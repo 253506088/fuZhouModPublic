@@ -1,10 +1,10 @@
 package basicmod.helpers;
 
 import basicmod.BasicMod;
+import basicmod.actions.GrandMageDadSelectiveExhaustHandAction;
 import basicmod.cards.BaseCard;
 import basicmod.monsters.GrandMageDad;
 import basicmod.powers.GrandMageDadCycleCursePower;
-import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -33,6 +33,7 @@ public class GrandMageDadCycleCurseHelper {
     public static final int STAGE_TEMP_THORNS = 5;
 
     private static final int CARD_DAMAGE_AMOUNT = 2;
+    private static final int UNEXHAUSTED_HAND_CARD_DAMAGE_AMOUNT = 12;
     private static final int TEMP_THORNS_AMOUNT = 5;
 
     private static final IdentityHashMap<AbstractCard, CardSnapshot> collapsedCards = new IdentityHashMap<>();
@@ -133,11 +134,11 @@ public class GrandMageDadCycleCurseHelper {
             card.triggerOnEndOfPlayerTurn();
         }
 
-        ArrayList<AbstractCard> cards = new ArrayList<>(player.hand.group);
-        for (AbstractCard card : cards) {
-            AbstractDungeon.actionManager.addToTop(new ExhaustSpecificCardAction(card, player.hand));
-        }
-        GrandMageDad.logDetail("【五行压制】回合结束消耗手牌：数量=" + cards.size() + "。");
+        AbstractDungeon.actionManager.addToTop(new GrandMageDadSelectiveExhaustHandAction(
+                getActiveDadSource(STAGE_EXHAUST_HAND),
+                UNEXHAUSTED_HAND_CARD_DAMAGE_AMOUNT));
+        GrandMageDad.logDetail("【五行压制】回合结束进入不消耗手牌选择：手牌数量=" + player.hand.size()
+                + "，每选择1张伤害=" + UNEXHAUSTED_HAND_CARD_DAMAGE_AMOUNT + "。");
         endPlayerCurseTurn();
     }
 
