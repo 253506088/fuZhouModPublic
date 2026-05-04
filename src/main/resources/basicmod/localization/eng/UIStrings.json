@@ -1,0 +1,195 @@
+﻿{
+    "fuZhouMod:PanKuUI":  {
+                              "TEXT":  [
+                                           "Enchant",
+                                           "Select a Demon Qi from the Pan Ku Box to enchant a card.",
+                                           "There is no Demon Qi available in the Pan Ku Box.",
+                                           " NL  NL Stored Qi: ",
+                                           ", ",
+                                           "Pan Ku Box Reward",
+                                           " NL There is currently no valid target for enchantment.",
+                                           "Pan Ku Box: Select Reward",
+                                           "Enchant Card",
+                                           "Immediately attach the Demon Qi of \"",
+                                           "\" to a card in your deck.",
+                                           "Store Demon Qi",
+                                           "Store the Demon Qi of \"",
+                                           "\" in the Pan Ku Box to enchant later at a Campfire.",
+                                           "\u0027s Stored Qi",
+                                           "Select to enchant a card.",
+                                           "Back to Campfire",
+                                           "Cancel this enchantment and return to the campfire. This will not consume your rest action.",
+                                           "Select a stored Demon Qi to enchant (or Cancel to return to campfire):",
+                                           "No valid targets for enchantment. Please choose another reward.",
+                                           "Select a card to enchant with Demon Qi: ",
+                                           "No valid targets for this Demon Qi. You can return to the campfire for other actions."
+                                       ]
+                          },
+    "fuZhouMod:MonkeyTalismanCampfireUI":  {
+                                               "TEXT":  [
+                                                            "Seventy-Two Transformations",
+                                                            "Choose 1 card from your deck and transform it into a chosen card from your class.",
+                                                            "There is no card available for transformation.",
+                                                            "Choose a card for Seventy-Two Transformations: ",
+                                                            "Choose the transformed form: ",
+                                                            "Back to Campfire",
+                                                            "Cancel this transformation and return to the campfire. This will not consume your rest action.",
+                                                            "There is currently no valid transformation target."
+                                                        ]
+                                           },
+    "fuZhouMod:DemonQiModifiers":  {
+                                       "TEXT":  [
+                                                    "Heaven",
+                                                    "Apply #yFear to target(s) with 1/8 chance.",
+                                                    "Earth",
+                                                    "Block gained this turn does not expire.",
+                                                    "Wind",
+                                                    "Draw 2 cards and apply 2 layers of #yWind #yCatalyst to all enemies.",
+                                                    "Thunder",
+                                                    "Reduce cost by 1 each time it is played this combat.",
+                                                    "Water",
+                                                    "Apply 2 layers of #yWet to target(s).",
+                                                    "Fire",
+                                                    "Apply 2 layers of #yBurning to target(s).",
+                                                    "Mountain",
+                                                    "Remove #yEthereal and #yExhaust from this card.",
+                                                    "Moon",
+                                                    "Reverse positive Strength on target(s) into negative Strength.",
+                                                    "[",
+                                                    "]"
+                                                ]
+                                   },
+    "fuZhouMod:PanKuQiNames":  {
+                                   "TEXT":  [
+                                                "Heaven",
+                                                "Earth",
+                                                "Wind",
+                                                "Thunder",
+                                                "Water",
+                                                "Fire",
+                                                "Mountain",
+                                                "Moon"
+                                            ]
+                               },
+    "fuZhouMod:PanKuQiDescriptions":  {
+                                          "TEXT":  [
+                                                       "On play, apply 2 layers of #yBurning to affected enemies.\n(Attack cards only)",
+                                                       "On play, apply 2 layers of #yWet to affected enemies.\n(Attack cards only)",
+                                                       "On play, draw 2 cards and apply 2 layers of #yWind #yCatalyst to all enemies.",
+                                                       "In combat, reduce cost by 1 each time it is played.",
+                                                       "On play, Block gained this turn does not expire.",
+                                                       "Remove #yEthereal and #yExhaust from this card.\n(Only for cards with these keywords)",
+                                                       "On play, has a 1/8 chance to apply #yFear to affected enemies.",
+                                                       "On play, reverse positive Strength on the target into negative Strength. (Once per combat)\n(Attack cards only)"
+                                                   ]
+                                      },
+    "fuZhouMod:RatTalismanUI":  {
+                                    "TEXT":  [
+                                                 "Select a Curse or Status card to replace",
+                                                 "Select a card to add to your hand",
+                                                 "Ethereal. "
+                                             ]
+                                },
+    "fuZhouMod:SoultrapUI":  {
+                                 "TEXT":  [
+                                              "Select cards to exhaust and gain Strength and Dexterity"
+                                          ]
+                             },
+    "fuZhouMod:MaskActionsUI":  {
+                                    "TEXT":  [
+                                                 "Exhaust 1 Attack card as a sacrifice",
+                                                 "Exhaust a card for a bonus (or click Cancel)"
+                                             ]
+                                },
+    "fuZhouMod:BlackHandActionsUI":  {
+                                         "TEXT":  [
+                                                      "Select 1 card from your discard pile to add to your hand",
+                                                      "Select %1$d cards from your discard pile to add to your hand"
+                                                  ]
+                                     },
+    "fuZhouMod:FinalBossChoiceUI":  {
+                                        "TEXT":  [
+                                                     "Act 4 Boss",
+                                                     "Heart",
+                                                     "Grand Mage Dad",
+                                                     "Random"
+                                                 ]
+                                    },
+    "fuZhouMod:GrandMageDadIntentUI":  {
+                                          "TEXT":  [
+                                                       "Thunder Sigil Barrage",
+                                                       "Deal #b%1$d x #b%2$d damage.",
+                                                       "Ward-Breaking Seal",
+                                                       "Deal #b%1$d x #b%2$d damage and apply #b2 Weak and #b2 Vulnerable.",
+                                                       "Talisman Seizure",
+                                                       "Deal #b%1$d x #b%2$d damage, then randomly seal #b2 Talismans from: %3$s. If there is no valid Talisman to seal, Dad instead gains #b2 Strength and #b1 Artifact. Sealed Talismans are removed from your relic bar; when #yRighteous #yPersistence reaches its damage cap this turn, Dad returns #b1 sealed Talisman.",
+                                                       "Eight Trigram Barrage",
+                                                       "Deal #b%1$d x #b%2$d damage.",
+                                                    "Demons Begone · Chant",
+                                                       "Gain #b%1$d Shield and #b%2$d Artifact, then begin chanting. This Shield cannot be removed directly by Pig Talisman. If the Shield is not broken before Dad's next turn, he will execute on the following turn.",
+                                                    "Demons Begone · Execution",
+                                                       "If the chant Shield is still intact, instantly kill the player, ignoring Intangible and normal damage reduction.",
+                                                       "Backlash Stagger",
+                                                       "Dad will not attack this turn and instead gains #b50 Shield.",
+                                                       "Secondary Intent: ",
+                                                       "Admonition: add #b1 Jackie curse to your discard pile.",
+                                                       "Guarded Aura: Dad gains Block, #b1 Artifact, and heals #b1/8 max HP.",
+                                                       "Mental Intrusion: add #b1 random Dad curse to your discard pile.",
+                                                       "Purging Backlash: remove all debuffs from Dad and gain #b2 Strength.",
+                                                       "Curse Array Spread: add #b2 different random Dad curses to your discard pile.",
+                                                       "None",
+                                                       "The Snake Talisman hides the secondary intent this turn, but it will still execute normally.",
+                                                       "No sealable Talismans",
+                                                       "Talisman Seizure: randomly seal #b2 sealable Talismans."
+                                                   ]
+                                     },
+    "fuZhouMod:GrandMageDadSealEffectsUI":  {
+                                               "TEXT":  [
+                                                            "Unknown effect",
+                                                            "Gain + #b4 Strength",
+                                                            "Gain + #b2 Artifact",
+                                                            "Future attacks gain + #b1 hit",
+                                                            "Add #b1 Burn after each attack",
+                                                            "Hide secondary intent display next turn",
+                                                            "Heal #b1/8 of missing HP at start of each Dad turn",
+                                                            "Apply skill tax to player (+ #b1 cost on first Skill next turn)",
+                                                            "At the start of each Dad turn, randomly borrow #b1 non-Curse, non-Status card from your draw pile or discard pile",
+                                                            "Gain Flight #b3",
+                                                            "Per-hit damage cap becomes #b45",
+                                                            "Attacks also apply #b1 Weak and #b1 Vulnerable",
+                                                            "Rat Talisman is sealed and cannot replace Curse or Status cards",
+                                                            "; Borrowed this turn: ",
+                                                            "; No card currently borrowed",
+                                                            "; If no card can be borrowed, heal #b30 HP",
+                                                            " (Currently heals #b",
+                                                            " HP)"
+                                                        ]
+                                           },
+    "fuZhouMod:HistoryBookFragmentUI":  {
+                                             "TEXT":  [
+                                                          "Choose a reality rewrite (cancel allowed):",
+                                                          "Cancel",
+                                                          "Set all monster HP to 1",
+                                                          "The Book of Ages rewrites every monster's life down to the final stroke.",
+                                                          "Stun all monsters for 1 turn",
+                                                          "Rewrite this turn so every monster simply stares into space.",
+                                                          "Fill your hand and gain 12 Energy",
+                                                          "Write your hand full, then write your energy until it overflows.",
+                                                          "Reset combat piles",
+                                                          "Clear your hand, discard pile, and draw pile, then restore the saved opening draw pile. Exhaust pile is unchanged. Draw 5 cards afterward.",
+                                                          "Exhaust all Status and Curse cards",
+                                                          "Exhaust all Status and Curse cards in your hand, discard pile, and draw pile.",
+                                                          "All rest-site options can be chosen this time",
+                                                          "This campfire is no longer limited to one choice; you can keep choosing other rest-site options.",
+                                                          "Turn this rest site into a free shop",
+                                                          "Rewrite this page into a shop. All prices in this shop become 0.",
+                                                          "Free shopping",
+                                                          "All cards, relics, potions, and card removal in this shop cost 0.",
+                                                          "Turn this shop into a multi-choice rest site",
+                                                          "Rewrite this page into a rest site. This campfire is no longer limited to one choice.",
+                                                          "Restock after every sale, unlimited removal",
+                                                          "This shop restocks after purchases, and card removal opens again after use.",
+                                                          "Uses consumed:"
+                                                      ]
+                                         }
+}

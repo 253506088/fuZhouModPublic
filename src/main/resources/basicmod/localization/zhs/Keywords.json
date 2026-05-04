@@ -1,0 +1,124 @@
+﻿[
+  {
+    "ID": "Combo",
+    "PROPER_NAME": "阿福连招",
+    "NAMES": [
+      "阿福连招",
+      "连招"
+    ],
+    "DESCRIPTION": "如果你本回合上一张打出的牌是 #y阿福 招式，触发额外效果。"
+  },
+  {
+    "ID": "AfuMove",
+    "PROPER_NAME": "阿福招式",
+    "NAMES": [
+      "阿福招式",
+      "阿福"
+    ],
+    "DESCRIPTION": "由黑手党大将阿福使出的威猛招式。"
+  },
+  {
+    "ID": "Flight",
+    "PROPER_NAME": "飞行",
+    "NAMES": [
+      "飞行"
+    ],
+    "DESCRIPTION": "受到的下一次伤害减半。"
+  },
+  {
+    "ID": "Soaked",
+    "PROPER_NAME": "潮湿",
+    "NAMES": [
+      "潮湿"
+    ],
+    "DESCRIPTION": "目标处于潮湿状态，水火不容，但雷电和寒气在潮湿状态下会有额外效果。"
+  },
+  {
+    "ID": "Steam",
+    "PROPER_NAME": "高温蒸汽",
+    "NAMES": [
+      "高温蒸汽"
+    ],
+    "DESCRIPTION": "由于被高温蒸汽包围，该怪物的意图有一定概率失效。"
+  },
+  {
+    "ID": "Burning",
+    "PROPER_NAME": "灼烧",
+    "NAMES": [
+      "灼烧"
+    ],
+    "DESCRIPTION": "回合开始时受到当前生命值 #b1/8 的伤害（单次最低 #b2，最高 #b20），达到 #b9 层时进化成 #y灼心 。"
+  },
+  {
+    "ID": "BurningHeart",
+    "PROPER_NAME": "灼心",
+    "NAMES": [
+      "灼心"
+    ],
+    "DESCRIPTION": "由 #y灼烧 进化而来的更强异常，回合开始时受到当前生命值 #b1/5 的伤害（单次最低 #b5，最高 #b40）。"
+  },
+  {
+    "ID": "Frostbite",
+    "PROPER_NAME": "冻伤",
+    "NAMES": [
+      "冻伤"
+    ],
+    "DESCRIPTION": "回合开始时受到当前生命值 #b1/8 的伤害（单次最低 #b2，最高 #b20），达到 #b9 层时进化成 #y冰狱 。"
+  },
+  {
+    "ID": "FrostHell",
+    "PROPER_NAME": "冰狱",
+    "NAMES": [
+      "冰狱"
+    ],
+    "DESCRIPTION": "由 #y冻伤 进化而来的更强异常，回合开始时受到当前生命值 #b1/5 的伤害（单次最低 #b5，最高 #b40）。"
+  },
+  {
+    "ID": "Fear",
+    "PROPER_NAME": "恐惧",
+    "NAMES": [
+      "恐惧"
+    ],
+    "DESCRIPTION": "感到恐惧，下一回合的意图将变得 #y保守 ，本状态在本单位的回合开始时消失。"
+  },
+  {
+    "ID": "EarthBind",
+    "PROPER_NAME": "地缚",
+    "NAMES": [
+      "地缚"
+    ],
+    "DESCRIPTION": "由 #y地之恶魔 施加的异常。回合开始时受到当前生命值 #b1/8 的伤害。该效果不会随回合自动减少，仅在玩家受到生命伤害时解除。"
+  },
+  {
+    "ID": "HeavyMire",
+    "PROPER_NAME": "沉重泥沼",
+    "NAMES": [
+      "沉重泥沼"
+    ],
+    "DESCRIPTION": "融合了 #y地缚 与 #y潮湿 的强化异常。每回合开始失去 #b1/5 当前生命值（单次最低 #b5，最高 #b40），并减少 #b2 点 #y力量 和 #y敏捷 。移除时返还扣除的所有层数。"
+  },
+  {
+    "ID": "WindCatalyst",
+    "PROPER_NAME": "风势",
+    "NAMES": [
+      "风势"
+    ],
+    "DESCRIPTION": "加速元素反应。 NL 敌人回合开始时，额外结算其持有的 #y灼烧 、 #y灼心 、 #y冻伤 或 #y冰狱 的伤害（灼烧或冻伤：最低 #b2，最高 #b20；灼心或冰狱：最低 #b5，最高 #b40）。 NL 敌人回合结束时，这些状态额外减少 #b1 层。 NL 层数每回合自然减少 #b1 层。"
+  },
+  {
+    "ID": "BlackHandMark",
+    "PROPER_NAME": "黑手",
+    "NAMES": [
+      "黑手"
+    ],
+    "DESCRIPTION": "黑手帮施加的标记。部分黑手帮卡牌会根据层数触发额外效果，并可消耗其层数。"
+  },
+  {
+    "ID": "Dominion",
+    "PROPER_NAME": "影蚀",
+    "NAMES": [
+      "影蚀"
+    ],
+    "DESCRIPTION": "黑影兵团卡不再受 #y力量 与 #y敏捷 影响，改为受 #y影蚀 影响。每 #b1 层 #y影蚀 ，使黑影兵团卡造成的伤害或获得的格挡 #b+1。"
+  }
+]

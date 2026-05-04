@@ -1,0 +1,127 @@
+{
+    "fuZhouMod:RatTalisman": {
+        "NAME": "Rat Talisman",
+        "FLAVOR": "Motion from stillness. Gives life to the lifeless.",
+        "DESCRIPTIONS": [
+            "When not cooling down, if there are #yStatus or #yCurse cards in your hand, choose 1 and replace it with a #y0-cost #yExhaust #yAttack card, then enter #b2-turn cooldown. NL Shendu's true form invokes the talisman's true power..."
+        ]
+    },
+    "fuZhouMod:OxTalisman": {
+        "NAME": "Ox Talisman",
+        "FLAVOR": "The robust ox bestows upon us immense strength.",
+        "DESCRIPTIONS": [
+            "Can be #yRight-Click to activate. Once activated, your next #ySingle-Target #yAttack deals #b2 times damage, then enters #b2-turn cooldown. Right-click again to cancel.",
+            "Can be #yRight-Click to activate. Once activated, your next #ySingle-Target #yAttack deals #b2 times damage, then enters #b2-turn cooldown. Right-click again to cancel. NL #y[True Shendu]: At the start of every 2 turns, gain #y1 #yStrength."
+        ]
+    },
+    "fuZhouMod:TigerTalisman": {
+        "NAME": "Tiger Talisman",
+        "FLAVOR": "The power of balance, allowing the holder to balance Yin and Yang, dividing into two entities of good and evil.",
+        "DESCRIPTIONS": [
+            "When playing #yAttack cards and #ySkill cards #yalternately, draw #b1 card, up to #b3 times per turn. NL #yStrength #yand #yDexterity #ybalance : When calculating damage and block, #yStrength and #yDexterity take the maximum of both.",
+            "When playing #yAttack cards and #ySkill cards #yalternately, draw #b1 card, up to #b3 times per turn. NL #yStrength and #yDexterity take the maximum of both. NL #y[True Shendu]: If the number of Attack and Skill cards played is equal, draw #b2 additional cards next turn."
+        ]
+    },
+    "fuZhouMod:RoosterTalisman": {
+        "NAME": "Rooster Talisman",
+        "FLAVOR": "The proud rooster grants us the ability to fly through the air.",
+        "DESCRIPTIONS": [
+            "Hand size #b+3. NL #yLevitation : When selecting map nodes, you can ignore path restrictions and go to any room on the next floor.",
+            "Hand size #b+3. NL #yLevitation : When selecting map nodes, you can ignore path restrictions and go to any room on the next floor. NL #y[True Shendu]: At the end of the turn, you can manually select cards to #yRetain."
+        ]
+    },
+    "fuZhouMod:RabbitTalisman": {
+        "NAME": "Rabbit Talisman",
+        "FLAVOR": "The agile rabbit bestows upon us the power to reverse time and space.",
+        "DESCRIPTIONS": [
+            "#yRight-Click to activate. After playing the #ynext #ynon-zero #ycost #ycard this turn, refund the energy and enter a #b2-turn cooldown. NL Or right-click a #yCooling talisman to #yend #yits #ycooldown; Rabbit Talisman will then enter a #b4-turn cooldown. Right-click again to cancel.",
+            "#yRight-Click to activate. After playing the #ynext #ynon-zero #ycost #ycard this turn, refund the energy and enter a #b2-turn cooldown. NL Or right-click a #yCooling talisman to #yend #yits #ycooldown; Rabbit Talisman will then enter a #b4-turn cooldown. Right-click again to cancel. NL #y[True Shendu]: Gain an additional #b1 Energy."
+        ]
+    },
+    "fuZhouMod:DragonTalisman": {
+        "NAME": "Dragon Talisman",
+        "FLAVOR": "The sacred dragon gives us the power to overcome all difficulties.",
+        "DESCRIPTIONS": [
+            "Whenever you play #b10 cards, deal #b5 damage to all enemies.",
+            "#y[True Shendu]: Whenever you play #b10 cards, deal #b5 damage to all enemies. NL (Damage is affected by #yStrength)"
+        ]
+    },
+    "fuZhouMod:SnakeTalisman": {
+        "NAME": "Snake Talisman",
+        "FLAVOR": "The snake biting its tail heralds the cycle of life.",
+        "DESCRIPTIONS": [
+            "After #yRight-Click to activate, gain #b1 stack of #yIntangible at the end of your turn, then enter an #b8-turn cooldown. Right-click again to cancel.",
+            "#y[True Shendu]: After #yRight-Click to activate, gain #b1 stack of #yIntangible at the end of your turn, then enter a #b6-turn cooldown. Right-click again to cancel."
+        ]
+    },
+    "fuZhouMod:HorseTalisman": {
+        "NAME": "Horse Talisman",
+        "FLAVOR": "The noble horse expels all external forces from the body.",
+        "DESCRIPTIONS": [
+            "Can be #yRight-Click to choose and remove #b1 debuff, then enter a #b2-turn cooldown. If no removal is triggered during the entire combat, heal #b20% of Max HP.",
+            "Can be #yRight-Click to choose and remove #b1 debuff, then enter a #b2-turn cooldown. If no removal is triggered during the entire combat, heal #b30% of Max HP."
+        ]
+    },
+    "fuZhouMod:SheepTalisman": {
+        "NAME": "Sheep Talisman",
+        "FLAVOR": "The soul is silent, formless and invisible. It can travel freely anywhere in the world.",
+        "DESCRIPTIONS": [
+            "Can be #yRight-Click to activate. Once activated, the stacks of the next debuff you apply to an enemy are doubled, then it enters #b2-turn cooldown. This cooldown can be accelerated by #yRabbit #yTalisman. NL Remaining energy this turn is carried over to the next turn.",
+            "Can be #yRight-Click to activate. Once activated, the stacks of the next debuff you apply to an enemy are doubled, then it enters #b2-turn cooldown. This cooldown can be accelerated by #yRabbit #yTalisman. NL Remaining energy this turn is carried over to the next turn. NL #y[True Shendu]: At the start of the first turn of each combat, your opening hand becomes #yUpgraded."
+        ]
+    },
+    "fuZhouMod:MonkeyTalisman": {
+        "NAME": "Monkey Talisman",
+        "FLAVOR": "The clever monkey bestows upon us the magic to change all things.",
+        "DESCRIPTIONS": [
+            "After resting at a campfire, choose #b1 card in your deck and transform it into #b1 #yselectable card of your class.",
+            "After resting at a campfire, choose #b1 card in your deck and transform it into #b1 #yselectable card of your class. NL #y[True Shendu]: Once per combat, #yRight-Click to transform #b1 card in hand into another card of your class."
+        ]
+    },
+    "fuZhouMod:DogTalisman": {
+        "NAME": "Dog Talisman",
+        "FLAVOR": "The loyal dog bestows upon us the magic of eternal immortality.",
+        "DESCRIPTIONS": [
+            "Once per combat: When taking fatal damage, HP remains at #b25% instead of dying.",
+            "#y[True Shendu]: Once per combat: When taking fatal damage, HP remains at #b35% instead of dying."
+        ]
+    },
+    "fuZhouMod:PigTalisman": {
+        "NAME": "Pig Talisman",
+        "FLAVOR": "Wow! My eyes can shoot lasers! So cool! I'm going to see if I can punch through that wall!",
+        "DESCRIPTIONS": [
+            "Can be #yRight-Click to activate. Once activated, your next #yAttack removes enemy #yBlock and #yArtifacts before damage calculation, then enters #b3-turn cooldown. NL Cannot directly remove Grand Mage Dad's #yUltimate #ySeal chant Shield.",
+            "Can be #yRight-Click to activate. Once activated, your next #yAttack removes enemy #yBlock and #yArtifacts before damage calculation, then enters #b3-turn cooldown. NL Cannot directly remove Grand Mage Dad's #yUltimate #ySeal chant Shield. NL #y[True Shendu]: When playing a single-target attack card, deal #b15% splash damage to #yall #yadjacent enemies (minimum #b1)."
+        ]
+    },
+    "fuZhouMod:TalismanLocator": {
+        "NAME": "Talisman Locator",
+        "FLAVOR": "Use it to find the twelve talismans, and I will give you the Golden Rooster King's treasure... Valmont",
+        "DESCRIPTIONS": [
+            "Whenever you can pick a relic, you can #yforgo that relic and gain a #yrandom #yTalisman relic you don't own. NL #yRight-Click to switch talisman activation modes. NL #y1 Semi-Auto (Default) NL #y0 Manual. NL In Semi-Auto mode, talismans automatically activate at the start of the turn, but can be manually canceled."
+        ]
+    },
+    "fuZhouMod:CollaborationRelic": {
+        "NAME": "Collaboration",
+        "FLAVOR": "Uncle says: We must use magic to defeat magic! Of course, we also have to bring along these troublesome little guys.",
+        "DESCRIPTIONS": [
+            "Card rewards #b+2. NL The two additional cards will always be random cards from the #yMain #yCast. NL (Without this relic, Main Cast cards will not appear anywhere)"
+        ]
+    },
+    "fuZhouMod:PanKuBox": {
+        "NAME": "Pan Ku Box",
+        "FLAVOR": "Everything has two sides, Yin and Yang, good and evil. Only a perfect balance can open the door.",
+        "DESCRIPTIONS": [
+            "Marked #ynodes on the map correspond to the number of #yDemon cards. After victory at a marked node, choose one of three rewards: #yDemon #yCard / #yDirect #yEnchantment / #yHost #yDemonic #yQi. Demonic Qi allows enchantment at #yRest #ySites by consuming the resting opportunity."
+        ]
+    },
+    "fuZhouMod:HistoryBookFragment": {
+        "NAME": "History Book Fragment",
+        "FLAVOR": "Uncle says not to tear books. Especially not books that rewrite reality.",
+        "DESCRIPTIONS": [
+            "#yRight-click to choose a #yreality #yrewrite based on your current scene. Combat, rest sites, and shops have different options. Canceling does not consume uses. NL ",
+            "Remaining rewrites: #b",
+            "Remaining rewrites: #b0. This page has no ink left."
+        ]
+    }
+}

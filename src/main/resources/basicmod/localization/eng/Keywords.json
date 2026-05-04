@@ -1,0 +1,125 @@
+﻿[
+    {
+        "ID":  "Combo",
+        "PROPER_NAME":  "Ah Fu Combo",
+        "NAMES":  [
+                      "Ah Fu Combo",
+                      "Combo"
+                  ],
+        "DESCRIPTION":  "If the last card played this turn was an #yAh #yFu #yMove, trigger an additional effect."
+    },
+    {
+        "ID":  "AfuMove",
+        "PROPER_NAME":  "Ah Fu Move",
+        "NAMES":  [
+                      "Ah Fu Move",
+                      "Ah Fu"
+                  ],
+        "DESCRIPTION":  "Powerful moves performed by the Dark Hand\u0027s general, Ah Fu."
+    },
+    {
+        "ID":  "Flight",
+        "PROPER_NAME":  "Flight",
+        "NAMES":  [
+                      "Flight"
+                  ],
+        "DESCRIPTION":  "Reduces the next damage taken by half."
+    },
+    {
+        "ID":  "Soaked",
+        "PROPER_NAME":  "Wet",
+        "NAMES":  [
+                      "Wet"
+                  ],
+        "DESCRIPTION":  "The target is in a wet state. Incompatible with fire, but Lightning and Frost have additional effects under the wet state."
+    },
+    {
+        "ID":  "Steam",
+        "PROPER_NAME":  "High Temp Steam",
+        "NAMES":  [
+                      "High Temp Steam"
+                  ],
+        "DESCRIPTION":  "Being surrounded by high-temperature steam, the monster\u0027s intention has a certain probability of failing."
+    },
+    {
+        "ID":  "Burning",
+        "PROPER_NAME":  "Burning",
+        "NAMES":  [
+                      "Burning"
+                  ],
+        "DESCRIPTION":  "At the start of the turn, take #b1/8 of current HP as damage (minimum #b2, maximum #b20 per trigger). Evolves into #yBurning #yHeart when reaching #b9 stacks."
+    },
+    {
+        "ID":  "BurningHeart",
+        "PROPER_NAME":  "Burning Heart",
+        "NAMES":  [
+                      "Burning Heart"
+                  ],
+        "DESCRIPTION":  "A stronger anomaly evolved from #yBurning. At the start of the turn, take #b1/5 of current HP as damage (minimum #b5, maximum #b40 per trigger)."
+    },
+    {
+        "ID":  "Frostbite",
+        "PROPER_NAME":  "Frostbite",
+        "NAMES":  [
+                      "Frostbite"
+                  ],
+        "DESCRIPTION":  "At the start of the turn, take #b1/8 of current HP as damage (minimum #b2, maximum #b20 per trigger). Evolves into #yFrost #yHell when reaching #b9 stacks."
+    },
+    {
+        "ID":  "FrostHell",
+        "PROPER_NAME":  "Frost Hell",
+        "NAMES":  [
+                      "Frost Hell"
+                  ],
+        "DESCRIPTION":  "A stronger anomaly evolved from #yFrostbite. At the start of the turn, take #b1/5 of current HP as damage (minimum #b5, maximum #b40 per trigger)."
+    },
+    {
+        "ID":  "Fear",
+        "PROPER_NAME":  "Fear",
+        "NAMES":  [
+                      "Fear"
+                  ],
+        "DESCRIPTION":  "Feeling fearful, the next turn\u0027s intention will become #yconservative. This state disappears at the start of this unit\u0027s turn."
+    },
+    {
+        "ID":  "EarthBind",
+        "PROPER_NAME":  "Earth Bind",
+        "NAMES":  [
+                      "Earth Bind"
+                  ],
+        "DESCRIPTION":  "An anomaly applied by the #yEarth #yDemon. At the start of the turn, take #b1/8 of current HP as damage. This effect does not automatically decrease over turns and is only removed when the player takes HP damage."
+    },
+    {
+        "ID":  "HeavyMire",
+        "PROPER_NAME":  "Heavy Mire",
+        "NAMES":  [
+                      "Heavy Mire"
+                  ],
+        "DESCRIPTION":  "A reinforced anomaly that fuses #yEarth #yBind and #yWet. Lose #b1/5 of current HP at the start of each turn (minimum #b5, maximum #b40 per trigger), and decrease #b2 #yStrength and #yDexterity. All reduced stacks are returned when removed."
+    },
+    {
+        "ID":  "WindCatalyst",
+        "PROPER_NAME":  "Wind Catalyst",
+        "NAMES":  [
+                      "Wind Catalyst"
+                  ],
+        "DESCRIPTION":  "Accelerates elemental reactions. NL At the start of the enemy\u0027s turn, trigger the damage of #yBurning, #yBurning #yHeart, #yFrostbite, or #yFrost #yHell they possess (Burning or Frostbite: minimum #b2, maximum #b20; Burning Heart or Frost Hell: minimum #b5, maximum #b40). NL At the end of the enemy\u0027s turn, these states decrease by an additional #b1 stack. NL Stacks naturally decrease by #b1 every turn."
+    },
+    {
+        "ID":  "BlackHandMark",
+        "PROPER_NAME":  "blackhand",
+        "NAMES":  [
+                      "blackhand",
+                      "Blackhand"
+                  ],
+        "DESCRIPTION":  "A mark applied by Blackhand cards. Some Blackhand cards gain extra effects based on stacks and can consume those stacks."
+    },
+    {
+        "ID":  "Dominion",
+        "PROPER_NAME":  "Dominion",
+        "NAMES":  [
+                      "Dominion"
+                  ],
+        "DESCRIPTION":  "Shadowkhan cards are no longer affected by #yStrength and #yDexterity. Instead, each stack of #yDominion grants +1 damage or +1 block to Shadowkhan cards."
+    }
+]

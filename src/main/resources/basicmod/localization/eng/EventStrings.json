@@ -1,0 +1,105 @@
+{
+  "fuZhouMod:RobTalismanEvent": {
+    "NAME": "Talisman Theft",
+    "DESCRIPTIONS": [
+      " #b~Good ~Chi~ and #r~Dark ~Chi~ are in balance. If one side becomes too strong, the other will follow. NL With every talisman absorbed, the #r~Dark ~Chi~ within Shendu surges, and correspondingly, the #bGood ~Chi~ scattered throughout the world condenses, making those who come to your door even stronger. NL  NL You feel an unprecedented #p@sense @of @crisis@...",
+      "Just in the middle of a busy downtown area, the shower of coins causes panic in the crowd. You take advantage of the chaos to hide in the crowd and ~escape~.",
+      "At the moment the opponent strikes, you feel a void in your chest. A precious #y~Talisman~ has been forcibly stripped away, and your power weakens accordingly.",
+      "You grit your teeth and let the opponent's magic blast your body. Although you kept the talisman, your foundation is damaged—the @bitter @fruit @of @pride@.",
+      " #b~\"Ay-yah!! Truly a blessing in disguise!\"~ NL  NL You quickly whip out a #yFake #yTalisman and shove it into the opponent's hand. NL While the poor sap is still staring blankly at this #p\"stone\", you've already vanished into the end of the alley. NL  NL #yUncle: \"One more thing! Stop messing with these fakes! It's not nice to deceive old people!\" "
+    ],
+    "OPTIONS": [
+      "[Golden Cicada Sheds Shell] Lose #yall #yGold (",
+      "), gain #p[Regret]",
+      "[Locked] Needs at least 200 Gold",
+      "[Discard Talisman] #rLose a random Talisman",
+      "[Endure Damage] Lose #r10 Max HP, gain #p[Pride]",
+      "[Leave]",
+      "[Golden Cicada Sheds Shell] Hand over a #yFake #yTalisman",
+      "[Locked] Needs at least one #yFake #yTalisman"
+    ]
+  },
+  "fuZhouMod:DragoEvent": {
+    "NAME": "Drago",
+    "DESCRIPTIONS": [
+      " #b~\"Ay-yah!!!\"~ You see an old man in a yellow shirt glaring at you, with a helpless-looking Jackie standing nearby. NL #yUncle: \"Shendu! Your son Drago has collected the eight demons, and he's going to turn Earth into a lava hell!\" NL #yJackie: \"Shendu, although we were enemies before, now... we need your power. To stop Drago, we must cooperate.\"",
+      " #yUncle: \"Good! Tohru, imbue the ~Chi Magic~ onto Shendu! ~Yu Mo Gui Gwai Fai Di Zao, Yu Mo Gui Gwai Fai Di Zao~...\" NL  NL Following Uncle's chant, you feel the dark chi in your body balanced by a gentle good chi. Though this @makes @you @feel @a @bit @uncomfortable@, you have indeed established a mysterious connection with this \"J-Team.\"",
+      " #r#b@\"I am proud of my son Drago!\"@ NL  NL You sneer and push Uncle away. As a Fire Demon, you would rather see the world destroyed than bow your head to these mortals. NL  NL Uncle sighs: #y\"Ay-yah... I knew it. Jackie, stay away from this stubborn statue.\" NL  NL Following your refusal, the roar of Drago destroying the world echoes from afar. Lava instantly swallows the temple, and you feel the life force in your body rapidly draining...",
+      " #yUncle: \"Ay-yah! How much longer are you going to think? Are you waiting for Drago to burn off your tail too? Hurry up!\""
+    ],
+    "OPTIONS": [
+      " #b[Accept Cooperation] Gain Relic: #yCollaboration. Unlock J-Team cards",
+      " #r[Refuse Cooperation] I am proud of my son Drago #r(The price is unbearable)",
+      " #r[Refuse Cooperation] I don't regret it... #r(Game Over)",
+      " #b[Think again] Perhaps Jackie and the others are right...",
+      "[Leave]"
+    ]
+  },
+  "fuZhouMod:DaoLongEvent": {
+    "NAME": "Daolon Wong's Dark Chi",
+    "DESCRIPTIONS": [
+      "In a dark alleyway, you encounter a wizard with flowing white hair and a dark robe. The tip of his staff is surrounded by an unsettling green glow—pure #r~Dark ~Energy~. NL  NL #yDaolon Wong: \"Shendu, your henchmen are far too weak... #yChow, #yRatso, #yFinn... these fools only disappoint you again and again. But I can grant them true magic power.\" NL  NL Saying so, he slowly raises his staff. At that moment, you feel the air grow cold and heavy, as an irresistible @Will@ has firmly locked onto the minion cards you carry.",
+      " #yDaolon Wong: \"Gan! Wen! Cui!... Go! Serve @ME@!\" NL  NL With a burst of painful #r~roars~, you see the mediocre faces of the thugs in your deck twisted and reshaped, finally transforming into hideous @Dark @Warriors@. Dark chi flows around them; they have completely undergone a metamorphosis.",
+      " #yDaolon Wong: \"Hmm? You don't even have a single henchman with you? Has the great Fire Demon fallen so low as to charge the front lines personally? What a waste of my time.\" NL  NL The wizard lets out a contemptuous snort and flickers into a wisp of #p~residual ~smoke~. Though you escaped the cold sorcery, you also missed an opportunity for power evolution."
+    ],
+    "OPTIONS": [
+      "[Accept Contract] Evolve all #yChow, #yRatso, #yFinn, and #yMount #yTai #yPress into #pDark #pWarriors",
+      "[Leave] Darkness no longer attracts you.",
+      "[Cannot Refuse] Daolon Wong's #pDark #pChi has locked onto your heart...",
+      "[Unavailable] No minions nearby to be empowered."
+    ]
+  },
+  "fuZhouMod:PanKuBoxEvent": {
+    "NAME": "Ancient Seal",
+    "DESCRIPTIONS": [
+      "Deep within the tower, on a dusty, hidden altar, you find a peculiar #b~mechanical ~stone ~box~. Crafted from an unknown ancient material, its surface is covered with precisely interlocking gears and eight mysterious #yTrigram #ySymbols. NL The #b~stone ~box~ emits a low hum. A fragment of ancient memory that doesn't belong to you floods your mind: In ancient times, eight #bImmortal #bDeities joined forces to cast this artifact named the #y\"Pan #yKu #yBox\", banishing the #rEight #rDemon #rSorcerers who ruled the earth one by one to the endless #pAbyss. NL The #bSeal is a shackle, yet it is also the only key that can open the #r@Demon @Portals@. At this moment, it flickers with your heartbeat, as if craving some #rprice to restart its ancient internal gears...",
+      "You drip #rblood into the gaps of the box. With the clicking sound of the mechanism turning, the gears begin to run on their own, and the #yTrigram #ySymbols light up in sequence. The #y~Pan #yKu #yBox~ floats beside you, and you faintly hear the hair-raising #r@demonic @whispers@ from afar. Several specific places on the map seem to be calling to you...",
+      "Ignoring the gods' warning, you forcibly pry open a corner of the box. A piercing #p~chill~ drills into your mind through your fingertips, but at the same time, the box recognizes your #rambition. The #r@Demon @Gates@ have opened for you, but the haze in your heart lingers for a long time.",
+      "Legendary power often comes with an #pabyss #pof #pno #preturn. You wisely withdraw your hand, leaving this #rdangerous #rmagic #rbox forever in the dust of the tower."
+    ],
+    "OPTIONS": [
+      "[Blood Riddle] Lose #r15 #rMax #rHP, gain Relic: #yPan #yKu #yBox",
+      "[Embrace Shadow] Gain Curses: #rClumsy, #rParasite, gain Relic: #yPan #yKu #yBox",
+      "[Leave]",
+      "[Locked] Your Max HP is less than #r15"
+    ]
+  },
+  "fuZhouMod:SafeArea13Event": {
+    "NAME": "The \"Safest\" Area 13",
+    "DESCRIPTIONS": [
+      " #yUncle: \"Ay-yah! One more thing! Jackie, Captain Black, look carefully! That stone demon Shendu actually brought the Black Hand and looted Area 13's vault dry! Jackie, go after him now, Uncle will read the loss list to you first!\" NL  NL You stand among overturned shelves and flashing alarms, with sealed crates rolling at your feet. Since you've already seized everything, how do you split the loot?",
+      "You pull a still-warm talisman from the bottom of a crate and snatch one base-game potion on the way. #yUncle stomps in anger from afar: \"Ay-yah! Shendu, you didn't even read the potion label!\"",
+      "You kick open the sealed cabinet, take one missing mask blueprint, force your potion bar to open two extra slots, then stuff in one base-game potion. #yUncle: \"Ay-yah! That's tampering with evidence!\"",
+      "You realize all core loot has already been taken, so you settle for reinforcing your body. Gain #b8 Max HP.",
+      "You sweep the remaining base-game relic racks clean and carry away two random base-game relics. #yUncle: \"Ay-yah! You won't even spare the backup vault!\""
+    ],
+    "OPTIONS": [
+      "[Seize Talisman] Gain #y1 missing Talisman and #y1 random base-game Potion",
+      "[Locked] All Talismans already collected",
+      "[Raid Mask Vault] Gain #y1 missing Mask, Potion slots #g+2, and #y1 random base-game Potion",
+      "[Locked] All Masks already collected",
+      "[Emergency Supply] #g+8 Max HP",
+      "[Locked] Available only when Talismans and Masks are both fully collected",
+      "[Loot the Vault] Gain #y2 random base-game Relics",
+      "[Locked] Available only when Talismans and Masks are both fully collected",
+      "[Leave]"
+    ]
+  },
+  "fuZhouMod:HistoryBookEvent": {
+    "NAME": "Book of Ages",
+    "DESCRIPTIONS": [
+      "Deep inside a crack in the tower, you find an ancient book as thick as a wall. Its pages turn by themselves, and the ink crawls like a living thing. NL  NL #yUncle: \"Ay-yah! Do not touch! This is the #yBook #yof #yAges. Whatever is written in it becomes real!\" NL #yJade: \"So can we write, 'Shendu forgets all his bad ideas today'?\" NL #yJackie: \"Jade!\" NL #yTohru: \"Sensei, the ink is already dripping onto Shendu's hand.\" NL  NL The page stops before you, waiting for you to make reality more convenient.",
+      "The moment you press your hand onto the page, old talismans peel away from your power one by one. Uncle waves his dried puffer fish and shouts: \"Ay-yah! History is being rewritten! For every talisman you lose, your body becomes harder to break!\" NL  NL Talisman types taken by the Book of Ages: #b",
+      ". NL  NL Then twelve talismans rise from the page and spin before you. Jade counts them from Jackie's shoulder while Tohru carefully holds the book's spine. One by one, the talismans fly back into your relic bar, like a chain of comic-panel chimes.",
+      "Ten shadow masks float out from the page's darkness. Uncle frowns: \"The Shadowkhan masks are not toys! First return the ones you already stole to history!\" NL  NL Mask types reclaimed by the Book of Ages: #b",
+      ". NL  NL Each old mask dissolves into ink, and ten new base masks slowly enter your deck in order. Jackie whispers, \"Slowly,\" while Jade is already wondering what the next page will draw.",
+      "While Uncle turns to chant, you tear one page from the Book of Ages. NL  NL #yUncle: \"Ay-yah! Tearing books is wrong! Tearing the Book of Ages is even more wrong!\" NL #yJade: \"But this page looks awesome.\" NL  NL The page folds into a relic fragment and drops into your relic bar. Reality feels lightly erased, leaving room to rewrite it later."
+    ],
+    "OPTIONS": [
+      "[Rewrite Talismans] Remove owned Talismans, gain #g+12 Max HP each, then gain all twelve Talismans",
+      "[Rewrite Masks] For each owned Mask type, gain #g+5 Max HP and remove 1 card, then gain ten base Masks",
+      "[Tear a Page] Gain Relic: #yHistory #yBook #yFragment",
+      "[Leave]"
+    ]
+  }
+}

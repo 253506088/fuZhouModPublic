@@ -1,0 +1,271 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <properties>
+        <modID>fuZhouMod</modID>
+        <author>guShenMoFeiTe</author>
+        <project.name>圣主历险记 Demon Sorcerer</project.name>
+        <author>股神墨菲特</author>
+
+        <!-- Change the path for your system to match your Steam installation. -->
+        <!-- If you're not sure, go to Slay the Spire in the Steam library, and choose Manage -> Browse local files -->
+        <steam.windows>D:/steam/steamapps</steam.windows>
+        <steam.mac>${user.home}/Library/Application Support/Steam/steamapps</steam.mac>
+        <steam.linux>${user.home}/.local/share/Steam/steamapps</steam.linux>
+        <!-- In the Maven tab, under Profiles, make sure only the profile for your system is enabled. Windows is the default. -->
+
+        <!-- These don't have to be up to date, it's just nice if they are. -->
+        <SlayTheSpire.version>12-18-2022</SlayTheSpire.version>
+        <ModTheSpire.version>3.30.0</ModTheSpire.version>
+
+        <!-- These two 1.8s are referring to the Java version; don't change them. -->
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <!--
+    java -Dfile.encoding=UTF-8 -jar mod-uploader.jar upload -w 圣主历险记
+     -->
+    <!-- This information will be displayed in ModTheSpire, the modded launcher. -->
+    <name>fuZhou</name>
+    <version>1.1.8</version>
+    <!-- Avoid using \ in this description, as they can cause the description to fail to load. -->
+    <!-- If you really want to use them, you'll need to "escape" them by putting another one in front, like \\ -->
+    <description>
+        “我是山之主，火之魂，远古的八大恶魔之首！” 曾经统治大地的恶魔首领圣主，如今在尖塔中苏醒。他失去了引以为傲的魔力，十二个符咒散落在塔的各处。为了找回昔日的荣光，他必须重新收集符咒，率领黑影兵团席卷塔尖...
+
+        该mod出现问题或觉得设计不好的地方都欢迎您的反馈，会尽快修复问题的，感谢各位捧场。
+
+        "I am the Lord of the Mountains, the Soul of Fire, the first of the Eight Ancient Demon Sorcerers!"
+        Shendu, the supreme Demon Sorcerer who once ruled the earth, now awakens within the Spire. Stripped of his proud magic, his immense power now lies divided among the Twelve Talismans scattered throughout the Spire. To reclaim his former glory, he must gather the Talismans once more and command the Shadowkhan to conquer the Spire...
+
+        If you encounter any bugs or have any suggestions regarding the mechanics and design, please feel free to leave a comment! I will read your feedback and fix issues as quickly as possible. Thank you all for playing and supporting this mod!
+    </description>
+
+    <!--You shouldn't need to change anything below this point, but feel free to look at it.-->
+    <!--You'll get a warning regarding these when you package your mod, but don't worry, it's just set up like this for convenience.-->
+    <!--Technically these should be changed individually, but this allows you to just set it in one place.-->
+    <!--Absolutely a no-go for larger projects, but for a personal mod it's fine.-->
+    <groupId>${modID}</groupId>
+    <artifactId>${modID}</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.megacrit.cardcrawl</groupId>
+            <artifactId>slaythespire</artifactId>
+            <version>${SlayTheSpire.version}</version>
+            <scope>system</scope>
+            <systemPath>${steam.path}${sts.path}</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.evacipated.cardcrawl</groupId>
+            <artifactId>modthespire</artifactId>
+            <version>${ModTheSpire.version}</version>
+            <scope>system</scope>
+            <systemPath>${steam.path}/workshop/content/646570/1605060445/ModTheSpire.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>basemod</groupId>
+            <artifactId>basemod</artifactId>
+            <!--Don't worry about these version numbers, they're only used for display
+                in the left sidebar under External Libraries and don't need to be accurate.-->
+            <version>5.44.0</version>
+            <scope>system</scope>
+            <systemPath>${steam.path}/workshop/content/646570/1605833019/BaseMod.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.evacipated.cardcrawl.mod</groupId>
+            <artifactId>StSLib</artifactId>
+            <version>2.4.0</version>
+            <scope>system</scope>
+            <systemPath>${steam.path}/workshop/content/646570/1609158507/StSLib.jar</systemPath>
+        </dependency>
+    </dependencies>
+
+
+    <!-- This is how your code is packaged into the jar file-->
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>com.github.sylvainlaurent.maven</groupId>
+                <artifactId>yaml-json-validator-maven-plugin</artifactId>
+                <version>1.0.4</version>
+                <executions>
+                    <execution>
+                        <id>validate</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>validate</goal>
+                        </goals>
+                        <configuration>
+                            <validationSets>
+                                <validationSet>
+                                    <includes>
+                                        <include>src/main/resources/**/*.json</include>
+                                    </includes>
+                                </validationSet>
+                            </validationSets>
+                            <allowEmptyFiles>true</allowEmptyFiles>
+                            <skip>false</skip>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.3.0</version>
+                <configuration>
+                    <excludes>
+                        <exclude>**/*.psd</exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.3.1</version>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                    <outputDirectory>${project.build.outputDirectory}</outputDirectory>
+                    <delimiters>
+                        <delimiter>${*}</delimiter>
+                    </delimiters>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>3.1.0</version>
+                <executions>
+                    <execution>
+                        <id>description</id>
+                        <phase>prepare-package</phase>
+                        <configuration>
+                            <target>
+                                <property name="tempDescription" value="${project.description}"/>
+                                <loadresource property="filteredDescription">
+                                    <propertyresource name="tempDescription"/>
+                                    <filterchain>
+                                        <tokenfilter>
+                                            <filetokenizer/>
+                                            <replaceregex pattern="(\s*\n\s*)" replace="\\\\n" flags="g"/>
+                                            <replaceregex pattern='((\\\\)*)(\\?")' replace='\1\\\\"' flags="g"/>
+                                        </tokenfilter>
+                                    </filterchain>
+                                </loadresource>
+
+                                <!--suppress UnresolvedMavenProperty -->
+                                <replace file="target/classes/ModTheSpire.json" value="${filteredDescription}" encoding="UTF-8">
+                                    <replacetoken>!(project.description)</replacetoken>
+                                </replace>
+                            </target>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>copy</id>
+                        <phase>package</phase>
+                        <configuration>
+                            <target>
+                                <!--This puts a copy of your mod's jar file into the SlayTheSpire mods folder so it will be loaded.-->
+                                <!--On mac, it will be copied to another location. See further below.-->
+                                <copy file="target/${project.artifactId}.jar" tofile="${steam.path}/common/SlayTheSpire/mods/${project.artifactId}.jar"/>
+                            </target>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>false</filtering>
+                <excludes> <!-- These files won't not be filtered. -->
+                    <exclude>ModTheSpire.json</exclude>
+                    <exclude>**/*.json</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+                <includes> <!-- These files will be filtered. -->
+                    <include>**/*.json</include>
+                </includes>
+            </resource>
+            <!-- Filtering replaces certain text like ${modID} with the corresponding value from this file. -->
+        </resources>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>default</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <steam.path>${steam.windows}</steam.path>
+                <sts.path>/common/SlayTheSpire/desktop-1.0.jar</sts.path>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>linux</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+                <os>
+                    <family>unix</family>
+                </os>
+            </activation>
+            <properties>
+                <steam.path>${steam.linux}</steam.path>
+                <sts.path>/common/SlayTheSpire/desktop-1.0.jar</sts.path>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>mac</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+                <os>
+                    <family>mac</family>
+                </os>
+            </activation>
+            <properties>
+                <steam.path>${steam.mac}</steam.path>
+                <sts.path>/common/SlayTheSpire/SlayTheSpire.app/Contents/Resources/desktop-1.0.jar</sts.path>
+            </properties>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-antrun-plugin</artifactId>
+                        <version>3.1.0</version>
+                        <executions>
+                            <execution>
+                                <phase>package</phase>
+                                <configuration>
+                                    <target>
+                                        <!-- This moves your mod into a common folder where all mods you make can go. -->
+                                        <copy file="target/${project.artifactId}.jar" tofile="${steam.path}/common/SlayTheSpire/SlayTheSpire.app/Contents/Resources/mods/${project.artifactId}.jar"/>
+                                    </target>
+                                </configuration>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+</project>

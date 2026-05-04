@@ -1,0 +1,534 @@
+﻿{
+    "fuZhouMod:WeThree":  {
+                              "NAME":  "The Trio (Deprecated)",
+                              "DESCRIPTION":  "This card is deprecated."
+                          },
+    "fuZhouMod:GanWenCui":  {
+                                "NAME":  "Gan, Wen, Cui (Deprecated)",
+                                "DESCRIPTION":  "This card is deprecated."
+                            },
+    "fuZhouMod:Tohru":  {
+                            "NAME":  "Dark Hand · Tohru",
+                            "DESCRIPTION":  "Gain !B! #yBlock. NL Deal !D! damage. NL Apply 2 *blackhand to the target. NL (Value is !M!% of your Max HP. For each [#efc100]Dark [#efc100]Hand[] card in your deck, this percentage increases by +1%) NL *blackhand",
+                            "UPGRADE_DESCRIPTION":  "Gain !B! #yBlock. NL Deal !D! damage. NL Apply 2 *blackhand to the target. NL (Value is !M!% of your Max HP. For each [#efc100]Dark [#efc100]Hand[] card in your deck, this percentage increases by +2%) NL *blackhand"
+                        },
+    "fuZhouMod:Valmont":  {
+                              "NAME":  "Valmont\u0027s Treasure",
+                              "DESCRIPTION":  "After playing, the cost of all [#efc100]Ah [#efc100]Fu[], [#efc100]Dark [#efc100]Hand[], and [#efc100]Dark [#efc100]Warrior[] cards played later this turn becomes *0 . NL #yExhaust. NL *blackhand"
+                          },
+    "fuZhouMod:CrowFlying":  {
+                                 "NAME":  "Angry Crow Takes Flight",
+                                 "DESCRIPTION":  "Deal !D! damage. If you have the #yRooster #yTalisman, cost is reduced by [G] . NL *Ah Fu"
+                             },
+    "fuZhouMod:LaserEyes":  {
+                                "NAME":  "Laser Eyes",
+                                "DESCRIPTION":  "Deal !D! damage. Apply !M! layers of #yVulnerable. If you have the #yPig #yTalisman, it affects all enemies instead. NL *Ah Fu"
+                            },
+    "fuZhouMod:OneTigerTwoSheep":  {
+                                       "NAME":  "One Tiger Kills Two Sheep",
+                                       "DESCRIPTION":  "Deal !D! damage *2 times. If this card kills an enemy, gain !M! #yStrength. NL *Ah Fu"
+                                   },
+    "fuZhouMod:MeteorHitsMountain":  {
+                                         "NAME":  "Meteor Hits the Mountain",
+                                         "DESCRIPTION":  "Deal !D! damage !M! times. NL If an #yAh #yFu card was played this turn: Your next attack damage increases by !fuZhouMod:B! . NL *Ah Fu"
+                                     },
+    "fuZhouMod:HeadCracksWalnut":  {
+                                       "NAME":  "Head Cracks the Walnut",
+                                       "DESCRIPTION":  "Deal !D! damage. NL If an #yAh #yFu card was played this turn: Draw !M! cards. NL *Ah Fu"
+                                   },
+    "fuZhouMod:AxeCutsTree":  {
+                                  "NAME":  "Giant Axe Cuts the Large Tree",
+                                  "DESCRIPTION":  "Deal !D! damage. If the target has #yBlock, damage is increased by [#efc100]50%[]. NL *Ah Fu"
+                              },
+    "fuZhouMod:AfuBeatJackie":  {
+                                    "NAME":  "Ah Fu Beats Up Jackie",
+                                    "DESCRIPTION":  "Deal !D! damage. For each unique #yAh #yFu card played in this combat, this card\u0027s damage increases by !M!. NL For each #b1 #yAh #yFu card played this turn, this card costs 1 less this turn. NL *Ah Fu"
+                                },
+    "fuZhouMod:ComboMove":  {
+                                "NAME":  "Combo Move",
+                                "DESCRIPTION":  "Find an Attack card from your draw pile and put it into your hand. Its cost becomes *0 this turn. NL *Ah Fu"
+                            },
+    "fuZhouMod:RatStealsCheese":  {
+                                      "NAME":  "Rat Steals the Cheese",
+                                      "DESCRIPTION":  "Gain !M! Energy. Add a #yDazed into your discard pile. NL *Ah Fu",
+                                      "UPGRADE_DESCRIPTION":  "Gain !M! Energy. Add a #yDazed into your discard pile. NL *Ah Fu"
+                                  },
+    "fuZhouMod:CraneCatchesShrimp":  {
+                                         "NAME":  "Crane Catches the Shrimp",
+                                         "DESCRIPTION":  "Discard all non-Attack cards in your hand. For each card discarded, draw !M! cards. NL *Ah Fu"
+                                     },
+    "fuZhouMod:EagleWings":  {
+                                 "NAME":  "Eagle Wings Spread",
+                                 "DESCRIPTION":  "Gain !M! layers of #yFlight. NL #yExhaust. NL *Ah Fu",
+                                 "UPGRADE_DESCRIPTION":  "Gain !M! layers of #yFlight. NL *Ah Fu"
+                             },
+    "fuZhouMod:TwoDragons":  {
+                                 "NAME":  "Double Dragon",
+                                 "DESCRIPTION":  "The next !M! cards you play this turn will trigger twice. NL #yExhaust. NL *Ah Fu"
+                             },
+    "fuZhouMod:GoatClimbsMountain":  {
+                                         "NAME":  "Goat Climbs the Mountain",
+                                         "DESCRIPTION":  "For every two cards played, gain *1 temporary #yStrength this turn. NL *Ah Fu"
+                                     },
+    "fuZhouMod:TaiShanPress":  {
+                                   "NAME":  "Mount Tai Press",
+                                   "DESCRIPTION":  "At the end of your turn, deal damage to a random enemy equal to [#efc100]30%[] of the total damage you dealt this turn. NL *Ah Fu"
+                               },
+    "fuZhouMod:Tornado":  {
+                              "NAME":  "Mountain",
+                              "DESCRIPTION":  "At the end of your turn, deal damage to all enemies equal to [#efc100]30%[] of the total damage you dealt this turn. NL *Ah Fu NL *Dark Warrior"
+                          },
+    "fuZhouMod:FlamingoStep":  {
+                                   "NAME":  "Flamingo Step",
+                                   "DESCRIPTION":  "Gain !B! #yBlock. NL If an #yAh #yFu card was played this turn: Gain !M! additional Energy next turn. NL *Ah Fu"
+                               },
+    "fuZhouMod:LameGoose":  {
+                                "NAME":  "I\u0027ve Become a Lame Goose",
+                                "DESCRIPTION":  "Gain !B! #yBlock. NL If an #yAh #yFu card was played this turn: Gain !M! temporary #yStrength this turn. NL *Ah Fu"
+                            },
+    "fuZhouMod:ElephantKick":  {
+                                   "NAME":  "Elephant Kick",
+                                   "DESCRIPTION":  "Gain !B! #yBlock. If the target\u0027s intention is an attack, deal !D! damage to it. NL *Ah Fu"
+                               },
+    "fuZhouMod:DaoLongBlackQi":  {
+                                     "NAME":  "Daolon Wong\u0027s Dark Chi",
+                                     "DESCRIPTION":  "[#7fff00]Note: As of v1.1.1, this card has been changed to an event. It can no longer be obtained directly.[] NL Transform all [#efc100]Chow, [#efc100]Ratso, [#efc100]Finn, and [#efc100]Mount [#efc100]Tai [#efc100]Press into [#efc100]Gan, [#efc100]Wen, [#efc100]Cui, and [#efc100]Mountain. NL Now primarily obtained via map events. NL #yExhaust.",
+                                     "UPGRADE_DESCRIPTION":  "[#7fff00]Note: Legacy Card.[] NL Transform all [#efc100]Chow, [#efc100]Ratso, [#efc100]Finn, and [#efc100]Mount [#efc100]Tai [#efc100]Press into [#efc100]Gan+, [#efc100]Wen+, [#efc100]Cui+, and [#efc100]Mountain+. NL Now primarily obtained via map events. NL #yExhaust."
+                                 },
+    "fuZhouMod:BlackHandAhFen":  {
+                                     "NAME":  "Dark Hand · Finn",
+                                     "DESCRIPTION":  "Deal !D! damage. NL *blackhand"
+                                 },
+    "fuZhouMod:BlackHandChow":  {
+                                    "NAME":  "Dark Hand · Chow",
+                                    "DESCRIPTION":  "Gain !B! #yBlock. NL *blackhand"
+                                },
+    "fuZhouMod:BlackHandRatso":  {
+                                     "NAME":  "Dark Hand · Ratso",
+                                     "DESCRIPTION":  "Gain !B! #yBlock. NL Draw !M! cards, discard !M! cards. NL *blackhand"
+                                 },
+    "fuZhouMod:BlackHandValmont":  {
+                                       "NAME":  "Dark Hand · Valmont",
+                                       "DESCRIPTION":  "This card costs 1 less for every #b5 [#efc100]Dark [#efc100]Hand[] cards in your deck. NL Deal !D! damage. For each [#efc100]Dark [#efc100]Hand[] card played this turn, deal an additional !M! damage. NL Apply (2 + number of *blackhand cards played this turn) *blackhand to the target. NL *blackhand"
+                                   },
+    "fuZhouMod:BlackHand":  {
+                                "NAME":  "The Dark Hand",
+                                "DESCRIPTION":  "Upgrade all [#efc100]Dark [#efc100]Hand and [#efc100]Ah [#efc100]Fu cards in your hand. NL #yExhaust. NL *blackhand"
+                            },
+    "fuZhouMod:Gan":  {
+                          "NAME":  "Gan",
+                          "DESCRIPTION":  "Deal !D! damage. Dealt [#efc100]50%[] additional damage on Critical Strike. NL Current Critical Chance: [#7fff00]!M!%[]. Each use increases the chance by [#7fff00]10%[]. NL *Dark Warrior"
+                      },
+    "fuZhouMod:Wen":  {
+                          "NAME":  "Wen",
+                          "DESCRIPTION":  "Gain !B! #yBlock. NL Gain !M! layers of #yFlame #yBarrier. NL *Dark Warrior"
+                      },
+    "fuZhouMod:Cui":  {
+                          "NAME":  "Cui",
+                          "DESCRIPTION":  "Gain !B! #yBlock. NL Draw !M! cards, discard !M! cards. Apply !M! layers of #yWeak to enemies. NL *Dark Warrior"
+                      },
+    "fuZhouMod:NiJiaMask":  {
+                                "NAME":  "Oni Mask of Ninja-khan",
+                                "DESCRIPTION":  "At the start of your turn, add !M! [#efc100]Ninja-khan cards to your hand (automatically played if hand is full).",
+                                "UPGRADE_DESCRIPTION":  "At the start of your turn, add !M! [#efc100]Ninja-khan+ cards to your hand (automatically played if hand is full)."
+                            },
+    "fuZhouMod:LaZuoMask":  {
+                                "NAME":  "Oni Mask of Razor-khan",
+                                "DESCRIPTION":  "At the start of your turn, add !M! [#efc100]Razor-khan cards to your hand (automatically played if hand is full).",
+                                "UPGRADE_DESCRIPTION":  "At the start of your turn, add !M! [#efc100]Razor-khan+ cards to your hand (automatically played if hand is full)."
+                            },
+    "fuZhouMod:SaMoMask":  {
+                               "NAME":  "Oni Mask of Sumo-khan",
+                               "DESCRIPTION":  "At the start of your turn, add !M! [#efc100]Sumo-khan cards to your hand (automatically played if hand is full).",
+                               "UPGRADE_DESCRIPTION":  "At the start of your turn, add !M! [#efc100]Sumo-khan+ cards to your hand (automatically played if hand is full)."
+                           },
+    "fuZhouMod:BaTeMask":  {
+                               "NAME":  "Oni Mask of Bat-khan",
+                               "DESCRIPTION":  "At the start of your turn, add !M! [#efc100]Bat-khan cards to your hand (automatically played if hand is full).",
+                               "UPGRADE_DESCRIPTION":  "At the start of your turn, add !M! [#efc100]Bat-khan+ cards to your hand (automatically played if hand is full)."
+                           },
+    "fuZhouMod:KaBoMask":  {
+                               "NAME":  "Oni Mask of Claw-khan",
+                               "DESCRIPTION":  "At the start of your turn, add !M! [#efc100]Claw-khan cards to your hand (automatically played if hand is full).",
+                               "UPGRADE_DESCRIPTION":  "At the start of your turn, add !M! [#efc100]Claw-khan+ cards to your hand (automatically played if hand is full)."
+                           },
+    "fuZhouMod:LeiSuMask":  {
+                                "NAME":  "Oni Mask of Spiked-khan",
+                                "DESCRIPTION":  "At the start of your turn, add !M! [#efc100]Spiked-khan cards to your hand (automatically played if hand is full).",
+                                "UPGRADE_DESCRIPTION":  "At the start of your turn, add !M! [#efc100]Spiked-khan+ cards to your hand (automatically played if hand is full)."
+                            },
+    "fuZhouMod:ManNiMask":  {
+                                "NAME":  "Oni Mask of Mini-khan",
+                                "DESCRIPTION":  "At the start of your turn, add !M! [#efc100]Mini-khan cards to your hand (automatically played if hand is full).",
+                                "UPGRADE_DESCRIPTION":  "At the start of your turn, add !M! [#efc100]Mini-khan+ cards to your hand (automatically played if hand is full)."
+                            },
+    "fuZhouMod:MingTaMask":  {
+                                 "NAME":  "Oni Mask of Squid-khan",
+                                 "DESCRIPTION":  "At the start of your turn, add !M! [#efc100]Squid-khan cards to your hand (automatically played if hand is full).",
+                                 "UPGRADE_DESCRIPTION":  "At the start of your turn, add !M! [#efc100]Squid-khan+ cards to your hand (automatically played if hand is full)."
+                             },
+    "fuZhouMod:YiKaMask":  {
+                               "NAME":  "Oni Mask of Samurai-khan",
+                               "DESCRIPTION":  "At the start of your turn, add !M! [#efc100]Samurai-khan cards to your hand (automatically played if hand is full).",
+                               "UPGRADE_DESCRIPTION":  "At the start of your turn, add !M! [#efc100]Samurai-khan+ cards to your hand (automatically played if hand is full)."
+                           },
+    "fuZhouMod:TaLaMask":  {
+                               "NAME":  "Oni Mask of Tarakudo",
+                               "DESCRIPTION":  "Mask capacity increased by !M! stacks. NL Gain 1 *Dominion. NL At the start of your turn, gain a random [#efc100]Shadowkhan card (automatically played if hand is full).",
+                               "UPGRADE_DESCRIPTION":  "Mask capacity increased by !M! stacks. NL Gain 1 *Dominion. NL At the start of your turn, gain a random [#efc100]Shadowkhan card (automatically played if hand is full)."
+                           },
+    "fuZhouMod:NiJiaNinja":  {
+                                 "NAME":  "Ninja-khan",
+                                 "DESCRIPTION":  "Deal !D! damage. NL #yExhaust",
+                                 "UPGRADE_DESCRIPTION":  "Deal !D! damage. NL #yExhaust"
+                             },
+    "fuZhouMod:LaZuoBlade":  {
+                                 "NAME":  "Razor-khan",
+                                 "DESCRIPTION":  "Deal !D! damage. If unblocked damage is dealt, apply !M! layers of #yVulnerable. NL If the target already has a #yCurse, deal [#efc100]25%[] additional damage. NL #yExhaust",
+                                 "UPGRADE_DESCRIPTION":  "Deal !D! damage. If unblocked damage is dealt, apply !M! layers of #yVulnerable. NL If the target already has a #yCurse, deal [#efc100]25%[] additional damage. NL #yExhaust"
+                             },
+    "fuZhouMod:SaMoTroll":  {
+                                "NAME":  "Sumo-khan",
+                                "DESCRIPTION":  "Gain !B! #yBlock. For every two Shadowkhan cards played this turn, gain an additional !M! #yBlock. NL #yExhaust",
+                                "UPGRADE_DESCRIPTION":  "Gain !B! #yBlock. For every two Shadowkhan cards played this turn, gain an additional !M! #yBlock. NL #yExhaust"
+                            },
+    "fuZhouMod:BaTeBat":  {
+                              "NAME":  "Bat-khan",
+                              "DESCRIPTION":  "Deal !D! damage. Draw !M! cards. NL If the target already has a #yCurse, heal [#7fff00]1[] HP. NL #yExhaust",
+                              "UPGRADE_DESCRIPTION":  "Deal !D! damage. Draw !M! cards. NL If the target already has a #yCurse, heal [#7fff00]1[] HP. NL #yExhaust"
+                          },
+    "fuZhouMod:KaBoPincer":  {
+                                 "NAME":  "Claw-khan",
+                                 "DESCRIPTION":  "Gain !B! #yBlock. Apply !M! layers of #yWeak. NL #yExhaust",
+                                 "UPGRADE_DESCRIPTION":  "Gain !B! #yBlock. Apply !M! layers of #yWeak. NL #yExhaust"
+                             },
+    "fuZhouMod:LeiSuAlien":  {
+                                 "NAME":  "Spiked-khan",
+                                 "DESCRIPTION":  "Apply !M! layers of #yCurse to the enemy (Shadowkhan cards played this turn will additionally increase its stacks). NL #yExhaust",
+                                 "UPGRADE_DESCRIPTION":  "Apply !M! layers of #yCurse to the enemy (Shadowkhan cards played this turn will additionally increase its stacks). NL #yExhaust"
+                             },
+    "fuZhouMod:ManNiMantis":  {
+                                  "NAME":  "Mini-khan",
+                                  "DESCRIPTION":  "Deal !D! damage. For each layer of #yVulnerable, #yWeak, or #yCurse on the enemy, strike an additional time (Max 3 times). NL #yExhaust",
+                                  "UPGRADE_DESCRIPTION":  "Deal !D! damage. For each layer of #yVulnerable, #yWeak, or #yCurse on the enemy, strike an additional time (Max 3 times). NL #yExhaust"
+                              },
+    "fuZhouMod:MingTaShadow":  {
+                                   "NAME":  "Squid-khan",
+                                   "DESCRIPTION":  "Exhaust 1 Attack card in hand to deal !D! + the sum of attack damage exhausted in this turn as additional damage. NL #yExhaust",
+                                   "UPGRADE_DESCRIPTION":  "Exhaust 1 Attack card in hand to deal !D! + the sum of attack damage exhausted in this turn as additional damage. NL #yExhaust"
+                               },
+    "fuZhouMod:YiKaSamurai":  {
+                                  "NAME":  "Samurai-khan",
+                                  "DESCRIPTION":  "Deal !D! damage. NL Can #yExhaust 1 card for additional effects: NL Skill: Draw 2 cards. NL Attack: Deal half of that card\u0027s damage. NL Power: Randomly apply 1 debuff. NL Curse: [#efc100]Stun[] the target. NL Status: Apply Poisson with turns +1. NL #yExhaust",
+                                  "UPGRADE_DESCRIPTION":  "Deal !D! damage. NL Can #yExhaust 1 card for additional effects: NL Skill: Draw 2 cards. NL Attack: Deal half of that card\u0027s damage. NL Power: Randomly apply 1 debuff. NL Curse: [#efc100]Stun[] the target. NL Status: Apply Poisson with turns +1. NL #yExhaust"
+                              },
+    "fuZhouMod:EndlessDarkness":  {
+                                      "NAME":  "Endless Darkness",
+                                      "DESCRIPTION":  "Innate. NL Expand all Mask slot limits to 10, and gain one stack of each of the ten mask effects.",
+                                      "UPGRADE_DESCRIPTION":  "Innate. NL Expand all Mask slot limits to 10, and gain one stack of each of the ten #yUpgraded mask effects."
+                                  },
+    "fuZhouMod:NothingLackingCard":  {
+                                         "NAME":  "I Lack Nothing",
+                                         "DESCRIPTION":  "Innate. NL Whenever you play 1 card, draw 1 card. Gain 6 [E], 6 layers of #yStrength, and 6 layers of #yDexterity.",
+                                         "UPGRADE_DESCRIPTION":  "Innate. NL Hand is always full. Gain 999 [E], 99 layers of #yStrength, and 99 layers of #yDexterity."
+                                     },
+    "fuZhouMod:TigerTalismanYin":  {
+                                       "NAME":  "Tiger Talisman · Yin Jackie",
+                                       "DESCRIPTION":  "Cost 1. Gain !B! #yBlock. NL (This value increases by !M! for each card in hand, up to 16).",
+                                       "UPGRADE_DESCRIPTION":  "Cost 1. Gain !B! #yBlock. NL (This value increases by !M! for each card in hand, up to 20)."
+                                   },
+    "fuZhouMod:TigerTalismanYang":  {
+                                        "NAME":  "Tiger Talisman · Yang Jackie",
+                                        "DESCRIPTION":  "Deal !D! damage. NL (This value decreases by 2 for each card in hand, minimum 2)."
+                                    },
+    "fuZhouMod:FakeTalisman":  {
+                                   "NAME":  "Fake Talisman",
+                                   "DESCRIPTION":  "Draw !M! cards, then choose 1 card in hand to discard."
+                               },
+    "fuZhouMod:DrunkenFist":  {
+                                  "NAME":  "Drunken Fist",
+                                  "DESCRIPTION":  "Deal 6~10 random damage X times. NL (Damage affected by Strength and Weak)",
+                                  "UPGRADE_DESCRIPTION":  "Deal 8~12 random damage X times. NL (Damage affected by Strength and Weak)"
+                              },
+    "fuZhouMod:ShadowQueen":  {
+                                  "NAME":  "Shadow Queen",
+                                  "DESCRIPTION":  "Cast all [#efc100]Shadowkhan cards in the exhaust pile in order. NL Jade used Tarakudo\u0027s tattoo to steal the Shadowkhan\u0027s authority.",
+                                  "UPGRADE_DESCRIPTION":  "Cast all [#efc100]Shadowkhan cards in the exhaust pile in order. NL Jade used Tarakudo\u0027s tattoo to steal the Shadowkhan\u0027s authority."
+                              },
+    "fuZhouMod:DeflectAndStrike":  {
+                                       "NAME":  "Deflect and Strike",
+                                       "DESCRIPTION":  "Next turn, if you fully block an enemy\u0027s attack, deal equivalent damage to that enemy.",
+                                       "UPGRADE_DESCRIPTION":  "Gain !B! #yBlock. NL Next turn, if you fully block an enemy\u0027s attack, deal equivalent damage to that enemy."
+                                   },
+    "fuZhouMod:GiantJade":  {
+                                "NAME":  "Giant Jade",
+                                "DESCRIPTION":  "Double your current #yBlock. NL #yExhaust",
+                                "UPGRADE_DESCRIPTION":  "Double your current #yBlock."
+                            },
+    "fuZhouMod:Suplex":  {
+                             "NAME":  "Suplex",
+                             "DESCRIPTION":  "Deal !D! (+ [#efc100]6%[] of target\u0027s Max HP) damage."
+                         },
+    "fuZhouMod:CloseAtHand":  {
+                                  "NAME":  "Close at Hand",
+                                  "DESCRIPTION":  "Lose [#efc100]6[] HP. NL Gain #yBlock equal to all enemies\u0027 [#efc100]Total [#efc100]Damage [#efc100]+1."
+                              },
+    "fuZhouMod:RatTalismanCard":  {
+                                      "NAME":  "Rat Talisman",
+                                      "DESCRIPTION":  "Ethereal. NL Add !M! cards from the exhaust pile to your hand. Their cost becomes *0 this turn. NL #yExhaust",
+                                      "UPGRADE_DESCRIPTION":  "Ethereal. NL Add !M! cards from the exhaust pile to your hand. Their cost becomes *0 this turn. NL #yExhaust"
+                                  },
+    "fuZhouMod:OxTalismanCard":  {
+                                     "NAME":  "Ox Talisman",
+                                     "DESCRIPTION":  "Enemy #yStrength and #yDexterity cannot be higher than yours."
+                                 },
+    "fuZhouMod:TigerTalismanSkillCard":  {
+                                             "NAME":  "Tiger Talisman · Skill",
+                                             "DESCRIPTION":  "Choose an enemy. NL If their HP is higher than yours: Their #yStrength -!M! this turn. NL If their HP is lower than yours: Your #yStrength +!M! this turn.",
+                                             "UPGRADE_DESCRIPTION":  "Choose an enemy. NL If their HP is higher than yours: Their #yStrength -!M! this turn. NL If their HP is lower than yours: Your #yStrength +!M! this turn."
+                                         },
+    "fuZhouMod:TigerTalismanAttackCard":  {
+                                              "NAME":  "Tiger Talisman · Attack",
+                                              "DESCRIPTION":  "Deal !D! damage. Compare current HP percentage with the target. NL If they are higher: Heal !M! HP. NL If they are lower: Deal additional damage equal to [#efc100]30%[] of their lost HP."
+                                          },
+    "fuZhouMod:RabbitTalismanCard":  {
+                                         "NAME":  "Rabbit Talisman",
+                                         "DESCRIPTION":  "End your turn by keeping your hand. Skip the enemy\u0027s next turn. Start your new turn. NL #yExhaust"
+                                     },
+    "fuZhouMod:DragonTalismanCard":  {
+                                         "NAME":  "Dragon Talisman",
+                                         "DESCRIPTION":  "Deal !D! damage to all enemies. If any enemy is killed, re-trigger this card\u0027s effect."
+                                     },
+    "fuZhouMod:SnakeTalismanCard":  {
+                                        "NAME":  "Snake Talisman",
+                                        "DESCRIPTION":  "Gain !M! layers of #yIntangible. NL #yExhaust NL #yEthereal",
+                                        "UPGRADE_DESCRIPTION":  "Gain !M! layers of #yIntangible. NL #yExhaust"
+                                    },
+    "fuZhouMod:HorseTalismanCard":  {
+                                        "NAME":  "Horse Talisman",
+                                        "DESCRIPTION":  "At the end of this turn, heal HP equal to half (rounded down) of the total unblocked damage you dealt to enemies this turn. NL #yExhaust"
+                                    },
+    "fuZhouMod:GoatTalismanCard":  {
+                                       "NAME":  "Sheep Talisman",
+                                       "DESCRIPTION":  "Choose an enemy. Double all its debuffs. NL #yExhaust"
+                                   },
+    "fuZhouMod:MonkeyTalismanCard":  {
+                                         "NAME":  "Monkey Talisman",
+                                         "DESCRIPTION":  "Gain 1 layer of #yVulnerable (25%). NL If the enemy\u0027s intention next turn is an attack, deal equivalent damage to it.",
+                                         "UPGRADE_DESCRIPTION":  "Gain 1 layer of #yVulnerable (50%). NL If the enemy\u0027s intention next turn is an attack, deal equivalent damage to it."
+                                     },
+    "fuZhouMod:RoosterTalismanCard":  {
+                                          "NAME":  "Rooster Talisman",
+                                          "DESCRIPTION":  "Gain #yFlight: #yDexterity +!M! and damage taken reduced by [#efc100]50%[]. After taking [#efc100]5[] hits, you are shot down and [#efc100]Stunned[] for 1 turn. NL #yExhaust"
+                                      },
+    "fuZhouMod:DogTalismanCard":  {
+                                      "NAME":  "Dog Talisman",
+                                      "DESCRIPTION":  "For the next #b5 turns, fatal damage from enemies is prevented. When triggered, restore !M! HP. Each fatal prevention consumes #b1 revive count. Repeated use stacks both duration and revive counts. The effect is removed when duration reaches 0 or revive counts are exhausted. NL #yExhaust",
+                                      "UPGRADE_DESCRIPTION":  "For the next #b8 turns, fatal damage from enemies is prevented. When triggered, restore !M! HP. Each fatal prevention consumes #b1 revive count. Repeated use stacks both duration and revive counts. The effect is removed when duration reaches 0 or revive counts are exhausted. NL #yExhaust"
+                                  },
+    "fuZhouMod:PigTalismanCard":  {
+                                      "NAME":  "Pig Talisman",
+                                      "DESCRIPTION":  "Deal !D! damage. Remove target\u0027s: Strength, Artifact, Thorns, Flight, Intangible, and Metallicize. NL #yExhaust"
+                                  },
+    "fuZhouMod:Soultrap":  {
+                               "NAME":  "Soul Trap",
+                               "DESCRIPTION":  "Choose any number of cards to Exhaust. For each odd card exhausted, gain [#efc100]1[] [#efc100]Strength[]. For each even card exhausted, gain [#efc100]1[] [#efc100]Dexterity[]. NL #yExhaust",
+                               "UPGRADE_DESCRIPTION":  "Choose any number of cards to Exhaust. For each odd card exhausted, gain [#efc100]1[] [#efc100]Strength[]. For each even card exhausted, gain [#efc100]1[] [#efc100]Dexterity[]. NL #yExhaust"
+                           },
+    "fuZhouMod:SinglePlankBridge":  {
+                                        "NAME":  "Single Plank Bridge",
+                                        "DESCRIPTION":  "Choose any number of cards to Exhaust. For each card exhausted, play the top card of your draw pile once.",
+                                        "UPGRADE_DESCRIPTION":  "Choose any number of cards to Exhaust. For each card exhausted, play the top card of your draw pile (count+1) times."
+                                    },
+    "fuZhouMod:Ambidexterity":  {
+                                    "NAME":  "Ambidexterity",
+                                    "DESCRIPTION":  "Draw !M! cards, choose 1 card in hand to discard, and choose 1 card in hand to put back on top of your draw pile.",
+                                    "UPGRADE_DESCRIPTION":  "Draw !M! cards, choose 1 card in hand to discard, and choose 1 card in hand to put back on top of your draw pile."
+                                },
+    "fuZhouMod:JadeStealsTalisman":  {
+                                         "NAME":  "Jade Steals Talismans",
+                                         "DESCRIPTION":  "Randomly get 1 of the 13 animal talisman cards to your hand. Its cost becomes *0 this turn. NL #yExhaust"
+                                     },
+    "fuZhouMod:Petrification":  {
+                                    "NAME":  "Petrification",
+                                    "DESCRIPTION":  "Apply 1 layer of [#efc100]Petrified to the target. NL ([#efc100]Petrified: Gain [#efc100]1 [#efc100]Strength each turn (Max 10), and damage taken increased by !M!% (increases by 1 layer each turn, Max 10)). NL #yExhaust"
+                                },
+    "fuZhouMod:Flatten":  {
+                              "NAME":  "Flatten",
+                              "DESCRIPTION":  "Deal !D! damage. (Damage is 8 + your total deck size)"
+                          },
+    "fuZhouMod:HiddenDragon":  {
+                                   "NAME":  "Hidden Dragon",
+                                   "DESCRIPTION":  "Gain !B! #yBlock. #yRetain all cards in hand. Gain an additional [E] at the start of next turn. End your turn.",
+                                   "UPGRADE_DESCRIPTION":  "Gain !B! #yBlock. #yRetain all cards in hand. Gain an additional [E] at the start of next turn. End your turn."
+                               },
+    "fuZhouMod:TargetImbalance":  {
+                                      "NAME":  "Target Imbalance",
+                                      "DESCRIPTION":  "Deal !D! damage. If HP damage is dealt, randomly change the enemy\u0027s intention. NL #yExhaust"
+                                  },
+    "fuZhouMod:CardFireDemonQi":  {
+                                      "NAME":  "Fire Demon · Drago",
+                                      "DESCRIPTION":  "Apply #b!M! layers of #yBurning to all enemies. NL Enemies in #yWet state will synthesize into #yHigh #yTemp #ySteam. NL (Base #b2 stacks, upgraded #b3 stacks)"
+                                  },
+    "fuZhouMod:CardMountainDemonQi":  {
+                                          "NAME":  "Mountain Demon · Po Kong",
+                                          "DESCRIPTION":  "Deal damage equal to current #yBlock. If an enemy is killed, gain !M! #yMax #yHP.",
+                                          "EXTENDED_DESCRIPTION":  [
+                                                                       " NL (Deals !D! damage)"
+                                                                   ]
+                                      },
+    "fuZhouMod:CardWindDemonQi":  {
+                                      "NAME":  "Wind Demon · Xiao Fung",
+                                      "DESCRIPTION":  "Draw !M! cards, then discard !fuZhouMod:DiscardCnt! cards in hand. NL Apply !fuZhouMod:WindAmt! layers of #yWind #yCatalyst to all enemies. NL (*Wind Catalyst converts *Wet into *Frostbite with same stacks and accelerates fire and frost anomalies.)"
+                                  },
+    "fuZhouMod:CardWaterDemonQi":  {
+                                       "NAME":  "Water Demon · Bai Tza",
+                                       "DESCRIPTION":  "Deal !D! damage to all enemies. For each: if already has #yFrostbite or #yFrost #yHell, apply #b!M! layers of #yFrostbite; otherwise apply #b!M! layers of #yWet. NL (*Burning and *Wet synthesize into *High *Temp *Steam). Small chance to gain Gold. NL (Base #b2 stacks, upgraded #b3 stacks)"
+                                   },
+    "fuZhouMod:CardThunderDemonQi":  {
+                                         "NAME":  "Thunder Demon · Tchang Zu",
+                                         "DESCRIPTION":  "Deal !D! damage. NL Each time this is played in this combat, cost [#71b1d1]-1[] (Min [#71b1d1]0[]) and permanent damage [#71b1d1]+1[] (Max [#71b1d1]+!M![]). NL If the target is #yWet or in #yHigh #yTemp #ySteam, damage increases by [#71b1d1]100%[]."
+                                     },
+    "fuZhouMod:CardEarthDemonQi":  {
+                                       "NAME":  "Earth Demon · Dai Gui",
+                                       "DESCRIPTION":  "Unused #yBlock this combat will not disappear. NL If you have no #yBlock at the end of the turn, lose [#efc100]!M![] HP and gain #yBlock equal to [#efc100]1/8 of Max HP[]. NL For every [#efc100]3[] consecutive turns without taking damage, apply one layer of #yEarth #yBind to all enemies (taking damage resets the counter and removes #yEarth #yBind)."
+                                   },
+    "fuZhouMod:CardHeavenDemonQi":  {
+                                        "NAME":  "Sky Demon · Hsi Wu",
+                                        "DESCRIPTION":  "On attack, trigger 1 stack of each: #yBurning, #yBurning #yHeart, #yFrostbite, and #yFrost #yHell on the target. NL On attack hit, there is a 1/8 probability to apply 1 layer of #yFear; the probability increases by 1/8 for each of the above anomalies the target possesses."
+                                    },
+    "fuZhouMod:CardMoonDemonQi":  {
+                                      "NAME":  "Moon Demon · Tso Lan",
+                                      "DESCRIPTION":  "Lose [#efc100]1/8[] of current HP. NL Choose to use on [Self] or [Enemy]. Reverse all Strength and Dexterity values on the target. NL #yExhaust"
+                                  },
+    "fuZhouMod:MoonChoiceSelf":  {
+                                     "NAME":  "Use on Self",
+                                     "DESCRIPTION":  "Reverse your Strength and Dexterity."
+                                 },
+    "fuZhouMod:MoonChoiceEnemy":  {
+                                      "NAME":  "Use on Enemy",
+                                      "DESCRIPTION":  "Add a 0-cost Moon Demon (Target) card to your hand."
+                                  },
+    "fuZhouMod:MoonTargetEnemy":  {
+                                      "NAME":  "Moon Demon (Target)",
+                                      "DESCRIPTION":  "Reverse the target\u0027s Strength and Dexterity. NL #yExhaust NL #yEthereal"
+                                  },
+    "fuZhouMod:MaskFace":  {
+                               "NAME":  "Mask Face",
+                               "DESCRIPTION":  "Choose 1 #yMask card from your draw pile and add it to your hand. It costs *0 this turn. NL If there is no #yMask card in your draw pile, add 3 random #yShadowkhan cards to your hand.",
+                               "UPGRADE_DESCRIPTION":  "Choose 1 #yMask card from your draw pile and add it to your hand. It costs *0 this turn. NL If there is no #yMask card in your draw pile, add 3 random #yShadowkhan cards to your hand. NL Increase mask capacity by #b1 for this combat."
+                           },
+    "fuZhouMod:PeelMask":  {
+                               "NAME":  "Peel Mask",
+                               "DESCRIPTION":  "Choose 1 currently equipped mask ability and peel it off. Peeling a regular mask returns its corresponding Shadowkhan and mask cards; peeling Tarakudo returns Tarakudo mask cards equal to its stacks and grants random Shadowkhan cards equal to twice its stacks. NL Mask cards returned by this peel cost [#71b1d1]-1[] this combat (minimum 0).",
+                               "UPGRADE_DESCRIPTION":  "Choose 1 currently equipped mask ability and peel it off. Peeling a regular mask returns its corresponding Shadowkhan and mask cards; peeling Tarakudo returns Tarakudo mask cards equal to its stacks and grants random Shadowkhan cards equal to twice its stacks. NL Mask cards returned by this peel cost [#71b1d1]-1[] this combat (minimum 0). NL This card costs [#71b1d1]0[] after upgrade."
+                           },
+    "fuZhouMod:BlackHandSiegeRam":  {
+                                        "NAME":  "Rear Naked Choke",
+                                        "DESCRIPTION":  "Deal !D! damage. If the target has at least 3 *blackhand, consume all of it. For every 3 stacks consumed, the target loses 1 #yStrength. The lost #yStrength returns after 2 turns. NL *blackhand"
+                                    },
+    "fuZhouMod:BlackHandFirstStrike":  {
+                                           "NAME":  "First Strike",
+                                           "DESCRIPTION":  "Deal !D! damage. If the target has *blackhand, deal an additional !M! damage; otherwise, apply 2 *blackhand. NL *blackhand"
+                                       },
+    "fuZhouMod:BlackHandStrike":  {
+                                      "NAME":  "Blackhand Strike",
+                                      "DESCRIPTION":  "Deal !D! damage. If the target has no *blackhand, apply !M! *blackhand. Otherwise, draw 1 card and apply 1 *blackhand. NL *blackhand"
+                                  },
+    "fuZhouMod:BlackHandExtortion":  {
+                                         "NAME":  "Extortion",
+                                         "DESCRIPTION":  "Deal !D! damage. Gain 1 Gold for every 3 *blackhand on the target, then consume 2 *blackhand from it. NL *blackhand"
+                                     },
+    "fuZhouMod:BlackHandCloseNet":  {
+                                        "NAME":  "Close the Net",
+                                        "DESCRIPTION":  "Deal !D! damage. If the target has at least 4 *blackhand, consume 4 *blackhand to deal the same damage again, repeating until it has less than 4. NL *blackhand"
+                                    },
+    "fuZhouMod:BlackHandSuppressiveFire":  {
+                                               "NAME":  "Shoot",
+                                               "DESCRIPTION":  "Deal !D! damage to ALL enemies. For every 2 *blackhand on each enemy, deal 1 additional damage to that enemy. NL *blackhand"
+                                           },
+    "fuZhouMod:BlackHandBlastDistrict13":  {
+                                               "NAME":  "Demolition",
+                                               "DESCRIPTION":  "Consume all *blackhand from all enemies. For each stack consumed, that enemy takes !M! damage. If total consumed is 8 or more, all enemies gain 1 #yVulnerable and 1 #yWeak. NL *blackhand",
+                                               "UPGRADE_DESCRIPTION":  "Consume all *blackhand from all enemies. For each stack consumed, that enemy takes !M! damage. If total consumed is 8 or more, all enemies gain 2 #yVulnerable and 2 #yWeak. NL *blackhand"
+                                           },
+    "fuZhouMod:BlackHandCodePhrase":  {
+                                          "NAME":  "Code Phrase",
+                                          "DESCRIPTION":  "If the previous card played was a #yDark #yHand card, gain [E] and draw 1 card. Otherwise, gain !B! #yBlock. NL Exhaust. NL *blackhand"
+                                      },
+    "fuZhouMod:BlackHandDistrict13Insider":  {
+                                                 "NAME":  "Threat",
+                                                 "DESCRIPTION":  "Scry !M! cards. For each card discarded this way, gain 2 #yBlock. For each card kept, apply 1 *blackhand to ALL enemies. NL *blackhand"
+                                             },
+    "fuZhouMod:BlackHandSpreadRumors":  {
+                                            "NAME":  "Conspiracy",
+                                            "DESCRIPTION":  "Apply !M! *blackhand to a target. If it already has *blackhand, gain [E]. NL *blackhand"
+                                        },
+    "fuZhouMod:BlackHandCoerciveInterrogation":  {
+                                                     "NAME":  "Imprison",
+                                                     "DESCRIPTION":  "The target loses X #yStrength this turn (X = its *blackhand stacks /2, rounded down), and gains 1 #yWeak. NL *blackhand",
+                                                     "UPGRADE_DESCRIPTION":  "The target loses X #yStrength this turn (X = its *blackhand stacks /2, rounded down, +1), and gains 1 #yWeak. NL *blackhand"
+                                                 },
+    "fuZhouMod:BlackHandEscort":  {
+                                      "NAME":  "Escort",
+                                      "DESCRIPTION":  "Gain !B! #yBlock. At the start of next turn, gain #yBlock equal to total enemy *blackhand stacks. NL *blackhand"
+                                  },
+    "fuZhouMod:BlackHandBlackMarketDeal":  {
+                                               "NAME":  "Black Market Deal",
+                                               "DESCRIPTION":  "Lose 15 Gold; gain [E] and draw !M! cards; apply 1 *blackhand to ALL enemies. NL *blackhand",
+                                               "UPGRADE_DESCRIPTION":  "Lose 15 Gold; gain [E] and draw !M! cards; apply 1 *blackhand to ALL enemies. NL *blackhand",
+                                               "EXTENDED_DESCRIPTION":  [
+                                                                            "Not enough Gold to make this deal."
+                                                                        ]
+                                           },
+    "fuZhouMod:BlackHandTangible":  {
+                                        "NAME":  "Black Hand",
+                                        "DESCRIPTION":  "Double the target\u0027s *blackhand stacks. NL *blackhand"
+                                    },
+    "fuZhouMod:BlackHandBounty":  {
+                                      "NAME":  "Bounty",
+                                      "DESCRIPTION":  "Whenever you apply *blackhand, deal 2 damage to that target. When an enemy with *blackhand dies, gain !M! Gold. NL *blackhand"
+                                  },
+    "fuZhouMod:BlackHandNoNameYet":  {
+                                         "NAME":  "Pizi",
+                                         "DESCRIPTION":  "At the start of your turn, apply 1 *blackhand to ALL enemies. Whenever an enemy gains 4 *blackhand in a turn, deal !M! damage to it and draw 1 card. NL *blackhand"
+                                     },
+    "fuZhouMod:BlackHandPullStrings":  {
+                                           "NAME":  "Pull Strings",
+                                           "DESCRIPTION":  "At the start of your turn, choose 1 card from your discard pile and add it to your hand. NL *blackhand",
+                                            "UPGRADE_DESCRIPTION":  "Innate. NL At the start of your turn, choose 1 card from your discard pile and add it to your hand. NL *blackhand"
+                                       },
+    "fuZhouMod:DarkPact":  {
+                              "NAME":  "Dark Pact",
+                              "DESCRIPTION":  "Gain !M! *Dominion. NL Lose 2 #yStrength. NL [#efc100]Exhaust[]."
+                          },
+    "fuZhouMod:ShadowRitual":  {
+                                  "NAME":  "Shadow Ritual",
+                                  "DESCRIPTION":  "Gain !M! *Dominion. NL Lose 5 HP. NL [#efc100]Exhaust[]."
+                              },
+    "fuZhouMod:ShadowDecree":  {
+                                  "NAME":  "Shadow Decree",
+                                  "DESCRIPTION":  "Gain 4 *Dominion. NL At the start of your turn, lose 1 #yStrength, 1 #yDexterity, and 1 HP. You can no longer gain #yStrength."
+                              },
+    "fuZhouMod:CardEightDemonPossession":  {
+                                               "NAME":  "Eight Demon Possession",
+                                               "DESCRIPTION":  "The first #b2 Attacks you play each turn apply #b2 stacks of a random debuff to attacked enemies (Demon debuffs, Weak, Vulnerable, Constricted, Mark, Talk to the Hand, Choke, Corpse Explosion, or Poison). Multi-target Attacks apply the same debuff to all attacked enemies.",
+                                               "UPGRADE_DESCRIPTION":  "Innate. NL The first #b2 Attacks you play each turn apply #b2 stacks of a random debuff to attacked enemies (Demon debuffs, Weak, Vulnerable, Constricted, Mark, Talk to the Hand, Choke, Corpse Explosion, or Poison). Multi-target Attacks apply the same debuff to all attacked enemies."
+                                           },
+    "fuZhouMod:CurseTohru":  {
+                                "NAME":  "Tohru",
+                                "DESCRIPTION":  "Unplayable Curse. NL When drawn: the first Attack you play this turn costs +1. NL End of turn: if you played no Attack this turn, lose 6 HP."
+                            },
+    "fuZhouMod:CurseJackie":  {
+                                 "NAME":  "Jackie",
+                                 "DESCRIPTION":  "Unplayable Curse. NL End of turn: if this remains in your hand, gain 1 Weak."
+                             },
+    "fuZhouMod:CurseJade":  {
+                               "NAME":  "Jade",
+                               "DESCRIPTION":  "Unplayable Curse. NL When drawn: discard 1 random card, then put 1 Dazed on top of your draw pile."
+                           },
+    "fuZhouMod:CurseBlack":  {
+                                "NAME":  "Black",
+                                "DESCRIPTION":  "Unplayable Curse. NL When drawn: the first Skill you play this turn costs +1. NL End of turn: if this remains in your hand, gain 1 Vulnerable."
+                                       }
+}

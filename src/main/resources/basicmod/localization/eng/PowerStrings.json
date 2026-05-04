@@ -1,0 +1,425 @@
+﻿{
+    "fuZhouMod:FlightAfuPower":  {
+                                     "NAME":  "Flight",
+                                     "DESCRIPTIONS":  [
+                                                          "Halves damage taken from attacks. Stacks decrease by #b1 after taking attack damage."
+                                                      ]
+                                 },
+    "fuZhouMod:TwoDragonsPower":  {
+                                      "NAME":  "Two Dragons Playing with a Pearl",
+                                      "DESCRIPTIONS":  [
+                                                           "Your next #b",
+                                                           " cards played will trigger twice."
+                                                       ]
+                                  },
+    "fuZhouMod:GoatClimbsMountainPower":  {
+                                              "NAME":  "Goat Climbs the Mountain",
+                                              "DESCRIPTIONS":  [
+                                                                   "Whenever you play #b2 cards, gain #b",
+                                                                   " temporary #yStrength."
+                                                               ]
+                                          },
+    "fuZhouMod:TaiShanPressPower":  {
+                                        "NAME":  "Mount Tai Press",
+                                        "DESCRIPTIONS":  [
+                                                             "At the end of your turn, deal damage to all enemies equal to #b30% ( #b",
+                                                             " ) of the total damage you dealt this turn."
+                                                         ]
+                                    },
+    "fuZhouMod:TornadoPower":  {
+                                   "NAME":  "Mountain",
+                                   "DESCRIPTIONS":  [
+                                                        "At the end of your turn, deal damage to all enemies equal to #b30% ( #b",
+                                                        " ) of the total damage you dealt this turn."
+                                                    ]
+                               },
+    "fuZhouMod:NiJiaPower":  {
+                                 "NAME":  "Ninja-khan Mask",
+                                 "DESCRIPTIONS":  [
+                                                      "At the start of the turn, add #b",
+                                                      " Ninja-khan cards to your hand (automatically played if hand is full)."
+                                                  ]
+                             },
+    "fuZhouMod:LaZuoPower":  {
+                                 "NAME":  "Razor-khan Mask",
+                                 "DESCRIPTIONS":  [
+                                                      "At the start of the turn, add #b",
+                                                      " Razor-khan cards to your hand (automatically played if hand is full)."
+                                                  ]
+                             },
+    "fuZhouMod:SaMoPower":  {
+                                "NAME":  "Sumo-khan Mask",
+                                "DESCRIPTIONS":  [
+                                                     "At the start of the turn, add #b",
+                                                     " Sumo-khan cards to your hand (automatically played if hand is full)."
+                                                 ]
+                            },
+    "fuZhouMod:BaTePower":  {
+                                "NAME":  "Bat-khan Mask",
+                                "DESCRIPTIONS":  [
+                                                     "At the start of the turn, add #b",
+                                                     " Bat-khan cards to your hand (automatically played if hand is full)."
+                                                 ]
+                            },
+    "fuZhouMod:KaBoPower":  {
+                                "NAME":  "Claw-khan Mask",
+                                "DESCRIPTIONS":  [
+                                                     "At the start of the turn, add #b",
+                                                     " Claw-khan cards to your hand (automatically played if hand is full)."
+                                                 ]
+                            },
+    "fuZhouMod:LeiSuPower":  {
+                                 "NAME":  "Samurai-khan Mask",
+                                 "DESCRIPTIONS":  [
+                                                      "At the start of the turn, add #b",
+                                                      " Samurai-khan cards to your hand (automatically played if hand is full)."
+                                                  ]
+                             },
+    "fuZhouMod:ManNiPower":  {
+                                 "NAME":  "Mini-khan Mask",
+                                 "DESCRIPTIONS":  [
+                                                      "At the start of the turn, add #b",
+                                                      " Mini-khan cards to your hand (automatically played if hand is full)."
+                                                  ]
+                             },
+    "fuZhouMod:MingTaPower":  {
+                                  "NAME":  "Squid-khan Mask",
+                                  "DESCRIPTIONS":  [
+                                                       "At the start of the turn, add #b",
+                                                       " Squid-khan cards to your hand (automatically played if hand is full)."
+                                                   ]
+                              },
+    "fuZhouMod:YiKaPower":  {
+                                "NAME":  "Samurai-khan Mask",
+                                "DESCRIPTIONS":  [
+                                                     "At the start of the turn, add #b",
+                                                     " Samurai-khan cards to your hand (automatically played if hand is full)."
+                                                 ]
+                            },
+    "fuZhouMod:TaLaPower":  {
+                                "NAME":  "Tarakudo Mask",
+                                "DESCRIPTIONS":  [
+                                                     "Mask capacity increased by #b",
+                                                     " stacks. At the start of the turn, gain a random Shadowkhan card (automatically played if hand is full)."
+                                                 ]
+                            },
+    "fuZhouMod:LeiSuCurse":  {
+                                 "NAME":  "Samurai Curse",
+                                 "DESCRIPTIONS":  [
+                                                      "At the end of the turn, if stacks are greater than or equal to HP, you are #yExterminated. Current stacks: #b",
+                                                      ""
+                                                  ]
+                             },
+    "fuZhouMod:GanPower":  {
+                               "NAME":  "Gan, You\u0027re a Genius",
+                               "DESCRIPTIONS":  [
+                                                    "Critical strike chance of card [#efc100]Gan[] increased by 10% [#71b1d1]",
+                                                    "% "
+                                                ]
+                           },
+    "fuZhouMod:SheepResonancePower":  {
+                                          "NAME":  "True Spirit Resonance",
+                                          "DESCRIPTIONS":  [
+                                                               "All cards in combat are now automatically [#efc100]Upgraded[]."
+                                                           ]
+                                      },
+    "fuZhouMod:NothingLackingPower":  {
+                                          "NAME":  "I Lack Nothing",
+                                          "DESCRIPTIONS":  [
+                                                               "Hand is always full. At the start of every turn, gain #b",
+                                                               " [E], #b",
+                                                               " *Strength, and #b",
+                                                               " *Dexterity."
+                                                           ]
+                                      },
+    "fuZhouMod:DeflectAndStrikePower":  {
+                                            "NAME":  "Deflect and Strike",
+                                            "DESCRIPTIONS":  [
+                                                                 "During this turn, if you fully block an enemy\u0027s attack, deal equivalent damage to that enemy."
+                                                             ]
+                                        },
+    "fuZhouMod:OxTalismanPower":  {
+                                      "NAME":  "Ox Talisman Power",
+                                      "DESCRIPTIONS":  [
+                                                           "Enemy Strength and Dexterity cannot be higher than yours. Whenever an enemy\u0027s values exceed yours, they are forced down."
+                                                       ]
+                                  },
+    "fuZhouMod:HorseTalismanPower":  {
+                                         "NAME":  "Horse Talisman Power",
+                                         "DESCRIPTIONS":  [
+                                                              "At the end of the turn, restore half (rounded down) of the total unblocked damage dealt this turn: #b",
+                                                              " HP."
+                                                          ]
+                                     },
+    "fuZhouMod:MonkeyTalismanPower":  {
+                                          "NAME":  "Monkey Talisman Power",
+                                          "DESCRIPTIONS":  [
+                                                               "Gain 1 stack of Vulnerable. If the enemy\u0027s intention is an attack, deal double damage to it."
+                                                           ]
+                                      },
+    "fuZhouMod:RoosterTalismanPower":  {
+                                           "NAME":  "Rooster Flight",
+                                           "DESCRIPTIONS":  [
+                                                                "Flight State: #yDexterity + #b",
+                                                                " , damage taken reduced by #b50%. Can withstand #b",
+                                                                " more hits. After hits run out, you will be shot down and stunned."
+                                                            ]
+                                       },
+    "fuZhouMod:DogTalismanPower":  {
+                                       "NAME":  "Dog Life-Sustaining",
+                                       "DESCRIPTIONS":  [
+                                                            "For the next ",
+                                                            " turns, fatal damage from enemies is prevented (heal on trigger: ",
+                                                            "). Revive counts left: ",
+                                                            "."
+                                                        ]
+                                   },
+    "fuZhouMod:PetrifiedPower":  {
+                                     "NAME":  "Petrified",
+                                     "DESCRIPTIONS":  [
+                                                          "Gain #b1 #yStrength at the start of each turn (Total: #b",
+                                                          " , Limit: #b10). Stacks increase by #b+1 at the start of each turn (Limit: 10). Damage taken increased by #b",
+                                                          "% (multiplicative with other damage modifiers)."
+                                                      ]
+                                 },
+    "fuZhouMod:HiddenDragonPower":  {
+                                        "NAME":  "Hidden Dragon",
+                                        "DESCRIPTIONS":  [
+                                                             "Retain all cards in your hand at the end of this turn. Gain #b",
+                                                             " [E] at the start of the next turn."
+                                                         ]
+                                    },
+    "fuZhouMod:BurningPower":  {
+                                   "NAME":  "Burning",
+                                   "DESCRIPTIONS":  [
+                                                        "Take #b1/8 ( #b",
+                                                        " ) of current HP as damage at the start of the turn. Duration: ",
+                                                        " turns. Damage per trigger is minimum #b2 and maximum #b20. Evolves into a new anomaly at 9 stacks."
+                                                    ]
+                               },
+    "fuZhouMod:SoakedPower":  {
+                                  "NAME":  "Wet",
+                                  "DESCRIPTIONS":  [
+                                                       "The target is in a wet state, decreasing by one stack each turn. Duration: ",
+                                                       " turns."
+                                                   ]
+                              },
+    "fuZhouMod:FrostbitePower":  {
+                                     "NAME":  "Frostbite",
+                                     "DESCRIPTIONS":  [
+                                                          "Take #b1/8 ( #b",
+                                                          " ) of current HP as damage at the start of the turn. Duration: ",
+                                                          " turns. Damage per trigger is minimum #b2 and maximum #b20. Evolves into a new anomaly at 9 stacks."
+                                                      ]
+                                 },
+    "fuZhouMod:EarthDemonPower":  {
+                                      "NAME":  "Earth Demon",
+                                      "DESCRIPTIONS":  [
+                                                           "At the end of your turn, if you have no block, lose #b",
+                                                           " HP and gain #b",
+                                                           " #yBlock."
+                                                       ]
+                                  },
+    "fuZhouMod:HeavenDemonPower":  {
+                                       "NAME":  "Sky Demon",
+                                       "DESCRIPTIONS":  [
+                                                            "When an attack hits, additionally trigger and consume 1 stack of #yBurning, #yBurning #yHeart, #yFrostbite, and #yFrost #yHell (this extra damage follows the same minimum and maximum limits). NL On attack hit, there is a #b1/8 probability to apply 1 stack of #yFear; the probability increases by #b1/8 for each of the above anomalies the target possesses."
+                                                        ]
+                                   },
+    "fuZhouMod:FearPower":  {
+                                "NAME":  "Fear",
+                                "DESCRIPTIONS":  [
+                                                     "Feeling fearful, the next turn\u0027s intention will become #yconservative. This effect disappears at the start of its turn."
+                                                 ]
+                            },
+    "fuZhouMod:BurningHeartPower":  {
+                                        "NAME":  "Burning Heart",
+                                        "DESCRIPTIONS":  [
+                                                             "Take #b1/5 ( #b",
+                                                             " ) of current HP as damage at the start of the turn. Duration: ",
+                                                             " turns. Damage per trigger is minimum #b5 and maximum #b40."
+                                                         ]
+                                    },
+    "fuZhouMod:FrostHellPower":  {
+                                     "NAME":  "Frost Hell",
+                                     "DESCRIPTIONS":  [
+                                                          "Take #b1/5 ( #b",
+                                                          " ) of current HP as damage at the start of the turn. Duration: ",
+                                                          " turns. Damage per trigger is minimum #b5 and maximum #b40."
+                                                      ]
+                                 },
+    "fuZhouMod:SteamPower":  {
+                                 "NAME":  "High Temp Steam",
+                                 "DESCRIPTIONS":  [
+                                                      "Being surrounded by high-temperature steam, the monster\u0027s intention has a #b",
+                                                      "/",
+                                                      " probability of failing.",
+                                                      "Suppressed by #yArchmage\u0027s #yBlessing: High Temp Steam no longer disrupts intent and instead deals up to #b",
+                                                      " damage at the start of turn."
+                                                  ]
+                             },
+    "fuZhouMod:EarthBindPower":  {
+                                     "NAME":  "Earth Bind",
+                                     "DESCRIPTIONS":  [
+                                                          "Lose #b1/8 ( #b",
+                                                          " ) of current HP at the start of the turn (minimum #b2). This state does not decrease over turns."
+                                                      ]
+                                 },
+    "fuZhouMod:EarthPrisonPrepPower":  {
+                                           "NAME":  "Earth Watch",
+                                           "DESCRIPTIONS":  [
+                                                                "If you do not take damage for #b",
+                                                                " consecutive turns, apply one stack of #yEarth #yBind to all enemies. If you take damage, the counter resets and all enemies\u0027 #yEarth #yBind or #yHeavy #yMire are removed."
+                                                            ]
+                                       },
+    "fuZhouMod:HeavyMirePower":  {
+                                     "NAME":  "Heavy Mire",
+                                     "DESCRIPTIONS":  [
+                                                          "Stuck in the mud, lose #b1/5 ( #b",
+                                                          " ) of current HP at the start of the turn (minimum #b5, maximum #b40). Decrease #b2 #yStrength and #b2 #yDexterity each turn. When removed, all previously deducted #yStrength and #yDexterity will be returned (Total deducted: ",
+                                                          "). This state does not decrease over turns."
+                                                      ]
+                                 },
+    "fuZhouMod:WindCatalystPower":  {
+                                        "NAME":  "Wind Catalyst",
+                                        "DESCRIPTIONS":  [
+                                                             "Accelerates elemental reactions. NL At the start of the enemy\u0027s turn, trigger the damage of #yBurning, #yBurning #yHeart, #yFrostbite, or #yFrost #yHell again (Burning or Frostbite: minimum #b2, maximum #b20; Burning Heart or Frost Hell: minimum #b5, maximum #b40). NL At the end of the enemy\u0027s turn, these states decrease by an additional #b1 stack. NL Stacks naturally decrease by #b1 every turn."
+                                                         ]
+                                    },
+    "fuZhouMod:ValmontPower":  {
+                                   "NAME":  "Power of the Golden Rooster King",
+                                   "DESCRIPTIONS":  [
+                                                        "In this turn, the cost of all [#efc100]Ah #yFu[], [#efc100]Dark #yHand[], and [#efc100]Dark #yKiller[] cards played becomes [#efc100]0[]."
+                                                    ]
+                               },
+    "fuZhouMod:BlackHandPower":  {
+                                     "NAME":  "Blackhand",
+                                     "DESCRIPTIONS":  [
+                                                          "Target is marked by *blackhand. Current stacks: #b",
+                                                          ". Some Blackhand cards gain extra effects based on stacks."
+                                                      ]
+                                 },
+    "fuZhouMod:BountyPower":  {
+                                  "NAME":  "Bounty",
+                                  "DESCRIPTIONS":  [
+                                                       "Whenever you apply *blackhand, deal #b",
+                                                       " damage to that target. When an enemy with *blackhand dies, gain #b",
+                                                       " Gold."
+                                                   ]
+                              },
+    "fuZhouMod:BlackHandNoNameYetPower":  {
+                                              "NAME":  "Pizi",
+                                              "DESCRIPTIONS":  [
+                                                                   "At the start of your turn, apply #b",
+                                                                   " *blackhand to ALL enemies. Whenever an enemy gains #b",
+                                                                   " *blackhand in a turn, deal #b",
+                                                                   " damage to it and draw 1 card."
+                                                               ]
+                                          },
+    "fuZhouMod:BlackHandEscortPower":  {
+                                           "NAME":  "Blackhand Escort",
+                                           "DESCRIPTIONS":  [
+                                                                "At the start of next turn, gain #yBlock equal to total enemy *blackhand stacks x#b",
+                                                                ", then remove this power."
+                                                            ]
+                                       },
+    "fuZhouMod:BlackHandStrengthReturnPower":  {
+                                                   "NAME":  "Blackhand Backlash",
+                                                   "DESCRIPTIONS":  [
+                                                                        "After #b",
+                                                                        " turn(s), regain #b",
+                                                                        " #yStrength lost to Rear Naked Choke."
+                                                                    ]
+                                               },
+    "fuZhouMod:BlackHandPullStringsPower":  {
+                                                "NAME":  "Pull Strings",
+                                                "DESCRIPTIONS":  [
+                                                                     "At the start of your turn, choose #b",
+                                                                     " card(s) from your discard pile and add it to your hand."
+                                                                 ]
+                                            },
+    "fuZhouMod:DominionPower":  {
+                                    "NAME":  "Dominion",
+                                    "DESCRIPTIONS":  [
+                                                         "Current stacks: #b",
+                                                         ", Shadowkhan damage or block is affected by this attribute."
+                                                     ]
+                                },
+    "fuZhouMod:ShadowDecreePower":  {
+                                        "NAME":  "Shadow Decree",
+                                        "DESCRIPTIONS":  [
+                                                             "At the start of your turn, lose [#71b1d1]",
+                                                             "[] [#efc100]Strength[] and [#71b1d1]",
+                                                             "[] [#efc100]Dexterity[], and lose [#71b1d1]1[] HP. You can no longer gain [#efc100]Strength[]."
+                                                         ]
+                                    },
+    "fuZhouMod:GrandMageDamageCapPower":  {
+                                              "NAME":  "Righteous Persistence",
+                                              "DESCRIPTIONS":  [
+                                                                   "Can take at most #b",
+                                                                   " damage each turn. Remaining this turn: #b",
+                                                                   ".",
+                                                                   " NL Single-hit cap: #b",
+                                                                   " NL When this turn's damage cap is fully reached, return #b1 sealed Talisman.",
+                                                                   " NL Currently sealed: ",
+                                                                   "None"
+                                                               ]
+                                          },
+    "fuZhouMod:GrandMageCounterPouncePower":  {
+                                                 "NAME":  "Righteous Counterpounce",
+                                                 "DESCRIPTIONS":  [
+                                                                      "Rule: each [#efc100]Talisman relic[] grants #b+30 HP; if you have [#efc100]Pan Ku Box[] , each obtained demon qi grants #b+30 HP; each [#efc100]Mask[] or [#efc100]Mask Support[] card grants #b+15 HP; each [#efc100]Talisman card[] grants #b+20 HP; [#efc100]Nothing Lacking[] grants #b+100 HP and is downgraded if upgraded; [#efc100]Endless Darkness[] grants #b+300 HP; each other [#efc100]master deck card[] grants #b+5 HP.",
+                                                                      " NL [#efc100]Extra HP this combat[]: #b",
+                                                                      ". [#efc100]Strength conversion: every 30 extra HP converts to 1 Strength; remainders under 30 are ignored[] . NL [#efc100]Initial Strength this combat[]: #b",
+                                                                      " Strength."
+                                                                  ]
+                                             },
+    "fuZhouMod:GrandMageBlessingPower":  {
+                                            "NAME":  "Archmage's Blessing",
+                                            "DESCRIPTIONS":  [
+                                                                  "This turn can still negate the next #b",
+                                                                  " debuff(s). Damage from demon-qi anomalies and #yHigh #yTemp #ySteam is capped at #b",
+                                                                  " damage. #yFear from Heaven Demon no longer changes Dad's intent and instead deals #b8 extra damage. At the start of Dad's turn, Dad removes all debuffs from himself and gains #b2 Strength.",
+                                                                  "This turn's debuff negations are exhausted. Damage from demon-qi anomalies and #yHigh #yTemp #ySteam is still capped at #b",
+                                                                  " damage. #yFear from Heaven Demon no longer changes Dad's intent and instead deals #b8 extra damage. At the start of Dad's turn, Dad removes all debuffs from himself and gains #b2 Strength."
+                                                              ]
+                                        },
+    "fuZhouMod:EightDemonPossessionPower":  {
+                                                "NAME":  "Eight Demon Possession",
+                                                "DESCRIPTIONS":  [
+                                                                     "The first #b2 Attacks you play each turn apply #b2 stacks of a random debuff to attacked enemies (Demon debuffs, Weak, Vulnerable, Constricted, Mark, Talk to the Hand, Choke, Corpse Explosion, or Poison). Multi-target Attacks apply the same debuff to all attacked enemies. Triggers remaining this turn: #b",
+                                                                     "."
+                                                                 ]
+                                            },
+    "fuZhouMod:GrandMageCurseTaxAttackPower":  {
+                                                   "NAME":  "Tohru",
+                                                   "DESCRIPTIONS":  [
+                                                                        "The first Attack you play this turn costs +1."
+                                                                    ]
+                                               },
+    "fuZhouMod:GrandMageCurseTaxSkillPower":  {
+                                                  "NAME":  "Black",
+                                                  "DESCRIPTIONS":  [
+                                                                       "The first Skill you play this turn costs +1."
+                                                                   ]
+                                            },
+    "fuZhouMod:GrandMageDadCycleCursePower":  {
+                                                  "NAME":  "Fivefold Suppression",
+                                                  "DESCRIPTIONS":  [
+                                                                       "Your upgraded cards temporarily collapse to their base versions this turn. They recover at end of turn.",
+                                                                       "At end of turn, exhaust every card left in your hand.",
+                                                                       "Whenever you play a card this turn, take #b2 blockable damage.",
+                                                                       "Whenever you play a card this turn, the next card's damage and block are reduced by #b",
+                                                                       ".",
+                                                                       "Dad gains #b5 temporary Thorns this turn. They are removed at end of the player's turn.",
+                                                                       "Grand Mage Dad is suppressing your turn."
+                                                                   ]
+                                               },
+    "fuZhouMod:GrandMageChantShieldPower":  {
+                                                "NAME":  "Sealing Chant",
+                                                "DESCRIPTIONS":  [
+                                                                     "Chant Shield: [",
+                                                                     "]. During chanting, this shield no longer naturally clears at turn start, and [Pig Talisman cannot directly remove it]. If this shield is broken before Dad's next action, the execution is canceled and Dad returns directly to T2."
+                                                                 ]
+                                            }
+}

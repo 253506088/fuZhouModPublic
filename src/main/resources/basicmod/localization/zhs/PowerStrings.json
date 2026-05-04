@@ -1,0 +1,425 @@
+﻿{
+  "fuZhouMod:FlightAfuPower": {
+    "NAME": "飞行",
+    "DESCRIPTIONS": [
+      "所受到的攻击伤害减半。 受到攻击伤害后层数减少 #b1 "
+    ]
+  },
+  "fuZhouMod:TwoDragonsPower": {
+    "NAME": "二龙戏珠",
+    "DESCRIPTIONS": [
+      "你下 #b",
+      " 张打出的牌将额外触发一次"
+    ]
+  },
+  "fuZhouMod:GoatClimbsMountainPower": {
+    "NAME": "山羊爬山",
+    "DESCRIPTIONS": [
+      "每当你打出 #b2 张牌，获得 #b",
+      " 点临时 #y力量 "
+    ]
+  },
+  "fuZhouMod:TaiShanPressPower": {
+    "NAME": "泰山压顶",
+    "DESCRIPTIONS": [
+      "在你的回合结束时，对所有敌人造成本回合你造成总伤害 #b30% ( #b",
+      " ) 的伤害"
+    ]
+  },
+  "fuZhouMod:TornadoPower": {
+    "NAME": "山",
+    "DESCRIPTIONS": [
+      "在你的回合结束时，对所有敌人造成本回合你造成总伤害 #b30% ( #b",
+      " ) 的伤害"
+    ]
+  },
+  "fuZhouMod:NiJiaPower": {
+    "NAME": "尼嘉面具",
+    "DESCRIPTIONS": [
+      "回合开始时增加 #b",
+      " 张尼嘉-忍者团到手中，若手牌已满则自动打出"
+    ]
+  },
+  "fuZhouMod:LaZuoPower": {
+    "NAME": "拉佐面具",
+    "DESCRIPTIONS": [
+      "回合开始时增加 #b",
+      " 张拉佐-刺刃团到手中，若手牌已满则自动打出"
+    ]
+  },
+  "fuZhouMod:SaMoPower": {
+    "NAME": "萨莫面具",
+    "DESCRIPTIONS": [
+      "回合开始时增加 #b",
+      " 张萨莫-巨魔团到手中，若手牌已满则自动打出"
+    ]
+  },
+  "fuZhouMod:BaTePower": {
+    "NAME": "巴特面具",
+    "DESCRIPTIONS": [
+      "回合开始时增加 #b",
+      " 张巴特-夜蝠团到手中，若手牌已满则自动打出"
+    ]
+  },
+  "fuZhouMod:KaBoPower": {
+    "NAME": "卡博面具",
+    "DESCRIPTIONS": [
+      "回合开始时增加 #b",
+      " 张卡博-猎钳团到手中，若手牌已满则自动打出"
+    ]
+  },
+  "fuZhouMod:LeiSuPower": {
+    "NAME": "雷苏面具",
+    "DESCRIPTIONS": [
+      "回合开始时增加 #b",
+      " 张雷苏-异形团到手中，若手牌已满则自动打出"
+    ]
+  },
+  "fuZhouMod:ManNiPower": {
+    "NAME": "曼尼面具",
+    "DESCRIPTIONS": [
+      "回合开始时增加 #b",
+      " 张曼尼-螳形团到手中，若手牌已满则自动打出"
+    ]
+  },
+  "fuZhouMod:MingTaPower": {
+    "NAME": "明塔面具",
+    "DESCRIPTIONS": [
+      "回合开始时增加 #b",
+      " 张明塔-噬影团到手中，若手牌已满则自动打出"
+    ]
+  },
+  "fuZhouMod:YiKaPower": {
+    "NAME": "伊卡面具",
+    "DESCRIPTIONS": [
+      "回合开始时增加 #b",
+      " 张伊卡-武士团到手中，若手牌已满则自动打出"
+    ]
+  },
+  "fuZhouMod:TaLaPower": {
+    "NAME": "塔拉面具",
+    "DESCRIPTIONS": [
+      "面具容量增加 #b",
+      " 层。回合开始时随机获取一张黑影兵团牌，若手牌已满则自动打出"
+    ]
+  },
+  "fuZhouMod:LeiSuCurse": {
+    "NAME": "异形诅咒",
+    "DESCRIPTIONS": [
+      "回合结束时如果层数大于等于生命值，则被 #y斩杀 。目前层数： #b",
+      ""
+    ]
+  },
+  "fuZhouMod:GanPower": {
+    "NAME": "甘你真他妈是个天才",
+    "DESCRIPTIONS": [
+      "卡牌 [#efc100]甘[] 造成的暴击几率提升10% [#71b1d1]",
+      "% "
+    ]
+  },
+  "fuZhouMod:SheepResonancePower": {
+    "NAME": "真灵共鸣",
+    "DESCRIPTIONS": [
+      "战斗中所有卡牌现在都会被自动 [#efc100]升级[] 。"
+    ]
+  },
+  "fuZhouMod:NothingLackingPower": {
+    "NAME": "我什么都不缺了",
+    "DESCRIPTIONS": [
+      "手牌始终补满。每回合开始时获得 #b",
+      " [E] 。获得 #b",
+      " 层 *力量 和 #b",
+      " 层 *敏捷 。"
+    ]
+  },
+  "fuZhouMod:DeflectAndStrikePower": {
+    "NAME": "借力打力",
+    "DESCRIPTIONS": [
+      "在本回合内，如果你完全格挡了敌人的攻击，则对该敌人造成等额的伤害。"
+    ]
+  },
+  "fuZhouMod:OxTalismanPower": {
+    "NAME": "丑牛",
+    "DESCRIPTIONS": [
+      "敌人的力量和敏捷无法高于你。每当敌人的数值超过你时，会被强制降低。"
+    ]
+  },
+  "fuZhouMod:HorseTalismanPower": {
+    "NAME": "午马",
+    "DESCRIPTIONS": [
+      "回合结束时，将恢复本回合造成未格挡伤害总和的一半（向下取整）： #b",
+      " 点。"
+    ]
+  },
+  "fuZhouMod:MonkeyTalismanPower": {
+    "NAME": "申猴",
+    "DESCRIPTIONS": [
+      "赋予自身一层易伤。如果敌人的意图是攻击，则对其造成双倍的伤害。"
+    ]
+  },
+  "fuZhouMod:RoosterTalismanPower": {
+    "NAME": "酉鸡飞行",
+    "DESCRIPTIONS": [
+      "飞行状态： #y敏捷 + #b",
+      " ，受伤降低 #b50% 。还能承受 #b",
+      " 次伤害。次数用完后将被击落并眩晕。"
+    ]
+  },
+  "fuZhouMod:DogTalismanPower": {
+    "NAME": "戌狗保命",
+    "DESCRIPTIONS": [
+      "接下来 ",
+      " 回合内，敌人造成的致命伤害不会让你死亡（触发时恢复 ",
+      " 点生命）。剩余保命次数：",
+      " 次。"
+    ]
+  },
+  "fuZhouMod:PetrifiedPower": {
+    "NAME": "石化",
+    "DESCRIPTIONS": [
+      "该单位每回合开始获得 #b1 点 #y力量 (共计加成 #b",
+      " 点，上限 #b10 点)。每回合开始层数 #b+1 (上限10层)。受到伤害提升 #b",
+      "% (与其他伤害修正倍率乘法叠加)。"
+    ]
+  },
+  "fuZhouMod:HiddenDragonPower": {
+    "NAME": "潜龙在渊",
+    "DESCRIPTIONS": [
+      "在本回合结束时，保留你的所有手牌。下一回合开始时，获得额外的 #b",
+      " [E] 。"
+    ]
+  },
+  "fuZhouMod:BurningPower": {
+    "NAME": "灼烧",
+    "DESCRIPTIONS": [
+      "回合开始时受到当前生命值 #b1/8 的伤害（ #b",
+      " 点）持续，",
+      " 回合，单次伤害最低 #b2，最高 #b20，9 层进化新异常"
+    ]
+  },
+  "fuZhouMod:SoakedPower": {
+    "NAME": "潮湿",
+    "DESCRIPTIONS": [
+      "目标处于潮湿状态，每回合减少一层持续： ",
+      " 回合"
+    ]
+  },
+  "fuZhouMod:FrostbitePower": {
+    "NAME": "冻伤",
+    "DESCRIPTIONS": [
+      "回合开始时受到当前生命值 #b1/8 的伤害（ #b",
+      " 点）持续，",
+      " 回合，单次伤害最低 #b2，最高 #b20，9 层进化新异常"
+    ]
+  },
+  "fuZhouMod:EarthDemonPower": {
+    "NAME": "地之恶魔",
+    "DESCRIPTIONS": [
+      "在你的回合结束时，如果没有格挡，失去 #b",
+      " 点生命，并获得 #b",
+      " 点 #y格挡 。"
+    ]
+  },
+  "fuZhouMod:HeavenDemonPower": {
+    "NAME": "天空恶魔",
+    "DESCRIPTIONS": [
+      "攻击命中时额外触发并消耗其身上各 1 层 #y灼烧 、 #y灼心 、 #y冻伤 、 #y冰狱 （额外触发伤害同样遵循最低值与上限）。 NL 攻击命中时有 #b1/8 概率施加 1 层 #y恐惧 ，目标每持有上述一种异常，概率提升 #b1/8 。"
+    ]
+  },
+  "fuZhouMod:FearPower": {
+    "NAME": "恐惧",
+    "DESCRIPTIONS": [
+      "感到恐惧，下一回合的意图将变得 #y保守 ，本状态在它的回合开始时该效果会消失"
+    ]
+  },
+  "fuZhouMod:BurningHeartPower": {
+    "NAME": "灼心",
+    "DESCRIPTIONS": [
+      "回合开始时受到当前生命值 #b1/5 的伤害（ #b",
+      " 点）持续，",
+      " 回合，单次伤害最低 #b5，最高 #b40"
+    ]
+  },
+  "fuZhouMod:FrostHellPower": {
+    "NAME": "冰狱",
+    "DESCRIPTIONS": [
+      "回合开始时受到当前生命值 #b1/5 的伤害（ #b",
+      " 点）持续，",
+      " 回合，单次伤害最低 #b5，最高 #b40"
+    ]
+  },
+  "fuZhouMod:SteamPower": {
+    "NAME": "高温蒸汽",
+    "DESCRIPTIONS": [
+      "由于被高温蒸汽包围，该怪物的意图有 #b",
+      "/",
+      " 的概率失效。",
+      "被【大法师的庇佑】压制：高温蒸汽不再令意图失效，改为在回合开始时造成至多 #b",
+      " 点伤害。"
+    ]
+  },
+  "fuZhouMod:EarthBindPower": {
+    "NAME": "地缚",
+    "DESCRIPTIONS": [
+      "在回合开始时，失去生命值当前生命值的 #b1/8 ( #b",
+      " ) （最低为 #b2 ）。该状态不会随回合流逝而减少。"
+    ]
+  },
+  "fuZhouMod:EarthPrisonPrepPower": {
+    "NAME": "大地守望",
+    "DESCRIPTIONS": [
+      "如果您连续 #b",
+      " 回合没有受到伤害，将对全体敌人施加一层 #y地缚 。如果您受到敌人的伤害，计数重置且解除所有敌人的 #y地缚 或 #y沉重泥沼 。"
+    ]
+  },
+  "fuZhouMod:HeavyMirePower": {
+    "NAME": "沉重泥沼",
+    "DESCRIPTIONS": [
+      "由于身陷泥泞，在回合开始时失去当前生命值的 #b1/5 ( #b",
+      " ) （最低 #b5，最高 #b40）。且每回合减少 #b2 点 #y力量 和 #b2 点 #y敏捷 。在该状态移除时，将返还此前扣除的所有 #y力量 和 #y敏捷 (目前已累计扣除： ",
+      " )。该状态不会随回合流逝而减少。"
+    ]
+  },
+  "fuZhouMod:WindCatalystPower": {
+    "NAME": "风势",
+    "DESCRIPTIONS": [
+      "加速元素反应。 NL 敌人回合开始时，再次结算其持有的 #y灼烧 、 #y灼心 、 #y冻伤 或 #y冰狱 的伤害（灼烧或冻伤：最低 #b2，最高 #b20；灼心或冰狱：最低 #b5，最高 #b40）。 NL 敌人回合结束时，这些状态额外减少 #b1 层。 NL 层数每回合自然减少 #b1 层。"
+    ]
+  },
+  "fuZhouMod:ValmontPower": {
+    "NAME": "金鸡王之力",
+    "DESCRIPTIONS": [
+      "本回合内，你打出的所有 [#efc100]阿福[] 、 [#efc100]黑手帮[] 和 [#efc100]黑暗杀手[] 系列卡牌的耗费变为 [#efc100]0[] 。"
+    ]
+  },
+  "fuZhouMod:BlackHandPower": {
+    "NAME": "黑手",
+    "DESCRIPTIONS": [
+      "目标携带黑手标记。当前层数： #b",
+      " 。部分黑手帮卡会根据层数触发额外效果。"
+    ]
+  },
+  "fuZhouMod:BountyPower": {
+    "NAME": "悬赏",
+    "DESCRIPTIONS": [
+      "每当你施加 *黑手 ，对该目标造成 #b",
+      " 点伤害。带 *黑手 的敌人死亡时，获得 #b",
+      " 金币。"
+    ]
+  },
+  "fuZhouMod:BlackHandNoNameYetPower": {
+    "NAME": "痞子",
+    "DESCRIPTIONS": [
+      "回合开始时，对所有敌人施加 #b",
+      " 层 *黑手 。每名敌人每回合累计获得 #b",
+      " 层 *黑手 时，对其造成 #b",
+      " 点伤害并抽 1 张牌。"
+    ]
+  },
+  "fuZhouMod:BlackHandEscortPower": {
+    "NAME": "黑手帮护送",
+    "DESCRIPTIONS": [
+      "下回合开始时，获得等同于敌方总 *黑手 层数 x#b",
+      " 的 *格挡 ，然后移除该能力。"
+    ]
+  },
+  "fuZhouMod:BlackHandStrengthReturnPower": {
+    "NAME": "裸绞",
+    "DESCRIPTIONS": [
+      "#b",
+      " 回合后，恢复 #b",
+      " 点因【裸绞】失去的 *力量 。"
+    ]
+  },
+  "fuZhouMod:BlackHandPullStringsPower": {
+    "NAME": "捞人",
+    "DESCRIPTIONS": [
+      "回合开始时，从弃牌堆中选择 #b",
+      " 张牌加入手牌。"
+    ]
+  },
+  "fuZhouMod:DominionPower": {
+    "NAME": "影蚀",
+    "DESCRIPTIONS": [
+      "当前层： #b",
+      " ，黑影兵团的伤害或护盾受到本属性影响。"
+    ]
+  },
+  "fuZhouMod:ShadowDecreePower": {
+    "NAME": "黑影敕令",
+    "DESCRIPTIONS": [
+      "回合开始时，失去 [#71b1d1]",
+      "[] 点 [#efc100]力量[] 和 [#71b1d1]",
+      "[] 点 [#efc100]敏捷[]，并失去 [#71b1d1]1[] 点生命值。你无法再获得 [#efc100]力量[]。"
+    ]
+  },
+  "fuZhouMod:GrandMageDamageCapPower": {
+    "NAME": "正气不灭",
+    "DESCRIPTIONS": [
+      "每回合最多承受 #b",
+      " 点伤害。当前剩余可承受： #b",
+      " 。",
+      " NL 单次受伤上限： #b",
+      " NL 当本回合承伤打满上限时，返还 #b1 个已封存符咒。",
+      " NL 当前已封存： ",
+      "无"
+    ]
+  },
+  "fuZhouMod:GrandMageCounterPouncePower": {
+    "NAME": "正气反扑",
+    "DESCRIPTIONS": [
+      "计算规则：每有1个 [#efc100]符咒遗物[] ，生命 #b+30 ；若持有 [#efc100]潘库宝盒[] ，每个已获得恶魔魔气生命 #b+30 ；每有1张 [#efc100]面具牌[] 或 [#efc100]面具辅助牌[] ，生命 #b+15 ；每有1张 [#efc100]动物符咒牌[] ，生命 #b+20 ； [#efc100]我什么都不缺了[] 生命 #b+100 且升级版会被降级； [#efc100]无尽黑暗[] 生命 #b+300 ；其余 [#efc100]主卡组卡牌[] 每张生命 #b+5 。",
+      " NL [#efc100]本场额外生命[] 为 #b",
+      " 点。 力量转换公式： [#efc100]每30点额外生命折算1点力量，不足30点不计算[]  NL 本场初始提升 #b",
+      " 点力量。"
+    ]
+  },
+  "fuZhouMod:GrandMageBlessingPower": {
+    "NAME": "大法师的庇佑",
+    "DESCRIPTIONS": [
+      "本回合还可免疫前 #b",
+      " 次异常状态。来自魔气系列异常与 #y【高温蒸汽】 的单次伤害最多为 #b",
+      " 点。天之恶魔的 #y【恐惧】 不会改变老爹意图，改为额外造成 #b8 点伤害。老爹行动开始时清除自身全部减益并获得 #b2 点力量。",
+      "本回合的异常免疫次数已用尽。来自魔气系列异常与 #y【高温蒸汽】 的单次伤害仍最多为 #b",
+      " 点。天之恶魔的 #y【恐惧】 不会改变老爹意图，改为额外造成 #b8 点伤害。老爹行动开始时清除自身全部减益并获得 #b2 点力量。"
+    ]
+  },
+  "fuZhouMod:EightDemonPossessionPower": {
+    "NAME": "八魔附体",
+    "DESCRIPTIONS": [
+      "每回合前 #b2 次打出攻击牌时，随机给予被攻击的敌人 #b2 层一种异常（恶魔异常、虚弱、易伤、缠绕、点穴、以手拒之、勒喉、尸爆术或中毒）。群体攻击会使所有被攻击的敌人获得同一种异常。 NL 本回合剩余触发次数： #b",
+      "。"
+    ]
+  },
+  "fuZhouMod:GrandMageCurseTaxAttackPower": {
+    "NAME": "特鲁",
+    "DESCRIPTIONS": [
+      "本回合你打出的第一张攻击牌费用 +1。"
+    ]
+  },
+  "fuZhouMod:GrandMageCurseTaxSkillPower": {
+    "NAME": "布莱克",
+    "DESCRIPTIONS": [
+      "本回合你打出的第一张技能牌费用 +1。"
+    ]
+  },
+  "fuZhouMod:GrandMageDadCycleCursePower": {
+    "NAME": "五行压制",
+    "DESCRIPTIONS": [
+      "本回合你的升级牌会临时塌落为基础版，回合结束后恢复。",
+      "本回合结束时，你未打出的手牌全部消耗。",
+      "本回合你每打出一张牌，受到 #b2 点可被格挡抵挡的伤害。",
+      "本回合你每打出一张牌，下一张牌的伤害和护盾 #b-",
+      " 。",
+      "老爹本回合获得 #b5 点临时荆棘，玩家回合结束后移除。",
+      "大法师老爹正在压制你的回合。"
+    ]
+  },
+  "fuZhouMod:GrandMageChantShieldPower": {
+    "NAME": "封印阵咏唱",
+    "DESCRIPTIONS": [
+      "吟唱护盾值：【",
+      "】。吟唱期间该护盾不会在回合开始时自然清空，且【猪符咒无法直接移除】。若该护盾在老爹下回合行动前被击破，则取消处决并直接回到T2。"
+    ]
+  }
+}
