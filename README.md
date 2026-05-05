@@ -8,7 +8,6 @@
 
 - Mod ID：`fuZhouMod`
 - Maven 名称：`fuZhou`
-- 当前版本：`1.1.9`
 - 主入口：[src/main/java/basicmod/BasicMod.java](src/main/java/basicmod/BasicMod.java)
 - ModTheSpire 配置：[src/main/resources/ModTheSpire.json](src/main/resources/ModTheSpire.json)
 - 主要依赖：`ModTheSpire`、`BaseMod`、`StSLib`
