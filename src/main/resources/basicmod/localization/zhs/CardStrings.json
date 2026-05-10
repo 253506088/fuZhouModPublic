@@ -121,11 +121,11 @@
   },
   "fuZhouMod:Wen": {
     "NAME": "文",
-    "DESCRIPTION": "获得 !B! 点格挡 NL 获得 !M! 层 *火焰屏障  NL *黑暗杀手"
+    "DESCRIPTION": "获得 !B! 点格挡 NL 抽 !M! 张牌，丢弃 !M! 张牌。 给予敌人 !M! 层 *虚弱  NL *黑暗杀手"
   },
   "fuZhouMod:Cui": {
     "NAME": "崔",
-    "DESCRIPTION": "获得 !B! 点格挡 NL 抽 !M! 张牌，丢弃 !M! 张牌。 给予敌人 !M! 层 *虚弱  NL *黑暗杀手"
+    "DESCRIPTION": "获得 !B! 点格挡 NL 获得 !M! 层 *火焰屏障  NL *黑暗杀手"
   },
   "fuZhouMod:NiJiaMask": {
     "NAME": "尼嘉面具",

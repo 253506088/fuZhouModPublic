@@ -37,6 +37,7 @@ import com.megacrit.cardcrawl.rooms.MonsterRoomElite;
 import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 
+import java.lang.reflect.Field;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -218,6 +219,51 @@ public class PanKuBox extends BaseRelic implements CustomSavable<PanKuBox.PanKuS
         return false;
     }
 
+    /**
+     * 判定当前战斗是否属于“真正胜利”：
+     * 1) 战斗已结束；
+     * 2) 不是烟雾弹逃跑；
+     * 3) 当前怪物组已视为死亡/离场。
+     */
+    public static boolean isTrueCombatVictory() {
+        if (AbstractDungeon.getCurrRoom() == null || !AbstractDungeon.getCurrRoom().isBattleOver) {
+            return false;
+        }
+        if (isSmokeBombEscapeInCurrentRoom()) {
+            return false;
+        }
+        return AbstractDungeon.getCurrRoom().monsters != null
+                && AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead();
+    }
+
+    /**
+     * 通过反射读取房间 smoked 标记，兼容字段可见性差异。
+     * smoked=true 时表示本场战斗通过烟雾弹逃跑结束，不应视为战胜。
+     */
+    private static boolean isSmokeBombEscapeInCurrentRoom() {
+        if (AbstractDungeon.getCurrRoom() == null) {
+            return false;
+        }
+        Class<?> clazz = AbstractDungeon.getCurrRoom().getClass();
+        while (clazz != null) {
+            try {
+                Field smokedField = clazz.getDeclaredField("smoked");
+                smokedField.setAccessible(true);
+                Object value = smokedField.get(AbstractDungeon.getCurrRoom());
+                if (value instanceof Boolean) {
+                    return (Boolean) value;
+                }
+                return false;
+            } catch (NoSuchFieldException e) {
+                clazz = clazz.getSuperclass();
+            } catch (Exception e) {
+                BasicMod.logger.warn("【潘库宝盒】读取房间smoked标记失败，按非逃跑处理。", e);
+                return false;
+            }
+        }
+        return false;
+    }
+
     public void ensurePendingRewardPresentInCurrentRoom() {
         if (!isPendingRewardForCurrentNode() || hasActivePanKuRewardInCurrentRoom()) {
             return;
@@ -378,6 +424,11 @@ public class PanKuBox extends BaseRelic implements CustomSavable<PanKuBox.PanKuS
 
     @Override
     public void onVictory() {
+        if (!isTrueCombatVictory()) {
+            clearPendingReward();
+            updateCounter();
+            return;
+        }
         if (AbstractDungeon.getCurrMapNode() != null) {
             if (MapNodeDemonPortalField.isDemonPortal.get(AbstractDungeon.getCurrMapNode())) {
                 flash();

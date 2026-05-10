@@ -18,6 +18,9 @@ public class PanKuRewardItemPatch {
         if (AbstractDungeon.player == null || AbstractDungeon.getCurrRoom() == null || !AbstractDungeon.getCurrRoom().isBattleOver) {
             return;
         }
+        if (!PanKuBox.isTrueCombatVictory()) {
+            return;
+        }
         com.megacrit.cardcrawl.relics.AbstractRelic relic = AbstractDungeon.player.getRelic(PanKuBox.ID);
         if (relic instanceof PanKuBox) {
             ((PanKuBox) relic).ensurePendingRewardPresentInCurrentRoom();
