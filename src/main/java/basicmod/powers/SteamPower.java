@@ -1,6 +1,7 @@
 package basicmod.powers;
 
 import basicmod.BasicMod;
+import basicmod.helpers.DemonQiDamageHelper;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -45,8 +46,9 @@ public class SteamPower extends BasePower {
         AbstractMonster m = (AbstractMonster) this.owner;
         if (GrandMageBlessingPower.shouldConvertSteamToDamage(this.owner)) {
             flash();
-            int dmg = Math.min(MAX_SINGLE_DAMAGE, Math.max(5, this.owner.currentHealth / 5));
-            dmg = GrandMageBlessingPower.capDemonQiDamage(this.owner, POWER_ID, dmg, "高温蒸汽回合开始");
+            int dmg = Math.max(5, this.owner.currentHealth / 5);
+            // 高温蒸汽被老爹改判为直接伤害后，仍需统一走“自身封顶 + 老爹封顶”链路。
+            dmg = DemonQiDamageHelper.applyDemonQiDamageCaps(this.source, this.owner, POWER_ID, dmg, MAX_SINGLE_DAMAGE, "高温蒸汽回合开始");
             BasicMod.logger.info("【高温蒸汽判定】目标拥有【大法师的庇佑】，不再干扰意图，改为造成伤害=" + dmg + "。目标=" + m.name);
             addToBot(new LoseHPAction(this.owner, this.source, dmg));
             return;

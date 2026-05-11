@@ -29,7 +29,8 @@
     "ID": "Soaked",
     "PROPER_NAME": "潮湿",
     "NAMES": [
-      "潮湿"
+      "潮湿",
+      "湿润"
     ],
     "DESCRIPTION": "目标处于潮湿状态，水火不容，但雷电和寒气在潮湿状态下会有额外效果。"
   },
@@ -45,7 +46,8 @@
     "ID": "Burning",
     "PROPER_NAME": "灼烧",
     "NAMES": [
-      "灼烧"
+      "灼烧",
+      "烧伤"
     ],
     "DESCRIPTION": "回合开始时受到当前生命值 #b1/8 的伤害（单次最低 #b2，最高 #b20），达到 #b9 层时进化成 #y灼心 。"
   },
@@ -61,7 +63,8 @@
     "ID": "Frostbite",
     "PROPER_NAME": "冻伤",
     "NAMES": [
-      "冻伤"
+      "冻伤",
+      "寒气"
     ],
     "DESCRIPTION": "回合开始时受到当前生命值 #b1/8 的伤害（单次最低 #b2，最高 #b20），达到 #b9 层时进化成 #y冰狱 。"
   },
@@ -120,5 +123,57 @@
       "影蚀"
     ],
     "DESCRIPTION": "黑影兵团卡不再受 #y力量 与 #y敏捷 影响，改为受 #y影蚀 影响。每 #b1 层 #y影蚀 ，使黑影兵团卡造成的伤害或获得的格挡 #b+1。"
+  },
+  {
+    "ID": "BlackHandCard",
+    "PROPER_NAME": "黑手帮",
+    "NAMES": [
+      "黑手帮"
+    ],
+    "DESCRIPTION": "黑手帮系列卡牌。部分效果会施加或利用 #y黑手 标记。"
+  },
+  {
+    "ID": "DarkWarrior",
+    "PROPER_NAME": "黑暗杀手",
+    "NAMES": [
+      "黑暗杀手"
+    ],
+    "DESCRIPTION": "刀龙麾下的黑暗杀手系列卡牌。"
+  },
+  {
+    "ID": "Mask",
+    "PROPER_NAME": "面具",
+    "NAMES": [
+      "面具"
+    ],
+    "DESCRIPTION": "黑影兵团面具。面具能力会在战斗中持续生成对应的黑影兵团牌。"
+  },
+  {
+    "ID": "Shadowkhan",
+    "PROPER_NAME": "黑影兵团",
+    "NAMES": [
+      "黑影兵团"
+    ],
+    "DESCRIPTION": "黑影兵团系列卡牌默认 #y消耗 ，其伤害或格挡会受 #y影蚀 影响。"
+  },
+  {
+    "ID": "DemonAnomaly",
+    "PROPER_NAME": "恶魔异常",
+    "NAMES": [
+      "恶魔异常"
+    ],
+    "EXTRA": [
+      "Burning",
+      "BurningHeart",
+      "Soaked",
+      "Steam",
+      "Frostbite",
+      "FrostHell",
+      "EarthBind",
+      "HeavyMire",
+      "WindCatalyst",
+      "Fear"
+    ],
+    "DESCRIPTION": "八大恶魔相关异常，包括 #y灼烧 、 #y灼心 、 #y潮湿 、 #y高温蒸汽 、 #y冻伤 、 #y冰狱 、 #y地缚 、 #y沉重泥沼 、 #y风势 和 #y恐惧 。"
   }
 ]

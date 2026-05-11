@@ -121,5 +121,58 @@
                       "Dominion"
                   ],
         "DESCRIPTION":  "Shadowkhan cards are no longer affected by #yStrength and #yDexterity. Instead, each stack of #yDominion grants +1 damage or +1 block to Shadowkhan cards."
+    },
+    {
+        "ID":  "BlackHandCard",
+        "PROPER_NAME":  "Dark Hand",
+        "NAMES":  [
+                      "Dark Hand"
+                  ],
+        "DESCRIPTION":  "Dark Hand series cards. Some effects apply or use #yblackhand marks."
+    },
+    {
+        "ID":  "DarkWarrior",
+        "PROPER_NAME":  "Dark Warrior",
+        "NAMES":  [
+                      "Dark Warrior"
+                  ],
+        "DESCRIPTION":  "Dark Warrior series cards serving Daolon Wong."
+    },
+    {
+        "ID":  "Mask",
+        "PROPER_NAME":  "Mask",
+        "NAMES":  [
+                      "Mask"
+                  ],
+        "DESCRIPTION":  "A Shadowkhan mask. Mask powers continuously generate corresponding Shadowkhan cards during combat."
+    },
+    {
+        "ID":  "Shadowkhan",
+        "PROPER_NAME":  "Shadowkhan",
+        "NAMES":  [
+                      "Shadowkhan"
+                  ],
+        "DESCRIPTION":  "Shadowkhan series cards Exhaust by default. Their damage or block is affected by #yDominion."
+    },
+    {
+        "ID":  "DemonAnomaly",
+        "PROPER_NAME":  "Demon debuffs",
+        "NAMES":  [
+                      "Demon debuffs",
+                      "Demon debuff"
+                  ],
+        "EXTRA":  [
+                      "Burning",
+                      "BurningHeart",
+                      "Soaked",
+                      "Steam",
+                      "Frostbite",
+                      "FrostHell",
+                      "EarthBind",
+                      "HeavyMire",
+                      "WindCatalyst",
+                      "Fear"
+                  ],
+        "DESCRIPTION":  "Eight Demon anomalies, including #yBurning, #yBurning #yHeart, #yWet, #yHigh #yTemp #ySteam, #yFrostbite, #yFrost #yHell, #yEarth #yBind, #yHeavy #yMire, #yWind #yCatalyst, and #yFear."
     }
 ]

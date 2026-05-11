@@ -372,7 +372,8 @@ public class BasicMod implements
     }
 
     private void registerKeyword(KeywordInfo info) {
-        BaseMod.addKeyword(modID.toLowerCase(), info.PROPER_NAME, info.NAMES, info.DESCRIPTION, info.COLOR);
+        String[] names = Arrays.copyOf(info.NAMES, info.NAMES.length);
+        BaseMod.addKeyword(modID.toLowerCase(), info.PROPER_NAME, names, info.DESCRIPTION, info.COLOR);
         if (!info.ID.isEmpty()) {
             keywords.put(info.ID, info);
         }
@@ -383,6 +384,7 @@ public class BasicMod implements
         loadAudio(Sounds.class);
     }
 
+// ... (rest of the code remains the same)
     private static final String[] AUDIO_EXTENSIONS = { ".ogg", ".wav", ".mp3" }; // There are more valid types, but not
                                                                                  // really worth checking them all here
 

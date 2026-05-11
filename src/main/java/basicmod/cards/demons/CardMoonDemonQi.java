@@ -130,14 +130,17 @@ public class CardMoonDemonQi extends BaseCard {
         ArrayList<AbstractCard> choices = new ArrayList<>();
         MoonChoiceSelf selfChoice = new MoonChoiceSelf();
         MoonChoiceEnemy enemyChoice = new MoonChoiceEnemy();
+        MoonChoiceUncap uncapChoice = new MoonChoiceUncap();
         
         if (this.upgraded) {
             selfChoice.upgrade();
             enemyChoice.upgrade();
+            uncapChoice.upgrade();
         }
         
         choices.add(selfChoice);
         choices.add(enemyChoice);
+        choices.add(uncapChoice);
         
         addToBot(new ChooseOneAction(choices));
     }

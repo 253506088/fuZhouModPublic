@@ -1,6 +1,7 @@
 package basicmod.powers;
 
 import basicmod.BasicMod;
+import basicmod.helpers.DemonQiDamageHelper;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
@@ -57,15 +58,17 @@ public class WindCatalystPower extends BasePower {
     private void triggerExtraDamage() {
         // 基础火/冰 (1/8 伤害, 保底 2 点以一致)
         if (this.owner.hasPower(BurningPower.POWER_ID) || this.owner.hasPower(FrostbitePower.POWER_ID)) {
-            int dmg = Math.min(MAX_BASE_STATUS_DAMAGE, Math.max(2, this.owner.currentHealth / 8));
-            dmg = GrandMageBlessingPower.capDemonQiDamage(this.owner, BurningPower.POWER_ID, dmg, "风势额外触发灼烧/冻伤");
+            int dmg = Math.max(2, this.owner.currentHealth / 8);
+            // 风势的额外触发，本质也是恶魔异常伤害，需要吃同一套解限规则。
+            dmg = DemonQiDamageHelper.applyDemonQiDamageCaps(this.source, this.owner, BurningPower.POWER_ID, dmg, MAX_BASE_STATUS_DAMAGE, "风势额外触发灼烧/冻伤");
             addToBot(new LoseHPAction(this.owner, this.source, dmg));
         }
 
         // 进化火/冰 (1/5 伤害, 保底 5 点)
         if (this.owner.hasPower(BurningHeartPower.POWER_ID) || this.owner.hasPower(FrostHellPower.POWER_ID)) {
-            int dmg = Math.min(MAX_EVOLVED_STATUS_DAMAGE, Math.max(5, this.owner.currentHealth / 5));
-            dmg = GrandMageBlessingPower.capDemonQiDamage(this.owner, BurningHeartPower.POWER_ID, dmg, "风势额外触发灼心/冰狱");
+            int dmg = Math.max(5, this.owner.currentHealth / 5);
+            // 风势触发进化异常时，同样要同步跳过两层伤害上限。
+            dmg = DemonQiDamageHelper.applyDemonQiDamageCaps(this.source, this.owner, BurningHeartPower.POWER_ID, dmg, MAX_EVOLVED_STATUS_DAMAGE, "风势额外触发灼心/冰狱");
             addToBot(new LoseHPAction(this.owner, this.source, dmg));
         }
     }

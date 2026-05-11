@@ -284,8 +284,8 @@
   },
   "fuZhouMod:TigerTalismanSkillCard": {
     "NAME": "寅虎·技",
-    "DESCRIPTION": "选择一个敌人 NL 若其生命值高于你：其本回合 *力量 -!M!  NL 若其生命值低于你：你本回合 *力量 +!M! ",
-    "UPGRADE_DESCRIPTION": "选择一个敌人 NL 若其生命值高于你：其本回合 *力量 -!M!  NL 若其生命值低于你：你本回合 *力量 +!M! "
+    "DESCRIPTION": "选择一个敌人 NL 若其生命值高于你：其 *力量 -!M!  NL 若其生命值低于你：你 *力量 +!M!  NL 消耗",
+    "UPGRADE_DESCRIPTION": "选择一个敌人 NL 若其生命值高于你：其 *力量 -!M!  NL 若其生命值低于你：你 *力量 +!M!  NL 消耗"
   },
   "fuZhouMod:TigerTalismanAttackCard": {
     "NAME": "寅虎·攻",
@@ -399,7 +399,7 @@
   },
   "fuZhouMod:CardMoonDemonQi": {
     "NAME": "月之恶魔·咒蓝",
-    "DESCRIPTION": "失去当前生命值的 [#efc100]1/8[] 。 NL 选择对【自己】或【敌方】使用。将其身上所有的 力量 与 敏捷 数值取反 NL 消耗"
+    "DESCRIPTION": "失去当前生命值的 [#efc100]1/8[] 。 NL 选择一个效果：对【自己】使用、对【敌方】使用，或发动【解除限制】。 NL 消耗"
   },
   "fuZhouMod:MoonChoiceSelf": {
     "NAME": "对自己使用",
@@ -408,6 +408,10 @@
   "fuZhouMod:MoonChoiceEnemy": {
     "NAME": "对敌方使用",
     "DESCRIPTION": "将一张0费的 月之恶魔(指向) 加入手牌"
+  },
+  "fuZhouMod:MoonChoiceUncap": {
+    "NAME": "解除限制",
+    "DESCRIPTION": "本回合内，你造成的 恶魔异常 伤害不再受到任何伤害上限的限制"
   },
   "fuZhouMod:MoonTargetEnemy": {
     "NAME": "月之恶魔(指向)",

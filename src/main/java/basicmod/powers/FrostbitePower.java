@@ -1,6 +1,7 @@
 package basicmod.powers;
 
 import basicmod.BasicMod;
+import basicmod.helpers.DemonQiDamageHelper;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -51,8 +52,9 @@ public class FrostbitePower extends BasePower {
     public void atStartOfTurn() {
         if (!this.owner.isPlayer) {
             flash();
-            int dmg = Math.min(MAX_SINGLE_DAMAGE, Math.max(2, this.owner.currentHealth / 8));
-            dmg = GrandMageBlessingPower.capDemonQiDamage(this.owner, POWER_ID, dmg, "冻伤回合开始");
+            int dmg = Math.max(2, this.owner.currentHealth / 8);
+            // 统一处理冻伤自己的伤害上限，以及大法师老爹的额外封顶。
+            dmg = DemonQiDamageHelper.applyDemonQiDamageCaps(this.source, this.owner, POWER_ID, dmg, MAX_SINGLE_DAMAGE, "冻伤回合开始");
             addToBot(new LoseHPAction(this.owner, this.source, dmg));
         }
     }

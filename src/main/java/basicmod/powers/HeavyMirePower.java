@@ -1,6 +1,7 @@
 package basicmod.powers;
 
 import basicmod.BasicMod;
+import basicmod.helpers.DemonQiDamageHelper;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -22,8 +23,9 @@ public class HeavyMirePower extends BasePower {
     public void atStartOfTurn() {
         if (this.owner.currentHealth > 0) {
             flash();
-            int damage = Math.min(MAX_SINGLE_DAMAGE, Math.max(5, this.owner.currentHealth / 5));
-            damage = GrandMageBlessingPower.capDemonQiDamage(this.owner, POWER_ID, damage, "沉重泥沼回合开始");
+            int damage = Math.max(5, this.owner.currentHealth / 5);
+            // 统一处理沉重泥沼自己的伤害上限，以及大法师老爹的额外封顶。
+            damage = DemonQiDamageHelper.applyDemonQiDamageCaps(this.source, this.owner, POWER_ID, damage, MAX_SINGLE_DAMAGE, "沉重泥沼回合开始");
             addToBot(new LoseHPAction(this.owner, this.source, damage));
 
             addToBot(new ApplyPowerAction(this.owner, this.owner, new StrengthPower(this.owner, -2), -2));

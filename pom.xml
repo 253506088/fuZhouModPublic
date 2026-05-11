@@ -29,7 +29,7 @@
      -->
     <!-- This information will be displayed in ModTheSpire, the modded launcher. -->
     <name>fuZhou</name>
-    <version>1.2.0</version>
+    <version>1.2.1</version>
     <!-- Avoid using \ in this description, as they can cause the description to fail to load. -->
     <!-- If you really want to use them, you'll need to "escape" them by putting another one in front, like \\ -->
     <description>
@@ -37,14 +37,15 @@
 
         该mod出现问题或觉得设计不好的地方都欢迎您的反馈，会尽快修复问题的，感谢各位捧场。
 
-        项目源码地址：https://github.com/253506088/fuZhouModPublic
+        QQ交流群： 598295851
+        我在 nexusmods 上发布了杀戮尖塔2 Mod 岁月史书（The Book of Ages），邀请各位帮忙捧场。
 
         "I am the Lord of the Mountains, the Soul of Fire, the first of the Eight Ancient Demon Sorcerers!"
         Shendu, the supreme Demon Sorcerer who once ruled the earth, now awakens within the Spire. Stripped of his proud magic, his immense power now lies divided among the Twelve Talismans scattered throughout the Spire. To reclaim his former glory, he must gather the Talismans once more and command the Shadowkhan to conquer the Spire...
 
         If you encounter any bugs or have any suggestions regarding the mechanics and design, please feel free to leave a comment! I will read your feedback and fix issues as quickly as possible. Thank you all for playing and supporting this mod!
 
-        GitHub：https://github.com/253506088/fuZhouModPublic
+        I've released the "The Book of Ages" mod for Slime Tower 2 on NexusMods and would appreciate your support.
     </description>
 
     <!--You shouldn't need to change anything below this point, but feel free to look at it.-->

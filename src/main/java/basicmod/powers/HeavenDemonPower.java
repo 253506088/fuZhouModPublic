@@ -1,6 +1,7 @@
 package basicmod.powers;
 
 import basicmod.BasicMod;
+import basicmod.helpers.DemonQiDamageHelper;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -42,32 +43,36 @@ public class HeavenDemonPower extends BasePower {
             // 灼烧
             if (target.hasPower(BurningPower.POWER_ID)) {
                 statusCount++;
-                int dmg = Math.min(MAX_BASE_STATUS_DAMAGE, Math.max(3, target.currentHealth / 8));
-                dmg = GrandMageBlessingPower.capDemonQiDamage(target, BurningPower.POWER_ID, dmg, "天空恶魔额外触发灼烧");
+                int dmg = Math.max(3, target.currentHealth / 8);
+                // 天空恶魔追加触发的异常伤害，也需要同步跳过两层伤害上限。
+                dmg = DemonQiDamageHelper.applyDemonQiDamageCaps(this.owner, target, BurningPower.POWER_ID, dmg, MAX_BASE_STATUS_DAMAGE, "天空恶魔额外触发灼烧");
                 addToBot(new LoseHPAction(target, this.owner, dmg));
                 addToBot(new ReducePowerAction(target, this.owner, BurningPower.POWER_ID, 1));
             }
             // 灼心
             if (target.hasPower(BurningHeartPower.POWER_ID)) {
                 statusCount++;
-                int dmg = Math.min(MAX_EVOLVED_STATUS_DAMAGE, Math.max(5, target.currentHealth / 5));
-                dmg = GrandMageBlessingPower.capDemonQiDamage(target, BurningHeartPower.POWER_ID, dmg, "天空恶魔额外触发灼心");
+                int dmg = Math.max(5, target.currentHealth / 5);
+                // 进化异常被天空恶魔触发时，也走同一套统一封顶逻辑。
+                dmg = DemonQiDamageHelper.applyDemonQiDamageCaps(this.owner, target, BurningHeartPower.POWER_ID, dmg, MAX_EVOLVED_STATUS_DAMAGE, "天空恶魔额外触发灼心");
                 addToBot(new LoseHPAction(target, this.owner, dmg));
                 addToBot(new ReducePowerAction(target, this.owner, BurningHeartPower.POWER_ID, 1));
             }
             // 冻伤
             if (target.hasPower(FrostbitePower.POWER_ID)) {
                 statusCount++;
-                int dmg = Math.min(MAX_BASE_STATUS_DAMAGE, Math.max(3, target.currentHealth / 8));
-                dmg = GrandMageBlessingPower.capDemonQiDamage(target, FrostbitePower.POWER_ID, dmg, "天空恶魔额外触发冻伤");
+                int dmg = Math.max(3, target.currentHealth / 8);
+                // 冻伤额外结算同样需要支持解除限制。
+                dmg = DemonQiDamageHelper.applyDemonQiDamageCaps(this.owner, target, FrostbitePower.POWER_ID, dmg, MAX_BASE_STATUS_DAMAGE, "天空恶魔额外触发冻伤");
                 addToBot(new LoseHPAction(target, this.owner, dmg));
                 addToBot(new ReducePowerAction(target, this.owner, FrostbitePower.POWER_ID, 1));
             }
             // 冰狱 (FrostHellPower)
             if (target.hasPower(FrostHellPower.POWER_ID)) {
                 statusCount++;
-                int dmg = Math.min(MAX_EVOLVED_STATUS_DAMAGE, Math.max(5, target.currentHealth / 5));
-                dmg = GrandMageBlessingPower.capDemonQiDamage(target, FrostHellPower.POWER_ID, dmg, "天空恶魔额外触发冰狱");
+                int dmg = Math.max(5, target.currentHealth / 5);
+                // 冰狱额外结算同样需要支持解除限制。
+                dmg = DemonQiDamageHelper.applyDemonQiDamageCaps(this.owner, target, FrostHellPower.POWER_ID, dmg, MAX_EVOLVED_STATUS_DAMAGE, "天空恶魔额外触发冰狱");
                 addToBot(new LoseHPAction(target, this.owner, dmg));
                 addToBot(new ReducePowerAction(target, this.owner, FrostHellPower.POWER_ID, 1));
             }

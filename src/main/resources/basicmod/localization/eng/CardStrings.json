@@ -125,7 +125,7 @@
   },
   "fuZhouMod:Cui": {
     "NAME": "Cui",
-    "DESCRIPTION": "Gain !B! #yBlock. NL Gain !M! layers of #yFlame #yBarrier. NL *Dark Warrior",
+    "DESCRIPTION": "Gain !B! #yBlock. NL Gain !M! layers of #yFlame #yBarrier. NL *Dark Warrior"
   },
   "fuZhouMod:NiJiaMask": {
     "NAME": "Oni Mask of Ninja-khan",
@@ -284,8 +284,8 @@
   },
   "fuZhouMod:TigerTalismanSkillCard": {
     "NAME": "Tiger Talisman · Skill",
-    "DESCRIPTION": "Choose an enemy. NL If their HP is higher than yours: Their #yStrength -!M! this turn. NL If their HP is lower than yours: Your #yStrength +!M! this turn.",
-    "UPGRADE_DESCRIPTION": "Choose an enemy. NL If their HP is higher than yours: Their #yStrength -!M! this turn. NL If their HP is lower than yours: Your #yStrength +!M! this turn."
+    "DESCRIPTION": "Choose an enemy. NL If their HP is higher than yours: Their #yStrength -!M!. NL If their HP is lower than yours: Your #yStrength +!M!. NL #yExhaust",
+    "UPGRADE_DESCRIPTION": "Choose an enemy. NL If their HP is higher than yours: Their #yStrength -!M!. NL If their HP is lower than yours: Your #yStrength +!M!. NL #yExhaust"
   },
   "fuZhouMod:TigerTalismanAttackCard": {
     "NAME": "Tiger Talisman · Attack",
@@ -399,7 +399,7 @@
   },
   "fuZhouMod:CardMoonDemonQi": {
     "NAME": "Moon Demon · Tso Lan",
-    "DESCRIPTION": "Lose [#efc100]1/8[] of current HP. NL Choose to use on [Self] or [Enemy]. Reverse all Strength and Dexterity values on the target. NL #yExhaust"
+    "DESCRIPTION": "Lose [#efc100]1/8[] of current HP. NL Choose an effect: use on [Self], use on [Enemy], or activate [Remove Limits]. NL #yExhaust"
   },
   "fuZhouMod:MoonChoiceSelf": {
     "NAME": "Use on Self",
@@ -408,6 +408,10 @@
   "fuZhouMod:MoonChoiceEnemy": {
     "NAME": "Use on Enemy",
     "DESCRIPTION": "Add a 0-cost Moon Demon (Target) card to your hand."
+  },
+  "fuZhouMod:MoonChoiceUncap": {
+    "NAME": "Remove Limits",
+    "DESCRIPTION": "This round, damage from Demon debuffs you cause ignores all damage caps."
   },
   "fuZhouMod:MoonTargetEnemy": {
     "NAME": "Moon Demon (Target)",

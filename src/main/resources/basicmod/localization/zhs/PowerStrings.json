@@ -384,6 +384,12 @@
       " 点。天之恶魔的 #y【恐惧】 不会改变老爹意图，改为额外造成 #b8 点伤害。老爹行动开始时清除自身全部减益并获得 #b2 点力量。"
     ]
   },
+  "fuZhouMod:MoonUncapPower": {
+    "NAME": "解除限制",
+    "DESCRIPTIONS": [
+      "直到本回合结束，你造成的 恶魔异常 伤害不再受到任何伤害上限的限制。"
+    ]
+  },
   "fuZhouMod:EightDemonPossessionPower": {
     "NAME": "八魔附体",
     "DESCRIPTIONS": [

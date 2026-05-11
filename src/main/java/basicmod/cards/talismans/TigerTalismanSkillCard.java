@@ -22,19 +22,18 @@ public class TigerTalismanSkillCard extends BaseCard {
         super(ID, info);
         tags.add(CustomTags.TALISMAN_CARD);
         setMagic(3, 1);
+        setExhaust(true);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (m != null) {
             if (m.currentHealth > p.currentHealth) {
-                // Enemy HP higher -> Reduce enemy strength for this turn
+                // 生命值更高的敌人直接永久失去力量，不再在回合结束时恢复。
                 addToBot(new ApplyPowerAction(m, p, new com.megacrit.cardcrawl.powers.StrengthPower(m, -magicNumber), -magicNumber));
-                addToBot(new ApplyPowerAction(m, p, new com.megacrit.cardcrawl.powers.GainStrengthPower(m, magicNumber), magicNumber));
             } else if (m.currentHealth < p.currentHealth) {
-                // Player HP higher -> Increase player strength for this turn
+                // 玩家生命值更高时，直接永久获得力量，不再在回合结束时回退。
                 addToBot(new ApplyPowerAction(p, p, new com.megacrit.cardcrawl.powers.StrengthPower(p, magicNumber), magicNumber));
-                addToBot(new ApplyPowerAction(p, p, new com.megacrit.cardcrawl.powers.LoseStrengthPower(p, magicNumber), magicNumber));
             }
         }
     }

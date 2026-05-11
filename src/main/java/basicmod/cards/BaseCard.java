@@ -3,8 +3,10 @@ package basicmod.cards;
 import basemod.BaseMod;
 import basemod.abstracts.CustomCard;
 import basemod.abstracts.DynamicVariable;
+import basemod.helpers.TooltipInfo;
 import basicmod.BasicMod;
 import basicmod.util.CardStats;
+import basicmod.util.KeywordInfo;
 import basicmod.util.TriFunction;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -17,6 +19,7 @@ import basicmod.enums.CustomTags;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -102,7 +105,7 @@ public abstract class BaseCard extends CustomCard {
         if (s == null) {
             return "[缺失文本描述]";
         }
-        return normalizeCardDescriptionColors(s.DESCRIPTION);
+        return normalizeCardDescription(s.DESCRIPTION);
     }
 
     /**
@@ -128,6 +131,31 @@ public abstract class BaseCard extends CustomCard {
         return sb.toString();
     }
 
+    public static String normalizeCardDescription(String raw) {
+        return normalizeCardDescriptionColors(raw);
+    }
+
+    private static boolean isCustomKeywordBoundary(char c) {
+        return Character.isWhitespace(c)
+                || c == '。'
+                || c == '，'
+                || c == '、'
+                || c == '；'
+                || c == '：'
+                || c == ','
+                || c == '.'
+                || c == '!'
+                || c == '?'
+                || c == '('
+                || c == ')'
+                || c == '（'
+                || c == '）'
+                || c == '['
+                || c == ']'
+                || c == '{'
+                || c == '}';
+    }
+
     private static String colorCodeToHex(char code) {
         switch (code) {
             case 'y':
@@ -147,8 +175,124 @@ public abstract class BaseCard extends CustomCard {
 
     @Override
     public void initializeDescription() {
-        this.rawDescription = normalizeCardDescriptionColors(this.rawDescription);
+        this.rawDescription = normalizeCardDescription(this.rawDescription);
         super.initializeDescription();
+    }
+
+    @Override
+    public List<TooltipInfo> getCustomTooltipsTop() {
+        return buildCustomKeywordTooltips();
+    }
+
+    private List<TooltipInfo> buildCustomKeywordTooltips() {
+        if (this.rawDescription == null) {
+            return null;
+        }
+
+        if (BasicMod.keywords.isEmpty()) {
+            return null;
+        }
+
+        ArrayList<TooltipInfo> tooltips = new ArrayList<>();
+        String searchText = getKeywordSearchText(this.rawDescription);
+        for (KeywordInfo keyword : BasicMod.keywords.values()) {
+            if (containsCustomKeywordName(searchText, keyword)) {
+                addCustomKeywordTooltip(tooltips, keyword);
+            }
+        }
+        return tooltips.isEmpty() ? null : tooltips;
+    }
+
+    private void addCustomKeywordTooltip(ArrayList<TooltipInfo> tooltips, KeywordInfo keyword) {
+        if (keyword == null || keyword.PROPER_NAME == null || keyword.DESCRIPTION == null) {
+            return;
+        }
+
+        if (!hasTooltip(tooltips, keyword.PROPER_NAME)) {
+            tooltips.add(new TooltipInfo(keyword.PROPER_NAME, keyword.DESCRIPTION));
+        }
+        if (keyword.EXTRA == null) {
+            return;
+        }
+        for (String extraID : keyword.EXTRA) {
+            addCustomKeywordTooltip(tooltips, BasicMod.keywords.get(extraID));
+        }
+    }
+
+    private static boolean hasTooltip(ArrayList<TooltipInfo> tooltips, String title) {
+        for (TooltipInfo tooltip : tooltips) {
+            if (tooltip != null && tooltip.title != null && tooltip.title.equals(title)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private static boolean containsCustomKeywordName(String searchText, KeywordInfo keyword) {
+        if (keyword == null) {
+            return false;
+        }
+        if (containsKeywordName(searchText, keyword.PROPER_NAME)) {
+            return true;
+        }
+        if (keyword.NAMES == null) {
+            return false;
+        }
+        for (String name : keyword.NAMES) {
+            if (containsKeywordName(searchText, name)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private static boolean containsKeywordName(String searchText, String keywordName) {
+        if (searchText == null || keywordName == null || keywordName.isEmpty()) {
+            return false;
+        }
+
+        if (containsCjk(keywordName)) {
+            return searchText.toLowerCase().contains(keywordName.toLowerCase());
+        }
+
+        int index = 0;
+        while (index <= searchText.length() - keywordName.length()) {
+            int foundIndex = searchText.toLowerCase().indexOf(keywordName.toLowerCase(), index);
+            if (foundIndex < 0) {
+                return false;
+            }
+            int endIndex = foundIndex + keywordName.length();
+            boolean validStart = foundIndex == 0 || isCustomKeywordBoundary(searchText.charAt(foundIndex - 1));
+            boolean validEnd = endIndex >= searchText.length() || isCustomKeywordBoundary(searchText.charAt(endIndex));
+            if (validStart && validEnd) {
+                return true;
+            }
+            index = foundIndex + 1;
+        }
+        return false;
+    }
+
+    private static String getKeywordSearchText(String raw) {
+        return raw.replace(BasicMod.modID + ":", "")
+                .replace(BasicMod.modID.toLowerCase() + ":", "")
+                .replace("*", "")
+                .replaceAll("\\[#(?:[0-9a-fA-F]{6}|[0-9a-fA-F]{8})\\]", "")
+                .replace("[]", "")
+                .replace("#y", "")
+                .replace("#b", "")
+                .replace("#r", "")
+                .replace("#g", "")
+                .replace("#p", "");
+    }
+
+    private static boolean containsCjk(String text) {
+        for (int i = 0; i < text.length(); i++) {
+            char c = text.charAt(i);
+            if (c >= '\u4e00' && c <= '\u9fff') {
+                return true;
+            }
+        }
+        return false;
     }
 
     public boolean isAfuComboActive() {
