@@ -35,7 +35,11 @@ public class EventInterceptorPatch {
         // 判断条件：圣主角色 第二层或以上，且没有【潘库宝盒】遗物
         if (AbstractDungeon.player != null && AbstractDungeon.player.chosenClass == basicmod.enums.CharacterEnums.SHENGZHU &&
                 AbstractDungeon.actNum >= 2 && !AbstractDungeon.player.hasRelic(PanKuBox.ID)) {
-            BasicMod.logger.info(">>> [事件房内容判定] 触发强制劫持！检测到圣主在第三层及以上且无潘库宝盒，强制返回 PanKuBoxEvent。");
+            if (BasicMod.hasDeclinedPanKuBoxEventThisRun()) {
+                BasicMod.logger.info(">>> [事件房内容判定] 检测到玩家此前已在【远古的封印】中选择离开，本次跳过二层保底强制触发。");
+                return SpireReturn.Continue();
+            }
+            BasicMod.logger.info(">>> [事件房内容判定] 触发强制劫持！检测到圣主在第二层及以上且无潘库宝盒，强制返回 PanKuBoxEvent。");
             return SpireReturn.Return(new PanKuBoxEvent());
         }
 

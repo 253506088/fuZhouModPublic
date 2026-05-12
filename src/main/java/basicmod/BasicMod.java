@@ -1,6 +1,7 @@
 package basicmod;
 
 import basemod.BaseMod;
+import basemod.abstracts.CustomSavable;
 import basemod.eventUtil.AddEventParams;
 import basemod.interfaces.AddAudioSubscriber;
 import basemod.interfaces.EditKeywordsSubscriber;
@@ -65,6 +66,22 @@ public class BasicMod implements
     
     private static SpireConfig modConfig;
     public static boolean semiAutoMode = false;
+    public static final String PANKU_BOX_EVENT_DECLINED_SAVE_KEY = makeID("PanKuBoxEventDeclined");
+    private static boolean panKuBoxEventDeclinedThisRun = false;
+    /**
+     * 保存【远古的封印】是否在本局被玩家明确拒绝。
+     */
+    private static final CustomSavable<Boolean> PAN_KU_BOX_EVENT_DECLINED_SAVABLE = new CustomSavable<Boolean>() {
+        @Override
+        public Boolean onSave() {
+            return panKuBoxEventDeclinedThisRun;
+        }
+
+        @Override
+        public void onLoad(Boolean declined) {
+            panKuBoxEventDeclinedThisRun = Boolean.TRUE.equals(declined);
+        }
+    };
 
     static {
         loadModInfo();
@@ -207,6 +224,7 @@ public class BasicMod implements
             FinalBossChoice defaultChoice = FinalBossChoice.fromString(modConfig.getString("finalBossChoice"));
             FinalBossChoiceManager.setDefaultChoice(defaultChoice);
             BaseMod.addSaveField(FinalBossChoiceManager.SAVE_KEY, FinalBossChoiceManager.getInstance());
+            BaseMod.addSaveField(PANKU_BOX_EVENT_DECLINED_SAVE_KEY, PAN_KU_BOX_EVENT_DECLINED_SAVABLE);
             logger.info("Configuration loaded: semiAutoMode = " + semiAutoMode);
         } catch (Exception e) {
             logger.error("Failed to initialize SpireConfig", e);
@@ -224,6 +242,31 @@ public class BasicMod implements
         } catch (Exception e) {
             logger.error("Failed to save SpireConfig", e);
         }
+    }
+
+    /**
+     * 判断本局是否已在【远古的封印】里选择过转身离开。
+     *
+     * @return true 表示本局已拒绝过该事件
+     */
+    public static boolean hasDeclinedPanKuBoxEventThisRun() {
+        return panKuBoxEventDeclinedThisRun;
+    }
+
+    /**
+     * 记录玩家本局已明确拒绝【远古的封印】。
+     */
+    public static void markPanKuBoxEventDeclinedThisRun() {
+        panKuBoxEventDeclinedThisRun = true;
+        logger.info("【远古的封印】已记录本局拒绝标记，后续二层保底将不再强制触发。");
+    }
+
+    /**
+     * 新开一局时清空【远古的封印】拒绝标记。
+     */
+    public static void resetPanKuBoxEventDeclinedThisRun() {
+        panKuBoxEventDeclinedThisRun = false;
+        logger.info("【远古的封印】已重置本局拒绝标记。");
     }
 
     @Override
@@ -290,6 +333,7 @@ public class BasicMod implements
         basemod.BaseMod.MAX_HAND_SIZE = 10;
         if (com.megacrit.cardcrawl.dungeons.AbstractDungeon.floorNum <= 0) {
             FinalBossChoiceManager.resetForNewRun();
+            resetPanKuBoxEventDeclinedThisRun();
         }
         if (com.megacrit.cardcrawl.dungeons.AbstractDungeon.player != null && 
             com.megacrit.cardcrawl.dungeons.AbstractDungeon.player.hasRelic(basicmod.relics.RoosterTalisman.ID)) {
