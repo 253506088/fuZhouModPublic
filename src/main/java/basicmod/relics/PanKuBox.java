@@ -511,7 +511,14 @@ public class PanKuBox extends BaseRelic implements CustomSavable<PanKuBox.PanKuS
                     MapRoomNode node = AbstractDungeon.map.get(y).get(x);
                     MapNodeDemonPortalField.isDemonPortal.set(node, true);
                     if (!(node.getRoom() instanceof MonsterRoomElite)) {
+                        // 若被替换的节点正好是玩家当前/即将进入的节点，原版已经在它上面调用过 onPlayerEntry()，
+                        // 直接换新 MonsterRoomElite 会丢掉 monsters 导致 AbstractRoom.update NPE，必须补一次 onPlayerEntry
+                        boolean isCurrentRoom = (AbstractDungeon.getCurrMapNode() == node)
+                                || (AbstractDungeon.nextRoom == node);
                         node.setRoom(new MonsterRoomElite());
+                        if (isCurrentRoom) {
+                            node.getRoom().onPlayerEntry();
+                        }
                     }
                 }
             }

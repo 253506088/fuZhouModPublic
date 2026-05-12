@@ -68,8 +68,17 @@ public class PanKuBoxPatches {
 
             MapRoomNode node = AbstractDungeon.nextRoom;
             MapNodeDemonPortalField.isDemonPortal.set(node, true);
+
+            // post_combat 存档：原版已恢复战斗奖励界面，替换 room 会让玩家重打已经赢过的战斗，保留原状态
+            if (saveFile.post_combat) {
+                return;
+            }
+
             if (!(node.getRoom() instanceof MonsterRoomElite)) {
                 node.setRoom(new MonsterRoomElite());
+                // 必须立即补一次 onPlayerEntry：MonsterRoomElite 构造器只设 phase=COMBAT，monsters 仍为 null，
+                // 否则下一帧 AbstractRoom.update 进入 COMBAT 分支调用 this.monsters.update() 会 NPE
+                node.getRoom().onPlayerEntry();
             }
         }
 
