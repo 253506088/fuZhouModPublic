@@ -1,5 +1,6 @@
 package basicmod.events;
 
+import basicmod.BasicMod;
 import basicmod.relics.PanKuBox;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.curses.Normality;
@@ -61,6 +62,7 @@ public class PanKuBoxEvent extends AbstractImageEvent {
                         obtainRelic();
                         break;
                     case 2: // 转身离开
+                        BasicMod.markPanKuBoxEventDeclinedThisRun();
                         this.imageEventText.updateBodyText(DESCRIPTIONS[3]);
                         break;
                 }
