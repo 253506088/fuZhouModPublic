@@ -174,8 +174,8 @@
   },
   "fuZhouMod:TaLaMask": {
     "NAME": "塔拉面具",
-    "DESCRIPTION": "面具容量增加 !M! 层 NL 获得 1 层 *影蚀 。 NL 回合开始时随机获取一张 *黑影兵团 牌，若手牌已满则自动打出",
-    "UPGRADE_DESCRIPTION": "面具容量增加 !M! 层 NL 获得 1 层 *影蚀 。 NL 回合开始时随机获取一张 *黑影兵团 牌，若手牌已满则自动打出"
+    "DESCRIPTION": "面具容量增加 !M! 层 NL 获得 1 层 *影噬 。 NL 回合开始时随机获取一张 *黑影兵团 牌，若手牌已满则自动打出",
+    "UPGRADE_DESCRIPTION": "面具容量增加 !M! 层 NL 获得 1 层 *影噬 。 NL 回合开始时随机获取一张 *黑影兵团 牌，若手牌已满则自动打出"
   },
   "fuZhouMod:NiJiaNinja": {
     "NAME": "尼嘉-忍者团",
@@ -234,12 +234,12 @@
   },
   "fuZhouMod:TigerTalismanYin": {
     "NAME": "虎符·阴成龙",
-    "DESCRIPTION": "耗能为1。获得 !B! 点 *格挡  NL (每有一张手牌，此数值增加 !M! ，上限为 16 )",
-    "UPGRADE_DESCRIPTION": "耗能为1。获得 !B! 点 *格挡  NL (每有一张手牌，此数值增加 !M! ，上限为 20 )"
+    "DESCRIPTION": "耗能为1。获得 !B! 点 *格挡  NL (每有一张手牌，此数值增加 !M! ，上限为 16 ) NL *龙小组",
+    "UPGRADE_DESCRIPTION": "耗能为1。获得 !B! 点 *格挡  NL (每有一张手牌，此数值增加 !M! ，上限为 20 ) NL *龙小组"
   },
   "fuZhouMod:TigerTalismanYang": {
     "NAME": "虎符·阳成龙",
-    "DESCRIPTION": "造成 !D! 点伤害 NL (每有一张手牌，此数值降低 2 ，下限为 2 )"
+    "DESCRIPTION": "造成 !D! 点伤害 NL (每有一张手牌，此数值降低 2 ，下限为 2 ) NL *龙小组"
   },
   "fuZhouMod:FakeTalisman": {
     "NAME": "冒牌符咒",
@@ -247,8 +247,8 @@
   },
   "fuZhouMod:DrunkenFist": {
     "NAME": "醉拳",
-    "DESCRIPTION": "造成 6~10 点随机伤害 X 次 NL (伤害受力量与虚弱影响)",
-    "UPGRADE_DESCRIPTION": "造成 8~12 点随机伤害 X 次 NL (伤害受力量与虚弱影响)"
+    "DESCRIPTION": "对所有敌人造成 6~10 点随机伤害 X 次 NL (伤害受力量与虚弱影响) NL *龙小组",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 8~12 点随机伤害 X 次 NL (伤害受力量与虚弱影响) NL *龙小组"
   },
   "fuZhouMod:ShadowQueen": {
     "NAME": "黑影女王",
@@ -257,78 +257,78 @@
   },
   "fuZhouMod:DeflectAndStrike": {
     "NAME": "借力打力",
-    "DESCRIPTION": "敌人下一个回合，如果完全格挡了敌人的攻击，则对该敌人造成等额的伤害",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 *格挡  NL 敌人下一个回合，如果完全格挡了敌人的攻击，则对该敌人造成等额的伤害"
+    "DESCRIPTION": "敌人下一个回合，如果完全格挡了敌人的攻击，则对该敌人造成等额的伤害 NL *龙小组",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 *格挡  NL 敌人下一个回合，如果完全格挡了敌人的攻击，则对该敌人造成等额的伤害 NL *龙小组"
   },
   "fuZhouMod:GiantJade": {
     "NAME": "巨大小玉",
-    "DESCRIPTION": "将你当前的 *格挡 翻倍 NL 消耗",
-    "UPGRADE_DESCRIPTION": "将你当前的 *格挡 翻倍"
+    "DESCRIPTION": "将你当前的 *格挡 翻倍 NL 消耗 NL *龙小组",
+    "UPGRADE_DESCRIPTION": "将你当前的 *格挡 翻倍 NL *龙小组"
   },
   "fuZhouMod:Suplex": {
     "NAME": "抱摔",
-    "DESCRIPTION": "造成 !D! (+目标最大生命值的 [#efc100]6%[] ) 点伤害"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 基础伤害 = #y!M! + 目标最大生命值的 #y1/8 NL *龙小组"
   },
   "fuZhouMod:CloseAtHand": {
     "NAME": "近在咫尺",
-    "DESCRIPTION": "失去 [#efc100]6[] 点生命值 NL 获得所有敌人 NL  [#efc100]伤害合计 +1[] 的 *格挡 "
+    "DESCRIPTION": "失去 [#efc100]6[] 点生命值 NL 获得所有敌人 NL  [#efc100]伤害合计 +1[] 的 *格挡  NL *龙小组"
   },
   "fuZhouMod:RatTalismanCard": {
     "NAME": "子鼠",
-    "DESCRIPTION": "将消耗牌堆中的 !M! 张卡牌加入手牌。其耗能在本回合变为 *0 ，且本次战斗获得 *虚无 与 消耗  NL 消耗",
-    "UPGRADE_DESCRIPTION": "将消耗牌堆中的 !M! 张卡牌加入手牌。其耗能在本回合变为 *0 ，且本次战斗获得 *虚无 与 消耗  NL 消耗"
+    "DESCRIPTION": "将消耗牌堆中的 !M! 张卡牌加入手牌。其耗能在本回合变为 *0 ，且本次战斗获得 *虚无 与 消耗  NL 消耗 NL *动物符咒",
+    "UPGRADE_DESCRIPTION": "将消耗牌堆中的 !M! 张卡牌加入手牌。其耗能在本回合变为 *0 ，且本次战斗获得 *虚无 与 消耗  NL 消耗 NL *动物符咒"
   },
   "fuZhouMod:OxTalismanCard": {
     "NAME": "丑牛",
-    "DESCRIPTION": "敌人的 *力量 和 *敏捷 无法高于你"
+    "DESCRIPTION": "敌人的 *力量 和 *敏捷 无法高于你 NL *动物符咒"
   },
   "fuZhouMod:TigerTalismanSkillCard": {
     "NAME": "寅虎·技",
-    "DESCRIPTION": "选择一个敌人 NL 若其生命值高于你：其 *力量 -!M!  NL 若其生命值低于你：你 *力量 +!M!  NL 消耗",
-    "UPGRADE_DESCRIPTION": "选择一个敌人 NL 若其生命值高于你：其 *力量 -!M!  NL 若其生命值低于你：你 *力量 +!M!  NL 消耗"
+    "DESCRIPTION": "选择一个敌人 NL 若其生命值高于你：其 *力量 -!M!  NL 若其生命值低于你：你 *力量 +!M!  NL 消耗 NL *动物符咒",
+    "UPGRADE_DESCRIPTION": "选择一个敌人 NL 若其生命值高于你：其 *力量 -!M!  NL 若其生命值低于你：你 *力量 +!M!  NL 消耗 NL *动物符咒"
   },
   "fuZhouMod:TigerTalismanAttackCard": {
     "NAME": "寅虎·攻",
-    "DESCRIPTION": "造成 !D! 点伤害，对比敌我双方生命值和最大生命值的百分比 NL 若高于你：恢复 !M! 点生命 NL 若低于你：造成额外等同于其已损失生命值 [#efc100]30%[] 的伤害"
+    "DESCRIPTION": "造成 !D! 点伤害，对比敌我双方生命值和最大生命值的百分比 NL 若高于你：恢复 !M! 点生命 NL 若低于你：造成额外等同于其已损失生命值 [#efc100]30%[] 的伤害 NL *动物符咒"
   },
   "fuZhouMod:RabbitTalismanCard": {
     "NAME": "卯兔",
-    "DESCRIPTION": "保留手牌结束你的回合。跳过敌人的下一个回合。开启你的新回合 NL 消耗"
+    "DESCRIPTION": "保留手牌结束你的回合。跳过敌人的下一个回合。开启你的新回合 NL 消耗 NL *动物符咒"
   },
   "fuZhouMod:DragonTalismanCard": {
     "NAME": "辰龙",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。如果击杀了任何敌人，重新触发此卡效果"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。如果击杀了任何敌人，重新触发此卡效果 NL *动物符咒"
   },
   "fuZhouMod:SnakeTalismanCard": {
     "NAME": "巳蛇",
-    "DESCRIPTION": "获得 !M! 层 *无实体  NL 消耗 NL *虚无",
-    "UPGRADE_DESCRIPTION": "获得 !M! 层 *无实体  NL 消耗"
+    "DESCRIPTION": "获得 !M! 层 *无实体  NL 消耗 NL *虚无 NL *动物符咒",
+    "UPGRADE_DESCRIPTION": "获得 !M! 层 *无实体  NL 消耗 NL *动物符咒"
   },
   "fuZhouMod:HorseTalismanCard": {
     "NAME": "午马",
-    "DESCRIPTION": "在本回合结束时，恢复你本回合对敌方造成未格挡伤害数值之和的一半（向下取整）的生命值 NL 消耗"
+    "DESCRIPTION": "在本回合结束时，恢复你本回合对敌方造成未格挡伤害数值之和的一半（向下取整）的生命值 NL 消耗 NL *动物符咒"
   },
   "fuZhouMod:GoatTalismanCard": {
     "NAME": "未羊",
-    "DESCRIPTION": "选择一个敌人。将其身上的所有负面状态翻倍 NL 消耗"
+    "DESCRIPTION": "选择一个敌人。将其身上的所有负面状态翻倍 NL 消耗 NL *动物符咒"
   },
   "fuZhouMod:MonkeyTalismanCard": {
     "NAME": "申猴",
-    "DESCRIPTION": "获得 1 层 *易伤（25%）。 NL 如果敌人下一回合的意图是攻击，则对其造成等额的伤害",
-    "UPGRADE_DESCRIPTION": "获得 1 层 *易伤（50%）。 NL 如果敌人下一回合的意图是攻击，则对其造成等额的伤害"
+    "DESCRIPTION": "获得 1 层 *易伤（25%）。 NL 如果敌人下一回合的意图是攻击，则对其造成等额的伤害 NL *动物符咒",
+    "UPGRADE_DESCRIPTION": "获得 1 层 *易伤（50%）。 NL 如果敌人下一回合的意图是攻击，则对其造成等额的伤害 NL *动物符咒"
   },
   "fuZhouMod:RoosterTalismanCard": {
     "NAME": "酉鸡",
-    "DESCRIPTION": "获得 *飞行 能力： *敏捷 +!M! 且受到的伤害降低 [#efc100]50%[] 。受到 [#efc100]5[] 次伤害后被击落并 [#efc100]眩晕[] 1 回合 NL 消耗"
+    "DESCRIPTION": "获得 *飞行 能力： *敏捷 +!M! 且受到的伤害降低 [#efc100]50%[] 。受到 [#efc100]5[] 次伤害后被击落并 [#efc100]眩晕[] 1 回合 NL 消耗 NL *动物符咒"
   },
   "fuZhouMod:DogTalismanCard": {
     "NAME": "戌狗",
-    "DESCRIPTION": "接下来 #b5 回合内，敌人造成的致命伤害不会让你死亡。触发时恢复 !M! 点生命。每次触发消耗 #b1 次保命次数。重复使用可叠加持续回合与保命次数；当持续回合归零或保命次数耗尽时，效果消失。 NL 消耗",
-    "UPGRADE_DESCRIPTION": "接下来 #b8 回合内，敌人造成的致命伤害不会让你死亡。触发时恢复 !M! 点生命。每次触发消耗 #b1 次保命次数。重复使用可叠加持续回合与保命次数；当持续回合归零或保命次数耗尽时，效果消失。 NL 消耗"
+    "DESCRIPTION": "接下来 #b5 回合内，敌人造成的致命伤害不会让你死亡。触发时恢复 !M! 点生命。每次触发消耗 #b1 次保命次数。重复使用可叠加持续回合与保命次数；当持续回合归零或保命次数耗尽时，效果消失。 NL 消耗 NL *动物符咒",
+    "UPGRADE_DESCRIPTION": "接下来 #b8 回合内，敌人造成的致命伤害不会让你死亡。触发时恢复 !M! 点生命。每次触发消耗 #b1 次保命次数。重复使用可叠加持续回合与保命次数；当持续回合归零或保命次数耗尽时，效果消失。 NL 消耗 NL *动物符咒"
   },
   "fuZhouMod:PigTalismanCard": {
     "NAME": "亥猪",
-    "DESCRIPTION": "造成 !D! 点伤害。移除目标：力量、人工制品、荆棘、飞行、无实体、金属化 NL 消耗"
+    "DESCRIPTION": "造成 !D! 点伤害。移除目标：力量、人工制品、荆棘、飞行、无实体、金属化 NL 消耗 NL *动物符咒"
   },
   "fuZhouMod:Soultrap": {
     "NAME": "拘魂",
@@ -337,25 +337,25 @@
   },
   "fuZhouMod:SinglePlankBridge": {
     "NAME": "独木桥",
-    "DESCRIPTION": "选择消耗任意张手牌，每消耗一张，你抽牌堆顶部第一张卡就会被打出一次",
-    "UPGRADE_DESCRIPTION": "选择消耗任意张手牌，每消耗一张，你抽牌堆顶部第一张卡就会被打出其张数+1次"
+    "DESCRIPTION": "选择消耗任意张手牌，每消耗一张，你抽牌堆顶部第一张卡就会被打出一次 NL *龙小组",
+    "UPGRADE_DESCRIPTION": "选择消耗任意张手牌，每消耗一张，你抽牌堆顶部第一张卡就会被打出其张数+1次 NL *龙小组"
   },
   "fuZhouMod:Ambidexterity": {
     "NAME": "左右互搏",
-    "DESCRIPTION": "抽 !M! 张卡，从手牌中选择一张丢弃，从手牌中选择一张回到抽牌堆顶部",
-    "UPGRADE_DESCRIPTION": "抽 !M! 张卡，从手牌中选择一张丢弃，从手牌中选择一张回到抽牌堆顶部"
+    "DESCRIPTION": "抽 !M! 张卡，从手牌中选择一张丢弃，从手牌中选择一张回到抽牌堆顶部 NL *龙小组",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张卡，从手牌中选择一张丢弃，从手牌中选择一张回到抽牌堆顶部 NL *龙小组"
   },
   "fuZhouMod:JadeStealsTalisman": {
     "NAME": "小玉偷符咒",
-    "DESCRIPTION": "从 13 张动物符咒卡片里随机获取一个到手牌，其耗能在本回合变为 *0  NL 消耗"
+    "DESCRIPTION": "从 13 张动物符咒卡片里随机获取一个到手牌，其耗能在本回合变为 *0  NL 消耗 NL *龙小组"
   },
   "fuZhouMod:Petrification": {
     "NAME": "石化",
-    "DESCRIPTION": "赋予目标 1 层 [#efc100]石化[]  NL ( [#efc100]石化[] ：每回合开始获得 [#efc100]1[] 点 [#efc100]力量[] (最高 [#efc100]10[] 点)，且受到的伤害提升 !M!% (每回合自增 1 层，最高 10 层)。) NL 消耗"
+    "DESCRIPTION": "赋予目标 1 层 [#efc100]石化[]  NL ( [#efc100]石化[] ：每回合开始获得 [#efc100]1[] 点 [#efc100]力量[] (最高 [#efc100]10[] 点)，且受到的伤害提升 !M!% (每回合自增 1 层，最高 10 层)。) NL 消耗 NL *龙小组"
   },
   "fuZhouMod:Flatten": {
     "NAME": "压扁",
-    "DESCRIPTION": "造成 !D! 点伤害。 (伤害等同于 8 + 你的总牌组数量)"
+    "DESCRIPTION": "造成 !D! 点伤害。 (伤害等同于 8 + 你的总牌组数量) NL *龙小组"
   },
   "fuZhouMod:HiddenDragon": {
     "NAME": "潜龙在渊",
@@ -364,7 +364,7 @@
   },
   "fuZhouMod:TargetImbalance": {
     "NAME": "目标失衡",
-    "DESCRIPTION": "造成 !D! 点伤害。 若造成生命值伤害，随机改变敌人意图 NL 消耗"
+    "DESCRIPTION": "造成 !D! 点伤害。 若造成生命值伤害，随机改变敌人意图 NL 消耗 NL *龙小组"
   },
   "fuZhouMod:CardFireDemonQi": {
     "NAME": "火之恶魔·小龙",
@@ -504,15 +504,15 @@
   },
   "fuZhouMod:DarkPact": {
     "NAME": "黑暗契约",
-    "DESCRIPTION": "获得 !M! 层 *影蚀 。 NL 失去 2 点 *力量 。 NL [#efc100]消耗[]。"
+    "DESCRIPTION": "获得 !M! 层 *影噬 。 NL 失去 2 点 *力量 。 NL [#efc100]消耗[]。"
   },
   "fuZhouMod:ShadowRitual": {
     "NAME": "潜影仪式",
-    "DESCRIPTION": "获得 !M! 层 *影蚀 。 NL 失去 5 点生命。 NL [#efc100]消耗[]。"
+    "DESCRIPTION": "获得 !M! 层 *影噬 。 NL 失去 5 点生命。 NL [#efc100]消耗[]。"
   },
   "fuZhouMod:ShadowDecree": {
     "NAME": "黑影敕令",
-    "DESCRIPTION": "获得 4 层 *影蚀 。 NL 回合开始时，失去 1 点 *力量 和 1 点 *敏捷 ，并失去 1 点生命值，且你无法再获得 *力量 。"
+    "DESCRIPTION": "获得 4 层 *影噬 。 NL 回合开始时，失去 1 点 *力量 和 1 点 *敏捷 ，并失去 1 点生命值，且你无法再获得 *力量 。"
   },
   "fuZhouMod:CardEightDemonPossession": {
     "NAME": "八魔附体",
@@ -534,5 +534,54 @@
   "fuZhouMod:CurseBlack": {
     "NAME": "布莱克",
     "DESCRIPTION": "诅咒。无法打出。 NL 抽到时：本回合你打出的第一张技能牌费用 +1。 NL 回合结束时：若此牌仍在手牌，获得 1 层易伤。"
+  },
+  "fuZhouMod:ChestnutBall": {
+    "NAME": "栗子球",
+    "DESCRIPTION": "本回合受到任何来源的伤害视为 0 。 NL 消耗 NL 虚无",
+    "UPGRADE_DESCRIPTION": "本回合受到任何来源的伤害视为 0 。 NL 消耗"
+  },
+  "fuZhouMod:DemonDice": {
+    "NAME": "恶魔的骰子",
+    "DESCRIPTION": "指定一名敌人，其 *力量 随机下降 [#efc100]1~6[] 点。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "指定一名敌人，其 *力量 随机下降 [#efc100]1~6[] 点。 NL 消耗"
+  },
+  "fuZhouMod:AngelDice": {
+    "NAME": "天使的骰子",
+    "DESCRIPTION": "你的 *力量 随机提升 [#efc100]1~6[] 点。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "你的 *力量 随机提升 [#efc100]1~6[] 点。 NL 消耗"
+  },
+  "fuZhouMod:ExodiaSealed": {
+    "NAME": "被封印的艾克佐迪亚",
+    "DESCRIPTION": "手牌集齐 [#efc100]被封印的艾克佐迪亚[] 、 [#efc100]被封印者的右臂[] 、 [#efc100]被封印者的左臂[] 、 [#efc100]被封印者的右足[] 、 [#efc100]被封印者的左足[] 时，消灭场上全部怪物，获得本场战斗胜利。",
+    "UPGRADE_DESCRIPTION": "保留 NL 手牌集齐 [#efc100]被封印的艾克佐迪亚[] 、 [#efc100]被封印者的右臂[] 、 [#efc100]被封印者的左臂[] 、 [#efc100]被封印者的右足[] 、 [#efc100]被封印者的左足[] 时，消灭场上全部怪物，获得本场战斗胜利。"
+  },
+  "fuZhouMod:ExodiaRightArm": {
+    "NAME": "被封印者的右臂",
+    "DESCRIPTION": "获得 !B! 点 *格挡 "
+  },
+  "fuZhouMod:ExodiaLeftArm": {
+    "NAME": "被封印者的左臂",
+    "DESCRIPTION": "获得 !B! 点 *格挡 "
+  },
+  "fuZhouMod:ExodiaRightLeg": {
+    "NAME": "被封印者的右足",
+    "DESCRIPTION": "造成 !D! 点伤害"
+  },
+  "fuZhouMod:ExodiaLeftLeg": {
+    "NAME": "被封印者的左足",
+    "DESCRIPTION": "造成 !D! 点伤害"
+  },
+  "fuZhouMod:RingOfDestruction": {
+    "NAME": "破坏轮",
+    "DESCRIPTION": "选择一个怪物为目标。该怪物死亡时，对场上其他怪物造成其 [#efc100]最大生命值[] 的伤害。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "选择一个怪物为目标。该怪物死亡时，对场上其他怪物造成其 [#efc100]最大生命值[] 的伤害。"
+  },
+  "fuZhouMod:BlueEyesWhiteDragon": {
+    "NAME": "青眼白龙",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 随即随机 *消耗 2 张手牌。"
+  },
+  "fuZhouMod:GandoraDragon": {
+    "NAME": "破坏龙甘多拉",
+    "DESCRIPTION": "清空你和全部怪物的 *力量 （归零）。 NL 对所有怪物造成清空力量 [#efc100]绝对值之和[] 的伤害。 NL 消耗"
   }
 }

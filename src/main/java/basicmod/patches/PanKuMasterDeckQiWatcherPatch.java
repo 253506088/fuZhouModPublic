@@ -30,6 +30,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.UUID;
 
 /**
@@ -48,6 +49,12 @@ public class PanKuMasterDeckQiWatcherPatch {
 
     /** 上一次记录的卡牌魔气快照：卡 UUID -> 这张卡代表的恶魔魔气卡 ID 列表。 */
     private static final HashMap<UUID, ArrayList<String>> qiByCardUuid = new HashMap<>();
+    /** 每帧复用的 UUID 集合，避免主卡组监听反复创建 HashSet。 */
+    private static final HashSet<UUID> currentUuids = new HashSet<>();
+    /** 上一次处理完成时的主卡组数量。 */
+    private static int watchedDeckSize = -1;
+    /** 上一次处理完成时的主卡组 UUID 指纹。 */
+    private static long watchedDeckFingerprint = 0L;
 
     /**
      * 挂到玩家 update，每帧做一次轻量主卡组 UUID 对比。
@@ -133,7 +140,13 @@ public class PanKuMasterDeckQiWatcherPatch {
             return;
         }
 
-        HashSet<UUID> currentUuids = new HashSet<>();
+        int currentDeckSize = player.masterDeck.group.size();
+        long currentDeckFingerprint = calculateDeckFingerprint(player.masterDeck);
+        if (currentDeckSize == watchedDeckSize && currentDeckFingerprint == watchedDeckFingerprint) {
+            return;
+        }
+
+        currentUuids.clear();
         for (AbstractCard card : player.masterDeck.group) {
             currentUuids.add(card.uuid);
             if (!qiByCardUuid.containsKey(card.uuid)) {
@@ -141,13 +154,17 @@ public class PanKuMasterDeckQiWatcherPatch {
             }
         }
 
-        for (UUID knownUuid : new ArrayList<>(qiByCardUuid.keySet())) {
+        Iterator<UUID> iterator = qiByCardUuid.keySet().iterator();
+        while (iterator.hasNext()) {
+            UUID knownUuid = iterator.next();
             if (!currentUuids.contains(knownUuid)) {
                 returnLostQi(qiByCardUuid.get(knownUuid));
+                iterator.remove();
             }
         }
 
-        qiByCardUuid.keySet().retainAll(currentUuids);
+        watchedDeckSize = currentDeckSize;
+        watchedDeckFingerprint = currentDeckFingerprint;
     }
 
     /**
@@ -160,6 +177,8 @@ public class PanKuMasterDeckQiWatcherPatch {
         for (AbstractCard card : deck.group) {
             qiByCardUuid.put(card.uuid, getQiCardIDs(card));
         }
+        watchedDeckSize = deck.group.size();
+        watchedDeckFingerprint = calculateDeckFingerprint(deck);
     }
 
     /**
@@ -170,6 +189,9 @@ public class PanKuMasterDeckQiWatcherPatch {
     private static void clearSnapshot() {
         watchedDeck = null;
         qiByCardUuid.clear();
+        currentUuids.clear();
+        watchedDeckSize = -1;
+        watchedDeckFingerprint = 0L;
     }
 
     /**
@@ -182,6 +204,21 @@ public class PanKuMasterDeckQiWatcherPatch {
             return;
         }
         qiByCardUuid.put(card.uuid, getQiCardIDs(card));
+    }
+
+    /**
+     * 计算主卡组 UUID 指纹。
+     *
+     * 只读取 UUID，不解析 Modifier；数量相同但卡被替换时也能触发完整差分。
+     */
+    private static long calculateDeckFingerprint(CardGroup deck) {
+        long fingerprint = 1469598103934665603L;
+        for (AbstractCard card : deck.group) {
+            int uuidHash = card.uuid == null ? 0 : card.uuid.hashCode();
+            fingerprint ^= uuidHash;
+            fingerprint *= 1099511628211L;
+        }
+        return fingerprint;
     }
 
     /**

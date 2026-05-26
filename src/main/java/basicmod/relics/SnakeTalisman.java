@@ -3,7 +3,7 @@ package basicmod.relics;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.input.InputHelper;
+import basicmod.helpers.TalismanInputHelper;
 import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 
 import static basicmod.BasicMod.makeID;
@@ -65,7 +65,7 @@ public class SnakeTalisman extends BaseRelic {
         super.update();
         // 只有在战斗中、非冷却状态下才允许点击
         if (canInteractInCombat() && this.counter <= 0) {
-            if (this.hb.hovered && InputHelper.justClickedRight) {
+            if (TalismanInputHelper.isRelicRightClickTriggered(this)) {
                 this.activated = !this.activated;
                 if (this.activated) {
                     CardCrawlGame.sound.play("UI_CLICK_1");

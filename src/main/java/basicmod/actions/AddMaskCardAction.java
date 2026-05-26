@@ -8,14 +8,27 @@ import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+/**
+ * 添加面具卡牌动作。
+ * 如果手牌未满，将卡牌加入手牌；如果手牌已满，自动免费打出该卡牌。
+ */
 public class AddMaskCardAction extends AbstractGameAction {
+    /** 要添加的卡牌 */
     private AbstractCard card;
 
+    /**
+     * 构造函数。
+     *
+     * @param card 要添加的面具卡牌
+     */
     public AddMaskCardAction(AbstractCard card) {
         this.card = card;
         this.actionType = ActionType.CARD_MANIPULATION;
     }
 
+    /**
+     * 执行动作逻辑：手牌未满时加入手牌，已满时自动免费打出。
+     */
     @Override
     public void update() {
         // 如果手牌未满，正常加入手牌

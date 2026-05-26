@@ -17,10 +17,21 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import java.util.List;
 
+/**
+ * 剥离面具动作。
+ * 选择一个面具能力剥离，移除该能力并返还对应的面具卡牌。
+ */
 public class PeelMaskAction extends AbstractGameAction {
+    /** 玩家对象 */
     private final AbstractPlayer player;
+    /** 是否升级 */
     private final boolean upgraded;
 
+    /**
+     * 构造函数。
+     *
+     * @param upgraded 是否升级
+     */
     public PeelMaskAction(boolean upgraded) {
         this.player = AbstractDungeon.player;
         this.upgraded = upgraded;
@@ -28,6 +39,9 @@ public class PeelMaskAction extends AbstractGameAction {
         this.duration = Settings.ACTION_DUR_MED;
     }
 
+    /**
+     * 执行动作逻辑：选择面具能力，移除并返还对应卡牌。
+     */
     @Override
     public void update() {
         if (this.duration == Settings.ACTION_DUR_MED) {
@@ -131,10 +145,20 @@ public class PeelMaskAction extends AbstractGameAction {
         this.isDone = true;
     }
 
+    /**
+     * 判断能力是否可剥离（是面具能力或塔拉能力）。
+     *
+     * @param power 要检查的能力
+     * @return 如果可剥离返回true
+     */
     private boolean isPeelableMaskPower(AbstractPower power) {
         return power instanceof BaseMaskPower || TaLaPower.POWER_ID.equals(power.ID);
     }
 
+    /**
+     * 面具能力预览卡牌。
+     * 用于在网格选择界面中显示面具能力的信息。
+     */
     private static class MaskPowerPreviewCard extends AbstractCard {
         private final String powerId;
         private final String previewName;

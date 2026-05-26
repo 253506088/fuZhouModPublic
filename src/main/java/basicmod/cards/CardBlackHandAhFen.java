@@ -9,7 +9,12 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+/**
+ * 黑手党阿芬卡牌。
+ * 基础攻击牌，造成伤害。
+ */
 public class CardBlackHandAhFen extends BaseCard {
+    /** 卡牌ID */
     public static final String ID = makeID("BlackHandAhFen");
     private static final CardStats info = new CardStats(
             CharacterEnums.SHENGZHU_COLOR,

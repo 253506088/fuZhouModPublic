@@ -6,12 +6,22 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
+/**
+ * 双倍格挡动作。
+ * 将玩家当前格挡值翻倍，通过标志位防止补丁重复触发。
+ */
 public class DoubleBlockAction extends AbstractGameAction {
+    /**
+     * 构造函数。
+     */
     public DoubleBlockAction() {
         this.actionType = ActionType.BLOCK;
         this.duration = Settings.ACTION_DUR_XFAST;
     }
 
+    /**
+     * 执行动作逻辑：通过压栈实现格挡翻倍，使用标志位防止补丁重复触发。
+     */
     @Override
     public void update() {
         AbstractPlayer p = AbstractDungeon.player;

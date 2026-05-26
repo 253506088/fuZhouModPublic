@@ -28,48 +28,109 @@ import static basicmod.util.GeneralUtils.removePrefix;
 import static basicmod.util.TextureLoader.getCardTextureString;
 
 
+/**
+ * 卡牌基类。
+ * 提供卡牌的基础功能，包括升级逻辑、自定义变量、关键字提示等。
+ */
 public abstract class BaseCard extends CustomCard {
+    /** 自定义动态变量映射表 */
     final private static Map<String, DynamicVariable> customVars = new HashMap<>();
+    /** 旧版颜色标记正则表达式 */
     private static final Pattern LEGACY_CARD_COLOR_PATTERN = Pattern.compile("(?<!\\[)#([ybrgp])([^\\s#]+)");
 
+    /** 生成Mod内唯一的ID */
     protected static String makeID(String name) { return BasicMod.makeID(name); }
+    /** 卡牌本地化字符串 */
     protected CardStrings cardStrings;
 
+    /** 是否升级描述 */
     protected boolean upgradesDescription;
 
+    /** 基础费用 */
     protected int baseCost;
 
+    /** 是否升级费用 */
     protected boolean upgradeCost;
+    /** 费用升级值 */
     protected int costUpgrade;
 
+    /** 是否升级伤害 */
     protected boolean upgradeDamage;
+    /** 是否升级格挡 */
     protected boolean upgradeBlock;
+    /** 是否升级魔法值 */
     protected boolean upgradeMagic;
 
+    /** 伤害升级值 */
     protected int damageUpgrade;
+    /** 格挡升级值 */
     protected int blockUpgrade;
+    /** 魔法值升级值 */
     protected int magicUpgrade;
 
+    /** 基础是否消耗 */
     protected boolean baseExhaust = false;
+    /** 升级后是否消耗 */
     protected boolean upgExhaust = false;
+    /** 基础是否虚无 */
     protected boolean baseEthereal = false;
+    /** 升级后是否虚无 */
     protected boolean upgEthereal = false;
+    /** 基础是否固有 */
     protected boolean baseInnate = false;
+    /** 升级后是否固有 */
     protected boolean upgInnate = false;
+    /** 基础是否保留 */
     protected boolean baseRetain = false;
+    /** 升级后是否保留 */
     protected boolean upgRetain = false;
 
+    /** 自定义变量映射表 */
     final protected Map<String, LocalVarInfo> cardVariables = new HashMap<>();
 
+    /**
+     * 使用CardStats构造卡牌。
+     *
+     * @param ID 卡牌ID
+     * @param info 卡牌属性信息
+     */
     public BaseCard(String ID, CardStats info) {
         this(ID, info, getCardTextureString(removePrefix(ID), info.cardType));
     }
+    /**
+     * 使用CardStats和自定义图片路径构造卡牌。
+     *
+     * @param ID 卡牌ID
+     * @param info 卡牌属性信息
+     * @param cardImage 卡牌图片路径
+     */
     public BaseCard(String ID, CardStats info, String cardImage) {
         this(ID, info.baseCost, info.cardType, info.cardTarget, info.cardRarity, info.cardColor, cardImage);
     }
+    /**
+     * 使用基本属性构造卡牌。
+     *
+     * @param ID 卡牌ID
+     * @param cost 费用
+     * @param cardType 卡牌类型
+     * @param target 卡牌目标
+     * @param rarity 稀有度
+     * @param color 卡牌颜色
+     */
     public BaseCard(String ID, int cost, CardType cardType, CardTarget target, CardRarity rarity, CardColor color) {
         this(ID, cost, cardType, target, rarity, color, getCardTextureString(removePrefix(ID), cardType));
     }
+    /**
+     * 完整构造函数。
+     *
+     * @param ID 卡牌ID
+     * @param cost 费用
+     * @param cardType 卡牌类型
+     * @param target 卡牌目标
+     * @param rarity 稀有度
+     * @param color 卡牌颜色
+     * @param cardImage 卡牌图片路径
+     */
     public BaseCard(String ID, int cost, CardType cardType, CardTarget target, CardRarity rarity, CardColor color, String cardImage)
     {
         super(ID, getName(ID), cardImage, cost, getInitialDescription(ID), cardType, color, rarity, target);
@@ -176,7 +237,11 @@ public abstract class BaseCard extends CustomCard {
     @Override
     public void initializeDescription() {
         this.rawDescription = normalizeCardDescription(this.rawDescription);
-        super.initializeDescription();
+        try {
+            super.initializeDescription();
+        } catch (Exception e) {
+            BasicMod.logger.error("卡牌描述初始化异常, cardID=" + this.cardID + ", rawDescription=" + this.rawDescription, e);
+        }
     }
 
     @Override
@@ -295,6 +360,12 @@ public abstract class BaseCard extends CustomCard {
         return false;
     }
 
+    /**
+     * 判断阿福连招是否激活。
+     * 本回合除当前牌外，是否已经打出过带有afu标签的牌。
+     *
+     * @return 如果连招激活返回true
+     */
     public boolean isAfuComboActive() {
         if (AbstractDungeon.actionManager == null) return false;
         
@@ -306,10 +377,21 @@ public abstract class BaseCard extends CustomCard {
         }
         return false;
     }
+    /**
+     * 设置伤害值。
+     *
+     * @param damage 基础伤害值
+     */
     protected final void setDamage(int damage)
     {
         this.setDamage(damage, 0);
     }
+    /**
+     * 设置伤害值和升级伤害值。
+     *
+     * @param damage 基础伤害值
+     * @param damageUpgrade 升级时增加的伤害值
+     */
     protected final void setDamage(int damage, int damageUpgrade)
     {
         this.baseDamage = this.damage = damage;
@@ -320,10 +402,21 @@ public abstract class BaseCard extends CustomCard {
         }
     }
 
+    /**
+     * 设置格挡值。
+     *
+     * @param block 基础格挡值
+     */
     protected final void setBlock(int block)
     {
         this.setBlock(block, 0);
     }
+    /**
+     * 设置格挡值和升级格挡值。
+     *
+     * @param block 基础格挡值
+     * @param blockUpgrade 升级时增加的格挡值
+     */
     protected final void setBlock(int block, int blockUpgrade)
     {
         this.baseBlock = this.block = block;
@@ -334,10 +427,21 @@ public abstract class BaseCard extends CustomCard {
         }
     }
 
+    /**
+     * 设置魔法值。
+     *
+     * @param magic 基础魔法值
+     */
     protected final void setMagic(int magic)
     {
         this.setMagic(magic, 0);
     }
+    /**
+     * 设置魔法值和升级魔法值。
+     *
+     * @param magic 基础魔法值
+     * @param magicUpgrade 升级时增加的魔法值
+     */
     protected final void setMagic(int magic, int magicUpgrade)
     {
         this.baseMagicNumber = this.magicNumber = magic;

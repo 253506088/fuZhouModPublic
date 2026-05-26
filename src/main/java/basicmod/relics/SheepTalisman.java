@@ -1,11 +1,11 @@
 package basicmod.relics;
 
 import com.evacipated.cardcrawl.mod.stslib.relics.OnApplyPowerRelic;
+import basicmod.helpers.TalismanInputHelper;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import static basicmod.BasicMod.makeID;
@@ -59,7 +59,7 @@ public class SheepTalisman extends BaseRelic implements OnApplyPowerRelic {
     public void update() {
         super.update();
         if (canInteractInCombat() && this.counter <= 0) {
-            if (this.hb.hovered && InputHelper.justClickedRight) {
+            if (TalismanInputHelper.isRelicRightClickTriggered(this)) {
                 this.activated = !this.activated;
                 if (this.activated) {
                     CardCrawlGame.sound.play("UI_CLICK_1");

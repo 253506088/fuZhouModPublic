@@ -26,7 +26,7 @@ public class FearPatch {
             if (isBypassing) return SpireReturn.Continue();
             
             if (__instance.hasPower(FearPower.POWER_ID)) {
-                logger.info("恐惧生效中：强制怪物 " + __instance.name + " 的意图显示为防御。");
+                logger.debug("恐惧生效中：强制怪物 {} 的意图显示为防御。", __instance.name);
                 
                 // 设为一个相对中性的防御意图，字节码设为 99 （通常比 -127 安全）
                 // 配合下方的 takeTurn 拦截，这个字节码其实不会被实际执行到。
@@ -54,7 +54,7 @@ public class FearPatch {
             AbstractMonster m = item.monster;
             
             if (m != null && m.hasPower(FearPower.POWER_ID)) {
-                logger.info("恐惧拦截成功：跳过怪物 " + m.name + " 的动作，并为其预备下回合意图。");
+                logger.debug("恐惧拦截成功：跳过怪物 {} 的动作，并为其预备下回合意图。", m.name);
                 
                 // 1. 弹出动作队列，代表本回合动作已“完成”
                 __instance.monsterQueue.remove(0);

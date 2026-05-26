@@ -9,7 +9,12 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+/**
+ * 黑手党老鼠卡牌。
+ * 获得格挡，抽牌后弃牌。
+ */
 public class CardBlackHandRatso extends BaseCard {
+    /** 卡牌ID */
     public static final String ID = makeID("BlackHandRatso");
     private static final CardStats info = new CardStats(
             CharacterEnums.SHENGZHU_COLOR,

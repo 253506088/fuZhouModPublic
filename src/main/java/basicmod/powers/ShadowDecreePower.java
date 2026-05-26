@@ -51,7 +51,7 @@ public class ShadowDecreePower extends BasePower implements OnReceivePowerPower 
         if (shouldBlockStrengthGain(power, target)) {
             this.flash();
             String sourceName = source == null ? "未知来源" : source.name;
-            BasicMod.logger.info("【黑影敕令】已拦截正向力量：来源={}，目标={}，数值={}",
+            BasicMod.logger.debug("【黑影敕令】已拦截正向力量：来源={}，目标={}，数值={}",
                     sourceName, target.name, power.amount);
             return false;
         }
@@ -66,7 +66,7 @@ public class ShadowDecreePower extends BasePower implements OnReceivePowerPower 
                 && stackAmount > 0) {
             this.flash();
             String sourceName = source == null ? "未知来源" : source.name;
-            BasicMod.logger.info("【黑影敕令】已拦截力量叠层：来源={}，目标={}，叠层={}",
+            BasicMod.logger.debug("【黑影敕令】已拦截力量叠层：来源={}，目标={}，叠层={}",
                     sourceName, target.name, stackAmount);
             return 0;
         }

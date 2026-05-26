@@ -14,20 +14,33 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
+/**
+ * 能力基类。
+ * 提供能力的基础功能，包括本地化、图片加载、双数值显示等。
+ */
 public abstract class BasePower extends AbstractPower {
+    /**
+     * 获取能力本地化字符串。
+     */
     private static PowerStrings getPowerStrings(String ID)
     {
         return CardCrawlGame.languagePack.getPowerStrings(ID);
     }
+    /** 能力来源 */
     protected AbstractCreature source;
+    /** 描述文本数组 */
     protected String[] DESCRIPTIONS;
 
-    //Will not display if at 0. You can override renderAmount to render it however you want.
-    //amount2 will not stack like the normal amount variable when stacking a power.
+    /** 第二个数值，为0时不显示。不会像amount一样在堆叠时自动累加 */
     public int amount2 = 0;
+    /** 第二个数值的红色（减少） */
     protected Color redColor2 = Color.RED.cpy();
+    /** 第二个数值的绿色（增加） */
     protected Color greenColor2 = Color.GREEN.cpy();
 
+    /**
+     * 基础构造函数。
+     */
     public BasePower(String id, PowerType powerType, boolean isTurnBased, AbstractCreature owner, int amount) {
         this(id, powerType, isTurnBased, owner, null, amount);
     }
@@ -78,6 +91,9 @@ public abstract class BasePower extends AbstractPower {
             this.updateDescription();
     }
 
+    /**
+     * 渲染能力数值，支持显示第二个数值。
+     */
     public void renderAmount(SpriteBatch sb, float x, float y, Color c) {
         super.renderAmount(sb, x, y, c);
 

@@ -1,6 +1,7 @@
 package basicmod.relics;
 
 import basicmod.enums.CustomTags;
+import basicmod.helpers.TalismanInputHelper;
 import basicmod.ui.MonkeyTalismanCampfireOption;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -128,7 +129,7 @@ public class MonkeyTalisman extends BaseRelic {
         // --- 处理右键点击：切换预备状态 ---
         if (canInteractInCombat() && !usedInCombat) {
             if (AbstractDungeon.player != null && AbstractDungeon.player.hasRelic(RatTalisman.ID)) {
-                if (this.hb.hovered && com.megacrit.cardcrawl.helpers.input.InputHelper.justClickedRight) {
+                if (TalismanInputHelper.isRelicRightClickTriggered(this)) {
                     this.activated = !this.activated;
                     if (this.activated) {
                         com.megacrit.cardcrawl.core.CardCrawlGame.sound.play("UI_CLICK_1");

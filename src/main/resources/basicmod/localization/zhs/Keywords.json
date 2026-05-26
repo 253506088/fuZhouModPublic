@@ -18,6 +18,22 @@
     "DESCRIPTION": "由黑手党大将阿福使出的威猛招式。"
   },
   {
+    "ID": "TeamJackie",
+    "PROPER_NAME": "龙小组",
+    "NAMES": [
+      "龙小组"
+    ],
+    "DESCRIPTION": "成龙、小玉、特鲁等人组成的龙小组系列卡牌。"
+  },
+  {
+    "ID": "AnimalTalisman",
+    "PROPER_NAME": "动物符咒",
+    "NAMES": [
+      "动物符咒"
+    ],
+    "DESCRIPTION": "十二生肖动物符咒系列卡牌，其中寅虎分为攻与技两张。"
+  },
+  {
     "ID": "Flight",
     "PROPER_NAME": "飞行",
     "NAMES": [
@@ -118,11 +134,11 @@
   },
   {
     "ID": "Dominion",
-    "PROPER_NAME": "影蚀",
+    "PROPER_NAME": "影噬",
     "NAMES": [
-      "影蚀"
+      "影噬"
     ],
-    "DESCRIPTION": "黑影兵团卡不再受 #y力量 与 #y敏捷 影响，改为受 #y影蚀 影响。每 #b1 层 #y影蚀 ，使黑影兵团卡造成的伤害或获得的格挡 #b+1。"
+    "DESCRIPTION": "黑影兵团卡不再受 #y力量 与 #y敏捷 影响，改为受 #y影噬 影响。每 #b1 层 #y影噬 ，使黑影兵团卡造成的伤害或获得的格挡 #b+1。"
   },
   {
     "ID": "BlackHandCard",
@@ -154,7 +170,7 @@
     "NAMES": [
       "黑影兵团"
     ],
-    "DESCRIPTION": "黑影兵团系列卡牌默认 #y消耗 ，其伤害或格挡会受 #y影蚀 影响。"
+    "DESCRIPTION": "黑影兵团系列卡牌默认 #y消耗 ，其伤害或格挡会受 #y影噬 影响。"
   },
   {
     "ID": "DemonAnomaly",

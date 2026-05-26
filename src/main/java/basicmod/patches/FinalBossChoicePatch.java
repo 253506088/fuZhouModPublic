@@ -1,7 +1,6 @@
 package basicmod.patches;
 
 import basicmod.BasicMod;
-import basicmod.enums.CharacterEnums;
 import basicmod.helpers.FinalBossChoiceManager;
 import basicmod.monsters.GrandMageDad;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
@@ -18,7 +17,7 @@ public class FinalBossChoicePatch {
             if (!"TheEnding".equals(AbstractDungeon.id)) {
                 return;
             }
-            if (AbstractDungeon.player == null || AbstractDungeon.player.chosenClass != CharacterEnums.SHENGZHU) {
+            if (AbstractDungeon.player == null || !FinalBossChoiceManager.canChooseFinalBoss(AbstractDungeon.player.chosenClass)) {
                 return;
             }
             if (__instance.monsters == null || __instance.monsters.monsters == null || __instance.monsters.monsters.isEmpty()) {
@@ -33,7 +32,7 @@ public class FinalBossChoicePatch {
                 return;
             }
 
-            BasicMod.logger.info("[最终Boss选项补丁] 用大法师父亲替换腐化之心");
+            BasicMod.logger.info("[最终Boss选项补丁] 当前角色选择大法师老爹，用大法师老爹替换腐化之心");
             __instance.monsters = new MonsterGroup(new GrandMageDad());
         }
     }

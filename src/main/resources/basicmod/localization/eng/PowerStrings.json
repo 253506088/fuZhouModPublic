@@ -427,5 +427,24 @@
                                                                      "Chant Shield: [",
                                                                      "]. During chanting, this shield no longer naturally clears at turn start, and [Pig Talisman cannot directly remove it]. If this shield is broken before Dad's next action, the execution is canceled and Dad returns directly to T2."
                                                                  ]
-                                            }
+                                            },
+    "fuZhouMod:RingOfDestructionPower":  {
+                                             "NAME":  "Ring of Destruction",
+                                             "DESCRIPTIONS":  [
+                                                                  "When this monster dies, deal #b",
+                                                                  " damage to all other enemies (equal to its Max HP)."
+                                                              ]
+                                         },
+    "fuZhouMod:ChestnutBallPower":  {
+                                        "NAME":  "Kuriboh",
+                                        "DESCRIPTIONS":  [
+                                                             "Immune to all damage this turn."
+                                                         ]
+                                    },
+    "fuZhouMod:ExodiaProtectionPower":  {
+                                            "NAME":  "Protection of Exodia",
+                                            "DESCRIPTIONS":  [
+                                                                 "Exodia has awakened. At the start of each turn, gain #b999 #yBlock and #b1 #yIntangible , and retain all Exodia pieces in hand."
+                                                             ]
+                                        }
 }

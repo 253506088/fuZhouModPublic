@@ -45,7 +45,7 @@ public class CardGan extends BaseCard {
         if (currentCrit > 100) currentCrit = 100;
         
         // 老大爷，我在这里改成了基于 Power 的全局计数，确保同局战斗内所有【甘】共享成长
-        basicmod.BasicMod.logger.info("【甘】卡牌使用 - 当前暴击率: " + currentCrit + "% (基础: " + baseCrit + ", 全局增长次数: " + growthCount + ")");
+        basicmod.BasicMod.logger.debug("【甘】卡牌使用 - 当前暴击率: {}% (基础: {}, 全局增长次数: {})", currentCrit, baseCrit, growthCount);
         
         int rng = AbstractDungeon.cardRandomRng.random(1, 100);
         boolean critted = rng <= currentCrit;
@@ -55,7 +55,7 @@ public class CardGan extends BaseCard {
             AbstractDungeon.effectList.add(new FlashAtkImgEffect(m.hb.cX, m.hb.cY, AbstractGameAction.AttackEffect.FIRE, false));
         }
         
-        basicmod.BasicMod.logger.info("【甘】决策判定 - 随机数: " + rng + ", 是否暴击: " + critted + ", 最终伤害: " + finalDamage);
+        basicmod.BasicMod.logger.debug("【甘】决策判定 - 随机数: {}, 是否暴击: {}, 最终伤害: {}", rng, critted, finalDamage);
         
         addToBot(new DamageAction(m, new DamageInfo(p, finalDamage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HEAVY));
         
@@ -64,7 +64,7 @@ public class CardGan extends BaseCard {
         
         // 日志记录下一次（也封个顶显示）
         int nextCrit = Math.min(100, baseCrit + (growthCount + 1) * 10);
-        basicmod.BasicMod.logger.info("【甘】魔力增长 - 期待下次暴击率: " + nextCrit + "%");
+        basicmod.BasicMod.logger.debug("【甘】魔力增长 - 期待下次暴击率: {}%", nextCrit);
     }
 
     @Override

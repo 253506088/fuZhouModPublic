@@ -15,7 +15,12 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * 阿福打成龙卡牌。
+ * 造成伤害，本局战斗中每打出过一种不同的阿福招式，伤害+2。
+ */
 public class CardAfuBeatJackie extends BaseCard {
+    /** 卡牌ID */
     public static final String ID = makeID("AfuBeatJackie");
     private static final CardStats info = new CardStats(
             CharacterEnums.SHENGZHU_COLOR,
@@ -77,6 +82,11 @@ public class CardAfuBeatJackie extends BaseCard {
         }
     }
 
+    /**
+     * 获取本局战斗中打出过的不同阿福招式数量。
+     *
+     * @return 不同阿福招式的数量
+     */
     private int getUniqueAfuMoves() {
         Set<String> uniqueIDs = new HashSet<>();
         for (AbstractCard c : AbstractDungeon.actionManager.cardsPlayedThisCombat) {
@@ -87,6 +97,9 @@ public class CardAfuBeatJackie extends BaseCard {
         return uniqueIDs.size();
     }
 
+    /**
+     * 根据本回合打出的阿福牌数量更新费用减免。
+     */
     private void updateTurnCostReductionFromAfu() {
         if (AbstractDungeon.actionManager == null) return;
         if (AbstractDungeon.player != null && AbstractDungeon.player.hasPower(ValmontPower.POWER_ID)) return;

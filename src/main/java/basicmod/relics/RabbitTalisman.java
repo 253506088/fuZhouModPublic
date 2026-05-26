@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.input.InputHelper;
+import basicmod.helpers.TalismanInputHelper;
 
 import static basicmod.BasicMod.makeID;
 
@@ -59,7 +59,7 @@ public class RabbitTalisman extends BaseRelic {
     public void update() {
         super.update();
         if (canInteractInCombat() && !this.usedThisTurn && this.counter <= 0) {
-            if (this.hb.hovered && InputHelper.justClickedRight) {
+            if (TalismanInputHelper.isRelicRightClickTriggered(this)) {
                 this.activated = !this.activated;
                 if (this.activated) {
                     CardCrawlGame.sound.play("UI_CLICK_1");
@@ -70,9 +70,9 @@ public class RabbitTalisman extends BaseRelic {
                 }
             }
 
-            if (this.activated && InputHelper.justClickedRight) {
+            if (this.activated) {
                 for (com.megacrit.cardcrawl.relics.AbstractRelic r : AbstractDungeon.player.relics) {
-                    if (r != this && r.hb.hovered && isWhitelistedTalisman(r)) {
+                    if (r != this && isWhitelistedTalisman(r) && TalismanInputHelper.isRelicRightClickTriggered(r)) {
                         if (tryRefreshRelic(r)) {
                             triggerEffect2();
                             break;

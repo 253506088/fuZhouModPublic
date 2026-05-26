@@ -46,9 +46,17 @@ public class GrandMageCurseCostPatch {
             return;
         }
 
+        boolean alreadyTaxed = TaxTrackFields.taxedByGrandMageCurse.get(c);
+        boolean hasRelatedTaxPower =
+                (c.type == AbstractCard.CardType.ATTACK && AbstractDungeon.player.hasPower(GrandMageCurseTaxAttackPower.POWER_ID))
+                        || (c.type == AbstractCard.CardType.SKILL && AbstractDungeon.player.hasPower(GrandMageCurseTaxSkillPower.POWER_ID));
+        if (!alreadyTaxed && !hasRelatedTaxPower) {
+            return;
+        }
+
         int taxAmount = getTaxAmount(c);
         if (taxAmount > 0) {
-            if (!TaxTrackFields.taxedByGrandMageCurse.get(c)) {
+            if (!alreadyTaxed) {
                 TaxTrackFields.preTaxCostForTurn.set(c, c.costForTurn);
                 TaxTrackFields.taxedByGrandMageCurse.set(c, true);
             }
@@ -57,20 +65,20 @@ public class GrandMageCurseCostPatch {
             c.costForTurn = Math.max(0, preTax + taxAmount);
             c.isCostModifiedForTurn = (c.costForTurn != c.cost);
             if (before != c.costForTurn) {
-                BasicMod.logger.info("【诅咒税-显示加费】牌={}({}) costForTurn {} -> {}，preTax={}，baseCost={}。",
+                BasicMod.logger.debug("【诅咒税-显示加费】牌={}({}) costForTurn {} -> {}，preTax={}，baseCost={}。",
                         c.name, c.cardID, before, c.costForTurn, preTax, c.cost);
             }
             return;
         }
 
-        if (TaxTrackFields.taxedByGrandMageCurse.get(c)) {
+        if (alreadyTaxed) {
             int before = c.costForTurn;
             int restore = TaxTrackFields.preTaxCostForTurn.get(c);
             c.costForTurn = restore;
             c.isCostModifiedForTurn = (c.costForTurn != c.cost);
             TaxTrackFields.taxedByGrandMageCurse.set(c, false);
             if (before != c.costForTurn) {
-                BasicMod.logger.info("【诅咒税-恢复显示】牌={}({}) costForTurn {} -> {}，baseCost={}。",
+                BasicMod.logger.debug("【诅咒税-恢复显示】牌={}({}) costForTurn {} -> {}，baseCost={}。",
                         c.name, c.cardID, before, c.costForTurn, c.cost);
             }
         }

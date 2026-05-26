@@ -4,13 +4,13 @@ import basemod.BaseMod;
 import basemod.abstracts.CustomSavable;
 import basicmod.BasicMod;
 import basicmod.helpers.HistoryBookRewriteManager;
+import basicmod.helpers.TalismanInputHelper;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.StunMonsterAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
@@ -96,7 +96,7 @@ public class HistoryBookFragment extends BaseRelic implements CustomSavable<Inte
             return;
         }
 
-        if (this.hb.hovered && InputHelper.justClickedRight) {
+        if (TalismanInputHelper.isRelicRightClickTriggered(this)) {
             openRewriteMenu();
         }
     }

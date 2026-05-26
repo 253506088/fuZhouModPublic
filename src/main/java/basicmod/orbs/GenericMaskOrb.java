@@ -8,10 +8,23 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import basicmod.BasicMod;
 
+/**
+ * 通用面具球。
+ * 用于显示面具能力的层数，位于角色上方。
+ */
 public class GenericMaskOrb extends AbstractOrb {
+    /** 球体ID */
     public static final String ORB_ID = BasicMod.makeID("GenericMaskOrb");
+    /** 对应的面具能力ID */
     public String maskPowerId;
 
+    /**
+     * 构造函数。
+     *
+     * @param maskPowerId 面具能力ID
+     * @param name 面具名称
+     * @param amount 层数
+     */
     public GenericMaskOrb(String maskPowerId, String name, int amount) {
         this.maskPowerId = maskPowerId;
         this.ID = maskPowerId; // 用Power的ID可以防止重复添加，或者跟进逻辑
@@ -32,6 +45,9 @@ public class GenericMaskOrb extends AbstractOrb {
         this.updateDescription();
     }
 
+    /**
+     * 更新描述文本。
+     */
     @Override
     public void updateDescription() {
         this.applyFocus(); 
@@ -46,6 +62,9 @@ public class GenericMaskOrb extends AbstractOrb {
     public void playChannelSFX() {
     }
 
+    /**
+     * 渲染面具球，显示面具图标和层数。
+     */
     @Override
     public void render(SpriteBatch sb) {
         sb.setColor(new Color(1.0F, 1.0F, 1.0F, this.c.a));
@@ -57,6 +76,9 @@ public class GenericMaskOrb extends AbstractOrb {
         this.hb.render(sb);
     }
 
+    /**
+     * 渲染层数文本。
+     */
     @Override
     protected void renderText(SpriteBatch sb) {
         // 重写原本的伤害数字，直接居右下角输出层数
@@ -73,6 +95,9 @@ public class GenericMaskOrb extends AbstractOrb {
         }
     }
 
+    /**
+     * 设置槽位位置，上移以避开石雕。
+     */
     @Override
     public void setSlot(int slotNum, int maxOrbs) {
         super.setSlot(slotNum, maxOrbs);

@@ -27,29 +27,57 @@ import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import java.util.ArrayList;
 import java.util.Locale;
 
+/**
+ * 圣主自定义玩家角色类。
+ * 实现了圣主角色的所有属性、动画和特殊逻辑。
+ */
 public class ShengZhuCustomPlayer extends CustomPlayer {
 
+    /** 每回合能量值 */
     public static final int ENERGY_PER_TURN = 3;
+    /** 初始生命值 */
     public static final int STARTING_HP = 80;
+    /** 最大生命值 */
     public static final int MAX_HP = 80;
+    /** 初始金币 */
     public static final int STARTING_GOLD = 99;
+    /** 每回合抽牌数 */
     public static final int CARD_DRAW = 5;
+    /** 能量球槽位数 */
     public static final int ORB_SLOTS = 0;
+    /** 石像状态图片路径 */
     private static final String STATUE_IMG_PATH = "character/shengzhu/statue.png";
+    /** 复活状态图片路径 */
     private static final String REVIVED_IMG_PATH = "character/shengzhu/main.png";
+    /** 待机动画帧目录 */
     private static final String IDLE_FRAME_DIR = "character/shengzhu/human_idle";
+    /** 待机动画总帧数 */
     private static final int IDLE_SOURCE_FRAME_COUNT = 20;
+    /** 待机动画帧间隔（秒） */
     private static final float IDLE_FRAME_INTERVAL_SECONDS = 0.05F;
+    /** 待机动画渲染缩放 */
     private static final float IDLE_RENDER_SCALE = 0.69F;
 
+    /** 角色本地化字符串 */
     private static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString("fuZhouMod:ShengZhuCustomPlayer");
+    /** 角色名称数组 */
     private static final String[] NAMES = characterStrings.NAMES;
+    /** 角色文本数组 */
     private static final String[] TEXT = characterStrings.TEXT;
 
+    /** 待机动画帧数组 */
     private Texture[] idleFrames;
+    /** 当前待机动画帧索引 */
     private int currentIdleFrame;
+    /** 待机动画帧计时器 */
     private float idleFrameTimer;
 
+    /**
+     * 构造函数。
+     *
+     * @param name 角色名称
+     * @param setClass 玩家职业
+     */
     public ShengZhuCustomPlayer(String name, PlayerClass setClass) {
         super(name, setClass, new basicmod.util.ShengZhuEnergyOrb(),
                 (String) null, (String) null);
@@ -64,6 +92,9 @@ public class ShengZhuCustomPlayer extends CustomPlayer {
         this.dialogY = this.drawY + 220.0F * Settings.scale;
     }
 
+    /**
+     * 渲染角色，支持待机动画和石像状态。
+     */
     @Override
     public void render(SpriteBatch sb) {
         com.megacrit.cardcrawl.rooms.AbstractRoom room = AbstractDungeon.getCurrRoom();
@@ -108,6 +139,9 @@ public class ShengZhuCustomPlayer extends CustomPlayer {
         this.healthHb.render(sb);
     }
 
+    /**
+     * 更新角色状态，处理待机动画帧切换。
+     */
     @Override
     public void update() {
         super.update();
@@ -126,6 +160,9 @@ public class ShengZhuCustomPlayer extends CustomPlayer {
         }
     }
 
+    /**
+     * 获取角色选择界面的加载信息。
+     */
     @Override
     public CharSelectInfo getLoadout() {
         return new CharSelectInfo(NAMES[0], TEXT[0],
@@ -133,6 +170,9 @@ public class ShengZhuCustomPlayer extends CustomPlayer {
                 getStartingDeck(), false);
     }
 
+    /**
+     * 获取初始卡组。
+     */
     @Override
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
@@ -147,10 +187,14 @@ public class ShengZhuCustomPlayer extends CustomPlayer {
         return retVal;
     }
 
+    /**
+     * 获取初始遗物。
+     */
     @Override
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
         retVal.add("fuZhouMod:TalismanLocator");
+        retVal.add("fuZhouMod:ShadowKhanToken");
         return retVal;
     }
 
@@ -238,6 +282,9 @@ public class ShengZhuCustomPlayer extends CustomPlayer {
         return Vampires.DESCRIPTIONS[0];
     }
 
+    /**
+     * 应用战斗开始逻辑：根据是否拥有鼠符咒决定显示石像或复活形态。
+     */
     @Override
     public void applyStartOfCombatLogic() {
         super.applyStartOfCombatLogic();
@@ -253,6 +300,9 @@ public class ShengZhuCustomPlayer extends CustomPlayer {
         }
     }
 
+    /**
+     * 启用待机动画，加载动画帧并切换到复活形态。
+     */
     public void enableIdleAnimation() {
         loadIdleFrames();
         this.currentIdleFrame = 0;
@@ -264,6 +314,9 @@ public class ShengZhuCustomPlayer extends CustomPlayer {
         }
     }
 
+    /**
+     * 禁用待机动画，切换到石像形态。
+     */
     public void disableIdleAnimation() {
         this.idleFrames = null;
         this.currentIdleFrame = 0;
@@ -271,6 +324,9 @@ public class ShengZhuCustomPlayer extends CustomPlayer {
         this.img = basicmod.util.TextureLoader.getTexture(BasicMod.imagePath(STATUE_IMG_PATH));
     }
 
+    /**
+     * 加载待机动画帧图片。
+     */
     private void loadIdleFrames() {
         if (this.idleFrames != null && this.idleFrames.length == IDLE_SOURCE_FRAME_COUNT) {
             return;

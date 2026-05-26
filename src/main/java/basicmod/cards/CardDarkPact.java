@@ -23,14 +23,14 @@ public class CardDarkPact extends BaseCard {
     public CardDarkPact() {
         super(ID, info);
         tags.add(CustomTags.MASK_SUPPORT);
-        // 1(2) 层影蚀。
+        // 1(2) 层影噬。
         setMagic(1, 1);
         setExhaust(true);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        BasicMod.logger.info("【黑暗契约】打出：获得影蚀={}，失去力量=2", this.magicNumber);
+        BasicMod.logger.info("【黑暗契约】打出：获得影噬={}，失去力量=2", this.magicNumber);
         addToBot(new ApplyPowerAction(p, p, new DominionPower(p, this.magicNumber), this.magicNumber));
         addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, -2), -2));
     }

@@ -10,12 +10,28 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.ChemicalX;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
+/**
+ * 醉拳动作。
+ * 消耗所有能量，对所有存活敌人造成多次随机伤害。
+ */
 public class DrunkenFistAction extends AbstractGameAction {
-    private boolean freeToPlayOnce;
-    private AbstractPlayer p;
-    private int energyOnUse;
-    private boolean upgraded;
+    /** 是否免费使用一次 */
+    private final boolean freeToPlayOnce;
+    /** 玩家对象 */
+    private final AbstractPlayer p;
+    /** 使用时的能量值 */
+    private final int energyOnUse;
+    /** 是否升级 */
+    private final boolean upgraded;
 
+    /**
+     * 构造函数。
+     *
+     * @param p 玩家对象
+     * @param energyOnUse 使用时的能量值
+     * @param upgraded 是否升级
+     * @param freeToPlayOnce 是否免费使用一次
+     */
     public DrunkenFistAction(AbstractPlayer p, int energyOnUse, boolean upgraded, boolean freeToPlayOnce) {
         this.p = p;
         this.energyOnUse = energyOnUse;
@@ -25,6 +41,9 @@ public class DrunkenFistAction extends AbstractGameAction {
         this.actionType = ActionType.DAMAGE;
     }
 
+    /**
+     * 执行动作逻辑：根据能量值，对所有存活敌人造成多次随机伤害。
+     */
     @Override
     public void update() {
         int effect = EnergyPanel.totalCount;
@@ -38,22 +57,16 @@ public class DrunkenFistAction extends AbstractGameAction {
 
         if (effect > 0) {
             for (int i = 0; i < effect; i++) {
-                // 1. 掷骰子计算基础伤害
-                int min = upgraded ? 8 : 6;
-                int max = upgraded ? 12 : 10;
-                int baseDmg = AbstractDungeon.cardRandomRng.random(min, max);
-                
-                // 2. 选取随机目标
-                AbstractMonster target = AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRandomRng);
-                
-                if (target != null) {
-                    // 3. 构建伤害信息并应用威能计算（力量、虚弱等）
+                for (AbstractMonster target : AbstractDungeon.getMonsters().monsters) {
+                    if (target == null || target.isDeadOrEscaped()) {
+                        continue;
+                    }
+
+                    int min = this.upgraded ? 8 : 6;
+                    int max = this.upgraded ? 12 : 10;
+                    int baseDmg = AbstractDungeon.cardRandomRng.random(min, max);
                     DamageInfo info = new DamageInfo(this.p, baseDmg, DamageInfo.DamageType.NORMAL);
                     info.applyPowers(this.p, target);
-                    
-                    // 使用 addToTop 确保这些伤害动作在当前 Action 结束后立即按顺序执行（由于是循环加入，最后加入的最先执行，这里用 addToTop 会导致顺序反向，但对随机目标无所谓）
-                    // 为了保证表现顺序符合直觉，我们其实可以用正常的逻辑，或者在一次 update 里处理完。
-                    // 实际上在 X 消耗 Action 里，通常直接触发伤害特效。
                     addToBot(new DamageAction(target, info, AttackEffect.BLUNT_LIGHT));
                 }
             }

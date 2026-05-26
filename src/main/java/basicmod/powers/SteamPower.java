@@ -49,16 +49,16 @@ public class SteamPower extends BasePower {
             int dmg = Math.max(5, this.owner.currentHealth / 5);
             // 高温蒸汽被老爹改判为直接伤害后，仍需统一走“自身封顶 + 老爹封顶”链路。
             dmg = DemonQiDamageHelper.applyDemonQiDamageCaps(this.source, this.owner, POWER_ID, dmg, MAX_SINGLE_DAMAGE, "高温蒸汽回合开始");
-            BasicMod.logger.info("【高温蒸汽判定】目标拥有【大法师的庇佑】，不再干扰意图，改为造成伤害=" + dmg + "。目标=" + m.name);
+            BasicMod.logger.debug("【高温蒸汽判定】目标拥有【大法师的庇佑】，不再干扰意图，改为造成伤害={}。目标={}", dmg, m.name);
             addToBot(new LoseHPAction(this.owner, this.source, dmg));
             return;
         }
 
         int roll = AbstractDungeon.aiRng.random(1, 8);
-        BasicMod.logger.info("【高温蒸汽判定】当前敌人: " + m.name + " | 蒸汽层数: " + this.amount + " | 摇点结果: " + roll);
+        BasicMod.logger.debug("【高温蒸汽判定】当前敌人: {} | 蒸汽层数: {} | 摇点结果: {}", m.name, this.amount, roll);
 
         if (roll <= this.amount) {
-            BasicMod.logger.info("【高温蒸汽判定】判定成功！拦截 " + m.name + " 的本回合行动。");
+            BasicMod.logger.debug("【高温蒸汽判定】判定成功！拦截 {} 的本回合行动。", m.name);
             this.skippedThisTurn = true;
 
             flash();
@@ -71,7 +71,7 @@ public class SteamPower extends BasePower {
             m.setMove((byte) -101, m.intent, baseDmg, multiAmt, isMulti);
             m.createIntent();
         } else {
-            BasicMod.logger.info("【高温蒸汽判定】判定失败。怪物将正常行动。");
+            BasicMod.logger.debug("【高温蒸汽判定】判定失败。怪物将正常行动。");
         }
     }
 

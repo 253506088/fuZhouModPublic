@@ -34,7 +34,7 @@ public class TaLaMask extends basicmod.cards.BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        BasicMod.logger.info("【塔拉面具】打出：面具容量+{}，并获得1层影蚀。", magicNumber);
+        BasicMod.logger.info("【塔拉面具】打出：面具容量+{}，并获得1层影噬。", magicNumber);
         addToBot(new ApplyPowerAction(p, p, new TaLaPower(p, magicNumber), magicNumber));
         addToBot(new ApplyPowerAction(p, p, new DominionPower(p, 1), 1));
         final boolean castUpgraded = this.upgraded;

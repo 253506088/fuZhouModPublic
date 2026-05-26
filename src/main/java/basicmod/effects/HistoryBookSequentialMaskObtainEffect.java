@@ -1,12 +1,11 @@
 package basicmod.effects;
 
 import basicmod.helpers.HistoryBookMaskHelper;
+import basicmod.helpers.CardRewardHelper;
 import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
-import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 
 import java.util.ArrayList;
 
@@ -33,7 +32,7 @@ public class HistoryBookSequentialMaskObtainEffect extends AbstractGameEffect {
     }
 
     /**
-     * 每隔一小段时间放入一张面具，所有获得效果结束后再检查无尽黑暗。
+     * 每隔一小段时间安全入组并展示一张面具，所有展示结束后再检查无尽黑暗。
      */
     @Override
     public void update() {
@@ -57,16 +56,21 @@ public class HistoryBookSequentialMaskObtainEffect extends AbstractGameEffect {
         if (this.timer <= 0.0F) {
             AbstractCard card = HistoryBookMaskHelper.makeMaskCopy(this.maskIds.get(this.index));
             if (card != null) {
-                CardCrawlGame.sound.play("CARD_OBTAIN");
-                com.megacrit.cardcrawl.dungeons.AbstractDungeon.topLevelEffectsQueue.add(new ShowCardAndObtainEffect(
-                        card,
-                        Settings.WIDTH / 2.0F,
-                        Settings.HEIGHT / 2.0F
-                ));
+                if (CardRewardHelper.grantCardToMasterDeck(card)) {
+                    showGrantedMaskCard(card);
+                }
             }
             this.index++;
             this.timer = CARD_INTERVAL;
         }
+    }
+
+    /**
+     * 入组后只播放展示特效，不再依赖展示特效完成后才发奖。
+     */
+    private void showGrantedMaskCard(AbstractCard card) {
+        CardCrawlGame.sound.play("CARD_OBTAIN");
+        CardRewardHelper.showCardBriefly(card);
     }
 
     /**

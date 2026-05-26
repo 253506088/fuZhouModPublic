@@ -12,12 +12,25 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import java.util.ArrayList;
 
+/**
+ * 大法师老爹选择性消耗手牌动作。
+ * 玩家选择保留的手牌（每张受到伤害），未选择的手牌被消耗。
+ */
 public class GrandMageDadSelectiveExhaustHandAction extends AbstractGameAction {
+    /** 选择提示文本 */
     private static final String SELECT_TEXT = "选择不消耗的手牌，每张受到12点伤害，可不选。来自于【五行压制】第二回合效果";
 
+    /** 伤害来源 */
     private final AbstractCreature source;
+    /** 每张保留卡牌受到的伤害 */
     private final int damagePerCard;
 
+    /**
+     * 构造函数。
+     *
+     * @param source 伤害来源
+     * @param damagePerCard 每张保留卡牌受到的伤害值
+     */
     public GrandMageDadSelectiveExhaustHandAction(AbstractCreature source, int damagePerCard) {
         this.actionType = ActionType.EXHAUST;
         this.duration = Settings.ACTION_DUR_FAST;
@@ -25,6 +38,9 @@ public class GrandMageDadSelectiveExhaustHandAction extends AbstractGameAction {
         this.damagePerCard = damagePerCard;
     }
 
+    /**
+     * 执行动作逻辑：打开手牌选择界面，选中的卡牌弃置并受到伤害，未选中的卡牌被消耗。
+     */
     @Override
     public void update() {
         AbstractPlayer player = AbstractDungeon.player;

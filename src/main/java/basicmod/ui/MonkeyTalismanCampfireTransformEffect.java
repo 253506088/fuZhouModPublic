@@ -18,9 +18,18 @@ import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 
+/**
+ * 猴符咒营火七十二变特效。
+ * 实现两阶段选牌流程：先选择要替换的牌，再选择新牌。
+ */
 public class MonkeyTalismanCampfireTransformEffect extends AbstractGameEffect {
+    /**
+     * 选牌阶段枚举。
+     */
     private enum Phase {
+        /** 选择要替换的牌 */
         CHOOSE_TARGET,
+        /** 选择新牌 */
         CHOOSE_REPLACEMENT
     }
 

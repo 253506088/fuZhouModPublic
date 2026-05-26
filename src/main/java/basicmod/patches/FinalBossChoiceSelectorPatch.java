@@ -1,12 +1,12 @@
 package basicmod.patches;
 
-import basicmod.enums.CharacterEnums;
 import basicmod.helpers.FinalBossChoiceManager;
 import basicmod.enums.FinalBossChoice;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.FontHelper;
@@ -29,12 +29,15 @@ public class FinalBossChoiceSelectorPatch {
     private static final Hitbox leftHb = new Hitbox(ARROW_SIZE * Settings.scale, ARROW_SIZE * Settings.scale);
     private static final Hitbox rightHb = new Hitbox(ARROW_SIZE * Settings.scale, ARROW_SIZE * Settings.scale);
     private static boolean initialized = false;
+    private static AbstractPlayer.PlayerClass lastSelectedClass = null;
 
     @SpirePatch(clz = CharacterSelectScreen.class, method = "open")
     public static class OpenPatch {
         @SpirePostfixPatch
         public static void Postfix(CharacterSelectScreen __instance, boolean isTrial) {
             initialized = false;
+            lastSelectedClass = null;
+            FinalBossChoiceManager.clearPendingChoice();
         }
     }
 
@@ -45,18 +48,20 @@ public class FinalBossChoiceSelectorPatch {
             if (!isOnCharSelect()) {
                 return;
             }
-            if (!isShengZhuSelected(__instance)) {
+            AbstractPlayer.PlayerClass selectedClass = getSelectedSupportedClass(__instance);
+            if (selectedClass == null) {
                 return;
             }
+            updateSelectedClass(selectedClass);
             ensureInit();
             updateHitboxes(__instance);
 
             if (InputHelper.justClickedLeft) {
                 if (leftHb.hovered) {
-                    cycle(-1);
+                    cycle(selectedClass, -1);
                     leftHb.clickStarted = true;
                 } else if (rightHb.hovered) {
-                    cycle(1);
+                    cycle(selectedClass, 1);
                     rightHb.clickStarted = true;
                 }
             }
@@ -70,9 +75,11 @@ public class FinalBossChoiceSelectorPatch {
             if (!isOnCharSelect()) {
                 return;
             }
-            if (!isShengZhuSelected(__instance)) {
+            AbstractPlayer.PlayerClass selectedClass = getSelectedSupportedClass(__instance);
+            if (selectedClass == null) {
                 return;
             }
+            updateSelectedClass(selectedClass);
             ensureInit();
             float[] anchor = getAnchor(__instance);
             float centerX = anchor[0];
@@ -85,7 +92,7 @@ public class FinalBossChoiceSelectorPatch {
             String dad = txt != null && txt.length > 2 ? txt[2] : "Grand Mage Dad";
             String random = txt != null && txt.length > 3 ? txt[3] : "Random";
 
-            FinalBossChoice choice = FinalBossChoiceManager.getSelectableChoice();
+            FinalBossChoice choice = FinalBossChoiceManager.getSelectableChoice(selectedClass);
             String choiceText = choice == FinalBossChoice.HEART ? heart : choice == FinalBossChoice.DAD ? dad : random;
 
             FontHelper.renderFontCentered(sb, FontHelper.buttonLabelFont, title, centerX, baseY + LABEL_Y_OFFSET * Settings.scale, Settings.GOLD_COLOR);
@@ -103,17 +110,26 @@ public class FinalBossChoiceSelectorPatch {
                 && CardCrawlGame.mainMenuScreen.screen == MainMenuScreen.CurScreen.CHAR_SELECT;
     }
 
-    private static boolean isShengZhuSelected(CharacterSelectScreen screen) {
+    private static AbstractPlayer.PlayerClass getSelectedSupportedClass(CharacterSelectScreen screen) {
         if (screen == null || screen.options == null) {
-            return false;
+            return null;
         }
         for (CharacterOption option : screen.options) {
             if (option == null || !option.selected || option.c == null) {
                 continue;
             }
-            return option.c.chosenClass == CharacterEnums.SHENGZHU;
+            AbstractPlayer.PlayerClass playerClass = option.c.chosenClass;
+            return FinalBossChoiceManager.canChooseFinalBoss(playerClass) ? playerClass : null;
         }
-        return false;
+        return null;
+    }
+
+    private static void updateSelectedClass(AbstractPlayer.PlayerClass selectedClass) {
+        if (lastSelectedClass == selectedClass) {
+            return;
+        }
+        lastSelectedClass = selectedClass;
+        FinalBossChoiceManager.clearPendingChoice();
     }
 
     private static void ensureInit() {
@@ -146,9 +162,9 @@ public class FinalBossChoiceSelectorPatch {
         return new float[] { centerX, baseY };
     }
 
-    private static void cycle(int delta) {
+    private static void cycle(AbstractPlayer.PlayerClass selectedClass, int delta) {
         FinalBossChoice[] vals = FinalBossChoice.values();
-        FinalBossChoice current = FinalBossChoiceManager.getSelectableChoice();
+        FinalBossChoice current = FinalBossChoiceManager.getSelectableChoice(selectedClass);
         int idx = current.ordinal();
         int next = (idx + delta + vals.length) % vals.length;
         FinalBossChoiceManager.setPendingChoice(vals[next]);

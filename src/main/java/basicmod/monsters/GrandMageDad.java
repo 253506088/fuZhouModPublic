@@ -71,8 +71,14 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.UUID;
 
+/**
+ * 大法师老爹怪物类。
+ * Mod的最终Boss之一，拥有多阶段战斗、符咒封印、诅咒施加等复杂机制。
+ */
 public class GrandMageDad extends AbstractMonster {
+    /** 怪物ID */
     public static final String ID = BasicMod.makeID("GrandMageDad");
+    /** 怪物名称 */
     public static final String NAME = "大法师老爹";
     private static final String IMG = BasicMod.imagePath("monsters/grand_mage_dad/grand_mage_dad.png");
     private static final String IDLE_FRAME_DIR = "monsters/grand_mage_dad/idle";
@@ -130,55 +136,102 @@ public class GrandMageDad extends AbstractMonster {
             " HP)"
     };
 
+    /** T1多段攻击 */
     private static final byte MOVE_T1_MULTI = 1;
+    /** T2打击+减益 */
     private static final byte MOVE_T2_STRIKE_DEBUFF = 2;
+    /** T3封印打击 */
     private static final byte MOVE_T3_SEAL_STRIKE = 3;
+    /** T4连击 */
     private static final byte MOVE_T4_BARRAGE = 4;
+    /** T5吟唱 */
     private static final byte MOVE_T5_CHANT = 5;
+    /** T6处决 */
     private static final byte MOVE_T6_EXECUTE = 6;
+    /** T6眩晕（护盾被打破） */
     private static final byte MOVE_T6_STUN = 7;
+    /** 猴符咒无牌可借时的回血量 */
     private static final int MONKEY_NO_CARD_HEAL = 30;
 
+    /** 副意图：无 */
     public static final int SEC_NONE = 0;
+    /** 副意图：训诫（塞入成龙诅咒） */
     public static final int SEC_CURSE_JACKIE = 1;
+    /** 副意图：护体（获得格挡和人工制品） */
     public static final int SEC_DEFEND_ARTIFACT = 2;
+    /** 副意图：杂念入侵（随机塞入诅咒） */
     public static final int SEC_RANDOM_CURSE = 3;
+    /** 副意图：净化反噬（清除减益并获得力量） */
     public static final int SEC_CLEANSE_BUFF = 4;
+    /** 副意图：咒阵扩散（塞入多张诅咒） */
     public static final int SEC_DOUBLE_CURSE = 5;
+    /** 副意图：符咒剥夺（封印符咒） */
     public static final int SEC_SEAL_TALISMAN = 6;
 
+    /** 每回合获得的格挡值 */
     private final int blockPerTurn;
+    /** 吟唱护盾值 */
     private final int chantShield;
+    /** 吟唱获得的人工制品层数 */
     private final int chantArtifact;
+    /** T1伤害 */
     private final int t1Damage;
+    /** T2伤害 */
     private final int t2Damage;
+    /** T3伤害 */
     private final int t3Damage;
+    /** T4伤害 */
     private final int t4Damage;
+    /** T4基础攻击次数 */
     private final int t4BaseHitCount;
+    /** 动态生命值加成 */
     private final int dynamicHpBonus;
+    /** 动态生命值加成报告 */
     private final GrandMageDadHelper.DynamicHpBonusReport dynamicHpBonusReport;
+    /** 每回合承伤上限 */
     private final int capPerTurn;
 
+    /** 当前回合索引 */
     private int turnIndex = 1;
+    /** 副意图代码 */
     private int secondaryIntentCode = SEC_NONE;
+    /** 兔符咒额外攻击次数 */
     private int rabbitExtraHits = 0;
+    /** 单次伤害上限 */
     private int singleHitCap = -1;
+    /** 是否正在吟唱护盾 */
     private boolean shieldChanting = false;
+    /** 坚壁是否由自身施加 */
     private boolean chantBarricadeAppliedBySelf = false;
+    /** 龙符咒是否触发灼烧 */
     private boolean dragonBurn = false;
+    /** 马符咒是否触发回复 */
     private boolean horseRegen = false;
+    /** 猴符咒是否触发混乱 */
     private boolean monkeyChaos = false;
+    /** 猴符咒借来的卡牌 */
     private AbstractCard monkeyBorrowedCard = null;
+    /** 猴符咒借牌来源 */
     private String monkeyBorrowedFrom = null;
+    /** 猴符咒上次借的卡牌UUID */
     private UUID monkeyLastBorrowedCardUuid = null;
+    /** 猪符咒是否触发减益 */
     private boolean pigDebuff = false;
+    /** 本回合是否隐藏副意图渲染 */
     private boolean hideSecondaryForRenderThisTurn = false;
+    /** 下回合是否隐藏副意图 */
     private boolean hideSecondaryNextTurn = false;
+    /** 被封印的符咒映射表 */
     private final LinkedHashMap<String, AbstractRelic> sealedTalismans = new LinkedHashMap<>();
+    /** 待机动画图集纹理 */
     private Texture idleAtlas;
+    /** 待机动画帧宽度 */
     private int idleFrameW;
+    /** 待机动画帧高度 */
     private int idleFrameH;
+    /** 待机动画帧数 */
     private int idleFrameCount;
+    /** 待机动画开始时间（纳秒） */
     private long idleAnimStartNano;
 
     private static class MonkeyBorrowCandidate {

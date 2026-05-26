@@ -10,14 +10,25 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 
+/**
+ * 收魂动作。
+ * 消耗手牌，根据消耗数量获得力量和敏捷（交替获得）。
+ */
 public class SoultrapAction extends AbstractGameAction {
+    /** UI字符串 */
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("fuZhouMod:SoultrapUI");
 
+    /**
+     * 构造函数。
+     */
     public SoultrapAction() {
         this.actionType = ActionType.EXHAUST;
         this.duration = Settings.ACTION_DUR_FAST;
     }
 
+    /**
+     * 执行动作逻辑：消耗手牌，根据数量交替获得力量和敏捷。
+     */
     @Override
     public void update() {
         if (this.duration == Settings.ACTION_DUR_FAST) {

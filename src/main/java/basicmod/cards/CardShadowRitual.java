@@ -23,14 +23,14 @@ public class CardShadowRitual extends BaseCard {
     public CardShadowRitual() {
         super(ID, info);
         tags.add(CustomTags.MASK_SUPPORT);
-        // 2(3) 层影蚀。
+        // 2(3) 层影噬。
         setMagic(2, 1);
         setExhaust(true);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        BasicMod.logger.info("【潜影仪式】打出：获得影蚀={}，失去生命=5", this.magicNumber);
+        BasicMod.logger.info("【潜影仪式】打出：获得影噬={}，失去生命=5", this.magicNumber);
         addToBot(new ApplyPowerAction(p, p, new DominionPower(p, this.magicNumber), this.magicNumber));
         addToBot(new LoseHPAction(p, p, 5));
     }

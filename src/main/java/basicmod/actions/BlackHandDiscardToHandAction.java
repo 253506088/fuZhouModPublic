@@ -12,8 +12,14 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 
 import java.util.ArrayList;
 
+/**
+ * 黑手党弃牌堆回收动作。
+ * 从弃牌堆中选择指定数量的卡牌加入手牌。
+ */
 public class BlackHandDiscardToHandAction extends AbstractGameAction {
+    /** UI字符串，用于选择提示 */
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(BasicMod.makeID("BlackHandActionsUI"));
+    /** 提示文本数组 */
     private static final String[] TEXT = uiStrings == null
             ? new String[]{
                     "Select 1 card from your discard pile to add to your hand.",
@@ -21,14 +27,25 @@ public class BlackHandDiscardToHandAction extends AbstractGameAction {
             }
             : uiStrings.TEXT;
 
+    /** 玩家对象 */
     private final AbstractPlayer player;
+    /** 要移动的卡牌数量 */
     private final int amountToMove;
+    /** 已选择的卡牌计数 */
     private int selectCount;
 
+    /**
+     * 默认构造函数，移动1张卡牌。
+     */
     public BlackHandDiscardToHandAction() {
         this(1);
     }
 
+    /**
+     * 指定数量的构造函数。
+     *
+     * @param amount 要移动的卡牌数量
+     */
     public BlackHandDiscardToHandAction(int amount) {
         this.actionType = ActionType.CARD_MANIPULATION;
         this.duration = Settings.ACTION_DUR_MED;
@@ -37,6 +54,9 @@ public class BlackHandDiscardToHandAction extends AbstractGameAction {
         this.selectCount = 0;
     }
 
+    /**
+     * 执行动作逻辑：打开弃牌堆选择界面，将选中的卡牌加入手牌。
+     */
     @Override
     public void update() {
         if (this.duration == Settings.ACTION_DUR_MED) {
@@ -82,6 +102,12 @@ public class BlackHandDiscardToHandAction extends AbstractGameAction {
         this.isDone = true;
     }
 
+    /**
+     * 构建选择提示文本。
+     *
+     * @param count 要选择的卡牌数量
+     * @return 格式化后的提示文本
+     */
     private String buildPrompt(int count) {
         if (count <= 1) {
             return TEXT[0];
@@ -96,6 +122,12 @@ public class BlackHandDiscardToHandAction extends AbstractGameAction {
         return TEXT[0];
     }
 
+    /**
+     * 将指定卡牌从弃牌堆移动到手牌。
+     * 如果手牌已满，卡牌会放回弃牌堆顶部。
+     *
+     * @param card 要移动的卡牌
+     */
     private void moveToHand(AbstractCard card) {
         if (card == null || this.player == null) {
             return;

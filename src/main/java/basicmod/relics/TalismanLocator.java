@@ -1,9 +1,9 @@
 package basicmod.relics;
 
 import basicmod.BasicMod;
+import basicmod.helpers.TalismanInputHelper;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.input.InputHelper;
 
 import static basicmod.BasicMod.makeID;
 
@@ -26,7 +26,7 @@ public class TalismanLocator extends BaseRelic {
     @Override
     public void update() {
         super.update();
-        if (this.hb.hovered && InputHelper.justClickedRight) {
+        if (TalismanInputHelper.isRelicRightClickTriggered(this)) {
             CardCrawlGame.sound.play("UI_CLICK_1");
             BasicMod.semiAutoMode = !BasicMod.semiAutoMode;
             BasicMod.saveConfig();

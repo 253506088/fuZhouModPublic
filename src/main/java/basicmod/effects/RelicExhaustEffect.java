@@ -10,12 +10,25 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
+/**
+ * 遗物消耗特效。
+ * 遗物从原位置移动到屏幕中央，然后放大消失。
+ */
 public class RelicExhaustEffect extends AbstractGameEffect {
+    /** 遗物对象 */
     private final AbstractRelic relic;
+    /** 起始位置和目标位置 */
     private float sX, sY, tX, tY;
+    /** 当前位置 */
     private float x, y;
+    /** 是否已播放音效 */
     private boolean soundPlayed = false;
 
+    /**
+     * 构造函数。
+     *
+     * @param r 要消耗的遗物
+     */
     public RelicExhaustEffect(AbstractRelic r) {
         this.relic = r;
         this.duration = 1.6F; // 总时长增加，让玩家有反应时间
@@ -37,6 +50,9 @@ public class RelicExhaustEffect extends AbstractGameEffect {
         this.rotation = r.counter >= 0 ? 0.0F : MathUtils.random(-10.0F, 10.0F);
     }
 
+    /**
+     * 更新特效状态，分三个阶段：停留颤动、移动到中央、放大消失。
+     */
     @Override
     public void update() {
         this.duration -= Gdx.graphics.getDeltaTime();
@@ -79,6 +95,9 @@ public class RelicExhaustEffect extends AbstractGameEffect {
         }
     }
 
+    /**
+     * 渲染遗物特效，包括发光效果。
+     */
     @Override
     public void render(SpriteBatch sb) {
         sb.setColor(this.color);

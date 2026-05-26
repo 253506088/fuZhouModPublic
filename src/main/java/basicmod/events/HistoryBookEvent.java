@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.localization.EventStrings;
+import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 /**
  * 岁月史书事件。
@@ -27,6 +28,7 @@ public class HistoryBookEvent extends AbstractImageEvent {
     private static final int MASK_MAX_HP = 5;
 
     private int screenNum = 0;
+    private AbstractGameEffect pendingRewardEffect = null;
 
     /**
      * 创建岁月史书事件，并展示三个改写现实的入口。
@@ -57,9 +59,19 @@ public class HistoryBookEvent extends AbstractImageEvent {
                 this.screenNum = 1;
                 break;
             case 1:
+                if (!canLeaveAfterReward()) {
+                    return;
+                }
                 this.openMap();
                 break;
         }
+    }
+
+    /**
+     * 奖励动画还没发完时不允许离开，避免地图切换清空特效队列导致奖励缺失。
+     */
+    private boolean canLeaveAfterReward() {
+        return this.pendingRewardEffect == null || this.pendingRewardEffect.isDone;
     }
 
     /**
@@ -67,7 +79,8 @@ public class HistoryBookEvent extends AbstractImageEvent {
      */
     private void gainAllTalismans() {
         int removed = HistoryBookTalismanHelper.removeOwnedTalismansAndGainMaxHp(TALISMAN_MAX_HP);
-        AbstractDungeon.topLevelEffectsQueue.add(new HistoryBookTalismanObtainEffect(HistoryBookTalismanHelper.makeAllTalismanCopies()));
+        this.pendingRewardEffect = new HistoryBookTalismanObtainEffect(HistoryBookTalismanHelper.makeAllTalismanCopies());
+        AbstractDungeon.topLevelEffectsQueue.add(this.pendingRewardEffect);
         this.imageEventText.updateBodyText(DESCRIPTIONS[1] + removed + DESCRIPTIONS[2]);
     }
 
@@ -76,7 +89,8 @@ public class HistoryBookEvent extends AbstractImageEvent {
      */
     private void gainAllMasks() {
         int removedTypes = HistoryBookMaskHelper.removeOwnedMaskTypesAndGainMaxHp(MASK_MAX_HP);
-        AbstractDungeon.topLevelEffectsQueue.add(new HistoryBookSequentialMaskObtainEffect(HistoryBookMaskHelper.getAllMaskIdsCopy()));
+        this.pendingRewardEffect = new HistoryBookSequentialMaskObtainEffect(HistoryBookMaskHelper.getAllMaskIdsCopy());
+        AbstractDungeon.topLevelEffectsQueue.add(this.pendingRewardEffect);
         this.imageEventText.updateBodyText(DESCRIPTIONS[3] + removedTypes + DESCRIPTIONS[4]);
     }
 

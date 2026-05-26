@@ -8,15 +8,28 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+/**
+ * 独木桥动作。
+ * 消耗手牌，从抽牌堆顶打出等量的卡牌（免费且消耗后移除）。
+ */
 public class SinglePlankBridgeAction extends AbstractGameAction {
+    /** 是否升级 */
     private boolean upgraded;
 
+    /**
+     * 构造函数。
+     *
+     * @param upgraded 是否升级（升级时额外打出1张）
+     */
     public SinglePlankBridgeAction(boolean upgraded) {
         this.actionType = ActionType.WAIT;
         this.duration = Settings.ACTION_DUR_FAST;
         this.upgraded = upgraded;
     }
 
+    /**
+     * 执行动作逻辑：消耗手牌，从抽牌堆顶打出等量卡牌。
+     */
     @Override
     public void update() {
         if (this.duration == Settings.ACTION_DUR_FAST) {

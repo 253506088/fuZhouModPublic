@@ -11,10 +11,21 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
+/**
+ * 面具脸动作。
+ * 从抽牌堆中选择一张面具牌加入手牌（本回合0费），如果没有面具牌则生成3张随机影子卡。
+ */
 public class MaskFaceAction extends AbstractGameAction {
+    /** 玩家对象 */
     private final AbstractPlayer player;
+    /** 是否升级 */
     private final boolean upgraded;
 
+    /**
+     * 构造函数。
+     *
+     * @param upgraded 是否升级（升级时增加1点面具容量）
+     */
     public MaskFaceAction(boolean upgraded) {
         this.player = AbstractDungeon.player;
         this.upgraded = upgraded;
@@ -22,6 +33,9 @@ public class MaskFaceAction extends AbstractGameAction {
         this.duration = Settings.ACTION_DUR_MED;
     }
 
+    /**
+     * 执行动作逻辑：从抽牌堆选择面具牌，或生成随机影子卡。
+     */
     @Override
     public void update() {
         if (this.duration == Settings.ACTION_DUR_MED) {

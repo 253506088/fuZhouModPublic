@@ -234,12 +234,12 @@
   },
   "fuZhouMod:TigerTalismanYin": {
     "NAME": "Tiger Talisman · Yin Jackie",
-    "DESCRIPTION": "Cost 1. Gain !B! #yBlock. NL (This value increases by !M! for each card in hand, up to 16).",
-    "UPGRADE_DESCRIPTION": "Cost 1. Gain !B! #yBlock. NL (This value increases by !M! for each card in hand, up to 20)."
+    "DESCRIPTION": "Cost 1. Gain !B! #yBlock. NL (This value increases by !M! for each card in hand, up to 16). NL *Team Jackie",
+    "UPGRADE_DESCRIPTION": "Cost 1. Gain !B! #yBlock. NL (This value increases by !M! for each card in hand, up to 20). NL *Team Jackie"
   },
   "fuZhouMod:TigerTalismanYang": {
     "NAME": "Tiger Talisman · Yang Jackie",
-    "DESCRIPTION": "Deal !D! damage. NL (This value decreases by 2 for each card in hand, minimum 2)."
+    "DESCRIPTION": "Deal !D! damage. NL (This value decreases by 2 for each card in hand, minimum 2). NL *Team Jackie"
   },
   "fuZhouMod:FakeTalisman": {
     "NAME": "Fake Talisman",
@@ -247,8 +247,8 @@
   },
   "fuZhouMod:DrunkenFist": {
     "NAME": "Drunken Fist",
-    "DESCRIPTION": "Deal 6~10 random damage X times. NL (Damage affected by Strength and Weak)",
-    "UPGRADE_DESCRIPTION": "Deal 8~12 random damage X times. NL (Damage affected by Strength and Weak)"
+    "DESCRIPTION": "Deal 6~10 random damage to all enemies X times. NL (Damage affected by Strength and Weak) NL *Team Jackie",
+    "UPGRADE_DESCRIPTION": "Deal 8~12 random damage to all enemies X times. NL (Damage affected by Strength and Weak) NL *Team Jackie"
   },
   "fuZhouMod:ShadowQueen": {
     "NAME": "Shadow Queen",
@@ -257,78 +257,78 @@
   },
   "fuZhouMod:DeflectAndStrike": {
     "NAME": "Deflect and Strike",
-    "DESCRIPTION": "Next turn, if you fully block an enemy\u0027s attack, deal equivalent damage to that enemy.",
-    "UPGRADE_DESCRIPTION": "Gain !B! #yBlock. NL Next turn, if you fully block an enemy\u0027s attack, deal equivalent damage to that enemy."
+    "DESCRIPTION": "Next turn, if you fully block an enemy\u0027s attack, deal equivalent damage to that enemy. NL *Team Jackie",
+    "UPGRADE_DESCRIPTION": "Gain !B! #yBlock. NL Next turn, if you fully block an enemy\u0027s attack, deal equivalent damage to that enemy. NL *Team Jackie"
   },
   "fuZhouMod:GiantJade": {
     "NAME": "Giant Jade",
-    "DESCRIPTION": "Double your current #yBlock. NL #yExhaust",
-    "UPGRADE_DESCRIPTION": "Double your current #yBlock."
+    "DESCRIPTION": "Double your current #yBlock. NL #yExhaust NL *Team Jackie",
+    "UPGRADE_DESCRIPTION": "Double your current #yBlock. NL *Team Jackie"
   },
   "fuZhouMod:Suplex": {
     "NAME": "Suplex",
-    "DESCRIPTION": "Deal !D! (+ [#efc100]6%[] of target\u0027s Max HP) damage."
+    "DESCRIPTION": "Deal !D! damage. NL Base = #y!M! + #y1/8 of target\u0027s Max HP. NL *Team Jackie"
   },
   "fuZhouMod:CloseAtHand": {
     "NAME": "Close at Hand",
-    "DESCRIPTION": "Lose [#efc100]6[] HP. NL Gain #yBlock equal to all enemies\u0027 [#efc100]Total [#efc100]Damage [#efc100]+1."
+    "DESCRIPTION": "Lose [#efc100]6[] HP. NL Gain #yBlock equal to all enemies\u0027 [#efc100]Total [#efc100]Damage [#efc100]+1. NL *Team Jackie"
   },
   "fuZhouMod:RatTalismanCard": {
     "NAME": "Rat Talisman",
-    "DESCRIPTION": "Ethereal. NL Add !M! cards from the exhaust pile to your hand. Their cost becomes *0 this turn. NL #yExhaust",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Add !M! cards from the exhaust pile to your hand. Their cost becomes *0 this turn. NL #yExhaust"
+    "DESCRIPTION": "Ethereal. NL Add !M! cards from the exhaust pile to your hand. Their cost becomes *0 this turn. NL #yExhaust NL *Animal Talisman",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Add !M! cards from the exhaust pile to your hand. Their cost becomes *0 this turn. NL #yExhaust NL *Animal Talisman"
   },
   "fuZhouMod:OxTalismanCard": {
     "NAME": "Ox Talisman",
-    "DESCRIPTION": "Enemy #yStrength and #yDexterity cannot be higher than yours."
+    "DESCRIPTION": "Enemy #yStrength and #yDexterity cannot be higher than yours. NL *Animal Talisman"
   },
   "fuZhouMod:TigerTalismanSkillCard": {
     "NAME": "Tiger Talisman · Skill",
-    "DESCRIPTION": "Choose an enemy. NL If their HP is higher than yours: Their #yStrength -!M!. NL If their HP is lower than yours: Your #yStrength +!M!. NL #yExhaust",
-    "UPGRADE_DESCRIPTION": "Choose an enemy. NL If their HP is higher than yours: Their #yStrength -!M!. NL If their HP is lower than yours: Your #yStrength +!M!. NL #yExhaust"
+    "DESCRIPTION": "Choose an enemy. NL If their HP is higher than yours: Their #yStrength -!M!. NL If their HP is lower than yours: Your #yStrength +!M!. NL #yExhaust NL *Animal Talisman",
+    "UPGRADE_DESCRIPTION": "Choose an enemy. NL If their HP is higher than yours: Their #yStrength -!M!. NL If their HP is lower than yours: Your #yStrength +!M!. NL #yExhaust NL *Animal Talisman"
   },
   "fuZhouMod:TigerTalismanAttackCard": {
     "NAME": "Tiger Talisman · Attack",
-    "DESCRIPTION": "Deal !D! damage. Compare current HP percentage with the target. NL If they are higher: Heal !M! HP. NL If they are lower: Deal additional damage equal to [#efc100]30%[] of their lost HP."
+    "DESCRIPTION": "Deal !D! damage. Compare current HP percentage with the target. NL If they are higher: Heal !M! HP. NL If they are lower: Deal additional damage equal to [#efc100]30%[] of their lost HP. NL *Animal Talisman"
   },
   "fuZhouMod:RabbitTalismanCard": {
     "NAME": "Rabbit Talisman",
-    "DESCRIPTION": "End your turn by keeping your hand. Skip the enemy\u0027s next turn. Start your new turn. NL #yExhaust"
+    "DESCRIPTION": "End your turn by keeping your hand. Skip the enemy\u0027s next turn. Start your new turn. NL #yExhaust NL *Animal Talisman"
   },
   "fuZhouMod:DragonTalismanCard": {
     "NAME": "Dragon Talisman",
-    "DESCRIPTION": "Deal !D! damage to all enemies. If any enemy is killed, re-trigger this card\u0027s effect."
+    "DESCRIPTION": "Deal !D! damage to all enemies. If any enemy is killed, re-trigger this card\u0027s effect. NL *Animal Talisman"
   },
   "fuZhouMod:SnakeTalismanCard": {
     "NAME": "Snake Talisman",
-    "DESCRIPTION": "Gain !M! layers of #yIntangible. NL #yExhaust NL #yEthereal",
-    "UPGRADE_DESCRIPTION": "Gain !M! layers of #yIntangible. NL #yExhaust"
+    "DESCRIPTION": "Gain !M! layers of #yIntangible. NL #yExhaust NL #yEthereal NL *Animal Talisman",
+    "UPGRADE_DESCRIPTION": "Gain !M! layers of #yIntangible. NL #yExhaust NL *Animal Talisman"
   },
   "fuZhouMod:HorseTalismanCard": {
     "NAME": "Horse Talisman",
-    "DESCRIPTION": "At the end of this turn, heal HP equal to half (rounded down) of the total unblocked damage you dealt to enemies this turn. NL #yExhaust"
+    "DESCRIPTION": "At the end of this turn, heal HP equal to half (rounded down) of the total unblocked damage you dealt to enemies this turn. NL #yExhaust NL *Animal Talisman"
   },
   "fuZhouMod:GoatTalismanCard": {
     "NAME": "Sheep Talisman",
-    "DESCRIPTION": "Choose an enemy. Double all its debuffs. NL #yExhaust"
+    "DESCRIPTION": "Choose an enemy. Double all its debuffs. NL #yExhaust NL *Animal Talisman"
   },
   "fuZhouMod:MonkeyTalismanCard": {
     "NAME": "Monkey Talisman",
-    "DESCRIPTION": "Gain 1 layer of #yVulnerable (25%). NL If the enemy\u0027s intention next turn is an attack, deal equivalent damage to it.",
-    "UPGRADE_DESCRIPTION": "Gain 1 layer of #yVulnerable (50%). NL If the enemy\u0027s intention next turn is an attack, deal equivalent damage to it."
+    "DESCRIPTION": "Gain 1 layer of #yVulnerable (25%). NL If the enemy\u0027s intention next turn is an attack, deal equivalent damage to it. NL *Animal Talisman",
+    "UPGRADE_DESCRIPTION": "Gain 1 layer of #yVulnerable (50%). NL If the enemy\u0027s intention next turn is an attack, deal equivalent damage to it. NL *Animal Talisman"
   },
   "fuZhouMod:RoosterTalismanCard": {
     "NAME": "Rooster Talisman",
-    "DESCRIPTION": "Gain #yFlight: #yDexterity +!M! and damage taken reduced by [#efc100]50%[]. After taking [#efc100]5[] hits, you are shot down and [#efc100]Stunned[] for 1 turn. NL #yExhaust"
+    "DESCRIPTION": "Gain #yFlight: #yDexterity +!M! and damage taken reduced by [#efc100]50%[]. After taking [#efc100]5[] hits, you are shot down and [#efc100]Stunned[] for 1 turn. NL #yExhaust NL *Animal Talisman"
   },
   "fuZhouMod:DogTalismanCard": {
     "NAME": "Dog Talisman",
-    "DESCRIPTION": "For the next #b5 turns, fatal damage from enemies is prevented. When triggered, restore !M! HP. Each fatal prevention consumes #b1 revive count. Repeated use stacks both duration and revive counts. The effect is removed when duration reaches 0 or revive counts are exhausted. NL #yExhaust",
-    "UPGRADE_DESCRIPTION": "For the next #b8 turns, fatal damage from enemies is prevented. When triggered, restore !M! HP. Each fatal prevention consumes #b1 revive count. Repeated use stacks both duration and revive counts. The effect is removed when duration reaches 0 or revive counts are exhausted. NL #yExhaust"
+    "DESCRIPTION": "For the next #b5 turns, fatal damage from enemies is prevented. When triggered, restore !M! HP. Each fatal prevention consumes #b1 revive count. Repeated use stacks both duration and revive counts. The effect is removed when duration reaches 0 or revive counts are exhausted. NL #yExhaust NL *Animal Talisman",
+    "UPGRADE_DESCRIPTION": "For the next #b8 turns, fatal damage from enemies is prevented. When triggered, restore !M! HP. Each fatal prevention consumes #b1 revive count. Repeated use stacks both duration and revive counts. The effect is removed when duration reaches 0 or revive counts are exhausted. NL #yExhaust NL *Animal Talisman"
   },
   "fuZhouMod:PigTalismanCard": {
     "NAME": "Pig Talisman",
-    "DESCRIPTION": "Deal !D! damage. Remove target\u0027s: Strength, Artifact, Thorns, Flight, Intangible, and Metallicize. NL #yExhaust"
+    "DESCRIPTION": "Deal !D! damage. Remove target\u0027s: Strength, Artifact, Thorns, Flight, Intangible, and Metallicize. NL #yExhaust NL *Animal Talisman"
   },
   "fuZhouMod:Soultrap": {
     "NAME": "Soul Trap",
@@ -337,25 +337,25 @@
   },
   "fuZhouMod:SinglePlankBridge": {
     "NAME": "Single Plank Bridge",
-    "DESCRIPTION": "Choose any number of cards to Exhaust. For each card exhausted, play the top card of your draw pile once.",
-    "UPGRADE_DESCRIPTION": "Choose any number of cards to Exhaust. For each card exhausted, play the top card of your draw pile (count+1) times."
+    "DESCRIPTION": "Choose any number of cards to Exhaust. For each card exhausted, play the top card of your draw pile once. NL *Team Jackie",
+    "UPGRADE_DESCRIPTION": "Choose any number of cards to Exhaust. For each card exhausted, play the top card of your draw pile (count+1) times. NL *Team Jackie"
   },
   "fuZhouMod:Ambidexterity": {
     "NAME": "Ambidexterity",
-    "DESCRIPTION": "Draw !M! cards, choose 1 card in hand to discard, and choose 1 card in hand to put back on top of your draw pile.",
-    "UPGRADE_DESCRIPTION": "Draw !M! cards, choose 1 card in hand to discard, and choose 1 card in hand to put back on top of your draw pile."
+    "DESCRIPTION": "Draw !M! cards, choose 1 card in hand to discard, and choose 1 card in hand to put back on top of your draw pile. NL *Team Jackie",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards, choose 1 card in hand to discard, and choose 1 card in hand to put back on top of your draw pile. NL *Team Jackie"
   },
   "fuZhouMod:JadeStealsTalisman": {
     "NAME": "Jade Steals Talismans",
-    "DESCRIPTION": "Randomly get 1 of the 13 animal talisman cards to your hand. Its cost becomes *0 this turn. NL #yExhaust"
+    "DESCRIPTION": "Randomly get 1 of the 13 animal talisman cards to your hand. Its cost becomes *0 this turn. NL #yExhaust NL *Team Jackie"
   },
   "fuZhouMod:Petrification": {
     "NAME": "Petrification",
-    "DESCRIPTION": "Apply 1 layer of [#efc100]Petrified to the target. NL ([#efc100]Petrified: Gain [#efc100]1 [#efc100]Strength each turn (Max 10), and damage taken increased by !M!% (increases by 1 layer each turn, Max 10)). NL #yExhaust"
+    "DESCRIPTION": "Apply 1 layer of [#efc100]Petrified to the target. NL ([#efc100]Petrified: Gain [#efc100]1 [#efc100]Strength each turn (Max 10), and damage taken increased by !M!% (increases by 1 layer each turn, Max 10)). NL #yExhaust NL *Team Jackie"
   },
   "fuZhouMod:Flatten": {
     "NAME": "Flatten",
-    "DESCRIPTION": "Deal !D! damage. (Damage is 8 + your total deck size)"
+    "DESCRIPTION": "Deal !D! damage. (Damage is 8 + your total deck size) NL *Team Jackie"
   },
   "fuZhouMod:HiddenDragon": {
     "NAME": "Hidden Dragon",
@@ -364,7 +364,7 @@
   },
   "fuZhouMod:TargetImbalance": {
     "NAME": "Target Imbalance",
-    "DESCRIPTION": "Deal !D! damage. If HP damage is dealt, randomly change the enemy\u0027s intention. NL #yExhaust"
+    "DESCRIPTION": "Deal !D! damage. If HP damage is dealt, randomly change the enemy\u0027s intention. NL #yExhaust NL *Team Jackie"
   },
   "fuZhouMod:CardFireDemonQi": {
     "NAME": "Fire Demon · Drago",
@@ -534,5 +534,54 @@
   "fuZhouMod:CurseBlack": {
     "NAME": "Black",
     "DESCRIPTION": "Unplayable Curse. NL When drawn: the first Skill you play this turn costs +1. NL End of turn: if this remains in your hand, gain 1 Vulnerable."
+  },
+  "fuZhouMod:ChestnutBall": {
+    "NAME": "Kuriboh",
+    "DESCRIPTION": "All damage you receive this turn is reduced to 0. NL #yExhaust NL #yEthereal",
+    "UPGRADE_DESCRIPTION": "All damage you receive this turn is reduced to 0. NL #yExhaust"
+  },
+  "fuZhouMod:DemonDice": {
+    "NAME": "Skull Dice",
+    "DESCRIPTION": "Target enemy loses [#efc100]1~6[] random #yStrength. NL #yExhaust",
+    "UPGRADE_DESCRIPTION": "Target enemy loses [#efc100]1~6[] random #yStrength. NL #yExhaust"
+  },
+  "fuZhouMod:AngelDice": {
+    "NAME": "Graceful Dice",
+    "DESCRIPTION": "Gain [#efc100]1~6[] random #yStrength. NL #yExhaust",
+    "UPGRADE_DESCRIPTION": "Gain [#efc100]1~6[] random #yStrength. NL #yExhaust"
+  },
+  "fuZhouMod:ExodiaSealed": {
+    "NAME": "Exodia the Forbidden One",
+    "DESCRIPTION": "When your hand contains [#efc100]Exodia the Forbidden One[], [#efc100]Right Arm of the Forbidden One[], [#efc100]Left Arm of the Forbidden One[], [#efc100]Right Leg of the Forbidden One[], and [#efc100]Left Leg of the Forbidden One[], destroy all enemies and win the battle.",
+    "UPGRADE_DESCRIPTION": "#yRetain NL When your hand contains [#efc100]Exodia the Forbidden One[], [#efc100]Right Arm of the Forbidden One[], [#efc100]Left Arm of the Forbidden One[], [#efc100]Right Leg of the Forbidden One[], and [#efc100]Left Leg of the Forbidden One[], destroy all enemies and win the battle."
+  },
+  "fuZhouMod:ExodiaRightArm": {
+    "NAME": "Right Arm of the Forbidden One",
+    "DESCRIPTION": "Gain !B! #yBlock."
+  },
+  "fuZhouMod:ExodiaLeftArm": {
+    "NAME": "Left Arm of the Forbidden One",
+    "DESCRIPTION": "Gain !B! #yBlock."
+  },
+  "fuZhouMod:ExodiaRightLeg": {
+    "NAME": "Right Leg of the Forbidden One",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "fuZhouMod:ExodiaLeftLeg": {
+    "NAME": "Left Leg of the Forbidden One",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "fuZhouMod:RingOfDestruction": {
+    "NAME": "Ring of Destruction",
+    "DESCRIPTION": "Choose an enemy. When it dies, deal damage equal to its [#efc100]Max HP[] to all other enemies. NL #yExhaust",
+    "UPGRADE_DESCRIPTION": "Choose an enemy. When it dies, deal damage equal to its [#efc100]Max HP[] to all other enemies."
+  },
+  "fuZhouMod:BlueEyesWhiteDragon": {
+    "NAME": "Blue-Eyes White Dragon",
+    "DESCRIPTION": "Deal !D! damage. NL Randomly #yExhaust 2 cards from your hand."
+  },
+  "fuZhouMod:GandoraDragon": {
+    "NAME": "Gandora the Dragon of Destruction",
+    "DESCRIPTION": "Remove all #yStrength from you and all enemies (set to 0). NL Deal damage to ALL enemies equal to the [#efc100]sum of absolute values[] of removed Strength. NL #yExhaust"
   }
 }

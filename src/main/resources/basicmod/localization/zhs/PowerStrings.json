@@ -339,7 +339,7 @@
     ]
   },
   "fuZhouMod:DominionPower": {
-    "NAME": "影蚀",
+    "NAME": "影噬",
     "DESCRIPTIONS": [
       "当前层： #b",
       " ，黑影兵团的伤害或护盾受到本属性影响。"
@@ -426,6 +426,25 @@
     "DESCRIPTIONS": [
       "吟唱护盾值：【",
       "】。吟唱期间该护盾不会在回合开始时自然清空，且【猪符咒无法直接移除】。若该护盾在老爹下回合行动前被击破，则取消处决并直接回到T2。"
+    ]
+  },
+  "fuZhouMod:RingOfDestructionPower": {
+    "NAME": "破坏轮",
+    "DESCRIPTIONS": [
+      "该怪物死亡时，对场上其他怪物造成 #b",
+      " 点伤害（等同于其最大生命值）。"
+    ]
+  },
+  "fuZhouMod:ChestnutBallPower": {
+    "NAME": "栗子球",
+    "DESCRIPTIONS": [
+      "本回合免疫任何来源的伤害。"
+    ]
+  },
+  "fuZhouMod:ExodiaProtectionPower": {
+    "NAME": "艾克佐迪亚的庇护",
+    "DESCRIPTIONS": [
+      "艾克佐迪亚已苏醒。每个回合开始时，获得 #b999 点 #y格挡 与 #b1 层 #y无实体 ，并将手牌中的部件保留。"
     ]
   }
 }

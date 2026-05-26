@@ -1,11 +1,11 @@
 package basicmod.relics;
 
 import basicmod.cards.BaseCard;
+import basicmod.helpers.TalismanInputHelper;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import basicmod.powers.ShenZhuStatuePower;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -89,7 +89,7 @@ public class HorseTalisman extends BaseRelic implements com.evacipated.cardcrawl
 
         // 1. 处理右键点击：切换预备状态
         if (canInteractInCombat() && !this.usedThisTurn && this.counter <= 0) {
-            if (this.hb.hovered && InputHelper.justClickedRight) {
+            if (TalismanInputHelper.isRelicRightClickTriggered(this)) {
                 this.activated = !this.activated;
                 if (this.activated) {
                     CardCrawlGame.sound.play("UI_CLICK_1");

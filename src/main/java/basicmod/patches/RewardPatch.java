@@ -6,6 +6,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
  
 import java.util.ArrayList;
 import java.util.List;
@@ -41,6 +42,10 @@ public class RewardPatch {
                         basicmod.BasicMod.logger.info("【TEAM_JACKIE 奖励池】第" + (i + 1) + "张抽取的随机索引: " + index);
                         
                         AbstractCard specialCard = drawPool.get(index).makeCopy();
+                        // 合作牌是在原版奖励预览流程之后追加的，这里补跑遗物预览逻辑，确保毒素蛋等遗物能正确显示升级版。
+                        for (AbstractRelic relic : AbstractDungeon.player.relics) {
+                            relic.onPreviewObtainCard(specialCard);
+                        }
                         basicmod.BasicMod.logger.info("【TEAM_JACKIE 奖励池】第" + (i + 1) + "张最终生成卡牌: " + specialCard.cardID);
                         
                         // 塞进结果列表的末尾，作为额外的奖励卡

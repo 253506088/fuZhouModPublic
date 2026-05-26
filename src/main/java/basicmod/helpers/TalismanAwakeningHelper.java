@@ -2,10 +2,7 @@ package basicmod.helpers;
 
 import basicmod.cards.NothingLackingCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -80,7 +77,10 @@ public class TalismanAwakeningHelper {
 
         // 1. 获得“我什么都不缺了”卡牌
         AbstractCard card = new NothingLackingCard();
-        AbstractDungeon.topLevelEffectsQueue.add(new ShowCardAndObtainEffect(card, Settings.WIDTH / 2.0f, Settings.HEIGHT / 2.0f));
+        if (CardRewardHelper.grantCardToMasterDeck(card)) {
+            CardRewardHelper.showCardBriefly(card);
+            awakeningPending = false;
+        }
         
         // 2. 特效与音效：震撼登场
         com.megacrit.cardcrawl.core.CardCrawlGame.sound.play("GHOST_ORB_HOWL"); 

@@ -25,10 +25,10 @@ public class MoonTargetEnemy extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (m == null) {
-            CardMoonDemonQi.logger.info("【月之恶魔】MoonTargetEnemy.use 被调用，但目标怪物 (m) 为 NULL！索敌环节异常。");
+            CardMoonDemonQi.logger.debug("【月之恶魔】MoonTargetEnemy.use 被调用，但目标怪物 (m) 为 NULL！索敌环节异常。");
         } else {
-            CardMoonDemonQi.logger.info(String.format("【月之恶魔】MoonTargetEnemy.use 捕获到目标: %s, ID: %s, HP: %d/%d, isDead: %b", 
-                m.name, m.id, m.currentHealth, m.maxHealth, m.isDead));
+            CardMoonDemonQi.logger.debug("【月之恶魔】MoonTargetEnemy.use 捕获到目标: {}, ID: {}, HP: {}/{}, isDead: {}",
+                m.name, m.id, m.currentHealth, m.maxHealth, m.isDead);
         }
         CardMoonDemonQi.invertStats(m);
     }

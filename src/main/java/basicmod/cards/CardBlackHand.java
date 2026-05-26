@@ -9,7 +9,12 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+/**
+ * 黑手党卡牌。
+ * 升级手中所有阿福和黑手党卡牌。
+ */
 public class CardBlackHand extends BaseCard {
+    /** 卡牌ID */
     public static final String ID = makeID("BlackHand");
     private static final CardStats info = new CardStats(
             CharacterEnums.SHENGZHU_COLOR,

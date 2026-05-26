@@ -18,6 +18,22 @@
         "DESCRIPTION":  "Powerful moves performed by the Dark Hand\u0027s general, Ah Fu."
     },
     {
+        "ID":  "TeamJackie",
+        "PROPER_NAME":  "Team Jackie",
+        "NAMES":  [
+                      "Team Jackie"
+                  ],
+        "DESCRIPTION":  "Cards used by Jackie, Jade, Tohru, and the rest of Team Jackie."
+    },
+    {
+        "ID":  "AnimalTalisman",
+        "PROPER_NAME":  "Animal Talisman",
+        "NAMES":  [
+                      "Animal Talisman"
+                  ],
+        "DESCRIPTION":  "Cards of the twelve animal talismans, with the Tiger Talisman split into Attack and Skill."
+    },
+    {
         "ID":  "Flight",
         "PROPER_NAME":  "Flight",
         "NAMES":  [

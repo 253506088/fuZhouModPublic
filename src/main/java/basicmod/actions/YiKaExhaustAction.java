@@ -1,5 +1,6 @@
 package basicmod.actions;
 
+import basicmod.relics.ShadowKhanToken;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.StunMonsterAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -18,20 +19,43 @@ import com.megacrit.cardcrawl.powers.*;
 import java.util.Collections;
 import java.util.ArrayList;
 
+/**
+ * 伊卡消耗动作。
+ * 消耗手牌，根据卡牌类型触发不同效果（攻击牌造成伤害，技能牌抽牌等）。
+ */
 public class YiKaExhaustAction extends AbstractGameAction {
+    /** UI字符串 */
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("fuZhouMod:MaskActionsUI");
+    /** 目标怪物 */
     private AbstractMonster m;
 
+    /**
+     * 构造函数。
+     *
+     * @param target 目标怪物
+     */
     public YiKaExhaustAction(AbstractMonster target) {
         this.actionType = ActionType.EXHAUST;
         this.duration = Settings.ACTION_DUR_FAST;
         this.m = target;
     }
 
+    /**
+     * 执行动作逻辑：选择手牌消耗，根据卡牌类型触发不同效果。
+     */
     @Override
     public void update() {
         if (this.duration == Settings.ACTION_DUR_FAST) {
             if (AbstractDungeon.player.hand.isEmpty()) {
+                this.isDone = true;
+                return;
+            }
+
+            if (!ShadowKhanToken.isManualExhaustMode()) {
+                AbstractCard randomCard = getRandomHandCard();
+                if (randomCard != null) {
+                    exhaustSelectedCard(randomCard);
+                }
                 this.isDone = true;
                 return;
             }
@@ -45,10 +69,7 @@ public class YiKaExhaustAction extends AbstractGameAction {
         // 处理从 GridSelectScreen 返回的结果
         if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
             for (AbstractCard c : AbstractDungeon.gridSelectScreen.selectedCards) {
-                // 消耗所选卡牌
-                AbstractDungeon.actionManager.addToTop(new ExhaustSpecificCardAction(c, AbstractDungeon.player.hand));
-                // 触发加成效果
-                triggerEffect(c);
+                exhaustSelectedCard(c);
             }
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
             AbstractDungeon.player.hand.refreshHandLayout();
@@ -57,6 +78,37 @@ public class YiKaExhaustAction extends AbstractGameAction {
         this.isDone = true;
     }
 
+    /**
+     * 随机获取当前手牌中的1张牌。
+     *
+     * @return 被随机选中的手牌，若没有手牌则返回null
+     */
+    private AbstractCard getRandomHandCard() {
+        if (AbstractDungeon.player.hand.isEmpty()) {
+            return null;
+        }
+        int index = AbstractDungeon.cardRandomRng.random(AbstractDungeon.player.hand.size() - 1);
+        return AbstractDungeon.player.hand.group.get(index);
+    }
+
+    /**
+     * 消耗指定手牌，并触发伊卡根据牌类型带来的追加效果。
+     *
+     * @param c 被消耗的卡牌
+     */
+    private void exhaustSelectedCard(AbstractCard c) {
+        // 消耗所选卡牌
+        AbstractDungeon.actionManager.addToTop(new ExhaustSpecificCardAction(c, AbstractDungeon.player.hand));
+        // 触发加成效果
+        triggerEffect(c);
+    }
+
+    /**
+     * 根据卡牌类型触发对应效果。
+     * 攻击牌：造成伤害的一半；技能牌：抽2张；能力牌：随机负面效果；诅咒牌：眩晕；状态牌：中毒。
+     *
+     * @param c 被消耗的卡牌
+     */
     private void triggerEffect(AbstractCard c) {
         switch (c.type) {
             case ATTACK:
@@ -88,6 +140,9 @@ public class YiKaExhaustAction extends AbstractGameAction {
         }
     }
 
+    /**
+     * 随机施加负面效果（虚弱2、易伤2、力量-2、敏捷-2之一）。
+     */
     private void applyRandomPower() {
         ArrayList<AbstractPower> powers = new ArrayList<>();
         powers.add(new WeakPower(m, 2, false));

@@ -22,13 +22,19 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 面具能力基类。
+ * 提供面具能力的基础功能，包括回合开始生成影子卡、挤出返还等机制。
+ */
 public abstract class BaseMaskPower extends BasePower {
 
+    /** 升级层数 */
     public int upgradedAmount = 0;
+    /** 面具堆叠记录 */
     private final ArrayList<MaskStackRecord> maskStackRecords = new ArrayList<>();
-    // 防止同一个面具能力实例在挤出流程中被重复返还
+    /** 防止同一个面具能力实例在挤出流程中被重复返还 */
     private boolean evictionRefundHandled = false;
-    // 每层面具在被挤出时返还 2 张对应兵团卡
+    /** 每层面具在被挤出时返还的兵团卡数量 */
     private static final int EVICT_SOLDIER_REFUND_PER_STACK = 2;
 
     public BaseMaskPower(String id, PowerType powerType, boolean isTurnBased, AbstractCreature owner, int amount) {
@@ -60,12 +66,27 @@ public abstract class BaseMaskPower extends BasePower {
         MaskManager.updateMaskOrbs();
     }
 
+    /**
+     * 获取关联的黑影兵团卡牌。
+     *
+     * @return 黑影兵团卡牌实例
+     */
     public abstract AbstractCard getLinkedShadowKhanCard();
 
+    /**
+     * 挤出回调，返还面具卡和兵团卡。
+     */
     public void onEvict() {
         onEvict(0);
     }
 
+    /**
+     * 记录应用的面具堆叠信息。
+     *
+     * @param stackCount 堆叠数量
+     * @param upgraded 是否升级
+     * @param permanentCostReductionCount 永久费用减免次数
+     */
     public void recordAppliedMaskStacks(int stackCount, boolean upgraded, int permanentCostReductionCount) {
         if (stackCount <= 0) {
             return;
@@ -76,6 +97,11 @@ public abstract class BaseMaskPower extends BasePower {
         }
     }
 
+    /**
+     * 挤出回调，返还面具卡和兵团卡，并应用费用减免。
+     *
+     * @param returnedMaskCostReduction 返还的面具费用减免次数
+     */
     public void onEvict(int returnedMaskCostReduction) {
         if (evictionRefundHandled) {
             return;
@@ -116,6 +142,9 @@ public abstract class BaseMaskPower extends BasePower {
         this.maskStackRecords.clear();
     }
 
+    /**
+     * 回合开始（抽牌后）触发，生成黑影兵团卡牌。
+     */
     @Override
     public void atStartOfTurnPostDraw() {
         super.atStartOfTurnPostDraw();

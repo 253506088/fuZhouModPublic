@@ -10,7 +10,14 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import java.lang.reflect.Field;
 
+/**
+ * 诅咒玉延迟动作。
+ * 等待抽牌阶段结束后，执行弃牌和向抽牌堆添加晕眩牌的效果。
+ */
 public class CurseJadeDeferredAction extends AbstractGameAction {
+    /**
+     * 执行动作逻辑：如果正在抽牌阶段则延迟执行，否则执行弃牌和添加晕眩牌。
+     */
     @Override
     public void update() {
         this.isDone = true;
@@ -27,6 +34,13 @@ public class CurseJadeDeferredAction extends AbstractGameAction {
         addToBot(new MakeTempCardInDrawPileAction(new Dazed(), 1, false, true, false));
     }
 
+    /**
+     * 检查是否正在进行抽牌阶段。
+     * 通过检查动作队列和当前动作是否为DrawCardAction来判断。
+     *
+     * @param manager 游戏动作管理器
+     * @return 如果正在抽牌返回true，否则返回false
+     */
     private boolean isDrawPhaseInProgress(GameActionManager manager) {
         if (manager.actions != null) {
             for (AbstractGameAction action : manager.actions) {

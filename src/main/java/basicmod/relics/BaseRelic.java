@@ -12,9 +12,16 @@ import com.megacrit.cardcrawl.localization.RelicStrings;
 
 import static basicmod.BasicMod.relicPath;
 
+/**
+ * 遗物基类。
+ * 提供遗物的基础功能，包括图片加载、本地化、卡池设置等。
+ */
 public abstract class BaseRelic extends CustomRelic {
+    /** 遗物所属卡池 */
     public AbstractCard.CardColor pool = null;
+    /** 遗物类型（共享/职业专属） */
     public basemod.helpers.RelicType relicType = basemod.helpers.RelicType.SHARED;
+    /** 遗物图片名称 */
     protected String imageName;
 
     /**
@@ -30,19 +37,26 @@ public abstract class BaseRelic extends CustomRelic {
                com.megacrit.cardcrawl.dungeons.AbstractDungeon.getCurrRoom().phase == com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase.COMBAT;
     }
 
-    //for character specific relics
+    /**
+     * 职业专属遗物构造函数。
+     */
     public BaseRelic(String id, String imageName, AbstractCard.CardColor pool, RelicTier tier, LandingSound sfx) {
         this(id, imageName, tier, sfx);
 
         setPool(pool);
     }
 
+    /**
+     * 使用ID作为图片名称的构造函数。
+     */
     public BaseRelic(String id, RelicTier tier, LandingSound sfx) {
         this(id, GeneralUtils.removePrefix(id), tier, sfx);
     }
 
-    //To use a basegame relic image, just pass in the imagename used by a basegame relic instead of the ID.
-    //eg. "calendar.png"
+    /**
+     * 完整构造函数。
+     * 要使用原版遗物图片，传入原版遗物使用的图片名称，如 "calendar.png"。
+     */
     public BaseRelic(String id, String imageName, RelicTier tier, LandingSound sfx) {
         super(testStrings(id), notPng(imageName) ? "" : imageName, tier, sfx);
 
@@ -52,6 +66,9 @@ public abstract class BaseRelic extends CustomRelic {
         }
     }
 
+    /**
+     * 加载遗物纹理图片。
+     */
     protected void loadTexture() {
         this.img = TextureLoader.getTextureNull(relicPath(imageName + ".png"), true);
         if (img != null) {
@@ -126,6 +143,9 @@ public abstract class BaseRelic extends CustomRelic {
         }
     }
 
+    /**
+     * 刷新遗物描述和提示。
+     */
     public void refreshDescription() {
         this.description = this.getUpdatedDescription();
         this.tips.clear();

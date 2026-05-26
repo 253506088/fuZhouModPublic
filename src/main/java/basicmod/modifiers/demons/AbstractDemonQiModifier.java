@@ -13,12 +13,30 @@ import basicmod.relics.RatTalisman;
 
 import java.util.ArrayList;
 
+/**
+ * 恶魔之气卡牌修改器基类。
+ * 为卡牌添加恶魔之气效果，增加前缀和额外描述。
+ */
 public abstract class AbstractDemonQiModifier extends AbstractCardModifier {
+    /** UI字符串 */
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("fuZhouMod:DemonQiModifiers");
-    
+
+    /**
+     * 获取恶魔之气前缀名称。
+     *
+     * @return 前缀名称
+     */
     public abstract String getPrefix();
+    /**
+     * 获取额外描述文本。
+     *
+     * @return 额外描述
+     */
     public abstract String getExtraDesc();
 
+    /**
+     * 修改卡牌名称，添加恶魔之气前缀。
+     */
     @Override
     public String modifyName(String cardName, AbstractCard card) {
         // 防止由于初始化或者其他导致前缀叠床架屋
@@ -30,16 +48,26 @@ public abstract class AbstractDemonQiModifier extends AbstractCardModifier {
         return left + getPrefix() + right + cardName;
     }
 
+    /**
+     * 修改卡牌描述，添加恶魔之气额外描述。
+     */
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
         return rawDescription + " NL " + getExtraDesc();
     }
     
+    /**
+     * 获取修改器标识符。
+     */
     @Override
     public String identifier(AbstractCard card) {
         return "DemonQi:" + this.getClass().getSimpleName();
     }
     
+    /**
+     * 判断是否应该应用修改器。
+     * 诅咒和状态卡不能被附魔，一张卡只能带一种魔气。
+     */
     @Override
     public boolean shouldApply(AbstractCard card) {
         // 诅咒和状态卡不能被附魔

@@ -48,7 +48,7 @@ public class GrandMageCurseTaxAttackPower extends BasePower {
         if (AbstractDungeon.player == null || AbstractDungeon.player.hand == null) {
             return;
         }
-        BasicMod.logger.info("【诅咒税Power】攻击税刷新手牌，当前手牌数={}。", AbstractDungeon.player.hand.size());
+        BasicMod.logger.debug("【诅咒税Power】攻击税刷新手牌，当前手牌数={}。", AbstractDungeon.player.hand.size());
         AbstractDungeon.player.hand.applyPowers();
         AbstractDungeon.player.hand.glowCheck();
     }

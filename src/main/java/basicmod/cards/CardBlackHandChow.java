@@ -7,7 +7,12 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+/**
+ * 黑手党周卡牌。
+ * 基础防御牌，获得格挡。
+ */
 public class CardBlackHandChow extends BaseCard {
+    /** 卡牌ID */
     public static final String ID = makeID("BlackHandChow");
     private static final CardStats info = new CardStats(
             CharacterEnums.SHENGZHU_COLOR,

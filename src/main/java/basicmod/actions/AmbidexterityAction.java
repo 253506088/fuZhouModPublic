@@ -6,9 +6,19 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.PutOnDeckAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
+/**
+ * 左右手互搏动作。
+ * 执行顺序：抽牌 -> 弃牌 -> 置顶（通过addToTop实现逆序执行）。
+ */
 public class AmbidexterityAction extends AbstractGameAction {
+    /** 抽牌数量 */
     private int drawAmount;
 
+    /**
+     * 构造函数。
+     *
+     * @param drawAmount 抽牌数量
+     */
     public AmbidexterityAction(int drawAmount) {
         this.drawAmount = drawAmount;
         this.actionType = ActionType.DRAW;

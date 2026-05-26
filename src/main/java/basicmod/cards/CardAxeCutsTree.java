@@ -9,7 +9,12 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+/**
+ * 斧头砍树卡牌。
+ * 造成伤害，对有格挡的敌人造成1.5倍伤害。
+ */
 public class CardAxeCutsTree extends BaseCard {
+    /** 卡牌ID */
     public static final String ID = makeID("AxeCutsTree");
     private static final CardStats info = new CardStats(
             CharacterEnums.SHENGZHU_COLOR,

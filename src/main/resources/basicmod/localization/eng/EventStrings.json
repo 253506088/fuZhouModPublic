@@ -101,5 +101,18 @@
       "[Tear a Page] Gain Relic: #yHistory #yBook #yFragment",
       "[Leave]"
     ]
+  },
+  "fuZhouMod:ExodiaEvent": {
+    "NAME": "The Sealed Tablet",
+    "DESCRIPTIONS": [
+      " #yUncle: \"Jackie! This is no ordinary Egyptian tablet! Sealed within is #r@Exodia@ — the most powerful forbidden sorcerer of the underworld! Five thousand years ago, the Pharaoh used five stone tablets to seal him in pieces. Anyone who gathers all five sealed fragments can summon his complete power!\" NL #yJade: \"Cool! Like collecting Dragon Balls?\" #yJackie: \"Jade! This is not a game!\" NL The cracks on the tablet are glowing, and the outlines of five fragments are clearly visible — #r~the head~ , #r~the right arm~ , #r~the left arm~ , #r~the right leg~ , #r~the left leg~ . An ancient #p~dark will~ seeps from the cracks, as if inviting you to take them away...",
+      " #yUncle: \"Ay-yah!! Are you crazy!! Touching that thing will get you cursed!!\" NL  NL Ignoring Uncle's warning, you press your hand against the tablet. Five golden beams shoot from the stone, and five sealed fragments transform into cards that fly into your deck. NL  NL #yUncle: \"Yu Mo Gui Gwai Fai Di Zao! Yu Mo Gui Gwai Fai Di Zao!\" NL #yJade: \"Uncle, your chant doesn't work on cards.\" NL #yJackie: \"Uncle, calm down...\" NL  NL You feel a power that has slumbered for five thousand years awakening within your deck. If you gather all five fragments in battle... #r@All enemies shall be reduced to nothing.@",
+      " #yUncle: \"Good! Good! Not touching it is the right choice! Underworld sorcerers are not to be trifled with!\" NL  NL You turn and walk away from the tablet. Uncle nods approvingly and continues drawing sealing runes around the tablet with his dried puffer fish. NL  NL #yUncle: \"Jackie! Help Uncle carry this tablet back to the shop! I need to reinforce the seal with #yChi #yMagic!\" NL #yJackie: \"Uncle, this tablet weighs at least three tons...\" NL #yJade: \"If only we had the Ox Talisman.\""
+    ],
+    "OPTIONS": [
+      "[Claim the Sealed Power] Add the #yExodia five-piece set to your deck",
+      "[Leave the Underworld Sorcerer Alone] Leave",
+      "[Leave]"
+    ]
   }
 }

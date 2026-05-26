@@ -10,11 +10,21 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 
+/**
+ * 猴符咒战斗中变幻动作。
+ * 选择一张手牌，从全职业牌池中选择一张新牌替换。
+ */
 public class MonkeyTalismanCombatAction extends AbstractGameAction {
+    /** 是否已打开网格选择界面 */
     private boolean openedGridScreen = false;
+    /** 要替换的目标卡牌 */
     private AbstractCard targetCard = null;
+    /** 可选的替换牌池 */
     private CardGroup replacementPool;
 
+    /**
+     * 构造函数，构建全职业牌池。
+     */
     public MonkeyTalismanCombatAction() {
         this.actionType = ActionType.CARD_MANIPULATION;
         this.duration = Settings.ACTION_DUR_FAST;
@@ -34,6 +44,9 @@ public class MonkeyTalismanCombatAction extends AbstractGameAction {
         this.replacementPool.sortByRarityPlusStatusCardType(false);
     }
 
+    /**
+     * 执行动作逻辑：选择手牌，从牌池中选择新牌替换。
+     */
     @Override
     public void update() {
         // 如果手牌为空，或者牌池没牌，无法变幻

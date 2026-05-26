@@ -2,14 +2,18 @@ package basicmod.helpers;
 
 import basicmod.cards.EndlessDarkness;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import java.util.ArrayList;
 
+/**
+ * 无尽黑暗辅助类。
+ * 检查主牌组是否集齐10张面具，如果是则触发觉醒，获得"终极黑暗"卡牌。
+ */
 public class EndlessDarknessHelper {
-    
-    // Check if the master deck contains all 10 masks. If so, trigger the Exodia awakening.
+
+    /**
+     * 检查主牌组是否集齐10张面具，如果是则触发觉醒。
+     */
     public static void checkAndTriggerAwakening() {
         if (AbstractDungeon.player == null || AbstractDungeon.player.masterDeck == null) return;
         
@@ -45,6 +49,11 @@ public class EndlessDarknessHelper {
         }
     }
     
+    /**
+     * 触发觉醒：移除10张面具，获得"终极黑暗"卡牌，播放音效和特效。
+     *
+     * @param requiredMasks 需要移除的面具ID数组
+     */
     private static void triggerAwakening(String[] requiredMasks) {
         // Collect one instance of each mask to remove
         ArrayList<AbstractCard> cardsToRemove = new ArrayList<>();
@@ -76,8 +85,8 @@ public class EndlessDarknessHelper {
         
         // 2. 获得“终极黑暗”卡牌
         AbstractCard endDark = new EndlessDarkness();
-        // 此处改用 topLevelEffectsQueue.add 避免并发修改异常
-        AbstractDungeon.topLevelEffectsQueue.add(new ShowCardAndObtainEffect(endDark, Settings.WIDTH / 2.0f, Settings.HEIGHT / 2.0f));
+        CardRewardHelper.grantCardToMasterDeck(endDark);
+        CardRewardHelper.showCardBriefly(endDark);
         
         // 3. 播放音效与视觉特效
         com.megacrit.cardcrawl.core.CardCrawlGame.sound.play("INTIMIDATE"); 

@@ -17,9 +17,18 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
+/**
+ * 潘库宝盒营火附魔特效。
+ * 实现两阶段选牌流程：先选择要使用的魔气，再选择附魔目标。
+ */
 public class PanKuCampfireEnchantEffect extends AbstractGameEffect {
+    /**
+     * 选牌阶段枚举。
+     */
     private enum Phase {
+        /** 选择魔气 */
         CHOOSE_QI,
+        /** 选择附魔目标 */
         CHOOSE_TARGET
     }
     private static final String CANCEL_TOKEN = "__PANKU_CANCEL__";

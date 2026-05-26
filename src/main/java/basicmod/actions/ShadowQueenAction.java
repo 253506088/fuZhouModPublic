@@ -8,11 +8,21 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import java.util.ArrayList;
 
+/**
+ * 暗影女王动作。
+ * 从消耗牌堆中找出所有黑影兵团卡牌，释放虚影并打出。
+ */
 public class ShadowQueenAction extends AbstractGameAction {
+    /**
+     * 构造函数。
+     */
     public ShadowQueenAction() {
         this.actionType = ActionType.SPECIAL;
     }
 
+    /**
+     * 执行动作逻辑：扫描消耗牌堆中的黑影兵团卡牌，释放虚影并打出。
+     */
     @Override
     public void update() {
         // 1. 扫描消耗牌堆，找出所有的黑影兵团卡片

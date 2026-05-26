@@ -11,7 +11,12 @@ import com.megacrit.cardcrawl.potions.AbstractPotion;
 import java.lang.reflect.Field;
 import java.util.List;
 
+/**
+ * 药水基类。
+ * 提供药水的基础功能，包括图片访问、本地化、数据初始化等。
+ */
 public abstract class BasePotion extends AbstractPotion {
+    /** 药水图片字段（通过反射访问） */
     private static final Field containerImg, outlineImg, liquidImg, hybridImg, spotsImg;
     static {
         try {
@@ -32,11 +37,18 @@ public abstract class BasePotion extends AbstractPotion {
         }
     }
 
+    /** 药水本地化字符串 */
     public PotionStrings potionStrings;
+    /** 描述文本数组 */
     public String[] DESCRIPTIONS;
+    /** 基础效能值 */
     public int basePotency;
+    /** 限定职业（null表示全职业可用） */
     public AbstractPlayer.PlayerClass playerClass = null;
 
+    /**
+     * 使用自定义颜色构造药水。
+     */
     public BasePotion(String id, int potency, PotionRarity rarity, PotionSize shape, Color liquidColor, Color hybridColor, Color spotsColor) {
         super("", id, rarity, shape, PotionEffect.NONE, liquidColor, hybridColor, spotsColor);
         basePotency = potency;
@@ -44,6 +56,9 @@ public abstract class BasePotion extends AbstractPotion {
         initializeData();
     }
 
+    /**
+     * 使用预设颜色构造药水。
+     */
     public BasePotion(String id, int potency, PotionRarity rarity, PotionSize size, PotionColor color) {
         super("", id, rarity, size, color);
         basePotency = potency;
@@ -51,6 +66,9 @@ public abstract class BasePotion extends AbstractPotion {
         initializeData();
     }
 
+    /**
+     * 检查颜色配置是否正确。
+     */
     protected void checkColors() {
         if (hybridColor != null && getHybridImg() == null) {
             throw new RuntimeException("Potion " + ID + " has hybridColor but no hybridImg; if this is intentional, override checkColors. Otherwise, set hybridColor to null or provide a Texture with setHybridImg.");
@@ -60,6 +78,9 @@ public abstract class BasePotion extends AbstractPotion {
         }
     }
 
+    /**
+     * 初始化药水数据，包括名称、描述、提示等。
+     */
     @Override
     public void initializeData() {
         this.potency = this.getPotency();
@@ -79,7 +100,15 @@ public abstract class BasePotion extends AbstractPotion {
         return basePotency;
     }
 
+    /**
+     * 获取药水描述文本。
+     *
+     * @return 描述文本
+     */
     public abstract String getDescription();
+    /**
+     * 添加额外的提示信息。
+     */
     public void addAdditionalTips() {
 
     }

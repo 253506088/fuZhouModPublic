@@ -22,16 +22,17 @@ public class Suplex extends BaseCard {
 
     public Suplex() {
         super(ID, info);
-        setDamage(9, 3); // 基础 6 点，升级 +3 = 9 点
+        setDamage(6, 3); // 基础 6 点，升级 +3 = 9 点
+        setMagic(6, 3);  // 用 magicNumber 展示基础伤害数值
         tags.add(CustomTags.TEAM_JACKIE);
     }
 
     @Override
     public void calculateCardDamage(AbstractMonster m) {
-        // 计算时临时注入目标 10% 最大生命值的固定伤害
+        // 计算时临时注入目标最大生命值 1/8 的固定伤害
         int realBase = this.baseDamage;
         if (m != null) {
-            this.baseDamage += (int)(m.maxHealth * 0.06);
+            this.baseDamage += (int)(m.maxHealth * 0.125);
         }
         super.calculateCardDamage(m);
         // 恢复原始 baseDamage 保证 applyPowers 时数值不被污染，UI 上的 damage 已经是计算后的了
@@ -41,10 +42,11 @@ public class Suplex extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // 计算 6% 最大生命值部分
-        int hpBonus = (int)(m.maxHealth * 0.06);
+        // 计算 1/8 最大生命值部分
+        int hpBonus = (int)(m.maxHealth * 0.125);
         // 打印中文日志，列出计算式
-        basicmod.BasicMod.logger.info(">>> [抱摔] 伤害计算式: [基础(" + (this.upgraded ? 9 : 6) + ") + 6%最大生命值(" + hpBonus + ")] * 力量/虚弱补正 = " + this.damage);
+        basicmod.BasicMod.logger.debug(">>> [抱摔] 伤害计算式: [基础({}) + 1/8最大生命值({})] * 力量/虚弱补正 = {}",
+                this.upgraded ? 9 : 6, hpBonus, this.damage);
 
         // calculateCardDamage 在被打出时已由引擎调用，直接使用 this.damage
         addToBot(new DamageAction(m, new DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SMASH));

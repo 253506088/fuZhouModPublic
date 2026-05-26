@@ -17,15 +17,28 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 刀龙黑气动作。
+ * 将牌组中的特定卡牌替换为对应的强化版本。
+ */
 public class DaoLongBlackQiAction extends AbstractGameAction {
+    /** 是否升级 */
     private boolean upgraded;
 
+    /**
+     * 构造函数。
+     *
+     * @param upgraded 是否升级替换后的卡牌
+     */
     public DaoLongBlackQiAction(boolean upgraded) {
         this.upgraded = upgraded;
         this.actionType = ActionType.CARD_MANIPULATION;
         this.duration = Settings.ACTION_DUR_FAST;
     }
 
+    /**
+     * 执行动作逻辑：替换手牌、抽牌堆、弃牌堆中的特定卡牌。
+     */
     @Override
     public void update() {
         if (this.duration == Settings.ACTION_DUR_FAST) {
@@ -37,6 +50,12 @@ public class DaoLongBlackQiAction extends AbstractGameAction {
         tickDuration();
     }
 
+    /**
+     * 在指定卡牌组中替换特定卡牌。
+     * 替换规则：周→甘，老鼠→文，阿芬→翠，泰山压顶→龙卷风。
+     *
+     * @param group 要处理的卡牌组
+     */
     private void replaceInGroup(CardGroup group) {
         List<AbstractCard> toReplace = new ArrayList<>();
         for (AbstractCard c : group.group) {

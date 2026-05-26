@@ -4,14 +4,27 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
+/**
+ * 亥猪符咒动作。
+ * 移除目标身上的指定正面Buff（白名单模式）。
+ */
 public class PigTalismanAction extends AbstractGameAction {
+    /** 目标生物 */
     private final AbstractCreature target;
 
+    /**
+     * 构造函数。
+     *
+     * @param target 要移除Buff的目标生物
+     */
     public PigTalismanAction(AbstractCreature target) {
         this.target = target;
         this.actionType = ActionType.SPECIAL;
     }
 
+    /**
+     * 执行动作逻辑：移除目标身上的白名单中的正面Buff。
+     */
     @Override
     public void update() {
         if (target != null && !target.isDeadOrEscaped()) {

@@ -47,6 +47,10 @@ import java.lang.reflect.Modifier;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 
+/**
+ * Mod主类，负责初始化和注册Mod的所有内容。
+ * 实现了BaseMod的各种订阅者接口，用于注册卡牌、遗物、角色、事件、本地化等。
+ */
 @SpireInitializer
 public class BasicMod implements
         EditStringsSubscriber,
@@ -61,12 +65,19 @@ public class BasicMod implements
         basemod.interfaces.PostBattleSubscriber,
         basemod.interfaces.PostPowerApplySubscriber,
         basemod.interfaces.StartGameSubscriber {
+    /** Mod信息对象，包含Mod的元数据（名称、作者、描述等） */
     public static ModInfo info;
-    public static String modID; // Edit your pom.xml to change this
-    
+    /** Mod的唯一标识符，从pom.xml中读取 */
+    public static String modID;
+    /** Mod配置对象，用于持久化存储用户设置 */
     private static SpireConfig modConfig;
+    /** 半自动模式开关，控制某些自动化行为 */
     public static boolean semiAutoMode = false;
+    /** 黑影兵团烧牌是否由玩家自选，true为自选，false为自动随机 */
+    public static boolean shadowKhanManualExhaustMode = true;
+    /** 【远古的封印】事件拒绝状态的存档键名 */
     public static final String PANKU_BOX_EVENT_DECLINED_SAVE_KEY = makeID("PanKuBoxEventDeclined");
+    /** 本局游戏中玩家是否拒绝过【远古的封印】事件 */
     private static boolean panKuBoxEventDeclinedThisRun = false;
     /**
      * 保存【远古的封印】是否在本局被玩家明确拒绝。
@@ -86,17 +97,25 @@ public class BasicMod implements
     static {
         loadModInfo();
     }
+    /** 资源文件夹路径，基于包名自动检测 */
     private static final String resourcesFolder = checkResourcesPath();
-    public static final Logger logger = LogManager.getLogger(modID); // Used to output to the console.
+    /** 日志记录器，用于输出调试信息到控制台 */
+    public static final Logger logger = LogManager.getLogger(modID);
 
-    // This is used to prefix the IDs of various objects like cards and relics,
-    // to avoid conflicts between different mods using the same name for things.
+    /**
+     * 为各种对象（卡牌、遗物等）的ID添加Mod前缀，避免不同Mod之间的命名冲突。
+     *
+     * @param id 原始ID
+     * @return 添加了Mod前缀的完整ID，格式为 "modID:id"
+     */
     public static String makeID(String id) {
         return modID + ":" + id;
     }
 
-    // This will be called by ModTheSpire because of the @SpireInitializer
-    // annotation at the top of the class.
+    /**
+     * Mod初始化入口，由ModTheSpire通过@SpireInitializer注解自动调用。
+     * 负责注册Mod颜色、创建Mod实例。
+     */
     public static void initialize() {
         new BasicMod();
         // 注册颜色
@@ -119,12 +138,17 @@ public class BasicMod implements
                 imagePath("512/card_small_orb.png"));
     }
 
+    /**
+     * 构造函数，向BaseMod订阅所有事件。
+     */
     public BasicMod() {
-        BaseMod.subscribe(this); // This will make BaseMod trigger all the subscribers at their appropriate
-                                 // times.
+        BaseMod.subscribe(this);
         logger.info(modID + " subscribed to BaseMod.");
     }
 
+    /**
+     * 接收遗物编辑事件，自动扫描并注册所有遗物。
+     */
     @Override
     public void receiveEditRelics() {
         new basemod.AutoAdd(modID)
@@ -136,6 +160,9 @@ public class BasicMod implements
                 });
     }
 
+    /**
+     * 接收角色编辑事件，注册圣主角色。
+     */
     @Override
     public void receiveEditCharacters() {
         BaseMod.addCharacter(new basicmod.character.ShengZhuCustomPlayer(com.megacrit.cardcrawl.core.CardCrawlGame.languagePack.getCharacterString("fuZhouMod:ShengZhuCustomPlayer").NAMES[0], basicmod.enums.CharacterEnums.SHENGZHU),
@@ -144,6 +171,9 @@ public class BasicMod implements
                 basicmod.enums.CharacterEnums.SHENGZHU);
     }
 
+    /**
+     * 接收卡牌编辑事件，自动扫描并注册所有卡牌。
+     */
     @Override
     public void receiveEditCards() {
         new basemod.AutoAdd(modID)
@@ -154,6 +184,9 @@ public class BasicMod implements
         BaseMod.addCard(new CardEightDemonPossession());
     }
 
+    /**
+     * 接收初始化完成事件，注册Mod徽章、事件和配置。
+     */
     @Override
     public void receivePostInitialize() {
         // This loads the image used as an icon in the in-game mods menu.
@@ -214,30 +247,40 @@ public class BasicMod implements
                 .spawnCondition(() -> com.megacrit.cardcrawl.dungeons.AbstractDungeon.actNum > 1)
                 .create());
 
+        // 注册事件：被封印的石板——艾克佐迪亚（全角色可见）
+        BaseMod.addEvent(new AddEventParams.Builder(basicmod.events.ExodiaEvent.ID, basicmod.events.ExodiaEvent.class)
+                .create());
+
         // 初始化配置
         try {
             Properties defaults = new Properties();
             defaults.setProperty("semiAutoMode", "true");
+            defaults.setProperty("shadowKhanManualExhaustMode", "true");
             defaults.setProperty("finalBossChoice", "DAD");
             modConfig = new SpireConfig(modID, "fuZhouModConfig", defaults);
             semiAutoMode = modConfig.getBool("semiAutoMode");
+            shadowKhanManualExhaustMode = modConfig.getBool("shadowKhanManualExhaustMode");
             FinalBossChoice defaultChoice = FinalBossChoice.fromString(modConfig.getString("finalBossChoice"));
             FinalBossChoiceManager.setDefaultChoice(defaultChoice);
             BaseMod.addSaveField(FinalBossChoiceManager.SAVE_KEY, FinalBossChoiceManager.getInstance());
             BaseMod.addSaveField(PANKU_BOX_EVENT_DECLINED_SAVE_KEY, PAN_KU_BOX_EVENT_DECLINED_SAVABLE);
-            logger.info("Configuration loaded: semiAutoMode = " + semiAutoMode);
+            logger.info("Configuration loaded: semiAutoMode = " + semiAutoMode + ", shadowKhanManualExhaustMode = " + shadowKhanManualExhaustMode);
         } catch (Exception e) {
             logger.error("Failed to initialize SpireConfig", e);
         }
     }
 
+    /**
+     * 保存Mod配置到文件。
+     */
     public static void saveConfig() {
         try {
             if (modConfig != null) {
                 modConfig.setBool("semiAutoMode", semiAutoMode);
+                modConfig.setBool("shadowKhanManualExhaustMode", shadowKhanManualExhaustMode);
                 modConfig.setString("finalBossChoice", FinalBossChoiceManager.getDefaultChoice().name());
                 modConfig.save();
-                logger.info("Configuration saved: semiAutoMode = " + semiAutoMode);
+                logger.info("Configuration saved: semiAutoMode = " + semiAutoMode + ", shadowKhanManualExhaustMode = " + shadowKhanManualExhaustMode);
             }
         } catch (Exception e) {
             logger.error("Failed to save SpireConfig", e);
@@ -278,6 +321,9 @@ public class BasicMod implements
         }
     }
 
+    /**
+     * 接收玩家回合开始（抽牌后）事件，重置影子卡计数并处理大法师诅咒循环。
+     */
     /*----------Hook Implementation----------*/
     @Override
     public void receiveOnPlayerTurnStartPostDraw() {
@@ -285,6 +331,11 @@ public class BasicMod implements
         GrandMageDadCycleCurseHelper.onPlayerTurnStartPostDraw();
     }
 
+    /**
+     * 接收卡牌使用事件，处理影子卡计数、大法师诅咒消耗、阿福卡牌语音播放。
+     *
+     * @param c 被使用的卡牌
+     */
     @Override
     public void receiveCardUsed(com.megacrit.cardcrawl.cards.AbstractCard c) {
         if (c instanceof basicmod.cards.shadowkhan.BaseShadowKhanCard) {
@@ -319,13 +370,22 @@ public class BasicMod implements
         }
     }
 
+    /**
+     * 接收战斗结束事件，清理大法师诅咒循环、面具管理器、检查符咒觉醒、重置艾克佐迪亚。
+     *
+     * @param r 当前房间
+     */
     @Override
     public void receivePostBattle(com.megacrit.cardcrawl.rooms.AbstractRoom r) {
         GrandMageDadCycleCurseHelper.clearAll();
         basicmod.helpers.MaskManager.clear();
         basicmod.helpers.TalismanAwakeningHelper.checkAndTriggerAwakening();
+        basicmod.cards.colorless.ExodiaHelper.reset();
     }
 
+    /**
+     * 接收游戏开始事件，重置手牌上限、最终Boss选择、潘库宝盒事件状态，检查符咒觉醒。
+     */
     @Override
     public void receiveStartGame() {
         // 游戏启动或进入存档时，重置手牌上限
@@ -344,15 +404,24 @@ public class BasicMod implements
 
     /*----------Localization----------*/
 
-    // This is used to load the appropriate localization files based on language.
+    /**
+     * 获取当前语言的小写标识符。
+     *
+     * @return 语言标识符，如 "eng"、"zhs"
+     */
     private static String getLangString() {
         return Settings.language.name().toLowerCase();
     }
 
+    /** 默认语言（英文） */
     private static final String defaultLanguage = "eng";
 
+    /** 已注册的关键字映射表，键为关键字ID，值为关键字信息 */
     public static final Map<String, KeywordInfo> keywords = new HashMap<>();
 
+    /**
+     * 接收字符串编辑事件，加载本地化字符串文件。
+     */
     @Override
     public void receiveEditStrings() {
         /*
@@ -374,6 +443,11 @@ public class BasicMod implements
         }
     }
 
+    /**
+     * 加载指定语言的所有本地化文件。
+     *
+     * @param lang 语言标识符，如 "eng"、"zhs"
+     */
     private void loadLocalization(String lang) {
         BaseMod.loadCustomStringsFile(CardStrings.class,
                 localizationPath(lang, "CardStrings.json"));
@@ -389,6 +463,9 @@ public class BasicMod implements
                 localizationPath(lang, "UIStrings.json"));
     }
 
+    /**
+     * 接收关键字编辑事件，加载并注册所有自定义关键字。
+     */
     @Override
     public void receiveEditKeywords() {
         Gson gson = new Gson();
@@ -415,6 +492,11 @@ public class BasicMod implements
         }
     }
 
+    /**
+     * 注册单个关键字到BaseMod。
+     *
+     * @param info 关键字信息
+     */
     private void registerKeyword(KeywordInfo info) {
         String[] names = Arrays.copyOf(info.NAMES, info.NAMES.length);
         BaseMod.addKeyword(modID.toLowerCase(), info.PROPER_NAME, names, info.DESCRIPTION, info.COLOR);
@@ -423,15 +505,22 @@ public class BasicMod implements
         }
     }
 
+    /**
+     * 接收音频添加事件，加载Sounds类中定义的所有音频文件。
+     */
     @Override
     public void receiveAddAudio() {
         loadAudio(Sounds.class);
     }
 
-// ... (rest of the code remains the same)
-    private static final String[] AUDIO_EXTENSIONS = { ".ogg", ".wav", ".mp3" }; // There are more valid types, but not
-                                                                                 // really worth checking them all here
+    /** 支持的音频文件扩展名列表 */
+    private static final String[] AUDIO_EXTENSIONS = { ".ogg", ".wav", ".mp3" };
 
+    /**
+     * 从指定类中加载所有音频字段，自动检测音频文件路径。
+     *
+     * @param cls 包含音频路径字段的类
+     */
     private void loadAudio(Class<?> cls) {
         try {
             Field[] fields = cls.getDeclaredFields();
@@ -468,28 +557,63 @@ public class BasicMod implements
         }
     }
 
-    // These methods are used to generate the correct filepaths to various parts of
-    // the resources folder.
+    /**
+     * 生成本地化文件的完整路径。
+     *
+     * @param lang 语言标识符
+     * @param file 文件名
+     * @return 完整的本地化文件路径
+     */
     public static String localizationPath(String lang, String file) {
         return resourcesFolder + "/localization/" + lang + "/" + file;
     }
 
+    /**
+     * 生成音频文件的完整路径。
+     *
+     * @param file 音频文件名
+     * @return 完整的音频文件路径
+     */
     public static String audioPath(String file) {
         return resourcesFolder + "/audio/" + file;
     }
 
+    /**
+     * 生成图片文件的完整路径。
+     *
+     * @param file 图片文件名
+     * @return 完整的图片文件路径
+     */
     public static String imagePath(String file) {
         return resourcesFolder + "/images/" + file;
     }
 
+    /**
+     * 生成角色图片文件的完整路径。
+     *
+     * @param file 角色图片文件名
+     * @return 完整的角色图片文件路径
+     */
     public static String characterPath(String file) {
         return resourcesFolder + "/images/character/" + file;
     }
 
+    /**
+     * 生成能力图标文件的完整路径。
+     *
+     * @param file 能力图标文件名
+     * @return 完整的能力图标文件路径
+     */
     public static String powerPath(String file) {
         return resourcesFolder + "/images/powers/" + file;
     }
 
+    /**
+     * 生成遗物图标文件的完整路径。
+     *
+     * @param file 遗物图标文件名
+     * @return 完整的遗物图标文件路径
+     */
     public static String relicPath(String file) {
         return resourcesFolder + "/images/relics/" + file;
     }

@@ -6,8 +6,18 @@ import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.rewards.RewardItem;
 
+/**
+ * 奖励领取补丁。
+ * 处理符咒探测仪的互斥规则，确保普通遗物和符咒遗物只能选择一个。
+ */
 @SpirePatch(clz = RewardItem.class, method = "claimReward")
 public class ClaimRewardPatch {
+    /**
+     * 处理符咒探测仪的回退逻辑。
+     * 当relicLink丢失时，强制执行互斥规则。
+     *
+     * @param claimed 被领取的奖励
+     */
     private static void handleLocatorFallback(RewardItem claimed) {
         if (AbstractDungeon.player == null || AbstractDungeon.getCurrRoom() == null || !AbstractDungeon.player.hasRelic(TalismanLocator.ID)) {
             return;
@@ -58,6 +68,9 @@ public class ClaimRewardPatch {
         }
     }
 
+    /**
+     * 后置补丁：处理奖励领取后的互斥逻辑。
+     */
     @SpirePostfixPatch
     public static boolean Postfix(boolean __result, RewardItem __instance) {
         if (__result) {

@@ -101,6 +101,13 @@
             "Whenever you can pick a relic, you can #yforgo that relic and gain a #yrandom #yTalisman relic you don't own. NL #yRight-Click to switch talisman activation modes. NL #y1 Semi-Auto (Default) NL #y0 Manual. NL In Semi-Auto mode, talismans automatically activate at the start of the turn, but can be manually canceled."
         ]
     },
+    "fuZhouMod:ShadowKhanToken": {
+        "NAME": "Shadowkhan Token",
+        "FLAVOR": "Flip the token, and the Shadowkhan know whose order to follow.",
+        "DESCRIPTIONS": [
+            "#yRight-click to switch how Shadowkhan cards exhaust other cards. NL #y1 Choose cards manually (Default) NL #y0 Exhaust random cards automatically NL Only affects #ySamurai-khan and #yMingta #yShadow."
+        ]
+    },
     "fuZhouMod:CollaborationRelic": {
         "NAME": "Collaboration",
         "FLAVOR": "Uncle says: We must use magic to defeat magic! Of course, we also have to bring along these troublesome little guys.",

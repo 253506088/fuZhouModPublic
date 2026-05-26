@@ -44,7 +44,7 @@ public class CardMoonDemonQi extends BaseCard {
 
     public static void invertStats(AbstractCreature target) {
         if (target == null) {
-            logger.info("【月之恶魔】invertStats 被调用，但目标为 NULL。");
+            logger.debug("【月之恶魔】invertStats 被调用，但目标为 NULL。");
             return;
         }
 
@@ -54,22 +54,24 @@ public class CardMoonDemonQi extends BaseCard {
         }
 
         // 记录目标的详细生存状态，排查“假死/装死”Bug
-        logger.info(String.format("【月之恶魔】逻辑启动。目标: %s, 当前血量: %d/%d, isDead: %b, halfDead: %b, escaped: %b, isDeadOrEscaped: %b", 
-            target.name, target.currentHealth, target.maxHealth, target.isDead, target.halfDead, escaped, target.isDeadOrEscaped()));
+        logger.debug("【月之恶魔】逻辑启动。目标: {}, 当前血量: {}/{}, isDead: {}, halfDead: {}, escaped: {}, isDeadOrEscaped: {}",
+            target.name, target.currentHealth, target.maxHealth, target.isDead, target.halfDead, escaped, target.isDeadOrEscaped());
 
 
         // 如果真的判定死亡，虽然记录了但还是跳过逻辑（物理层面已经无法反转）
         if (target.isDeadOrEscaped()) {
-            logger.info("【月之恶魔】目标生存判定失败（已死亡或逃跑），中止反转。");
+            logger.debug("【月之恶魔】目标生存判定失败（已死亡或逃跑），中止反转。");
             return;
         }
 
         // 打印能力列表进行核对
-        StringBuilder sb = new StringBuilder("当前能力列表: ");
-        for (AbstractPower p : target.powers) {
-            sb.append("[").append(p.ID).append(": ").append(p.amount).append("] ");
+        if (logger.isDebugEnabled()) {
+            StringBuilder sb = new StringBuilder("当前能力列表: ");
+            for (AbstractPower p : target.powers) {
+                sb.append("[").append(p.ID).append(": ").append(p.amount).append("] ");
+            }
+            logger.debug(sb.toString());
         }
-        logger.info(sb.toString());
 
         // 统一处理属性取反（即时生效，不进入 Action 队列排队）
         boolean stateChanged = false;
@@ -77,14 +79,14 @@ public class CardMoonDemonQi extends BaseCard {
         stateChanged |= processDirectInversion(target, DexterityPower.POWER_ID);
 
         if (stateChanged) {
-            logger.info("【月之恶魔】反转修改成功，正在刷新 UI...");
+            logger.debug("【月之恶魔】反转修改成功，正在刷新 UI...");
             if (target instanceof AbstractMonster) {
                 ((AbstractMonster) target).applyPowers();
             } else {
                 AbstractDungeon.player.hand.applyPowers();
             }
         } else {
-            logger.info("【月之恶魔】未检测到可反转的非零数值。");
+            logger.debug("【月之恶魔】未检测到可反转的非零数值。");
         }
     }
 
@@ -97,21 +99,21 @@ public class CardMoonDemonQi extends BaseCard {
         if (p != null) {
             int current = p.amount;
             if (current == 0) {
-                logger.info("【月之恶魔】" + powerId + " 为 0，跳过。");
+                logger.debug("【月之恶魔】{} 为 0，跳过。", powerId);
                 return false;
             }
 
             // 1. 人工制品交互拦截 (仅当反转造成属性下降时拦截)
             // 规则：正变负 -> 属性下降 -> 触发 Artifact
             if (current > 0 && target.hasPower("Artifact")) {
-                logger.info("【月之恶魔】检测到 " + powerId + " 反转方向为负向，且目标有【人工制品】保护。");
+                logger.debug("【月之恶魔】检测到 {} 反转方向为负向，且目标有【人工制品】保护。", powerId);
                 target.getPower("Artifact").flash();
                 AbstractDungeon.actionManager.addToTop(new com.megacrit.cardcrawl.actions.common.ReducePowerAction(target, target, "Artifact", 1));
                 return false;
             }
 
             // 2. 直接强力取反
-            logger.info("【月之恶魔】正在反转 " + powerId + ": " + current + " -> " + (-current));
+            logger.debug("【月之恶魔】正在反转 {}: {} -> {}", powerId, current, -current);
             p.amount = -current;
             p.updateDescription();
             p.flash();
