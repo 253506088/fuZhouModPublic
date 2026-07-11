@@ -37,6 +37,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -199,6 +200,26 @@ public class BasicMod implements
         // Panel".
         BaseMod.registerModBadge(badgeTexture, info.Name, GeneralUtils.arrToString(info.Authors), info.Description,
                 null);
+
+        // 注册药水 (M11)
+        BaseMod.addPotion(basicmod.potions.TalismanPotion.class,
+                new com.badlogic.gdx.graphics.Color(1f, 0.84f, 0f, 1f), null, null,
+                basicmod.potions.TalismanPotion.POTION_ID);
+        BaseMod.addPotion(basicmod.potions.ChiMagicPotion.class,
+                new com.badlogic.gdx.graphics.Color(0.2f, 0.8f, 0.2f, 1f), null, null,
+                basicmod.potions.ChiMagicPotion.POTION_ID);
+        BaseMod.addPotion(basicmod.potions.ShadowPotion.class,
+                new com.badlogic.gdx.graphics.Color(0.3f, 0.1f, 0.4f, 1f), null, null,
+                basicmod.potions.ShadowPotion.POTION_ID);
+        BaseMod.addPotion(basicmod.potions.RagePotion.class,
+                new com.badlogic.gdx.graphics.Color(0.9f, 0.1f, 0.1f, 1f), null, null,
+                basicmod.potions.RagePotion.POTION_ID);
+        BaseMod.addPotion(basicmod.potions.RewriteInk.class,
+                new com.badlogic.gdx.graphics.Color(0.1f, 0.2f, 0.8f, 1f), null, null,
+                basicmod.potions.RewriteInk.POTION_ID);
+        BaseMod.addPotion(basicmod.potions.BountyPotion.class,
+                new com.badlogic.gdx.graphics.Color(0.9f, 0.5f, 0.1f, 1f), null, null,
+                basicmod.potions.BountyPotion.POTION_ID);
 
         // 注册事件：圣主专属剧情——抢夺符咒 (只有持有至少一个符咒时才会在常规房池中出现)
         BaseMod.addEvent(new AddEventParams.Builder(basicmod.events.RobTalismanEvent.ID, basicmod.events.RobTalismanEvent.class)
@@ -461,6 +482,8 @@ public class BasicMod implements
                 localizationPath(lang, "EventStrings.json"));
         BaseMod.loadCustomStringsFile(UIStrings.class,
                 localizationPath(lang, "UIStrings.json"));
+        BaseMod.loadCustomStringsFile(PotionStrings.class,
+                localizationPath(lang, "PotionStrings.json"));
     }
 
     /**

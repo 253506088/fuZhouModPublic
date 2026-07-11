@@ -446,5 +446,13 @@
     "DESCRIPTIONS": [
       "艾克佐迪亚已苏醒。每个回合开始时，获得 #b999 点 #y格挡 与 #b1 层 #y无实体 ，并将手牌中的部件保留。"
     ]
+  },
+  "fuZhouMod:TalismanResonancePower": {
+    "NAME": "符咒共振",
+    "DESCRIPTIONS": [
+      "每打出一张 *动物符咒 ，获得 ",
+      " 层 *力量 和 ",
+      " 层 *敏捷 。"
+    ]
   }
 }

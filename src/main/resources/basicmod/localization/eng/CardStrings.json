@@ -1,4 +1,4 @@
-﻿{
+{
   "fuZhouMod:WeThree": {
     "NAME": "The Trio (Deprecated)",
     "DESCRIPTION": "This card is deprecated."
@@ -13,7 +13,7 @@
     "UPGRADE_DESCRIPTION": "Gain !B! #yBlock. NL Deal !D! damage. NL Apply 2 *blackhand to the target. NL (Value is !M!% of your Max HP. For each [#efc100]Dark [#efc100]Hand[] card in your deck, this percentage increases by +2%) NL *blackhand"
   },
   "fuZhouMod:Valmont": {
-    "NAME": "Valmont\u0027s Treasure",
+    "NAME": "Valmont's Treasure",
     "DESCRIPTION": "After playing, the cost of all [#efc100]Ah [#efc100]Fu[], [#efc100]Dark [#efc100]Hand[], and [#efc100]Dark [#efc100]Warrior[] cards played later this turn becomes *0 . NL #yExhaust. NL *blackhand"
   },
   "fuZhouMod:CrowFlying": {
@@ -42,7 +42,7 @@
   },
   "fuZhouMod:AfuBeatJackie": {
     "NAME": "Ah Fu Beats Up Jackie",
-    "DESCRIPTION": "Deal !D! damage. For each unique #yAh #yFu card played in this combat, this card\u0027s damage increases by !M!. NL For each #b1 #yAh #yFu card played this turn, this card costs 1 less this turn. NL *Ah Fu"
+    "DESCRIPTION": "Deal !D! damage. For each unique #yAh #yFu card played in this combat, this card's damage increases by !M!. NL For each #b1 #yAh #yFu card played this turn, this card costs 1 less this turn. NL *Ah Fu"
   },
   "fuZhouMod:ComboMove": {
     "NAME": "Combo Move",
@@ -83,15 +83,15 @@
     "DESCRIPTION": "Gain !B! #yBlock. NL If an #yAh #yFu card was played this turn: Gain !M! additional Energy next turn. NL *Ah Fu"
   },
   "fuZhouMod:LameGoose": {
-    "NAME": "I\u0027ve Become a Lame Goose",
+    "NAME": "I've Become a Lame Goose",
     "DESCRIPTION": "Gain !B! #yBlock. NL If an #yAh #yFu card was played this turn: Gain !M! temporary #yStrength this turn. NL *Ah Fu"
   },
   "fuZhouMod:ElephantKick": {
     "NAME": "Elephant Kick",
-    "DESCRIPTION": "Gain !B! #yBlock. If the target\u0027s intention is an attack, deal !D! damage to it. NL *Ah Fu"
+    "DESCRIPTION": "Gain !B! #yBlock. If the target's intention is an attack, deal !D! damage to it. NL *Ah Fu"
   },
   "fuZhouMod:DaoLongBlackQi": {
-    "NAME": "Daolon Wong\u0027s Dark Chi",
+    "NAME": "Daolon Wong's Dark Chi",
     "DESCRIPTION": "[#7fff00]Note: As of v1.1.1, this card has been changed to an event. It can no longer be obtained directly.[] NL Transform all [#efc100]Chow, [#efc100]Ratso, [#efc100]Finn, and [#efc100]Mount [#efc100]Tai [#efc100]Press into [#efc100]Gan, [#efc100]Wen, [#efc100]Cui, and [#efc100]Mountain. NL Now primarily obtained via map events. NL #yExhaust.",
     "UPGRADE_DESCRIPTION": "[#7fff00]Note: Legacy Card.[] NL Transform all [#efc100]Chow, [#efc100]Ratso, [#efc100]Finn, and [#efc100]Mount [#efc100]Tai [#efc100]Press into [#efc100]Gan+, [#efc100]Wen+, [#efc100]Cui+, and [#efc100]Mountain+. NL Now primarily obtained via map events. NL #yExhaust."
   },
@@ -219,8 +219,8 @@
   },
   "fuZhouMod:YiKaSamurai": {
     "NAME": "Samurai-khan",
-    "DESCRIPTION": "Deal !D! damage. NL Can #yExhaust 1 card for additional effects: NL Skill: Draw 2 cards. NL Attack: Deal half of that card\u0027s damage. NL Power: Randomly apply 1 debuff. NL Curse: [#efc100]Stun[] the target. NL Status: Apply Poisson with turns +1. NL #yExhaust",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Can #yExhaust 1 card for additional effects: NL Skill: Draw 2 cards. NL Attack: Deal half of that card\u0027s damage. NL Power: Randomly apply 1 debuff. NL Curse: [#efc100]Stun[] the target. NL Status: Apply Poisson with turns +1. NL #yExhaust"
+    "DESCRIPTION": "Deal !D! damage. NL Can #yExhaust 1 card for additional effects: NL Skill: Draw 2 cards. NL Attack: Deal half of that card's damage. NL Power: Randomly apply 1 debuff. NL Curse: [#efc100]Stun[] the target. NL Status: Apply Poisson with turns +1. NL #yExhaust",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Can #yExhaust 1 card for additional effects: NL Skill: Draw 2 cards. NL Attack: Deal half of that card's damage. NL Power: Randomly apply 1 debuff. NL Curse: [#efc100]Stun[] the target. NL Status: Apply Poisson with turns +1. NL #yExhaust"
   },
   "fuZhouMod:EndlessDarkness": {
     "NAME": "Endless Darkness",
@@ -252,13 +252,13 @@
   },
   "fuZhouMod:ShadowQueen": {
     "NAME": "Shadow Queen",
-    "DESCRIPTION": "Cast all [#efc100]Shadowkhan cards in the exhaust pile in order. NL Jade used Tarakudo\u0027s tattoo to steal the Shadowkhan\u0027s authority.",
-    "UPGRADE_DESCRIPTION": "Cast all [#efc100]Shadowkhan cards in the exhaust pile in order. NL Jade used Tarakudo\u0027s tattoo to steal the Shadowkhan\u0027s authority."
+    "DESCRIPTION": "Cast all [#efc100]Shadowkhan cards in the exhaust pile in order. NL Jade used Tarakudo's tattoo to steal the Shadowkhan's authority.",
+    "UPGRADE_DESCRIPTION": "Cast all [#efc100]Shadowkhan cards in the exhaust pile in order. NL Jade used Tarakudo's tattoo to steal the Shadowkhan's authority."
   },
   "fuZhouMod:DeflectAndStrike": {
     "NAME": "Deflect and Strike",
-    "DESCRIPTION": "Next turn, if you fully block an enemy\u0027s attack, deal equivalent damage to that enemy. NL *Team Jackie",
-    "UPGRADE_DESCRIPTION": "Gain !B! #yBlock. NL Next turn, if you fully block an enemy\u0027s attack, deal equivalent damage to that enemy. NL *Team Jackie"
+    "DESCRIPTION": "Next turn, if you fully block an enemy's attack, deal equivalent damage to that enemy. NL *Team Jackie",
+    "UPGRADE_DESCRIPTION": "Gain !B! #yBlock. NL Next turn, if you fully block an enemy's attack, deal equivalent damage to that enemy. NL *Team Jackie"
   },
   "fuZhouMod:GiantJade": {
     "NAME": "Giant Jade",
@@ -267,11 +267,11 @@
   },
   "fuZhouMod:Suplex": {
     "NAME": "Suplex",
-    "DESCRIPTION": "Deal !D! damage. NL Base = #y!M! + #y1/8 of target\u0027s Max HP. NL *Team Jackie"
+    "DESCRIPTION": "Deal !D! damage. NL Base = #y!M! + #y1/8 of target's Max HP. NL *Team Jackie"
   },
   "fuZhouMod:CloseAtHand": {
     "NAME": "Close at Hand",
-    "DESCRIPTION": "Lose [#efc100]6[] HP. NL Gain #yBlock equal to all enemies\u0027 [#efc100]Total [#efc100]Damage [#efc100]+1. NL *Team Jackie"
+    "DESCRIPTION": "Lose [#efc100]6[] HP. NL Gain #yBlock equal to all enemies' [#efc100]Total [#efc100]Damage [#efc100]+1. NL *Team Jackie"
   },
   "fuZhouMod:RatTalismanCard": {
     "NAME": "Rat Talisman",
@@ -293,11 +293,11 @@
   },
   "fuZhouMod:RabbitTalismanCard": {
     "NAME": "Rabbit Talisman",
-    "DESCRIPTION": "End your turn by keeping your hand. Skip the enemy\u0027s next turn. Start your new turn. NL #yExhaust NL *Animal Talisman"
+    "DESCRIPTION": "End your turn by keeping your hand. Skip the enemy's next turn. Start your new turn. NL #yExhaust NL *Animal Talisman"
   },
   "fuZhouMod:DragonTalismanCard": {
     "NAME": "Dragon Talisman",
-    "DESCRIPTION": "Deal !D! damage to all enemies. If any enemy is killed, re-trigger this card\u0027s effect. NL *Animal Talisman"
+    "DESCRIPTION": "Deal !D! damage to all enemies. If any enemy is killed, re-trigger this card's effect. NL *Animal Talisman"
   },
   "fuZhouMod:SnakeTalismanCard": {
     "NAME": "Snake Talisman",
@@ -314,8 +314,8 @@
   },
   "fuZhouMod:MonkeyTalismanCard": {
     "NAME": "Monkey Talisman",
-    "DESCRIPTION": "Gain 1 layer of #yVulnerable (25%). NL If the enemy\u0027s intention next turn is an attack, deal equivalent damage to it. NL *Animal Talisman",
-    "UPGRADE_DESCRIPTION": "Gain 1 layer of #yVulnerable (50%). NL If the enemy\u0027s intention next turn is an attack, deal equivalent damage to it. NL *Animal Talisman"
+    "DESCRIPTION": "Gain 1 layer of #yVulnerable (25%). NL If the enemy's intention next turn is an attack, deal equivalent damage to it. NL *Animal Talisman",
+    "UPGRADE_DESCRIPTION": "Gain 1 layer of #yVulnerable (50%). NL If the enemy's intention next turn is an attack, deal equivalent damage to it. NL *Animal Talisman"
   },
   "fuZhouMod:RoosterTalismanCard": {
     "NAME": "Rooster Talisman",
@@ -328,7 +328,7 @@
   },
   "fuZhouMod:PigTalismanCard": {
     "NAME": "Pig Talisman",
-    "DESCRIPTION": "Deal !D! damage. Remove target\u0027s: Strength, Artifact, Thorns, Flight, Intangible, and Metallicize. NL #yExhaust NL *Animal Talisman"
+    "DESCRIPTION": "Deal !D! damage. Remove target's: Strength, Artifact, Thorns, Flight, Intangible, and Metallicize. NL #yExhaust NL *Animal Talisman"
   },
   "fuZhouMod:Soultrap": {
     "NAME": "Soul Trap",
@@ -364,7 +364,7 @@
   },
   "fuZhouMod:TargetImbalance": {
     "NAME": "Target Imbalance",
-    "DESCRIPTION": "Deal !D! damage. If HP damage is dealt, randomly change the enemy\u0027s intention. NL #yExhaust NL *Team Jackie"
+    "DESCRIPTION": "Deal !D! damage. If HP damage is dealt, randomly change the enemy's intention. NL #yExhaust NL *Team Jackie"
   },
   "fuZhouMod:CardFireDemonQi": {
     "NAME": "Fire Demon · Drago",
@@ -415,7 +415,7 @@
   },
   "fuZhouMod:MoonTargetEnemy": {
     "NAME": "Moon Demon (Target)",
-    "DESCRIPTION": "Reverse the target\u0027s Strength and Dexterity. NL #yExhaust NL #yEthereal"
+    "DESCRIPTION": "Reverse the target's Strength and Dexterity. NL #yExhaust NL #yEthereal"
   },
   "fuZhouMod:MaskFace": {
     "NAME": "Mask Face",
@@ -487,7 +487,7 @@
   },
   "fuZhouMod:BlackHandTangible": {
     "NAME": "Black Hand",
-    "DESCRIPTION": "Double the target\u0027s *blackhand stacks. NL *blackhand"
+    "DESCRIPTION": "Double the target's *blackhand stacks. NL *blackhand"
   },
   "fuZhouMod:BlackHandBounty": {
     "NAME": "Bounty",
@@ -583,5 +583,370 @@
   "fuZhouMod:GandoraDragon": {
     "NAME": "Gandora the Dragon of Destruction",
     "DESCRIPTION": "Remove all #yStrength from you and all enemies (set to 0). NL Deal damage to ALL enemies equal to the [#efc100]sum of absolute values[] of removed Strength. NL #yExhaust"
+  },
+  "fuZhouMod:DualTalismanResonance": {
+    "NAME": "Dual Talisman Resonance",
+    "DESCRIPTION": "Draw !M! cards. NL If you have 2 or more *Animal Talismans, draw 1 additional card and gain 1 Energy. NL *Fusion"
+  },
+  "fuZhouMod:ZodiacCycle": {
+    "NAME": "Zodiac Cycle",
+    "DESCRIPTION": "Gain !B! *Block. NL Draw 1 card for each *Animal Talisman you have (max 3). NL Exhaust. NL *Fusion"
+  },
+  "fuZhouMod:TalismanResonance": {
+    "NAME": "Talisman Resonance",
+    "DESCRIPTION": "Gain !M! *Strength. NL Gain 1 additional *Strength for each *Animal Talisman you have. NL Exhaust. NL *Fusion",
+    "UPGRADE_DESCRIPTION": "Gain !M! *Strength. NL Gain 1 additional *Strength for each *Animal Talisman you have. NL Exhaust. NL *Fusion"
+  },
+  "fuZhouMod:RatOxFusion": {
+    "NAME": "Rat-Ox Fusion",
+    "DESCRIPTION": "Deal !D! damage. NL If you have the *Rat Talisman or *Ox Talisman, gain !M! *Strength. NL *Fusion"
+  },
+  "fuZhouMod:TigerRabbitFusion": {
+    "NAME": "Tiger-Rabbit Fusion",
+    "DESCRIPTION": "Draw !M! cards. NL If you have the *Tiger Talisman or *Rabbit Talisman, gain 1 Energy and draw 1 additional card. NL *Fusion"
+  },
+  "fuZhouMod:DragonSnakeFusion": {
+    "NAME": "Dragon-Snake Fusion",
+    "DESCRIPTION": "Deal !D! damage. NL If you have the *Dragon Talisman or *Snake Talisman, deal damage again. NL *Fusion"
+  },
+  "fuZhouMod:HorseGoatFusion": {
+    "NAME": "Horse-Goat Fusion",
+    "DESCRIPTION": "Gain !B! *Block. NL If you have the *Horse Talisman or *Sheep Talisman, heal !M! HP. NL *Fusion"
+  },
+  "fuZhouMod:MonkeyRoosterFusion": {
+    "NAME": "Monkey-Rooster Fusion",
+    "DESCRIPTION": "Gain !B! *Block. NL If you have the *Monkey Talisman or *Rooster Talisman, draw 2 cards. NL *Fusion"
+  },
+  "fuZhouMod:DogPigFusion": {
+    "NAME": "Dog-Pig Fusion",
+    "DESCRIPTION": "Deal !D! damage. NL If you have the *Dog Talisman or *Pig Talisman, deal damage to ALL enemies instead. NL *Fusion"
+  },
+  "fuZhouMod:ZodiacArray": {
+    "NAME": "Zodiac Array",
+    "DESCRIPTION": "Gain !M! Energy at the start of each turn. NL If you have Animal Talisman relics, gain !M! #yStrength. NL *Fusion"
+  },
+  "fuZhouMod:TalismanStorm": {
+    "NAME": "Talisman Storm",
+    "DESCRIPTION": "Deal damage equal to Talisman relics owned × !M!. NL #yExhaust NL *Fusion"
+  },
+  "fuZhouMod:TwelvePerfection": {
+    "NAME": "Twelve Perfection",
+    "DESCRIPTION": "If you have 12 Talisman relics, gain !M! Energy and !M! #yStrength. Otherwise draw 1 card. NL *Fusion"
+  },
+  "fuZhouMod:ZodiacGuard": {
+    "NAME": "Zodiac Guard",
+    "DESCRIPTION": "Gain !M! #yPlated #yArmor. NL If you have Talisman relics, gain 1 #yThorns. NL *Fusion"
+  },
+  "fuZhouMod:TalismanOverload": {
+    "NAME": "Talisman Overload",
+    "DESCRIPTION": "Discard !M! cards, draw 3 cards, heal !M! HP. NL #yExhaust NL *Fusion"
+  },
+  "fuZhouMod:CounterTalisman": {
+    "NAME": "Counter Talisman",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! #yVulnerable and !M! #yWeak. NL *Fusion"
+  },
+  "fuZhouMod:TalismanResonanceExtreme": {
+    "NAME": "Talisman Resonance Extreme",
+    "DESCRIPTION": "Gain !M! #yStrength and !M! #yDexterity. NL *Fusion"
+  },
+  "fuZhouMod:ShengZhuEcstasy": {
+    "NAME": "Sheng Zhu's Ecstasy",
+    "DESCRIPTION": "Gain !M! #yStrength. NL Gain 1 Energy each turn. NL *Fusion"
+  },
+  "fuZhouMod:JackieChanDrunkenMaster": {
+    "NAME": "Jackie Chan, Drunken Master",
+    "DESCRIPTION": "Deal !D! damage. NL If you have 3+ cards in hand, deal !M! additional damage."
+  },
+  "fuZhouMod:JadeChanClever": {
+    "NAME": "Jade Chan, Clever",
+    "DESCRIPTION": "Draw !M! cards. NL Gain 1 Energy."
+  },
+  "fuZhouMod:TooruSumo": {
+    "NAME": "Tooru, Sumo Giant",
+    "DESCRIPTION": "Deal !D! damage and gain !B! Block."
+  },
+  "fuZhouMod:BullWarrior": {
+    "NAME": "Bull Warrior, Wrestler",
+    "DESCRIPTION": "Gain !B! Block and !M! #yThorns."
+  },
+  "fuZhouMod:ViperShadowThief": {
+    "NAME": "Viper, Shadow Thief",
+    "DESCRIPTION": "Deal !D! damage, apply !M! #yPoison."
+  },
+  "fuZhouMod:UncleChiMage": {
+    "NAME": "Uncle, Chi Mage",
+    "DESCRIPTION": "Gain !M! #yStrength and !M! #yDexterity."
+  },
+  "fuZhouMod:PacoSidekick": {
+    "NAME": "Paco, Sidekick",
+    "DESCRIPTION": "Draw !M! card. NL Gain 1 Energy."
+  },
+  "fuZhouMod:JTeamAssembly": {
+    "NAME": "J-Team Assembly",
+    "DESCRIPTION": "Draw !M! cards. NL #yExhaust."
+  },
+  "fuZhouMod:JTeamTactics": {
+    "NAME": "J-Team Tactics",
+    "DESCRIPTION": "Gain !M! #yStrength."
+  },
+  "fuZhouMod:JTeamUltimateStrike": {
+    "NAME": "J-Team Ultimate Strike",
+    "DESCRIPTION": "Deal !D! damage + cards in hand × !M!. NL #yExhaust."
+  },
+  "fuZhouMod:ShadowGathering": {
+    "NAME": "Shadow Gathering",
+    "DESCRIPTION": "Draw !M! cards. NL Gain 1 Energy."
+  },
+  "fuZhouMod:FormationPincer": {
+    "NAME": "Formation: Pincer",
+    "DESCRIPTION": "Gain !M! #yStrength."
+  },
+  "fuZhouMod:FormationIronWall": {
+    "NAME": "Formation: Iron Wall",
+    "DESCRIPTION": "Gain !B! #yBlock."
+  },
+  "fuZhouMod:FormationIntermittent": {
+    "NAME": "Formation: Intermittent",
+    "DESCRIPTION": "Draw !M! cards."
+  },
+  "fuZhouMod:MaskEmpower": {
+    "NAME": "Mask Empower",
+    "DESCRIPTION": "Gain !M! #yStrength and !M! #yDexterity."
+  },
+  "fuZhouMod:TarakudoCommand": {
+    "NAME": "Tarakudo's Command",
+    "DESCRIPTION": "Each turn gain !M! Energy and !M! #yStrength."
+  },
+  "fuZhouMod:ShadowSurge": {
+    "NAME": "Shadow Surge",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "fuZhouMod:MaskSwitch": {
+    "NAME": "Mask Switch",
+    "DESCRIPTION": "Draw !M! card. NL Gain 1 Energy. NL #yExhaust."
+  },
+  "fuZhouMod:NineMasksUnited": {
+    "NAME": "Nine Masks United",
+    "DESCRIPTION": "Gain !M! #yStrength and !M! #yDexterity."
+  },
+  "fuZhouMod:ShadowKing": {
+    "NAME": "Shadow King",
+    "DESCRIPTION": "Gain !M! #yStrength."
+  },
+  "fuZhouMod:District13Raid": {
+    "NAME": "District 13 Raid",
+    "DESCRIPTION": "Deal !D! damage. NL If enemy is #yWeak, deal !M! additional damage."
+  },
+  "fuZhouMod:District13Interrogation": {
+    "NAME": "District 13 Interrogation",
+    "DESCRIPTION": "Draw !M! card. NL Gain 1 Energy."
+  },
+  "fuZhouMod:District13Armory": {
+    "NAME": "District 13 Armory",
+    "DESCRIPTION": "Gain !B! #yBlock. NL #yExhaust."
+  },
+  "fuZhouMod:CaptainBlack": {
+    "NAME": "Captain Black",
+    "DESCRIPTION": "Apply !M! #yVulnerable. NL Draw 1 card."
+  },
+  "fuZhouMod:BountyHunter": {
+    "NAME": "Bounty Hunter",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! gold."
+  },
+  "fuZhouMod:District13Lockdown": {
+    "NAME": "District 13 Lockdown",
+    "DESCRIPTION": "Gain !B! #yBlock."
+  },
+  "fuZhouMod:WantedPoster": {
+    "NAME": "Wanted Poster",
+    "DESCRIPTION": "Apply !M! #yVulnerable. NL #yExhaust."
+  },
+  "fuZhouMod:District13FinalStrike": {
+    "NAME": "District 13 Final Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "fuZhouMod:UncleBanishEvil": {
+    "NAME": "Uncle: Banish Evil",
+    "DESCRIPTION": "Gain !B! #yBlock. NL #yExhaust."
+  },
+  "fuZhouMod:UncleChiPalm": {
+    "NAME": "Uncle: Chi Palm",
+    "DESCRIPTION": "Deal !D! damage, apply !M! #yVulnerable."
+  },
+  "fuZhouMod:UncleElixir": {
+    "NAME": "Uncle: Elixir",
+    "DESCRIPTION": "Heal !M! HP. NL Gain 1 Energy."
+  },
+  "fuZhouMod:UncleSeal": {
+    "NAME": "Uncle: Seal",
+    "DESCRIPTION": "Gain !B! #yBlock."
+  },
+  "fuZhouMod:ChiShield": {
+    "NAME": "Chi Shield",
+    "DESCRIPTION": "Gain !B! #yBlock and !M! #yThorns."
+  },
+  "fuZhouMod:ChiCounter": {
+    "NAME": "Chi Counter",
+    "DESCRIPTION": "Deal !D! damage and gain !B! #yBlock."
+  },
+  "fuZhouMod:UncleAdmonition": {
+    "NAME": "Uncle: Admonition",
+    "DESCRIPTION": "Draw !M! card. NL Gain 1 Energy."
+  },
+  "fuZhouMod:ChiInheritance": {
+    "NAME": "Chi Inheritance",
+    "DESCRIPTION": "Each turn gain !M! Energy."
+  },
+  "fuZhouMod:UncleGarlic": {
+    "NAME": "Uncle: Garlic Charm",
+    "DESCRIPTION": "Gain !B! #yBlock."
+  },
+  "fuZhouMod:UltimateSpellReturn": {
+    "NAME": "Ultimate Spell: Return",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Draw !M! cards. NL #yExhaust."
+  },
+  "fuZhouMod:PanguBoxOpen": {
+    "NAME": "Pan Ku Box: Open",
+    "DESCRIPTION": "Draw !M! cards. NL Gain 1 Energy."
+  },
+  "fuZhouMod:GateShadowSeal": {
+    "NAME": "Gate Shadow Seal",
+    "DESCRIPTION": "Gain !M! #yStrength."
+  },
+  "fuZhouMod:EarthGateShadow": {
+    "NAME": "Earth Gate Shadow",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! #yStrength."
+  },
+  "fuZhouMod:WaterGateShadow": {
+    "NAME": "Water Gate Shadow",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! #yWeak."
+  },
+  "fuZhouMod:ThunderGateShadow": {
+    "NAME": "Thunder Gate Shadow",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! #yWeak."
+  },
+  "fuZhouMod:EightGatesSealed": {
+    "NAME": "Eight Gates Sealed",
+    "DESCRIPTION": "Gain !M! #yStrength and !M! #yDexterity."
+  },
+  "fuZhouMod:GateOverflow": {
+    "NAME": "Gate Overflow",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL #yExhaust."
+  },
+  "fuZhouMod:DemonContract": {
+    "NAME": "Demon Contract",
+    "DESCRIPTION": "Gain !M! #yStrength and !M! #yDexterity."
+  },
+  "fuZhouMod:ShengZhuDemonLord": {
+    "NAME": "Sheng Zhu: Demon Lord",
+    "DESCRIPTION": "Gain !M! #yStrength."
+  },
+  "fuZhouMod:TarakudoDescent": {
+    "NAME": "Tarakudo Descent",
+    "DESCRIPTION": "Gain !M! #yStrength and !M! #yDexterity."
+  },
+  "fuZhouMod:TarakudoMockery": {
+    "NAME": "Tarakudo Mockery",
+    "DESCRIPTION": "Draw !M! cards. NL Gain 1 Energy."
+  },
+  "fuZhouMod:TarakudoDevour": {
+    "NAME": "Tarakudo Devour",
+    "DESCRIPTION": "Deal !D! damage. NL Heal !M! HP."
+  },
+  "fuZhouMod:NineMaskRotation": {
+    "NAME": "Nine Mask Rotation",
+    "DESCRIPTION": "Gain !M! #yStrength and !M! #yDexterity."
+  },
+  "fuZhouMod:TarakudoLegion": {
+    "NAME": "Tarakudo Legion",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies."
+  },
+  "fuZhouMod:MaskCurse": {
+    "NAME": "Mask Curse",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! #yVulnerable."
+  },
+  "fuZhouMod:TarakudoImmortal": {
+    "NAME": "Tarakudo Immortal",
+    "DESCRIPTION": "Gain !M! #yPlated #yArmor."
+  },
+  "fuZhouMod:UltimateShadowKing": {
+    "NAME": "Ultimate Shadow King",
+    "DESCRIPTION": "Gain !M! #yStrength."
+  },
+  "fuZhouMod:ChronicleFlipPage": {
+    "NAME": "Chronicle: Flip Page",
+    "DESCRIPTION": "Draw !M! cards. NL #yExhaust."
+  },
+  "fuZhouMod:ChronicleAlter": {
+    "NAME": "Chronicle: Alter",
+    "DESCRIPTION": "Gain !M! Energy."
+  },
+  "fuZhouMod:ChronicleTearPage": {
+    "NAME": "Chronicle: Tear Page",
+    "DESCRIPTION": "Deal !D! damage. NL #yExhaust."
+  },
+  "fuZhouMod:ChronicleContinue": {
+    "NAME": "Chronicle: Continue",
+    "DESCRIPTION": "Gain !B! #yBlock. NL #yExhaust."
+  },
+  "fuZhouMod:ChronicleRewrite": {
+    "NAME": "Chronicle: Rewrite",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL #yExhaust."
+  },
+  "fuZhouMod:ChronicleBlankPage": {
+    "NAME": "Chronicle: Blank Page",
+    "DESCRIPTION": "Draw !M! cards."
+  },
+  "fuZhouMod:ChronicleGuardian": {
+    "NAME": "Chronicle Guardian",
+    "DESCRIPTION": "Gain !M! #yStrength."
+  },
+  "fuZhouMod:JTeamRestoreHistory": {
+    "NAME": "J-Team: Restore History",
+    "DESCRIPTION": "Heal !M! HP. NL #yExhaust."
+  },
+  "fuZhouMod:ShengZhuUsurper": {
+    "NAME": "Sheng Zhu: Usurper",
+    "DESCRIPTION": "Gain !M! #yStrength."
+  },
+  "fuZhouMod:FireBreath": {
+    "NAME": "Fire Breath",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "fuZhouMod:DragonScale": {
+    "NAME": "Dragon Scale",
+    "DESCRIPTION": "Gain !B! #yBlock. NL Gain !M! #yThorns."
+  },
+  "fuZhouMod:RageCharge": {
+    "NAME": "Rage Charge",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! #yBlock."
+  },
+  "fuZhouMod:DragonWrath": {
+    "NAME": "Dragon Wrath",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "fuZhouMod:DemonQiDrain": {
+    "NAME": "Demon Qi Drain",
+    "DESCRIPTION": "Draw !M! cards. NL Gain 1 Energy."
+  },
+  "fuZhouMod:FireStorm": {
+    "NAME": "Fire Storm",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies."
+  },
+  "fuZhouMod:DragonWill": {
+    "NAME": "Dragon Will",
+    "DESCRIPTION": "Next turn, gain !M! Energy."
+  },
+  "fuZhouMod:DragoFrenzy": {
+    "NAME": "Drago Frenzy",
+    "DESCRIPTION": "Gain !M! Energy."
+  },
+  "fuZhouMod:FatherSonRift": {
+    "NAME": "Father-Son Rift",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "fuZhouMod:UltimateDragonFlame": {
+    "NAME": "Ultimate Dragon Flame",
+    "DESCRIPTION": "Deal !D! damage. NL #yExhaust."
   }
 }
