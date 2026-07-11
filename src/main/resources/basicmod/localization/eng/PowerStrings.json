@@ -446,5 +446,13 @@
                                             "DESCRIPTIONS":  [
                                                                  "Exodia has awakened. At the start of each turn, gain #b999 #yBlock and #b1 #yIntangible , and retain all Exodia pieces in hand."
                                                              ]
+                                        },
+    "fuZhouMod:TalismanResonancePower":  {
+                                            "NAME":  "Talisman Resonance",
+                                            "DESCRIPTIONS":  [
+                                                                 "Whenever you play an *Animal Talisman, gain ",
+                                                                 " #yStrength and ",
+                                                                 " #yDexterity."
+                                                             ]
                                         }
 }

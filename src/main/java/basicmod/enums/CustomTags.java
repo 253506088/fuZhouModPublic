@@ -57,4 +57,10 @@ public class CustomTags {
      */
     @SpireEnum
     public static AbstractCard.CardTags DAOLONG_DARK_ASSASSIN;
+
+    /**
+     * 符咒融合卡
+     */
+    @SpireEnum
+    public static AbstractCard.CardTags FUSION;
 }

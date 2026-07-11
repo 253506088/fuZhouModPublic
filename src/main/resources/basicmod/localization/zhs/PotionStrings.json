@@ -1,0 +1,38 @@
+{
+  "fuZhouMod:TalismanPotion": {
+    "NAME": "符咒药剂",
+    "DESCRIPTIONS": [
+      "获得 1 点能量。"
+    ]
+  },
+  "fuZhouMod:ChiMagicPotion": {
+    "NAME": "气魔法药水",
+    "DESCRIPTIONS": [
+      "获得 15 格挡。"
+    ]
+  },
+  "fuZhouMod:ShadowPotion": {
+    "NAME": "黑影药水",
+    "DESCRIPTIONS": [
+      "获得 1 点 力量 。"
+    ]
+  },
+  "fuZhouMod:RagePotion": {
+    "NAME": "暴怒药水",
+    "DESCRIPTIONS": [
+      "获得 2 点 力量 。"
+    ]
+  },
+  "fuZhouMod:RewriteInk": {
+    "NAME": "改写墨水",
+    "DESCRIPTIONS": [
+      "抽 3 张牌。"
+    ]
+  },
+  "fuZhouMod:BountyPotion": {
+    "NAME": "通缉药水",
+    "DESCRIPTIONS": [
+      "对所有敌人施加 1 层 易伤 。"
+    ]
+  }
+}

@@ -190,5 +190,13 @@
                       "Fear"
                   ],
         "DESCRIPTION":  "Eight Demon anomalies, including #yBurning, #yBurning #yHeart, #yWet, #yHigh #yTemp #ySteam, #yFrostbite, #yFrost #yHell, #yEarth #yBind, #yHeavy #yMire, #yWind #yCatalyst, and #yFear."
+    },
+    {
+        "ID":  "Fusion",
+        "PROPER_NAME":  "Fusion",
+        "NAMES":  [
+                      "Fusion"
+                  ],
+        "DESCRIPTION":  "The power of two talismans merged into one. Fusion cards embody the abilities of both talismans."
     }
 ]

@@ -1,0 +1,38 @@
+{
+  "fuZhouMod:TalismanPotion": {
+    "NAME": "Talisman Potion",
+    "DESCRIPTIONS": [
+      "Gain 1 Energy."
+    ]
+  },
+  "fuZhouMod:ChiMagicPotion": {
+    "NAME": "Chi Magic Potion",
+    "DESCRIPTIONS": [
+      "Gain 15 #yBlock."
+    ]
+  },
+  "fuZhouMod:ShadowPotion": {
+    "NAME": "Shadow Potion",
+    "DESCRIPTIONS": [
+      "Gain 1 #yStrength."
+    ]
+  },
+  "fuZhouMod:RagePotion": {
+    "NAME": "Rage Potion",
+    "DESCRIPTIONS": [
+      "Gain 2 #yStrength."
+    ]
+  },
+  "fuZhouMod:RewriteInk": {
+    "NAME": "Rewrite Ink",
+    "DESCRIPTIONS": [
+      "Draw 3 cards."
+    ]
+  },
+  "fuZhouMod:BountyPotion": {
+    "NAME": "Bounty Potion",
+    "DESCRIPTIONS": [
+      "Apply 1 #yVulnerable to ALL enemies."
+    ]
+  }
+}

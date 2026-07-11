@@ -1,4 +1,4 @@
-﻿{
+{
   "fuZhouMod:WeThree": {
     "NAME": "葱姜蒜(已废弃)",
     "DESCRIPTION": "此卡已废弃"
@@ -445,7 +445,7 @@
   },
   "fuZhouMod:BlackHandCloseNet": {
     "NAME": "收网",
-    "DESCRIPTION": "造成 !D! 点伤害。若目标 *黑手 ≥4，则每消耗 4 层 *黑手 再造成一次同等伤害，直到其 *黑手 \u003c4。 NL *黑手帮"
+    "DESCRIPTION": "造成 !D! 点伤害。若目标 *黑手 ≥4，则每消耗 4 层 *黑手 再造成一次同等伤害，直到其 *黑手 <4。 NL *黑手帮"
   },
   "fuZhouMod:BlackHandSuppressiveFire": {
     "NAME": "射击",
@@ -583,5 +583,370 @@
   "fuZhouMod:GandoraDragon": {
     "NAME": "破坏龙甘多拉",
     "DESCRIPTION": "清空你和全部怪物的 *力量 （归零）。 NL 对所有怪物造成清空力量 [#efc100]绝对值之和[] 的伤害。 NL 消耗"
+  },
+  "fuZhouMod:DualTalismanResonance": {
+    "NAME": "双符共鸣",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 若持有 2 个及以上 *动物符咒 ，额外抽 1 张牌并恢复 1 点能量。 NL *融合"
+  },
+  "fuZhouMod:ZodiacCycle": {
+    "NAME": "生肖轮转",
+    "DESCRIPTION": "获得 !B! 点 *格挡 。 NL 每持有 1 个 *动物符咒 抽 1 张牌(最多 3 张)。 NL 消耗。 NL *融合"
+  },
+  "fuZhouMod:TalismanResonance": {
+    "NAME": "符咒共振",
+    "DESCRIPTION": "获得 !M! 点 *力量 。 NL 每持有 1 个 *动物符咒 ，额外获得 1 点 *力量 。 NL 消耗。 NL *融合",
+    "UPGRADE_DESCRIPTION": "获得 !M! 点 *力量 。 NL 每持有 1 个 *动物符咒 ，额外获得 1 点 *力量 。 NL 消耗。 NL *融合"
+  },
+  "fuZhouMod:RatOxFusion": {
+    "NAME": "鼠牛合击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若持有 *鼠符咒 或 *牛符咒 ，获得 !M! 点 *力量 。 NL *融合"
+  },
+  "fuZhouMod:TigerRabbitFusion": {
+    "NAME": "虎兔连势",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 若持有 *虎符咒 或 *兔符咒 ，获得 1 点能量并额外抽 1 张牌。 NL *融合"
+  },
+  "fuZhouMod:DragonSnakeFusion": {
+    "NAME": "龙蛇双影",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若持有 *龙符咒 或 *蛇符咒 ，再造成 1 次伤害。 NL *融合"
+  },
+  "fuZhouMod:HorseGoatFusion": {
+    "NAME": "马羊同魂",
+    "DESCRIPTION": "获得 !B! 点 *格挡 。 NL 若持有 *马符咒 或 *羊符咒 ，回复 !M! 点生命。 NL *融合"
+  },
+  "fuZhouMod:MonkeyRoosterFusion": {
+    "NAME": "猴鸡合形",
+    "DESCRIPTION": "获得 !B! 点 *格挡 。 NL 若持有 *猴符咒 或 *鸡符咒 ，抽 2 张牌。 NL *融合"
+  },
+  "fuZhouMod:DogPigFusion": {
+    "NAME": "狗猪同归",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 若持有 *狗符咒 或 *猪符咒 ，改为对所有敌人造成伤害。 NL *融合"
+  },
+  "fuZhouMod:ZodiacArray": {
+    "NAME": "生肖大阵",
+    "DESCRIPTION": "每回合开始获得 !M! 点能量。 NL 若持有动物符咒遗物，额外获得 !M! 层 *力量 。 NL *融合"
+  },
+  "fuZhouMod:TalismanStorm": {
+    "NAME": "符咒风暴",
+    "DESCRIPTION": "造成 持有符咒遗物数× !M! 的伤害。 NL 消耗 NL *融合"
+  },
+  "fuZhouMod:TwelvePerfection": {
+    "NAME": "十二圆满",
+    "DESCRIPTION": "若集齐 12 个符咒遗物，获得 !M! 点能量与 !M! 层 *力量 。否则抽 1 张牌。 NL *融合"
+  },
+  "fuZhouMod:ZodiacGuard": {
+    "NAME": "生肖守护",
+    "DESCRIPTION": "获得 !M! 层 *护甲 。 NL 若持有符咒遗物，额外获得 1 层 *反伤 。 NL *融合"
+  },
+  "fuZhouMod:TalismanOverload": {
+    "NAME": "符咒过载",
+    "DESCRIPTION": "弃 !M! 张牌，抽 3 张牌，恢复 !M! 点生命。 NL 消耗 NL *融合"
+  },
+  "fuZhouMod:CounterTalisman": {
+    "NAME": "反符咒",
+    "DESCRIPTION": "造成 !D! 伤害。 NL 施加 !M! 层 *易伤 与 !M! 层 *虚弱 。 NL *融合"
+  },
+  "fuZhouMod:TalismanResonanceExtreme": {
+    "NAME": "符咒共鸣·极",
+    "DESCRIPTION": "获得 !M! 层 *力量 与 !M! 层 *敏捷 。 NL *融合"
+  },
+  "fuZhouMod:ShengZhuEcstasy": {
+    "NAME": "圣主的狂喜",
+    "DESCRIPTION": "获得 !M! 层 *力量 。 NL 每回合获得 1 点能量。 NL *融合"
+  },
+  "fuZhouMod:JackieChanDrunkenMaster": {
+    "NAME": "成龙·醉拳师父",
+    "DESCRIPTION": "造成 !D! 伤害。 NL 若手牌≥3张，再造成 !M! 伤害。"
+  },
+  "fuZhouMod:JadeChanClever": {
+    "NAME": "成小玉·机灵鬼",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 获得 1 点能量。"
+  },
+  "fuZhouMod:TooruSumo": {
+    "NAME": "特鲁·相扑巨汉",
+    "DESCRIPTION": "造成 !D! 伤害并获得 !B! 格挡。"
+  },
+  "fuZhouMod:BullWarrior": {
+    "NAME": "牛战士·摔角王",
+    "DESCRIPTION": "获得 !B! 格挡与 !M! 层 *反伤 。"
+  },
+  "fuZhouMod:ViperShadowThief": {
+    "NAME": "小蛇·暗影盗贼",
+    "DESCRIPTION": "造成 !D! 伤害，施加 !M! 层 *毒 。"
+  },
+  "fuZhouMod:UncleChiMage": {
+    "NAME": "老爹·气魔法师",
+    "DESCRIPTION": "获得 !M! 层 *力量 与 !M! 层 *敏捷 。"
+  },
+  "fuZhouMod:PacoSidekick": {
+    "NAME": "帕克·小跟班",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 获得 1 点能量。"
+  },
+  "fuZhouMod:JTeamAssembly": {
+    "NAME": "龙小组集结",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 消耗。"
+  },
+  "fuZhouMod:JTeamTactics": {
+    "NAME": "J-Team战术",
+    "DESCRIPTION": "获得 !M! 层 *力量 。"
+  },
+  "fuZhouMod:JTeamUltimateStrike": {
+    "NAME": "龙小组·终极合击",
+    "DESCRIPTION": "造成 !D! 伤害+手牌数× !M! 。 NL 消耗。"
+  },
+  "fuZhouMod:ShadowGathering": {
+    "NAME": "鬼影集结",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 获得 1 点能量。"
+  },
+  "fuZhouMod:FormationPincer": {
+    "NAME": "阵型·钳形",
+    "DESCRIPTION": "获得 !M! 层 *力量 。"
+  },
+  "fuZhouMod:FormationIronWall": {
+    "NAME": "阵型·铁壁",
+    "DESCRIPTION": "获得 !B! 格挡。"
+  },
+  "fuZhouMod:FormationIntermittent": {
+    "NAME": "阵型·穿插",
+    "DESCRIPTION": "抽 !M! 张牌。"
+  },
+  "fuZhouMod:MaskEmpower": {
+    "NAME": "面具·赋予",
+    "DESCRIPTION": "获得 !M! 层 *力量 与 !M! 层 *敏捷 。"
+  },
+  "fuZhouMod:TarakudoCommand": {
+    "NAME": "塔拉库多之令",
+    "DESCRIPTION": "每回合获得 !M! 点能量与 !M! 层 *力量 。"
+  },
+  "fuZhouMod:ShadowSurge": {
+    "NAME": "黑影狂潮",
+    "DESCRIPTION": "造成 !D! 伤害。"
+  },
+  "fuZhouMod:MaskSwitch": {
+    "NAME": "面具切换",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 获得 1 点能量。 NL 消耗。"
+  },
+  "fuZhouMod:NineMasksUnited": {
+    "NAME": "九面合一",
+    "DESCRIPTION": "获得 !M! 层 *力量 与 !M! 层 *敏捷 。"
+  },
+  "fuZhouMod:ShadowKing": {
+    "NAME": "影之王",
+    "DESCRIPTION": "获得 !M! 层 *力量 。"
+  },
+  "fuZhouMod:District13Raid": {
+    "NAME": "十三区·突袭",
+    "DESCRIPTION": "造成 !D! 伤害。 NL 若敌方有 *虚弱 ，额外造成 !M! 伤害。"
+  },
+  "fuZhouMod:District13Interrogation": {
+    "NAME": "十三区·审讯",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 获得 1 点能量。"
+  },
+  "fuZhouMod:District13Armory": {
+    "NAME": "十三区·装备库",
+    "DESCRIPTION": "获得 !B! 格挡。 NL 消耗。"
+  },
+  "fuZhouMod:CaptainBlack": {
+    "NAME": "布莱克·警长",
+    "DESCRIPTION": "施加 !M! 层 *易伤 。 NL 抽 1 张牌。"
+  },
+  "fuZhouMod:BountyHunter": {
+    "NAME": "悬赏猎人",
+    "DESCRIPTION": "造成 !D! 伤害。 NL 获得 !M! 金币。"
+  },
+  "fuZhouMod:District13Lockdown": {
+    "NAME": "十三区·封锁",
+    "DESCRIPTION": "获得 !B! 格挡。"
+  },
+  "fuZhouMod:WantedPoster": {
+    "NAME": "通缉令",
+    "DESCRIPTION": "施加 !M! 层 *易伤 。 NL 消耗。"
+  },
+  "fuZhouMod:District13FinalStrike": {
+    "NAME": "十三区·总攻",
+    "DESCRIPTION": "造成 !D! 伤害。"
+  },
+  "fuZhouMod:UncleBanishEvil": {
+    "NAME": "老爹·咒语",
+    "DESCRIPTION": "获得 !B! 格挡。 NL 消耗。"
+  },
+  "fuZhouMod:UncleChiPalm": {
+    "NAME": "老爹·气功掌",
+    "DESCRIPTION": "造成 !D! 伤害，施加 !M! 层 *易伤 。"
+  },
+  "fuZhouMod:UncleElixir": {
+    "NAME": "老爹·魔药",
+    "DESCRIPTION": "恢复 !M! 点生命。 NL 获得 1 点能量。"
+  },
+  "fuZhouMod:UncleSeal": {
+    "NAME": "老爹·封印术",
+    "DESCRIPTION": "获得 !B! 格挡。"
+  },
+  "fuZhouMod:ChiShield": {
+    "NAME": "气魔法·护体",
+    "DESCRIPTION": "获得 !B! 格挡与 !M! 层 *反伤 。"
+  },
+  "fuZhouMod:ChiCounter": {
+    "NAME": "气魔法·反击",
+    "DESCRIPTION": "造成 !D! 伤害并获得 !B! 格挡。"
+  },
+  "fuZhouMod:UncleAdmonition": {
+    "NAME": "老爹·训诫",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 获得 1 点能量。"
+  },
+  "fuZhouMod:ChiInheritance": {
+    "NAME": "气魔法·传承",
+    "DESCRIPTION": "每回合获得 !M! 点能量。"
+  },
+  "fuZhouMod:UncleGarlic": {
+    "NAME": "老爹·大蒜护身",
+    "DESCRIPTION": "获得 !B! 格挡。"
+  },
+  "fuZhouMod:UltimateSpellReturn": {
+    "NAME": "终极咒语·万物归元",
+    "DESCRIPTION": "对所有敌人造成 !D! 伤害。 NL 抽 !M! 张牌。 NL 消耗。"
+  },
+  "fuZhouMod:PanguBoxOpen": {
+    "NAME": "盘古宝盒·开启",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 获得 1 点能量。"
+  },
+  "fuZhouMod:GateShadowSeal": {
+    "NAME": "鬼影门封印",
+    "DESCRIPTION": "获得 !M! 点 *力量 。"
+  },
+  "fuZhouMod:EarthGateShadow": {
+    "NAME": "地之鬼影",
+    "DESCRIPTION": "造成 !D! 伤害。 NL 获得 !M! 点 *力量 。"
+  },
+  "fuZhouMod:WaterGateShadow": {
+    "NAME": "水之鬼影",
+    "DESCRIPTION": "造成 !D! 伤害。 NL 施加 !M! 层 *虚弱 。"
+  },
+  "fuZhouMod:ThunderGateShadow": {
+    "NAME": "雷之鬼影",
+    "DESCRIPTION": "造成 !D! 伤害。 NL 施加 !M! 层 *虚弱 。"
+  },
+  "fuZhouMod:EightGatesSealed": {
+    "NAME": "八门封印",
+    "DESCRIPTION": "获得 !M! 点 *力量 和 !M! 点 *敏捷 。"
+  },
+  "fuZhouMod:GateOverflow": {
+    "NAME": "鬼影溢出",
+    "DESCRIPTION": "对所有敌人造成 !D! 伤害。 NL 消耗。"
+  },
+  "fuZhouMod:DemonContract": {
+    "NAME": "恶魔契约",
+    "DESCRIPTION": "获得 !M! 点 *力量 和 !M! 点 *敏捷 。"
+  },
+  "fuZhouMod:ShengZhuDemonLord": {
+    "NAME": "圣主·恶魔之主",
+    "DESCRIPTION": "获得 !M! 点 *力量 。"
+  },
+  "fuZhouMod:TarakudoDescent": {
+    "NAME": "塔拉库多降临",
+    "DESCRIPTION": "获得 !M! 点 *力量 和 !M! 点 *敏捷 。"
+  },
+  "fuZhouMod:TarakudoMockery": {
+    "NAME": "塔拉库多嘲弄",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 获得 1 点能量。"
+  },
+  "fuZhouMod:TarakudoDevour": {
+    "NAME": "塔拉库多吞噬",
+    "DESCRIPTION": "造成 !D! 伤害。 NL 恢复 !M! 点生命。"
+  },
+  "fuZhouMod:NineMaskRotation": {
+    "NAME": "九面轮转",
+    "DESCRIPTION": "获得 !M! 点 *力量 和 !M! 点 *敏捷 。"
+  },
+  "fuZhouMod:TarakudoLegion": {
+    "NAME": "塔拉库多军团",
+    "DESCRIPTION": "对所有敌人造成 !D! 伤害。"
+  },
+  "fuZhouMod:MaskCurse": {
+    "NAME": "面具诅咒",
+    "DESCRIPTION": "造成 !D! 伤害。 NL 施加 !M! 层 *易伤 。"
+  },
+  "fuZhouMod:TarakudoImmortal": {
+    "NAME": "塔拉库多不灭",
+    "DESCRIPTION": "获得 !M! 层 *多层护甲 。"
+  },
+  "fuZhouMod:UltimateShadowKing": {
+    "NAME": "终极黑影之王",
+    "DESCRIPTION": "获得 !M! 点 *力量 。"
+  },
+  "fuZhouMod:ChronicleFlipPage": {
+    "NAME": "岁月史书·翻页",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 消耗。"
+  },
+  "fuZhouMod:ChronicleAlter": {
+    "NAME": "岁月史书·改写",
+    "DESCRIPTION": "获得 !M! 点能量。"
+  },
+  "fuZhouMod:ChronicleTearPage": {
+    "NAME": "岁月史书·撕页",
+    "DESCRIPTION": "造成 !D! 伤害。 NL 消耗。"
+  },
+  "fuZhouMod:ChronicleContinue": {
+    "NAME": "岁月史书·续写",
+    "DESCRIPTION": "获得 !B! 格挡。 NL 消耗。"
+  },
+  "fuZhouMod:ChronicleRewrite": {
+    "NAME": "岁月史书·重写",
+    "DESCRIPTION": "对所有敌人造成 !D! 伤害。 NL 消耗。"
+  },
+  "fuZhouMod:ChronicleBlankPage": {
+    "NAME": "岁月史书·空白页",
+    "DESCRIPTION": "抽 !M! 张牌。"
+  },
+  "fuZhouMod:ChronicleGuardian": {
+    "NAME": "岁月史书守护者",
+    "DESCRIPTION": "获得 !M! 点 *力量 。"
+  },
+  "fuZhouMod:JTeamRestoreHistory": {
+    "NAME": "龙小组·还原历史",
+    "DESCRIPTION": "恢复 !M! 点生命。 NL 消耗。"
+  },
+  "fuZhouMod:ShengZhuUsurper": {
+    "NAME": "圣主·篡夺者",
+    "DESCRIPTION": "获得 !M! 点 *力量 。"
+  },
+  "fuZhouMod:FireBreath": {
+    "NAME": "火焰吐息",
+    "DESCRIPTION": "造成 !D! 伤害。"
+  },
+  "fuZhouMod:DragonScale": {
+    "NAME": "龙鳞",
+    "DESCRIPTION": "获得 !B! 格挡。 NL 获得 !M! 层 *反伤 。"
+  },
+  "fuZhouMod:RageCharge": {
+    "NAME": "暴怒冲撞",
+    "DESCRIPTION": "造成 !D! 伤害。 NL 获得 !B! 格挡。"
+  },
+  "fuZhouMod:DragonWrath": {
+    "NAME": "龙裔之怒",
+    "DESCRIPTION": "造成 !D! 伤害。"
+  },
+  "fuZhouMod:DemonQiDrain": {
+    "NAME": "魔气汲取",
+    "DESCRIPTION": "抽 !M! 张牌。 NL 获得 1 点能量。"
+  },
+  "fuZhouMod:FireStorm": {
+    "NAME": "火焰风暴",
+    "DESCRIPTION": "对所有敌人造成 !D! 伤害。"
+  },
+  "fuZhouMod:DragonWill": {
+    "NAME": "龙之意志",
+    "DESCRIPTION": "下回合获得 !M! 点能量。"
+  },
+  "fuZhouMod:DragoFrenzy": {
+    "NAME": "德拉格·暴走",
+    "DESCRIPTION": "获得 !M! 点能量。"
+  },
+  "fuZhouMod:FatherSonRift": {
+    "NAME": "父子决裂",
+    "DESCRIPTION": "造成 !D! 伤害。"
+  },
+  "fuZhouMod:UltimateDragonFlame": {
+    "NAME": "终极·焚天龙焰",
+    "DESCRIPTION": "造成 !D! 伤害。 NL 消耗。"
   }
 }
