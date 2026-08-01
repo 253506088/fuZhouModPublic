@@ -1,6 +1,7 @@
 package basicmod.relics;
 
 import basicmod.actions.RatTalismanReplaceAction;
+import basicmod.helpers.TalismanInputHelper;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -15,8 +16,7 @@ import static basicmod.BasicMod.makeID;
 
 /**
  * 鼠符咒
- * 一回合一次：摸牌后，若手牌中有 状态 或 诅咒 牌，则选择其中1张，将其替换为1张0费且消耗的攻击牌。
- * 若回合开始摸牌未触发，后续本回合内因抽牌或效果加入手牌时仍可触发。
+ * 战斗中可右键激发：选择手牌中1张状态或诅咒牌，将其替换为1张0费且消耗的攻击牌。
  */
 public class RatTalisman extends BaseRelic {
     public static final String NAME = "RatTalisman";
@@ -26,6 +26,7 @@ public class RatTalisman extends BaseRelic {
 
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("fuZhouMod:RatTalismanUI");
     public static final String SELECT_PROMPT = uiStrings.TEXT[0];
+    public static final String CANCEL_TEXT = uiStrings.TEXT.length > 3 ? uiStrings.TEXT[3] : "取消";
     private static final int COOLDOWN_TURNS = 2;
 
     // 每回合只允许成功替换一次
@@ -134,16 +135,11 @@ public class RatTalisman extends BaseRelic {
     }
 
     @Override
-    public void atTurnStartPostDraw() {
-        // 起手摸牌后立刻检测一次
-        queueReplaceCheck();
-    }
-
-    @Override
     public void update() {
         super.update();
-        // 覆盖后续抽牌和直接加入手牌的情况
-        if (!checkQueued && canTriggerNow() && hasReplaceableCardInHand()) {
+        // 右键手动激发鼠符咒，选择手牌中的诅咒或状态牌进行变化。
+        if (!checkQueued && canTriggerNow() && hasReplaceableCardInHand() && TalismanInputHelper.isRelicRightClickTriggered(this)) {
+            CardCrawlGame.sound.play("UI_CLICK_1");
             queueReplaceCheck();
         }
     }

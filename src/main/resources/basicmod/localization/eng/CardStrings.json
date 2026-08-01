@@ -583,5 +583,77 @@
   "fuZhouMod:GandoraDragon": {
     "NAME": "Gandora the Dragon of Destruction",
     "DESCRIPTION": "Remove all #yStrength from you and all enemies (set to 0). NL Deal damage to ALL enemies equal to the [#efc100]sum of absolute values[] of removed Strength. NL #yExhaust"
+  },
+  "fuZhouMod:ShadowGuard": {
+    "NAME": "Shadow Guard",
+    "DESCRIPTION": "Whenever #yNinja #ySquad deals unblocked damage, gain that much #yBlock.",
+    "UPGRADE_DESCRIPTION": "Whenever #yNinja #ySquad deals damage, gain that much #yBlock, including damage blocked by the target."
+  },
+  "fuZhouMod:DoubleSticks": {
+    "NAME": "Double Sticks",
+    "DESCRIPTION": "#yNinja #ySquad gains 3 times as much damage from #yDominion.",
+    "UPGRADE_DESCRIPTION": "#yNinja #ySquad gains 3 times as much damage from #yDominion. NL Gain 1 #yDominion."
+  },
+  "fuZhouMod:WingsuitFlight": {
+    "NAME": "Wingsuit Flight",
+    "DESCRIPTION": "#yNinja #ySquad gains #yRetain. NL Each turn, whenever you play 2 #yNinja #ySquad cards, gain 1 temporary #yDominion.",
+    "UPGRADE_DESCRIPTION": "#yNinja #ySquad gains #yRetain. NL Each turn, whenever you play 2 #yNinja #ySquad cards, gain 1 temporary #yDominion."
+  },
+  "fuZhouMod:Shuriken": {
+    "NAME": "Shuriken",
+    "DESCRIPTION": "While you have #yShuriken, #yNinja #ySquad base damage per hit becomes 3 normally or 5 when the Ninja Squad is upgraded. NL Attacks 2 times.",
+    "UPGRADE_DESCRIPTION": "While you have #yShuriken, #yNinja #ySquad base damage per hit becomes 3 normally or 5 when the Ninja Squad is upgraded. NL Attacks 3 times."
+  },
+  "fuZhouMod:SmokeBomb": {
+    "NAME": "Smoke Bomb",
+    "DESCRIPTION": "Whenever #yNinja #ySquad deals unblocked damage, the target loses 1 #yStrength this turn.",
+    "UPGRADE_DESCRIPTION": "Whenever a #yNinja #ySquad hit resolves, the target loses 1 #yStrength this turn."
+  },
+  "fuZhouMod:NoWayThrough": {
+    "NAME": "No Way Through",
+    "DESCRIPTION": "Gain !B! #yBlock. NL Add 2 #yNinja #ySquad cards to your hand.",
+    "UPGRADE_DESCRIPTION": "Gain !B! #yBlock. NL Add 2 upgraded #yNinja #ySquad cards to your hand."
+  },
+  "fuZhouMod:NinjaCooperation": {
+    "NAME": "Ninja Cooperation",
+    "DESCRIPTION": "For each #yNinja #ySquad in your exhaust pile, #yNinja #ySquad deals 1 more damage per hit.",
+    "UPGRADE_DESCRIPTION": "#yInnate. NL For each #yNinja #ySquad in your exhaust pile, #yNinja #ySquad deals 1 more damage per hit."
+  },
+  "fuZhouMod:Katana": {
+    "NAME": "Katana",
+    "DESCRIPTION": "#yNinja #ySquad attacks all enemies.",
+    "UPGRADE_DESCRIPTION": "#yInnate. NL #yNinja #ySquad attacks all enemies."
+  },
+  "fuZhouMod:DemonCodex": {
+    "NAME": "Demon Codex",
+    "DESCRIPTION": "#yShadowkhan cards are affected by #yStrength, #yDexterity, #yVulnerable, #yWeak, and #yFrail. NL Increase mask capacity by !M! this combat.",
+    "UPGRADE_DESCRIPTION": "#yShadowkhan cards are affected by #yStrength, #yDexterity, #yVulnerable, #yWeak, and #yFrail. NL Increase mask capacity by !M! this combat."
+  },
+  "fuZhouMod:EmergencyEscape": {
+    "NAME": "Emergency Escape",
+    "DESCRIPTION": "Gain !B! #yPlated #yArmor. NL For the next !M! turns, block and reflect debuffs from monsters. NL #yTeam #yJackie",
+    "UPGRADE_DESCRIPTION": "Gain !B! #yPlated #yArmor. NL For the next !M! turns, block and reflect debuffs from monsters. NL #yTeam #yJackie"
+  },
+  "fuZhouMod:RabbitStrike": {
+    "NAME": "Rabbit Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Add a copy of this card to your discard pile. NL If you have #yRabbit #yTalisman, draw 1 card. NL If you played another #yAfu card this turn, gain [E], up to 2 times each turn. NL #yAfu"
+  },
+  "fuZhouMod:BlackHandBitterChoice": {
+    "NAME": "Bitter Choice",
+    "DESCRIPTION": "Lose 3 HP. If you are still alive, gain !M! [E], draw !M! cards, and gain 2 temporary #yStrength and #yDexterity. NL Next turn, all cards cost 1 more. NL #yExhaust NL #yBlack #yHand",
+    "UPGRADE_DESCRIPTION": "Lose 3 HP. If you are still alive, gain !M! [E], draw !M! cards, and gain 3 temporary #yStrength and #yDexterity. NL Next turn, all cards cost 1 more. NL #yExhaust NL #yBlack #yHand"
+  },
+  "fuZhouMod:OfferingToEmperor": {
+    "NAME": "Offering to the Emperor",
+    "DESCRIPTION": "Heal !M! HP. NL Gain 1 random potion. NL #yExhaust",
+    "UPGRADE_DESCRIPTION": "Heal !M! HP. NL Gain 1 random potion. NL #yExhaust"
+  },
+  "fuZhouMod:Possession": {
+    "NAME": "Possession",
+    "DESCRIPTION": "Can only be played if you have not played an Attack this turn. NL You cannot play Attacks this turn. NL Stun the enemy for 1 turn. Steal its #yStrength, #yArtifact, #yRitual, #yMetallicize, and #yBlock. NL Apply !M! #yVulnerable and !M! #yWeak. NL #yExhaust",
+    "UPGRADE_DESCRIPTION": "Can only be played if you have not played an Attack this turn. NL You cannot play Attacks this turn. NL Stun the enemy for 1 turn. Steal its #yStrength, #yArtifact, #yRitual, #yMetallicize, and #yBlock. NL Apply !M! #yVulnerable and !M! #yWeak. NL #yExhaust",
+    "EXTENDED_DESCRIPTION": [
+      "You have already played an Attack this turn."
+    ]
   }
 }

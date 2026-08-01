@@ -16,7 +16,7 @@ public class DominionPower extends BasePower {
 
     @Override
     public void onInitialApplication() {
-        BasicMod.logger.info("【影噬】首次获得，当前层数={}", this.amount);
+        BasicMod.logger.debug("【影噬】首次获得，当前层数={}", this.amount);
     }
 
     @Override
@@ -26,7 +26,7 @@ public class DominionPower extends BasePower {
         }
         this.fontScale = 8.0F;
         this.amount += stackAmount;
-        BasicMod.logger.info("【影噬】层数增加，增加={}，当前层数={}", stackAmount, this.amount);
+        BasicMod.logger.debug("【影噬】层数增加，增加={}，当前层数={}", stackAmount, this.amount);
         updateDescription();
     }
 

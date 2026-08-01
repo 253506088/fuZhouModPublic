@@ -37,6 +37,10 @@ public abstract class BaseCard extends CustomCard {
     final private static Map<String, DynamicVariable> customVars = new HashMap<>();
     /** 旧版颜色标记正则表达式 */
     private static final Pattern LEGACY_CARD_COLOR_PATTERN = Pattern.compile("(?<!\\[)#([ybrgp])([^\\s#]+)");
+    /** BaseMod卡牌颜色标记起始正则表达式 */
+    private static final Pattern CARD_COLOR_START_PATTERN = Pattern.compile("\\[#(?:[0-9a-fA-F]{6}|[0-9a-fA-F]{8})\\]");
+    /** 旧版卡牌颜色标记前缀正则表达式 */
+    private static final Pattern LEGACY_CARD_COLOR_PREFIX_PATTERN = Pattern.compile("(?<!\\[)#([ybrgp])(?=\\S)");
 
     /** 生成Mod内唯一的ID */
     protected static String makeID(String name) { return BasicMod.makeID(name); }
@@ -193,7 +197,34 @@ public abstract class BaseCard extends CustomCard {
     }
 
     public static String normalizeCardDescription(String raw) {
+        if (isTraditionalChineseLanguage()) {
+            return removeTraditionalChineseCardColorMarkers(raw);
+        }
         return normalizeCardDescriptionColors(raw);
+    }
+
+    /**
+     * 判断当前游戏语言是否为繁体中文。
+     *
+     * @return 当前语言为繁体中文时返回true
+     */
+    private static boolean isTraditionalChineseLanguage() {
+        return Settings.language != null && "ZHT".equalsIgnoreCase(Settings.language.name());
+    }
+
+    /**
+     * 清理繁体中文卡牌描述中的颜色标记，保留原始文字内容。
+     *
+     * @param raw 原始卡牌描述
+     * @return 去除颜色标记后的卡牌描述
+     */
+    private static String removeTraditionalChineseCardColorMarkers(String raw) {
+        if (raw == null) {
+            return null;
+        }
+        return LEGACY_CARD_COLOR_PREFIX_PATTERN.matcher(CARD_COLOR_START_PATTERN.matcher(raw).replaceAll(""))
+                .replaceAll("")
+                .replace("[]", "");
     }
 
     private static boolean isCustomKeywordBoundary(char c) {

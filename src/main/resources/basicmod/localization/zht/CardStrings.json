@@ -1,0 +1,659 @@
+﻿{
+  "fuZhouMod:WeThree": {
+    "NAME": "蔥薑蒜(已廢棄)",
+    "DESCRIPTION": "此卡已廢棄"
+  },
+  "fuZhouMod:GanWenCui": {
+    "NAME": "甘文崔(已廢棄)",
+    "DESCRIPTION": "此卡已廢棄"
+  },
+  "fuZhouMod:Tohru": {
+    "NAME": "黑手幫·特魯",
+    "DESCRIPTION": "獲得 !B! 點 *格擋 。 NL 造成 !D! 點傷害。 NL 對目標施加 2 層 *黑手 。 NL (數值爲最大生命值的 !M!% 。牌組中每有一張 *黑手幫 卡牌，此百分比 +1% ) NL *黑手幫",
+    "UPGRADE_DESCRIPTION": "獲得 !B! 點 *格擋 。 NL 造成 !D! 點傷害。 NL 對目標施加 2 層 *黑手 。 NL (數值爲最大生命值的 !M!% 。牌組中每有一張 *黑手幫 卡牌，此百分比 +2% ) NL *黑手幫"
+  },
+  "fuZhouMod:Valmont": {
+    "NAME": "金雞王的寶藏",
+    "DESCRIPTION": "打出後，本回合內之後打出的 *阿福 、 *黑手幫 和 *黑暗殺手 系列卡牌耗費變爲 *0  NL 消耗 NL *黑手幫"
+  },
+  "fuZhouMod:CrowFlying": {
+    "NAME": "烏鴉坐飛機",
+    "DESCRIPTION": "造成 !D! 點傷害。 如果擁有 *雞符咒 ，耗能減少 [G]  NL *阿福"
+  },
+  "fuZhouMod:LaserEyes": {
+    "NAME": "電眼逼人",
+    "DESCRIPTION": "造成 !D! 點傷害。 施加 !M! 層 *易傷 。 如果持有 *豬符咒 ，則改爲對所有敵人生效 NL *阿福"
+  },
+  "fuZhouMod:OneTigerTwoSheep": {
+    "NAME": "一虎殺兩羊",
+    "DESCRIPTION": "造成 !D! 點傷害 *2 次。 如果此牌擊殺了敵人，獲得 !M! 點 *力量  NL *阿福"
+  },
+  "fuZhouMod:MeteorHitsMountain": {
+    "NAME": "流星連打山",
+    "DESCRIPTION": "造成 !D! 點傷害 !M! 次 NL 若本輪已打出 *阿福 ：你的下一次攻擊傷害增加 !fuZhouMod:B! 點 NL *阿福"
+  },
+  "fuZhouMod:HeadCracksWalnut": {
+    "NAME": "腦袋砸核桃",
+    "DESCRIPTION": "造成 !D! 點傷害 NL 若本輪已打出 *阿福 ：抽 !M! 張牌 NL *阿福"
+  },
+  "fuZhouMod:AxeCutsTree": {
+    "NAME": "巨斧砍大樹",
+    "DESCRIPTION": "造成 !D! 點傷害。 如果目標擁有 *格擋 ，傷害提升 [#efc100]50%[]  NL *阿福"
+  },
+  "fuZhouMod:AfuBeatJackie": {
+    "NAME": "阿福揍扁了成龍",
+    "DESCRIPTION": "造成 !D! 點傷害。 本場戰鬥中你每打出一張名稱不同的 *阿福 ，此牌傷害增加 !M! 點。 NL 本回合內每打出 #b1 張 *阿福 ，此牌費用 -1 。 NL *阿福"
+  },
+  "fuZhouMod:ComboMove": {
+    "NAME": "組合技",
+    "DESCRIPTION": "從抽牌堆中尋找一張攻擊牌放入手牌。 其耗能在本輪變爲 *0  NL *阿福"
+  },
+  "fuZhouMod:RatStealsCheese": {
+    "NAME": "老鼠偷奶酪",
+    "DESCRIPTION": "獲得 !M! 點能量。 將一張 *暈眩 加入棄牌堆 NL *阿福",
+    "UPGRADE_DESCRIPTION": "獲得 !M! 點能量。 將一張 *暈眩 加入棄牌堆 NL *阿福"
+  },
+  "fuZhouMod:CraneCatchesShrimp": {
+    "NAME": "飛鶴捕蝦",
+    "DESCRIPTION": "丟棄手牌中所有非攻擊牌，每丟棄一張，抽 !M! 張牌 NL *阿福"
+  },
+  "fuZhouMod:EagleWings": {
+    "NAME": "飛鷹展翅",
+    "DESCRIPTION": "獲得 !M! 層 *飛行  NL 消耗 NL *阿福",
+    "UPGRADE_DESCRIPTION": "獲得 !M! 層 *飛行  NL *阿福"
+  },
+  "fuZhouMod:TwoDragons": {
+    "NAME": "二龍戲珠",
+    "DESCRIPTION": "你在本輪打出的下 !M! 張牌將額外觸發一次 NL 消耗 NL *阿福"
+  },
+  "fuZhouMod:GoatClimbsMountain": {
+    "NAME": "山羊爬山",
+    "DESCRIPTION": "每打出兩張牌，本輪獲得 *1 點臨時 *力量  NL *阿福"
+  },
+  "fuZhouMod:TaiShanPress": {
+    "NAME": "泰山壓頂",
+    "DESCRIPTION": "在你的回合結束時，對一名隨機敵人造成本輪你造成總傷害 [#efc100]30%[] 的傷害 NL *阿福"
+  },
+  "fuZhouMod:Tornado": {
+    "NAME": "山",
+    "DESCRIPTION": "在你的回合結束時，對所有敵人造成本輪你造成總傷害 [#efc100]30%[] 的傷害 NL *阿福 NL *黑暗殺手"
+  },
+  "fuZhouMod:FlamingoStep": {
+    "NAME": "弗朗明哥舞步",
+    "DESCRIPTION": "獲得 !B! 點 *格擋  NL 若本輪已打出 *阿福 ：下回合額外獲得 !M! 點能量 NL *阿福"
+  },
+  "fuZhouMod:LameGoose": {
+    "NAME": "我成了瘸腿鵝",
+    "DESCRIPTION": "獲得 !B! 點 *格擋  NL 若本輪已打出 *阿福 ：本輪獲得 !M! 點臨時 *力量  NL *阿福"
+  },
+  "fuZhouMod:ElephantKick": {
+    "NAME": "大象踢腿",
+    "DESCRIPTION": "獲得 !B! 點 *格擋 。 如果目標意圖爲攻擊，則對其造成 !D! 點傷害 NL *阿福"
+  },
+  "fuZhouMod:DaoLongBlackQi": {
+    "NAME": "刀龍黑氣",
+    "DESCRIPTION": "[#7fff00]1.1.1版本本卡改爲事件，此後本卡無法再獲得[] NL 將所有的 *周 、 *拉蘇 、 *阿奮 和 *泰山壓頂 變爲 *甘 、 *文 、 *崔 和 *山  NL 現在主要的獲取方式已改爲地圖事件 NL 消耗",
+    "UPGRADE_DESCRIPTION": "[#7fff00]遺願卡[] NL 將所有的 *周 、 *拉蘇 、 *阿奮 和 *泰山壓頂 變爲 *甘+ 、 *文+ 、 *崔+ 和 *山+  NL 現在主要的獲取方式已改爲地圖事件 NL 消耗"
+  },
+  "fuZhouMod:BlackHandAhFen": {
+    "NAME": "黑手幫·阿奮",
+    "DESCRIPTION": "造成 !D! 點傷害 NL *黑手幫"
+  },
+  "fuZhouMod:BlackHandChow": {
+    "NAME": "黑手幫·周",
+    "DESCRIPTION": "獲得 !B! 點格擋 NL *黑手幫"
+  },
+  "fuZhouMod:BlackHandRatso": {
+    "NAME": "黑手幫·拉蘇",
+    "DESCRIPTION": "獲得 !B! 點格擋 NL 抽 !M! 張牌，丟棄 !M! 張牌 NL *黑手幫"
+  },
+  "fuZhouMod:BlackHandValmont": {
+    "NAME": "黑手幫·瓦龍",
+    "DESCRIPTION": "牌組裏每有 #b5 張 *黑手幫 卡牌，此牌費用 -1。 NL 造成 !D! 點傷害。本回合每打出1張 *黑手幫 卡牌，額外造成 !M! 點傷害 NL 對目標施加 (2 + 本回合已打出 *黑手幫 卡牌數) 層 *黑手 。 NL *黑手幫"
+  },
+  "fuZhouMod:BlackHand": {
+    "NAME": "黑手幫",
+    "DESCRIPTION": "升級手牌中所有 *黑手幫 和 *阿福 卡牌 NL 消耗 NL *黑手幫"
+  },
+  "fuZhouMod:Gan": {
+    "NAME": "甘",
+    "DESCRIPTION": "造成 !D! 點傷害，暴擊時額外造成 [#efc100]50%[] 傷害， NL 當前暴擊率： [#7fff00]!M!%[] ，每用一次疊加 [#7fff00]10%[] 暴擊率 NL *黑暗殺手"
+  },
+  "fuZhouMod:Wen": {
+    "NAME": "文",
+    "DESCRIPTION": "獲得 !B! 點格擋 NL 抽 !M! 張牌，丟棄 !M! 張牌。 給予敵人 !M! 層 *虛弱  NL *黑暗殺手"
+  },
+  "fuZhouMod:Cui": {
+    "NAME": "崔",
+    "DESCRIPTION": "獲得 !B! 點格擋 NL 獲得 !M! 層 *火焰屏障  NL *黑暗殺手"
+  },
+  "fuZhouMod:NiJiaMask": {
+    "NAME": "尼嘉面具",
+    "DESCRIPTION": "在你回合開始時增加 !M! 張 *尼嘉-忍者團 到你手中，若手牌已滿則自動打出",
+    "UPGRADE_DESCRIPTION": "在你回合開始時增加 !M! 張 *尼嘉-忍者團+ 到你手中，若手牌已滿則自動打出"
+  },
+  "fuZhouMod:LaZuoMask": {
+    "NAME": "拉佐面具",
+    "DESCRIPTION": "在你回合開始時增加 !M! 張 *拉佐-刺刃團 到你手中，若手牌已滿則自動打出",
+    "UPGRADE_DESCRIPTION": "在你回合開始時增加 !M! 張 *拉佐-刺刃團+ 到你手中，若手牌已滿則自動打出"
+  },
+  "fuZhouMod:SaMoMask": {
+    "NAME": "薩莫面具",
+    "DESCRIPTION": "在你回合開始時增加 !M! 張 *薩莫-巨魔團 到你手中，若手牌已滿則自動打出",
+    "UPGRADE_DESCRIPTION": "在你回合開始時增加 !M! 張 *薩莫-巨魔團+ 到你手中，若手牌已滿則自動打出"
+  },
+  "fuZhouMod:BaTeMask": {
+    "NAME": "巴特面具",
+    "DESCRIPTION": "在你回合開始時增加 !M! 張 *巴特-夜蝠團 到你手中，若手牌已滿則自動打出",
+    "UPGRADE_DESCRIPTION": "在你回合開始時增加 !M! 張 *巴特-夜蝠團+ 到你手中，若手牌已滿則自動打出"
+  },
+  "fuZhouMod:KaBoMask": {
+    "NAME": "卡博面具",
+    "DESCRIPTION": "在你回合開始時增加 !M! 張 *卡博-獵鉗團 到你手中，若手牌已滿則自動打出",
+    "UPGRADE_DESCRIPTION": "在你回合開始時增加 !M! 張 *卡博-獵鉗團+ 到你手中，若手牌已滿則自動打出"
+  },
+  "fuZhouMod:LeiSuMask": {
+    "NAME": "雷蘇面具",
+    "DESCRIPTION": "在你回合開始時增加 !M! 張 *雷蘇-異形團 到你手中，若手牌已滿則自動打出",
+    "UPGRADE_DESCRIPTION": "在你回合開始時增加 !M! 張 *雷蘇-異形團+ 到你手中，若手牌已滿則自動打出"
+  },
+  "fuZhouMod:ManNiMask": {
+    "NAME": "曼尼面具",
+    "DESCRIPTION": "在你回合開始時增加 !M! 張 *曼尼-螳形團 到你手中，若手牌已滿則自動打出",
+    "UPGRADE_DESCRIPTION": "在你回合開始時增加 !M! 張 *曼尼-螳形團+ 到你手中，若手牌已滿則自動打出"
+  },
+  "fuZhouMod:MingTaMask": {
+    "NAME": "明塔面具",
+    "DESCRIPTION": "在你回合開始時增加 !M! 張 *明塔-噬影團 到你手中，若手牌已滿則自動打出",
+    "UPGRADE_DESCRIPTION": "在你回合開始時增加 !M! 張 *明塔-噬影團+ 到你手中，若手牌已滿則自動打出"
+  },
+  "fuZhouMod:YiKaMask": {
+    "NAME": "伊卡面具",
+    "DESCRIPTION": "在你回合開始時增加 !M! 張 *伊卡-武士團 到你手中，若手牌已滿則自動打出",
+    "UPGRADE_DESCRIPTION": "在你回合開始時增加 !M! 張 *伊卡-武士團+ 到你手中，若手牌已滿則自動打出"
+  },
+  "fuZhouMod:TaLaMask": {
+    "NAME": "塔拉麪具",
+    "DESCRIPTION": "面具容量增加 !M! 層 NL 獲得 1 層 *影噬 。 NL 回合開始時隨機獲取一張 *黑影兵團 牌，若手牌已滿則自動打出",
+    "UPGRADE_DESCRIPTION": "面具容量增加 !M! 層 NL 獲得 1 層 *影噬 。 NL 回合開始時隨機獲取一張 *黑影兵團 牌，若手牌已滿則自動打出"
+  },
+  "fuZhouMod:NiJiaNinja": {
+    "NAME": "尼嘉-忍者團",
+    "DESCRIPTION": "造成 !D! 點傷害 NL 消耗",
+    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害 NL 消耗"
+  },
+  "fuZhouMod:LaZuoBlade": {
+    "NAME": "拉佐-刺刃團",
+    "DESCRIPTION": "造成 !D! 點傷害。若造成未被格擋的傷害，給予 !M! 層 *易傷  NL 若目標已有 *詛咒 ，追加 [#efc100]25%[] 傷害 NL 消耗",
+    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。若造成未被格擋的傷害，給予 !M! 層 *易傷  NL 若目標已有 *詛咒 ，追加 [#efc100]25%[] 傷害 NL 消耗"
+  },
+  "fuZhouMod:SaMoTroll": {
+    "NAME": "薩莫-巨魔團",
+    "DESCRIPTION": "獲得 !B! 點格擋。本回合每打出兩張黑影兵團牌，額外獲得 !M! 點格擋 NL 消耗",
+    "UPGRADE_DESCRIPTION": "獲得 !B! 點格擋。本回合每打出兩張黑影兵團牌，額外獲得 !M! 點格擋 NL 消耗"
+  },
+  "fuZhouMod:BaTeBat": {
+    "NAME": "巴特-夜蝠團",
+    "DESCRIPTION": "造成 !D! 點傷害。抽 !M! 張牌 NL 若目標已有 *詛咒 ，恢復 [#7fff00]1[] 點生命值 NL 消耗",
+    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。抽 !M! 張牌 NL 若目標已有 *詛咒 ，恢復 [#7fff00]1[] 點生命值 NL 消耗"
+  },
+  "fuZhouMod:KaBoPincer": {
+    "NAME": "卡博-獵鉗團",
+    "DESCRIPTION": "獲得 !B! 點格擋。給予 !M! 層 *虛弱  NL 消耗",
+    "UPGRADE_DESCRIPTION": "獲得 !B! 點格擋。給予 !M! 層 *虛弱  NL 消耗"
+  },
+  "fuZhouMod:LeiSuAlien": {
+    "NAME": "雷蘇-異形團",
+    "DESCRIPTION": "給予敵人 !M! 層 詛咒 （本回合黑影兵團牌會額外增加其層數） NL 消耗",
+    "UPGRADE_DESCRIPTION": "給予敵人 !M! 層 詛咒 （本回合黑影兵團牌會額外增加其層數） NL 消耗"
+  },
+  "fuZhouMod:ManNiMantis": {
+    "NAME": "曼尼-螳形團",
+    "DESCRIPTION": "造成 !D! 點傷害。敵人每有一層 *易傷 或 *虛弱 或 *詛咒 ，額外打擊一次 (最高 3 次) NL 消耗",
+    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。敵人每有一層 *易傷 或 *虛弱 或 *詛咒 ，額外打擊一次 (最高 3 次) NL 消耗"
+  },
+  "fuZhouMod:MingTaShadow": {
+    "NAME": "明塔-噬影團",
+    "DESCRIPTION": "消耗手中1張攻擊牌，造成 !D! +歷史消耗攻擊牌傷害合計 的額外傷害 NL 消耗",
+    "UPGRADE_DESCRIPTION": "消耗手中1張攻擊牌，造成 !D! +歷史消耗攻擊牌傷害合計 的額外傷害 NL 消耗"
+  },
+  "fuZhouMod:YiKaSamurai": {
+    "NAME": "伊卡-武士團",
+    "DESCRIPTION": "造成 !D! 點傷害 NL 可消耗1張牌獲得額外效果： NL 技能：抽 2 張牌 NL 攻擊：造成該牌傷害的一半 NL 能力：隨機賦予1種負面效果 NL 詛咒：使目標 [#efc100]擊暈[]  NL 狀態：回合數+1的中毒 NL 消耗",
+    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害 NL 可消耗1張牌獲得額外效果： NL 技能：抽 2 張牌 NL 攻擊：造成該牌傷害的一半 NL 能力：隨機賦予1種負面效果 NL 詛咒：使目標 [#efc100]擊暈[]  NL 狀態：回合數+1的中毒 NL 消耗"
+  },
+  "fuZhouMod:EndlessDarkness": {
+    "NAME": "無盡黑暗",
+    "DESCRIPTION": "固有  NL 將所有 面具 槽位限制擴展至 10 ，獲得所有十種面具效果各一層",
+    "UPGRADE_DESCRIPTION": "固有  NL 將所有 面具 槽位限制擴展至 10 ，獲得所有十種面具 升級版 效果各一層"
+  },
+  "fuZhouMod:NothingLackingCard": {
+    "NAME": "我什麼都不缺了",
+    "DESCRIPTION": "固有 NL 每打出1張牌，抽1張牌。獲得 6 點 [E] ，6 層 *力量 與 6 層 *敏捷 ",
+    "UPGRADE_DESCRIPTION": "固有 NL 手牌始終補滿，獲得 999 點 [E] ，99 層 *力量 與 99 層 *敏捷 "
+  },
+  "fuZhouMod:TigerTalismanYin": {
+    "NAME": "虎符·陰成龍",
+    "DESCRIPTION": "耗能爲1。獲得 !B! 點 *格擋  NL (每有一張手牌，此數值增加 !M! ，上限爲 16 ) NL *龍小組",
+    "UPGRADE_DESCRIPTION": "耗能爲1。獲得 !B! 點 *格擋  NL (每有一張手牌，此數值增加 !M! ，上限爲 20 ) NL *龍小組"
+  },
+  "fuZhouMod:TigerTalismanYang": {
+    "NAME": "虎符·陽成龍",
+    "DESCRIPTION": "造成 !D! 點傷害 NL (每有一張手牌，此數值降低 2 ，下限爲 2 ) NL *龍小組"
+  },
+  "fuZhouMod:FakeTalisman": {
+    "NAME": "冒牌符咒",
+    "DESCRIPTION": "抽 !M! 張牌，選擇 1 張手牌丟棄"
+  },
+  "fuZhouMod:DrunkenFist": {
+    "NAME": "醉拳",
+    "DESCRIPTION": "對所有敵人造成 6~10 點隨機傷害 X 次 NL (傷害受力量與虛弱影響) NL *龍小組",
+    "UPGRADE_DESCRIPTION": "對所有敵人造成 8~12 點隨機傷害 X 次 NL (傷害受力量與虛弱影響) NL *龍小組"
+  },
+  "fuZhouMod:ShadowQueen": {
+    "NAME": "黑影女王",
+    "DESCRIPTION": "將消耗牌堆中所有 *黑影兵團 按照進堆順序釋放 NL 小玉用塔拉紋身竊取了黑影兵團的權柄",
+    "UPGRADE_DESCRIPTION": "將消耗牌堆中所有 *黑影兵團 按照進堆順序釋放"
+  },
+  "fuZhouMod:DeflectAndStrike": {
+    "NAME": "借力打力",
+    "DESCRIPTION": "敵人下一個回合，如果完全格擋了敵人的攻擊，則對該敵人造成等額的傷害 NL *龍小組",
+    "UPGRADE_DESCRIPTION": "獲得 !B! 點 *格擋  NL 敵人下一個回合，如果完全格擋了敵人的攻擊，則對該敵人造成等額的傷害 NL *龍小組"
+  },
+  "fuZhouMod:GiantJade": {
+    "NAME": "巨大小玉",
+    "DESCRIPTION": "將你當前的 *格擋 翻倍 NL 消耗 NL *龍小組",
+    "UPGRADE_DESCRIPTION": "將你當前的 *格擋 翻倍 NL *龍小組"
+  },
+  "fuZhouMod:Suplex": {
+    "NAME": "抱摔",
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 基礎傷害 = #y!M! + 目標最大生命值的 #y1/8 NL *龍小組"
+  },
+  "fuZhouMod:CloseAtHand": {
+    "NAME": "近在咫尺",
+    "DESCRIPTION": "失去 [#efc100]6[] 點生命值 NL 獲得所有敵人 NL  [#efc100]傷害合計 +1[] 的 *格擋  NL *龍小組"
+  },
+  "fuZhouMod:RatTalismanCard": {
+    "NAME": "子鼠",
+    "DESCRIPTION": "將消耗牌堆中的 !M! 張卡牌加入手牌。其耗能在本回合變爲 *0 ，且本次戰鬥獲得 *虛無 與 消耗  NL 消耗 NL *動物符咒",
+    "UPGRADE_DESCRIPTION": "將消耗牌堆中的 !M! 張卡牌加入手牌。其耗能在本回合變爲 *0 ，且本次戰鬥獲得 *虛無 與 消耗  NL 消耗 NL *動物符咒"
+  },
+  "fuZhouMod:OxTalismanCard": {
+    "NAME": "丑牛",
+    "DESCRIPTION": "敵人的 *力量 和 *敏捷 無法高於你 NL *動物符咒"
+  },
+  "fuZhouMod:TigerTalismanSkillCard": {
+    "NAME": "寅虎·技",
+    "DESCRIPTION": "選擇一個敵人 NL 若其生命值高於你：其 *力量 -!M!  NL 若其生命值低於你：你 *力量 +!M!  NL 消耗 NL *動物符咒",
+    "UPGRADE_DESCRIPTION": "選擇一個敵人 NL 若其生命值高於你：其 *力量 -!M!  NL 若其生命值低於你：你 *力量 +!M!  NL 消耗 NL *動物符咒"
+  },
+  "fuZhouMod:TigerTalismanAttackCard": {
+    "NAME": "寅虎·攻",
+    "DESCRIPTION": "造成 !D! 點傷害，對比敵我雙方生命值和最大生命值的百分比 NL 若高於你：恢復 !M! 點生命 NL 若低於你：造成額外等同於其已損失生命值 [#efc100]30%[] 的傷害 NL *動物符咒"
+  },
+  "fuZhouMod:RabbitTalismanCard": {
+    "NAME": "卯兔",
+    "DESCRIPTION": "保留手牌結束你的回合。跳過敵人的下一個回合。開啓你的新回合 NL 消耗 NL *動物符咒"
+  },
+  "fuZhouMod:DragonTalismanCard": {
+    "NAME": "辰龍",
+    "DESCRIPTION": "對所有敵人造成 !D! 點傷害。如果擊殺了任何敵人，重新觸發此卡效果 NL *動物符咒"
+  },
+  "fuZhouMod:SnakeTalismanCard": {
+    "NAME": "巳蛇",
+    "DESCRIPTION": "獲得 !M! 層 *無實體  NL 消耗 NL *虛無 NL *動物符咒",
+    "UPGRADE_DESCRIPTION": "獲得 !M! 層 *無實體  NL 消耗 NL *動物符咒"
+  },
+  "fuZhouMod:HorseTalismanCard": {
+    "NAME": "午馬",
+    "DESCRIPTION": "在本回合結束時，恢復你本回合對敵方造成未格擋傷害數值之和的一半（向下取整）的生命值 NL 消耗 NL *動物符咒"
+  },
+  "fuZhouMod:GoatTalismanCard": {
+    "NAME": "未羊",
+    "DESCRIPTION": "選擇一個敵人。將其身上的所有負面狀態翻倍 NL 消耗 NL *動物符咒"
+  },
+  "fuZhouMod:MonkeyTalismanCard": {
+    "NAME": "申猴",
+    "DESCRIPTION": "獲得 1 層 *易傷（25%）。 NL 如果敵人下一回合的意圖是攻擊，則對其造成等額的傷害 NL *動物符咒",
+    "UPGRADE_DESCRIPTION": "獲得 1 層 *易傷（50%）。 NL 如果敵人下一回合的意圖是攻擊，則對其造成等額的傷害 NL *動物符咒"
+  },
+  "fuZhouMod:RoosterTalismanCard": {
+    "NAME": "酉雞",
+    "DESCRIPTION": "獲得 *飛行 能力： *敏捷 +!M! 且受到的傷害降低 [#efc100]50%[] 。受到 [#efc100]5[] 次傷害後被擊落並 [#efc100]眩暈[] 1 回合 NL 消耗 NL *動物符咒"
+  },
+  "fuZhouMod:DogTalismanCard": {
+    "NAME": "戌狗",
+    "DESCRIPTION": "接下來 #b5 回合內，敵人造成的致命傷害不會讓你死亡。觸發時恢復 !M! 點生命。每次觸發消耗 #b1 次保命次數。重複使用可疊加持續回合與保命次數；當持續回合歸零或保命次數耗盡時，效果消失。 NL 消耗 NL *動物符咒",
+    "UPGRADE_DESCRIPTION": "接下來 #b8 回合內，敵人造成的致命傷害不會讓你死亡。觸發時恢復 !M! 點生命。每次觸發消耗 #b1 次保命次數。重複使用可疊加持續回合與保命次數；當持續回合歸零或保命次數耗盡時，效果消失。 NL 消耗 NL *動物符咒"
+  },
+  "fuZhouMod:PigTalismanCard": {
+    "NAME": "亥豬",
+    "DESCRIPTION": "造成 !D! 點傷害。移除目標：力量、人工製品、荊棘、飛行、無實體、金屬化 NL 消耗 NL *動物符咒"
+  },
+  "fuZhouMod:Soultrap": {
+    "NAME": "拘魂",
+    "DESCRIPTION": "選擇消耗任意張手牌。每消耗奇數張，獲得 [#efc100]1[] 點 [#efc100]力量[] ；每消耗偶數張，獲得 [#efc100]1[] 點 [#efc100]敏捷[]  NL 消耗",
+    "UPGRADE_DESCRIPTION": "選擇消耗任意張手牌。每消耗奇數張，獲得 [#efc100]1[] 點 [#efc100]力量[] ；每消耗偶數張，獲得 [#efc100]1[] 點 [#efc100]敏捷[]  NL 消耗"
+  },
+  "fuZhouMod:SinglePlankBridge": {
+    "NAME": "獨木橋",
+    "DESCRIPTION": "選擇消耗任意張手牌，每消耗一張，你抽牌堆頂部第一張卡就會被打出一次 NL *龍小組",
+    "UPGRADE_DESCRIPTION": "選擇消耗任意張手牌，每消耗一張，你抽牌堆頂部第一張卡就會被打出其張數+1次 NL *龍小組"
+  },
+  "fuZhouMod:Ambidexterity": {
+    "NAME": "左右互搏",
+    "DESCRIPTION": "抽 !M! 張卡，從手牌中選擇一張丟棄，從手牌中選擇一張回到抽牌堆頂部 NL *龍小組",
+    "UPGRADE_DESCRIPTION": "抽 !M! 張卡，從手牌中選擇一張丟棄，從手牌中選擇一張回到抽牌堆頂部 NL *龍小組"
+  },
+  "fuZhouMod:JadeStealsTalisman": {
+    "NAME": "小玉偷符咒",
+    "DESCRIPTION": "從 13 張動物符咒卡片裏隨機獲取一個到手牌，其耗能在本回合變爲 *0  NL 消耗 NL *龍小組"
+  },
+  "fuZhouMod:Petrification": {
+    "NAME": "石化",
+    "DESCRIPTION": "賦予目標 1 層 [#efc100]石化[]  NL ( [#efc100]石化[] ：每回合開始獲得 [#efc100]1[] 點 [#efc100]力量[] (最高 [#efc100]10[] 點)，且受到的傷害提升 !M!% (每回合自增 1 層，最高 10 層)。) NL 消耗 NL *龍小組"
+  },
+  "fuZhouMod:Flatten": {
+    "NAME": "壓扁",
+    "DESCRIPTION": "造成 !D! 點傷害。 (傷害等同於 8 + 你的總牌組數量) NL *龍小組"
+  },
+  "fuZhouMod:HiddenDragon": {
+    "NAME": "潛龍在淵",
+    "DESCRIPTION": "獲得 !B! 點 *格擋  NL 保留 所有手牌 NL 下一回合開始時，額外獲得 [E]  NL 結束你的回合",
+    "UPGRADE_DESCRIPTION": "獲得 !B! 點 *格擋  NL 保留 所有手牌 NL 下一回合開始時，額外獲得 [E]  NL 結束你的回合"
+  },
+  "fuZhouMod:TargetImbalance": {
+    "NAME": "目標失衡",
+    "DESCRIPTION": "造成 !D! 點傷害。 若造成生命值傷害，隨機改變敵人意圖 NL 消耗 NL *龍小組"
+  },
+  "fuZhouMod:CardFireDemonQi": {
+    "NAME": "火之惡魔·小龍",
+    "DESCRIPTION": "給予所有敵人 #b!M! 層 *灼燒 。 NL 處於 *潮溼 狀態的敵人會與之合成爲 *高溫蒸汽 。 NL （基礎 #b2 層，升級 #b3 層）"
+  },
+  "fuZhouMod:CardMountainDemonQi": {
+    "NAME": "山之惡魔·波剛",
+    "DESCRIPTION": "造成等同於當前 *格擋 的傷害。若擊殺了敵人，獲得 !M! 點 *最大生命 ",
+    "EXTENDED_DESCRIPTION": [
+      " NL （造成 !D! 點傷害）"
+    ]
+  },
+  "fuZhouMod:CardWindDemonQi": {
+    "NAME": "風之惡魔·嘯風",
+    "DESCRIPTION": "抽 !M! 張牌，選擇 !fuZhouMod:DiscardCnt! 張手牌丟棄。 NL 給予全體敵人 !fuZhouMod:WindAmt! 層 *風勢 。 NL ( *風勢 會將敵人身上的 *潮溼 轉化爲同向層數的 *凍傷 ，並加速火、冰類異常狀態的結算與消耗。)"
+  },
+  "fuZhouMod:CardWaterDemonQi": {
+    "NAME": "水之惡魔·芭莎",
+    "DESCRIPTION": "對所有敵人造成 !D! 點傷害。對其中的每個敵人：若其已有 *凍傷 或 *冰獄 ，給予 #b!M! 層 *凍傷 ；否則給予 #b!M! 層 *潮溼 。 NL ( *灼燒 與 *潮溼 會自動合成 *高溫蒸汽 ) 小概率獲得金幣。 NL （基礎 #b2 層，升級 #b3 層）"
+  },
+  "fuZhouMod:CardThunderDemonQi": {
+    "NAME": "雷之惡魔·中蘇",
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 本場戰鬥每打出一次，耗能 [#71b1d1]-1[](最低 [#71b1d1]0[]) NL 永久傷害 [#71b1d1]+1[](上限 [#71b1d1]+!M![]) NL 若目標有 *潮溼 或 *高溫蒸汽 ，傷害提升 [#71b1d1]100%[]"
+  },
+  "fuZhouMod:CardEarthDemonQi": {
+    "NAME": "地之惡魔·地魁",
+    "DESCRIPTION": "本場戰鬥中沒用完的 *格擋 不會消失 NL 回合結束時沒有 *格擋 ，失去 [#efc100]!M![] 生命並獲得 [#efc100]最大生命值 1/8[] 的 *格擋 。 NL 每當你連續 [#efc100]3[] 回合沒有受到傷害，對全體敵人施加一層 *地縛 (受到傷害重置計數並解除 *地縛 )。"
+  },
+  "fuZhouMod:CardHeavenDemonQi": {
+    "NAME": "天空惡魔·西木",
+    "DESCRIPTION": "攻擊時觸發其身上各 1 層 *灼燒 、 *灼心 、 *凍傷 、 *冰獄  NL 攻擊命中時有 1/8 概率施加 1 層 *恐懼 ，目標每持有上述一種異常，概率提升 1/8 。"
+  },
+  "fuZhouMod:CardMoonDemonQi": {
+    "NAME": "月之惡魔·咒藍",
+    "DESCRIPTION": "失去當前生命值的 [#efc100]1/8[] 。 NL 選擇一個效果：對【自己】使用、對【敵方】使用，或發動【解除限制】。 NL 消耗"
+  },
+  "fuZhouMod:MoonChoiceSelf": {
+    "NAME": "對自己使用",
+    "DESCRIPTION": "將自己的 力量 與 敏捷 取反"
+  },
+  "fuZhouMod:MoonChoiceEnemy": {
+    "NAME": "對敵方使用",
+    "DESCRIPTION": "將一張0費的 月之惡魔(指向) 加入手牌"
+  },
+  "fuZhouMod:MoonChoiceUncap": {
+    "NAME": "解除限制",
+    "DESCRIPTION": "本回合內，你造成的 惡魔異常 傷害不再受到任何傷害上限的限制"
+  },
+  "fuZhouMod:MoonTargetEnemy": {
+    "NAME": "月之惡魔(指向)",
+    "DESCRIPTION": "將目標的 力量 與 敏捷 取反 NL 消耗 NL 虛無"
+  },
+  "fuZhouMod:MaskFace": {
+    "NAME": "面具臉譜",
+    "DESCRIPTION": "從抽牌堆中選擇 1 張 *面具 牌加入手牌，其本回合費用變爲 *0 。 NL 若抽牌堆中沒有 *面具 牌，則隨機加入 3 張 *黑影兵團 牌到手牌。",
+    "UPGRADE_DESCRIPTION": "從抽牌堆中選擇 1 張 *面具 牌加入手牌，其本回合費用變爲 *0 。 NL 若抽牌堆中沒有 *面具 牌，則隨機加入 3 張 *黑影兵團 牌到手牌。 NL 本場戰鬥面具上限 +1。"
+  },
+  "fuZhouMod:PeelMask": {
+    "NAME": "剝離面具",
+    "DESCRIPTION": "選擇你當前裝載的 1 個面具能力進行剝離。剝離普通面具時會返還對應的黑影兵團牌與面具牌；剝離塔拉時會返還等同層數的塔拉麪具牌，並隨機獲得該層數 2 倍的黑影兵團牌。 NL 本次剝離返還出的面具牌本場戰鬥費用 -1（最低爲 0）。",
+    "UPGRADE_DESCRIPTION": "選擇你當前裝載的 1 個面具能力進行剝離。剝離普通面具時會返還對應的黑影兵團牌與面具牌；剝離塔拉時會返還等同層數的塔拉麪具牌，並隨機獲得該層數 2 倍的黑影兵團牌。 NL 本次剝離返還出的面具牌本場戰鬥費用 -1（最低爲 0）。 NL 升級後本卡費用變爲 0。"
+  },
+  "fuZhouMod:BlackHandSiegeRam": {
+    "NAME": "裸絞",
+    "DESCRIPTION": "造成 !D! 點傷害。若目標 *黑手 ≥3，消耗目標全部 *黑手 。每消耗 3 層 *黑手 ，目標下降 1 點 *力量 。2 回合後恢復下降的 *力量 。 NL *黑手幫"
+  },
+  "fuZhouMod:BlackHandFirstStrike": {
+    "NAME": "先攻",
+    "DESCRIPTION": "造成 !D! 點傷害。若目標有 *黑手 ，額外造成 !M! 點傷害；若目標沒有 *黑手 ，施加 2 層 *黑手 。 NL *黑手幫"
+  },
+  "fuZhouMod:BlackHandStrike": {
+    "NAME": "黑手打擊",
+    "DESCRIPTION": "造成 !D! 點傷害。若目標沒有 *黑手 ，施加 !M! 層 *黑手 ；否則抽 1 張牌並施加 1 層 *黑手 。 NL *黑手幫"
+  },
+  "fuZhouMod:BlackHandExtortion": {
+    "NAME": "敲詐",
+    "DESCRIPTION": "造成 !D! 點傷害。目標每有 3 層 *黑手 ，獲得 1 金幣，然後消耗目標 2 層 *黑手 。 NL *黑手幫"
+  },
+  "fuZhouMod:BlackHandCloseNet": {
+    "NAME": "收網",
+    "DESCRIPTION": "造成 !D! 點傷害。若目標 *黑手 ≥4，則每消耗 4 層 *黑手 再造成一次同等傷害，直到其 *黑手 \u003c4。 NL *黑手幫"
+  },
+  "fuZhouMod:BlackHandSuppressiveFire": {
+    "NAME": "射擊",
+    "DESCRIPTION": "對所有敵人造成 !D! 點傷害；每名敵人每有 2 層 *黑手 ，額外受到 1 點傷害。 NL *黑手幫"
+  },
+  "fuZhouMod:BlackHandBlastDistrict13": {
+    "NAME": "爆破",
+    "DESCRIPTION": "消耗所有敵人的 *黑手 。每消耗 1 層，該敵人受到 !M! 點傷害；若總消耗≥8層，全體再獲得 1 層 *易傷 和 1 層 *虛弱 。 NL *黑手幫",
+    "UPGRADE_DESCRIPTION": "消耗所有敵人的 *黑手 。每消耗 1 層，該敵人受到 !M! 點傷害；若總消耗≥8層，全體再獲得 2 層 *易傷 和 2 層 *虛弱 。 NL *黑手幫"
+  },
+  "fuZhouMod:BlackHandCodePhrase": {
+    "NAME": "暗號",
+    "DESCRIPTION": "若上一張打出的牌是 *黑手幫 牌，獲得 [E] 並抽 1 張牌；否則獲得 !B! 點 *格擋 。 NL 消耗。 NL *黑手幫"
+  },
+  "fuZhouMod:BlackHandDistrict13Insider": {
+    "NAME": "十三區內奸",
+    "DESCRIPTION": "預覽牌庫頂 !M! 張，可棄置任意張；每棄 1 張獲得 2 點 *格擋 。每保留 1 張，對所有敵人施加 1 層 *黑手 。 NL *黑手幫"
+  },
+  "fuZhouMod:BlackHandSpreadRumors": {
+    "NAME": "陰謀",
+    "DESCRIPTION": "對目標施加 !M! 層 *黑手 。若其已有 *黑手 ，額外獲得 [E] 。 NL *黑手幫"
+  },
+  "fuZhouMod:BlackHandCoerciveInterrogation": {
+    "NAME": "囚禁",
+    "DESCRIPTION": "目標本回合失去 X 點 *力量 （X=其 *黑手 層數 /2，向下取整），並獲得 1 層 *虛弱 。 NL *黑手幫",
+    "UPGRADE_DESCRIPTION": "目標本回合失去 X 點 *力量 （X=其 *黑手 層數 /2，向下取整，且 +1），並獲得 1 層 *虛弱 。 NL *黑手幫"
+  },
+  "fuZhouMod:BlackHandEscort": {
+    "NAME": "護送",
+    "DESCRIPTION": "獲得 !B! 點 *格擋 。下回合開始時，獲得等同於敵方總 *黑手 層數的 *格擋 。 NL *黑手幫"
+  },
+  "fuZhouMod:BlackHandBlackMarketDeal": {
+    "NAME": "黑市交易",
+    "DESCRIPTION": "失去 15 金幣；獲得 [E] 並抽 !M! 張牌；對所有敵人施加 1 層 *黑手 。 NL *黑手幫",
+    "UPGRADE_DESCRIPTION": "失去 15 金幣；獲得 [E] 並抽 !M! 張牌；對所有敵人施加 1 層 *黑手 。 NL *黑手幫",
+    "EXTENDED_DESCRIPTION": [
+      "金幣不足，無法進行黑市交易。"
+    ]
+  },
+  "fuZhouMod:BlackHandTangible": {
+    "NAME": "黑手",
+    "DESCRIPTION": "將目標的 *黑手 層數翻倍。 NL *黑手幫"
+  },
+  "fuZhouMod:BlackHandBounty": {
+    "NAME": "懸賞",
+    "DESCRIPTION": "每當你施加 *黑手 時，對該目標造成 2 點傷害。帶 *黑手 的敵人死亡時，獲得 !M! 金幣。 NL *黑手幫"
+  },
+  "fuZhouMod:BlackHandNoNameYet": {
+    "NAME": "痞子",
+    "DESCRIPTION": "回合開始時，對所有敵人施加 1 層 *黑手 。每名敵人每回合累計獲得 4 層 *黑手 時，對其造成 !M! 點傷害並抽 1 張牌。 NL *黑手幫"
+  },
+  "fuZhouMod:BlackHandPullStrings": {
+    "NAME": "撈人",
+    "DESCRIPTION": "回合開始時，從棄牌堆中選擇 1 張牌加入手牌。 NL *黑手幫",
+    "UPGRADE_DESCRIPTION": "固有 NL 回合開始時，從棄牌堆中選擇 1 張牌加入手牌。 NL *黑手幫"
+  },
+  "fuZhouMod:DarkPact": {
+    "NAME": "黑暗契約",
+    "DESCRIPTION": "獲得 !M! 層 *影噬 。 NL 失去 2 點 *力量 。 NL [#efc100]消耗[]。"
+  },
+  "fuZhouMod:ShadowRitual": {
+    "NAME": "潛影儀式",
+    "DESCRIPTION": "獲得 !M! 層 *影噬 。 NL 失去 5 點生命。 NL [#efc100]消耗[]。"
+  },
+  "fuZhouMod:ShadowDecree": {
+    "NAME": "黑影敕令",
+    "DESCRIPTION": "獲得 4 層 *影噬 。 NL 回合開始時，失去 1 點 *力量 和 1 點 *敏捷 ，並失去 1 點生命值，且你無法再獲得 *力量 。"
+  },
+  "fuZhouMod:CardEightDemonPossession": {
+    "NAME": "八魔附體",
+    "DESCRIPTION": "每回合前 #b2 次打出攻擊牌時，隨機給予被攻擊的敵人 #b2 層一種異常（惡魔異常、虛弱、易傷、纏繞、點穴、以手拒之、勒喉、屍爆術或中毒）。羣體攻擊會使所有被攻擊的敵人獲得同一種異常。",
+    "UPGRADE_DESCRIPTION": "固有。 NL 每回合前 #b2 次打出攻擊牌時，隨機給予被攻擊的敵人 #b2 層一種異常（惡魔異常、虛弱、易傷、纏繞、點穴、以手拒之、勒喉、屍爆術或中毒）。羣體攻擊會使所有被攻擊的敵人獲得同一種異常。"
+  },
+  "fuZhouMod:CurseTohru": {
+    "NAME": "特魯",
+    "DESCRIPTION": "詛咒。無法打出。 NL 抽到時：本回合你打出的第一張攻擊牌費用 +1。 NL 回合結束時：若你本回合未打出攻擊牌，失去 6 點生命。"
+  },
+  "fuZhouMod:CurseJackie": {
+    "NAME": "成龍",
+    "DESCRIPTION": "詛咒。無法打出。 NL 回合結束時：若此牌仍在手牌，獲得 1 層虛弱。"
+  },
+  "fuZhouMod:CurseJade": {
+    "NAME": "小玉",
+    "DESCRIPTION": "詛咒。無法打出。 NL 抽到時：隨機棄 1 張手牌，並將 1 張【眩暈】置於抽牌堆頂。"
+  },
+  "fuZhouMod:CurseBlack": {
+    "NAME": "布萊克",
+    "DESCRIPTION": "詛咒。無法打出。 NL 抽到時：本回合你打出的第一張技能牌費用 +1。 NL 回合結束時：若此牌仍在手牌，獲得 1 層易傷。"
+  },
+  "fuZhouMod:ChestnutBall": {
+    "NAME": "栗子球",
+    "DESCRIPTION": "本回合受到任何來源的傷害視爲 0 。 NL 消耗 NL 虛無",
+    "UPGRADE_DESCRIPTION": "本回合受到任何來源的傷害視爲 0 。 NL 消耗"
+  },
+  "fuZhouMod:DemonDice": {
+    "NAME": "惡魔的骰子",
+    "DESCRIPTION": "指定一名敵人，其 *力量 隨機下降 [#efc100]1~6[] 點。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "指定一名敵人，其 *力量 隨機下降 [#efc100]1~6[] 點。 NL 消耗"
+  },
+  "fuZhouMod:AngelDice": {
+    "NAME": "天使的骰子",
+    "DESCRIPTION": "你的 *力量 隨機提升 [#efc100]1~6[] 點。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "你的 *力量 隨機提升 [#efc100]1~6[] 點。 NL 消耗"
+  },
+  "fuZhouMod:ExodiaSealed": {
+    "NAME": "被封印的艾克佐迪亞",
+    "DESCRIPTION": "手牌集齊 [#efc100]被封印的艾克佐迪亞[] 、 [#efc100]被封印者的右臂[] 、 [#efc100]被封印者的左臂[] 、 [#efc100]被封印者的右足[] 、 [#efc100]被封印者的左足[] 時，消滅場上全部怪物，獲得本場戰鬥勝利。",
+    "UPGRADE_DESCRIPTION": "保留 NL 手牌集齊 [#efc100]被封印的艾克佐迪亞[] 、 [#efc100]被封印者的右臂[] 、 [#efc100]被封印者的左臂[] 、 [#efc100]被封印者的右足[] 、 [#efc100]被封印者的左足[] 時，消滅場上全部怪物，獲得本場戰鬥勝利。"
+  },
+  "fuZhouMod:ExodiaRightArm": {
+    "NAME": "被封印者的右臂",
+    "DESCRIPTION": "獲得 !B! 點 *格擋 "
+  },
+  "fuZhouMod:ExodiaLeftArm": {
+    "NAME": "被封印者的左臂",
+    "DESCRIPTION": "獲得 !B! 點 *格擋 "
+  },
+  "fuZhouMod:ExodiaRightLeg": {
+    "NAME": "被封印者的右足",
+    "DESCRIPTION": "造成 !D! 點傷害"
+  },
+  "fuZhouMod:ExodiaLeftLeg": {
+    "NAME": "被封印者的左足",
+    "DESCRIPTION": "造成 !D! 點傷害"
+  },
+  "fuZhouMod:RingOfDestruction": {
+    "NAME": "破壞輪",
+    "DESCRIPTION": "選擇一個怪物爲目標。該怪物死亡時，對場上其他怪物造成其 [#efc100]最大生命值[] 的傷害。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "選擇一個怪物爲目標。該怪物死亡時，對場上其他怪物造成其 [#efc100]最大生命值[] 的傷害。"
+  },
+  "fuZhouMod:BlueEyesWhiteDragon": {
+    "NAME": "青眼白龍",
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 隨即隨機 *消耗 2 張手牌。"
+  },
+  "fuZhouMod:GandoraDragon": {
+    "NAME": "破壞龍甘多拉",
+    "DESCRIPTION": "清空你和全部怪物的 *力量 （歸零）。 NL 對所有怪物造成清空力量 [#efc100]絕對值之和[] 的傷害。 NL 消耗"
+  },
+  "fuZhouMod:ShadowGuard": {
+    "NAME": "黑影護衛",
+    "DESCRIPTION": "*尼嘉-忍者團 造成生命傷害時，獲得等量 *格擋 。",
+    "UPGRADE_DESCRIPTION": "*尼嘉-忍者團 造成傷害時，獲得等量 *格擋 ，包括被目標 *格擋 吸收的傷害。"
+  },
+  "fuZhouMod:DoubleSticks": {
+    "NAME": "雙棍",
+    "DESCRIPTION": "*尼嘉-忍者團 從 *影噬 獲得的傷害加成變為 3 倍。",
+    "UPGRADE_DESCRIPTION": "*尼嘉-忍者團 從 *影噬 獲得的傷害加成變為 3 倍。 NL 獲得 1 層 *影噬 。"
+  },
+  "fuZhouMod:WingsuitFlight": {
+    "NAME": "翼裝飛行",
+    "DESCRIPTION": "*尼嘉-忍者團 獲得 *保留 。 NL 每回合每打出 2 張 *尼嘉-忍者團 ，本回合獲得 1 層 *影噬 。",
+    "UPGRADE_DESCRIPTION": "*尼嘉-忍者團 獲得 *保留 。 NL 每回合每打出 2 張 *尼嘉-忍者團 ，本回合獲得 1 層 *影噬 。"
+  },
+  "fuZhouMod:Shuriken": {
+    "NAME": "手裏劍",
+    "DESCRIPTION": "持有 *手裏劍 時，*尼嘉-忍者團 每段基礎傷害變為：基礎版 3 點，升級版 5 點。 NL 攻擊 2 次。",
+    "UPGRADE_DESCRIPTION": "持有 *手裏劍 時，*尼嘉-忍者團 每段基礎傷害變為：基礎版 3 點，升級版 5 點。 NL 攻擊 3 次。"
+  },
+  "fuZhouMod:SmokeBomb": {
+    "NAME": "煙霧彈",
+    "DESCRIPTION": "*尼嘉-忍者團 造成生命傷害時，使目標本回合失去 1 點 *力量 。",
+    "UPGRADE_DESCRIPTION": "*尼嘉-忍者團 每段攻擊結算時，使目標本回合失去 1 點 *力量 。"
+  },
+  "fuZhouMod:NoWayThrough": {
+    "NAME": "此路不通",
+    "DESCRIPTION": "獲得 !B! 點 *格擋 。 NL 將 2 張 *尼嘉-忍者團 加入手牌。",
+    "UPGRADE_DESCRIPTION": "獲得 !B! 點 *格擋 。 NL 將 2 張 *尼嘉-忍者團+ 加入手牌。"
+  },
+  "fuZhouMod:NinjaCooperation": {
+    "NAME": "忍者協作",
+    "DESCRIPTION": "消耗牌堆每有 1 張 *尼嘉-忍者團 ， *尼嘉-忍者團 每段傷害提高 1 點。",
+    "UPGRADE_DESCRIPTION": "固有。 NL 消耗牌堆每有 1 張 *尼嘉-忍者團 ， *尼嘉-忍者團 每段傷害提高 1 點。"
+  },
+  "fuZhouMod:Katana": {
+    "NAME": "武士刀",
+    "DESCRIPTION": "*尼嘉-忍者團 改為攻擊所有敵人。",
+    "UPGRADE_DESCRIPTION": "固有。 NL *尼嘉-忍者團 改為攻擊所有敵人。"
+  },
+  "fuZhouMod:DemonCodex": {
+    "NAME": "惡魔法典",
+    "DESCRIPTION": "*黑影兵團 會受到 *力量 、 *敏捷 、 *易傷 、 *虛弱 、 *脆弱 的影響。 NL 本場戰鬥面具容量 +!M! 。",
+    "UPGRADE_DESCRIPTION": "*黑影兵團 會受到 *力量 、 *敏捷 、 *易傷 、 *虛弱 、 *脆弱 的影響。 NL 本場戰鬥面具容量 +!M! 。"
+  },
+  "fuZhouMod:EmergencyEscape": {
+    "NAME": "緊急逃生",
+    "DESCRIPTION": "獲得 !B! 層 *覆甲 。 NL 未來 !M! 回合，免疫並反彈來自怪物的減益。 NL *龍小組",
+    "UPGRADE_DESCRIPTION": "獲得 !B! 層 *覆甲 。 NL 未來 !M! 回合，免疫並反彈來自怪物的減益。 NL *龍小組"
+  },
+  "fuZhouMod:RabbitStrike": {
+    "NAME": "狡兔出擊",
+    "DESCRIPTION": "造成 !D! 點傷害。 NL 將一張本牌的複製加入棄牌堆。 NL 如果擁有 *兔符咒 ，抽 1 張牌。 NL 若本回合已打出其他 *阿福 ，獲得 [E] ，每回合最多 2 次。 NL *阿福"
+  },
+  "fuZhouMod:BlackHandBitterChoice": {
+    "NAME": "苦澀的抉擇",
+    "DESCRIPTION": "失去 3 點生命。若仍存活，獲得 !M! [E] ，抽 !M! 張牌，本回合獲得 2 點 *力量 和 2 點 *敏捷 。 NL 下回合全部卡牌費用 +1。 NL 消耗 NL *黑手幫",
+    "UPGRADE_DESCRIPTION": "失去 3 點生命。若仍存活，獲得 !M! [E] ，抽 !M! 張牌，本回合獲得 3 點 *力量 和 3 點 *敏捷 。 NL 下回合全部卡牌費用 +1。 NL 消耗 NL *黑手幫"
+  },
+  "fuZhouMod:OfferingToEmperor": {
+    "NAME": "給皇帝的供奉",
+    "DESCRIPTION": "恢復 !M! 點生命。 NL 獲得 1 瓶隨機藥水。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "恢復 !M! 點生命。 NL 獲得 1 瓶隨機藥水。 NL 消耗"
+  },
+  "fuZhouMod:Possession": {
+    "NAME": "奪舍",
+    "DESCRIPTION": "本回合未打出攻擊牌時才能打出。 NL 本回合不能再打出攻擊牌。 NL 眩暈目標 1 回合，奪走目標的 *力量 、 *人工製品 、 *儀式 、 *金屬化 和 *格擋 。 NL 施加 !M! 層 *易傷 和 !M! 層 *虛弱 。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "本回合未打出攻擊牌時才能打出。 NL 本回合不能再打出攻擊牌。 NL 眩暈目標 1 回合，奪走目標的 *力量 、 *人工製品 、 *儀式 、 *金屬化 和 *格擋 。 NL 施加 !M! 層 *易傷 和 !M! 層 *虛弱 。 NL 消耗",
+    "EXTENDED_DESCRIPTION": [
+      "本回合已經打出過攻擊牌，無法打出奪舍。"
+    ]
+  }
+}

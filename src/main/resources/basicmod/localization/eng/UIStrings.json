@@ -85,9 +85,10 @@
                                       },
     "fuZhouMod:RatTalismanUI":  {
                                     "TEXT":  [
-                                                 "Select a Curse or Status card to replace",
+                                                 "Select a Curse or Status card to randomly transform",
                                                  "Select a card to add to your hand",
-                                                 "Ethereal. "
+                                                 "Ethereal. ",
+                                                 "Cancel"
                                              ]
                                 },
     "fuZhouMod:SoultrapUI":  {

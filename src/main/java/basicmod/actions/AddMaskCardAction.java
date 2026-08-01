@@ -1,6 +1,7 @@
 package basicmod.actions;
 
 import basemod.BaseMod;
+import basicmod.helpers.NiJiaSupportHelper;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -31,6 +32,7 @@ public class AddMaskCardAction extends AbstractGameAction {
      */
     @Override
     public void update() {
+        NiJiaSupportHelper.prepareGeneratedNiJiaCard(card);
         // 如果手牌未满，正常加入手牌
         if (AbstractDungeon.player.hand.size() < BaseMod.MAX_HAND_SIZE) {
             AbstractDungeon.actionManager.addToTop(new MakeTempCardInHandAction(card, 1));

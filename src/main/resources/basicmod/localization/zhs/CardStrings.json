@@ -583,5 +583,77 @@
   "fuZhouMod:GandoraDragon": {
     "NAME": "破坏龙甘多拉",
     "DESCRIPTION": "清空你和全部怪物的 *力量 （归零）。 NL 对所有怪物造成清空力量 [#efc100]绝对值之和[] 的伤害。 NL 消耗"
+  },
+  "fuZhouMod:ShadowGuard": {
+    "NAME": "黑影护卫",
+    "DESCRIPTION": "*尼嘉-忍者团 造成生命伤害时，获得等量 *格挡 。",
+    "UPGRADE_DESCRIPTION": "*尼嘉-忍者团 造成伤害时，获得等量 *格挡 ，包括被目标 *格挡 吸收的伤害。"
+  },
+  "fuZhouMod:DoubleSticks": {
+    "NAME": "双棍",
+    "DESCRIPTION": "*尼嘉-忍者团 从 *影噬 获得的伤害加成变为 3 倍。",
+    "UPGRADE_DESCRIPTION": "*尼嘉-忍者团 从 *影噬 获得的伤害加成变为 3 倍。 NL 获得 1 层 *影噬 。"
+  },
+  "fuZhouMod:WingsuitFlight": {
+    "NAME": "翼装飞行",
+    "DESCRIPTION": "*尼嘉-忍者团 获得 *保留 。 NL 每回合每打出 2 张 *尼嘉-忍者团 ，本回合获得 1 层 *影噬 。",
+    "UPGRADE_DESCRIPTION": "*尼嘉-忍者团 获得 *保留 。 NL 每回合每打出 2 张 *尼嘉-忍者团 ，本回合获得 1 层 *影噬 。"
+  },
+  "fuZhouMod:Shuriken": {
+    "NAME": "手里剑",
+    "DESCRIPTION": "持有 *手里剑 时，*尼嘉-忍者团 每段基础伤害变为：基础版 3 点，升级版 5 点。 NL 攻击 2 次。",
+    "UPGRADE_DESCRIPTION": "持有 *手里剑 时，*尼嘉-忍者团 每段基础伤害变为：基础版 3 点，升级版 5 点。 NL 攻击 3 次。"
+  },
+  "fuZhouMod:SmokeBomb": {
+    "NAME": "烟雾弹",
+    "DESCRIPTION": "*尼嘉-忍者团 造成生命伤害时，使目标本回合失去 1 点 *力量 。",
+    "UPGRADE_DESCRIPTION": "*尼嘉-忍者团 每段攻击结算时，使目标本回合失去 1 点 *力量 。"
+  },
+  "fuZhouMod:NoWayThrough": {
+    "NAME": "此路不通",
+    "DESCRIPTION": "获得 !B! 点 *格挡 。 NL 将 2 张 *尼嘉-忍者团 加入手牌。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 *格挡 。 NL 将 2 张 *尼嘉-忍者团+ 加入手牌。"
+  },
+  "fuZhouMod:NinjaCooperation": {
+    "NAME": "忍者协作",
+    "DESCRIPTION": "消耗牌堆每有 1 张 *尼嘉-忍者团 ， *尼嘉-忍者团 每段伤害提高 1 点。",
+    "UPGRADE_DESCRIPTION": "固有。 NL 消耗牌堆每有 1 张 *尼嘉-忍者团 ， *尼嘉-忍者团 每段伤害提高 1 点。"
+  },
+  "fuZhouMod:Katana": {
+    "NAME": "武士刀",
+    "DESCRIPTION": "*尼嘉-忍者团 改为攻击所有敌人。",
+    "UPGRADE_DESCRIPTION": "固有。 NL *尼嘉-忍者团 改为攻击所有敌人。"
+  },
+  "fuZhouMod:DemonCodex": {
+    "NAME": "恶魔法典",
+    "DESCRIPTION": "*黑影兵团 会受到 *力量 、 *敏捷 、 *易伤 、 *虚弱 、 *脆弱 的影响。 NL 本场战斗面具容量 +!M! 。",
+    "UPGRADE_DESCRIPTION": "*黑影兵团 会受到 *力量 、 *敏捷 、 *易伤 、 *虚弱 、 *脆弱 的影响。 NL 本场战斗面具容量 +!M! 。"
+  },
+  "fuZhouMod:EmergencyEscape": {
+    "NAME": "紧急逃生",
+    "DESCRIPTION": "获得 !B! 层 *覆甲 。 NL 未来 !M! 回合，免疫并反弹来自怪物的减益。 NL *龙小组",
+    "UPGRADE_DESCRIPTION": "获得 !B! 层 *覆甲 。 NL 未来 !M! 回合，免疫并反弹来自怪物的减益。 NL *龙小组"
+  },
+  "fuZhouMod:RabbitStrike": {
+    "NAME": "狡兔出击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 将一张本牌的复制加入弃牌堆。 NL 如果拥有 *兔符咒 ，抽 1 张牌。 NL 若本回合已打出其他 *阿福 ，获得 [E] ，每回合最多 2 次。 NL *阿福"
+  },
+  "fuZhouMod:BlackHandBitterChoice": {
+    "NAME": "苦涩的抉择",
+    "DESCRIPTION": "失去 3 点生命。若仍存活，获得 !M! [E] ，抽 !M! 张牌，本回合获得 2 点 *力量 和 2 点 *敏捷 。 NL 下回合全部卡牌费用 +1。 NL 消耗 NL *黑手帮",
+    "UPGRADE_DESCRIPTION": "失去 3 点生命。若仍存活，获得 !M! [E] ，抽 !M! 张牌，本回合获得 3 点 *力量 和 3 点 *敏捷 。 NL 下回合全部卡牌费用 +1。 NL 消耗 NL *黑手帮"
+  },
+  "fuZhouMod:OfferingToEmperor": {
+    "NAME": "给皇帝的供奉",
+    "DESCRIPTION": "恢复 !M! 点生命。 NL 获得 1 瓶随机药水。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "恢复 !M! 点生命。 NL 获得 1 瓶随机药水。 NL 消耗"
+  },
+  "fuZhouMod:Possession": {
+    "NAME": "夺舍",
+    "DESCRIPTION": "本回合未打出攻击牌时才能打出。 NL 本回合不能再打出攻击牌。 NL 眩晕目标 1 回合，夺走目标的 *力量 、 *人工制品 、 *仪式 、 *金属化 和 *格挡 。 NL 施加 !M! 层 *易伤 和 !M! 层 *虚弱 。 NL 消耗",
+    "UPGRADE_DESCRIPTION": "本回合未打出攻击牌时才能打出。 NL 本回合不能再打出攻击牌。 NL 眩晕目标 1 回合，夺走目标的 *力量 、 *人工制品 、 *仪式 、 *金属化 和 *格挡 。 NL 施加 !M! 层 *易伤 和 !M! 层 *虚弱 。 NL 消耗",
+    "EXTENDED_DESCRIPTION": [
+      "本回合已经打出过攻击牌，无法打出夺舍。"
+    ]
   }
 }

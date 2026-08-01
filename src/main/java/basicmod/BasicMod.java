@@ -75,6 +75,8 @@ public class BasicMod implements
     public static boolean semiAutoMode = false;
     /** 黑影兵团烧牌是否由玩家自选，true为自选，false为自动随机 */
     public static boolean shadowKhanManualExhaustMode = true;
+    /** 黑影兵团烧牌挡位：1自选，0随机，2明塔随机且伊卡白板 */
+    public static int shadowKhanExhaustMode = 1;
     /** 【远古的封印】事件拒绝状态的存档键名 */
     public static final String PANKU_BOX_EVENT_DECLINED_SAVE_KEY = makeID("PanKuBoxEventDeclined");
     /** 本局游戏中玩家是否拒绝过【远古的封印】事件 */
@@ -256,15 +258,18 @@ public class BasicMod implements
             Properties defaults = new Properties();
             defaults.setProperty("semiAutoMode", "true");
             defaults.setProperty("shadowKhanManualExhaustMode", "true");
+            defaults.setProperty("shadowKhanExhaustMode", "1");
             defaults.setProperty("finalBossChoice", "DAD");
             modConfig = new SpireConfig(modID, "fuZhouModConfig", defaults);
             semiAutoMode = modConfig.getBool("semiAutoMode");
             shadowKhanManualExhaustMode = modConfig.getBool("shadowKhanManualExhaustMode");
+            shadowKhanExhaustMode = parseShadowKhanExhaustMode(modConfig.getString("shadowKhanExhaustMode"), shadowKhanManualExhaustMode);
+            shadowKhanManualExhaustMode = shadowKhanExhaustMode == 1;
             FinalBossChoice defaultChoice = FinalBossChoice.fromString(modConfig.getString("finalBossChoice"));
             FinalBossChoiceManager.setDefaultChoice(defaultChoice);
             BaseMod.addSaveField(FinalBossChoiceManager.SAVE_KEY, FinalBossChoiceManager.getInstance());
             BaseMod.addSaveField(PANKU_BOX_EVENT_DECLINED_SAVE_KEY, PAN_KU_BOX_EVENT_DECLINED_SAVABLE);
-            logger.info("Configuration loaded: semiAutoMode = " + semiAutoMode + ", shadowKhanManualExhaustMode = " + shadowKhanManualExhaustMode);
+            logger.info("Configuration loaded: semiAutoMode = " + semiAutoMode + ", shadowKhanManualExhaustMode = " + shadowKhanManualExhaustMode + ", shadowKhanExhaustMode = " + shadowKhanExhaustMode);
         } catch (Exception e) {
             logger.error("Failed to initialize SpireConfig", e);
         }
@@ -278,13 +283,33 @@ public class BasicMod implements
             if (modConfig != null) {
                 modConfig.setBool("semiAutoMode", semiAutoMode);
                 modConfig.setBool("shadowKhanManualExhaustMode", shadowKhanManualExhaustMode);
+                modConfig.setString("shadowKhanExhaustMode", String.valueOf(shadowKhanExhaustMode));
                 modConfig.setString("finalBossChoice", FinalBossChoiceManager.getDefaultChoice().name());
                 modConfig.save();
-                logger.info("Configuration saved: semiAutoMode = " + semiAutoMode + ", shadowKhanManualExhaustMode = " + shadowKhanManualExhaustMode);
+                logger.info("Configuration saved: semiAutoMode = " + semiAutoMode + ", shadowKhanManualExhaustMode = " + shadowKhanManualExhaustMode + ", shadowKhanExhaustMode = " + shadowKhanExhaustMode);
             }
         } catch (Exception e) {
             logger.error("Failed to save SpireConfig", e);
         }
+    }
+
+    /**
+     * 解析黑影令牌烧牌挡位，并兼容旧版布尔配置。
+     *
+     * @param modeValue 新版整数挡位配置文本
+     * @param manualMode 旧版是否自选烧牌配置
+     * @return 合法挡位：1自选，0随机，2明塔随机且伊卡白板
+     */
+    private static int parseShadowKhanExhaustMode(String modeValue, boolean manualMode) {
+        try {
+            int mode = Integer.parseInt(modeValue);
+            if (mode >= 0 && mode <= 2) {
+                return mode;
+            }
+        } catch (Exception ignored) {
+            logger.info("【黑影令牌】未读取到新版烧牌挡位，使用旧版配置转换。");
+        }
+        return manualMode ? 1 : 0;
     }
 
     /**

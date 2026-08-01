@@ -68,7 +68,7 @@ public class MingTaExhaustAction extends AbstractGameAction {
                 return;
             }
 
-            if (!ShadowKhanToken.isManualExhaustMode()) {
+            if (ShadowKhanToken.isMingTaRandomExhaustMode()) {
                 exhaustAndDamage(getRandomAttackCard());
                 this.isDone = true;
                 return;

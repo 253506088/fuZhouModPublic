@@ -46,6 +46,11 @@ public class YiKaExhaustAction extends AbstractGameAction {
     @Override
     public void update() {
         if (this.duration == Settings.ACTION_DUR_FAST) {
+            if (ShadowKhanToken.isYiKaBlankMode()) {
+                this.isDone = true;
+                return;
+            }
+
             if (AbstractDungeon.player.hand.isEmpty()) {
                 this.isDone = true;
                 return;

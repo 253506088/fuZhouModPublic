@@ -3,17 +3,13 @@ package basicmod.cards.shadowkhan;
 import basicmod.BasicMod;
 import basicmod.cards.BaseCard;
 import basicmod.enums.CustomTags;
-import basicmod.powers.DominionPower;
+import basicmod.helpers.NiJiaSupportHelper;
 import basicmod.util.CardStats;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.DexterityPower;
-import com.megacrit.cardcrawl.powers.FrailPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.powers.WeakPower;
 
 import java.util.ArrayList;
 
@@ -37,17 +33,57 @@ public abstract class BaseShadowKhanCard extends BaseCard {
     }
 
     /**
-     * 读取玩家身上的影噬层数。
+     * 判断本次黑影兵团结算是否忽略力量、敏捷、虚弱和脆弱。
      *
-     * @return 当前影噬层数，没有影噬时返回 0
+     * @param snapshot 玩家能力快照
+     * @return 没有恶魔法典时返回 true
      */
-    private int getDominionAmount() {
-        if (AbstractDungeon.player == null) {
-            return 0;
-        }
-        // 统一从玩家身上的【影噬】读取层数，供伤害/格挡结算复用。
-        AbstractPower dominion = AbstractDungeon.player.getPower(DominionPower.POWER_ID);
-        return dominion == null ? 0 : Math.max(0, dominion.amount);
+    protected boolean shouldIgnoreBaseShadowKhanPowerModifiers(NiJiaSupportHelper.ShadowKhanPowerSnapshot snapshot) {
+        return !snapshot.hasDemonCodex;
+    }
+
+    /**
+     * 取得黑影兵团结算用的基础伤害。
+     *
+     * @param originalBaseDamage 卡牌原本基础伤害
+     * @param snapshot 玩家能力快照
+     * @return 实际参与结算的基础伤害
+     */
+    protected int getShadowKhanBaseDamage(int originalBaseDamage, NiJiaSupportHelper.ShadowKhanPowerSnapshot snapshot) {
+        return originalBaseDamage;
+    }
+
+    /**
+     * 取得黑影兵团结算用的基础格挡。
+     *
+     * @param originalBaseBlock 卡牌原本基础格挡
+     * @param snapshot 玩家能力快照
+     * @return 实际参与结算的基础格挡
+     */
+    protected int getShadowKhanBaseBlock(int originalBaseBlock, NiJiaSupportHelper.ShadowKhanPowerSnapshot snapshot) {
+        return originalBaseBlock;
+    }
+
+    /**
+     * 取得影噬提供的伤害加成。
+     *
+     * @param dominion 当前影噬层数
+     * @param snapshot 玩家能力快照
+     * @return 加到基础伤害上的数值
+     */
+    protected int getDominionDamageBonus(int dominion, NiJiaSupportHelper.ShadowKhanPowerSnapshot snapshot) {
+        return dominion;
+    }
+
+    /**
+     * 取得影噬提供的格挡加成。
+     *
+     * @param dominion 当前影噬层数
+     * @param snapshot 玩家能力快照
+     * @return 加到基础格挡上的数值
+     */
+    protected int getDominionBlockBonus(int dominion, NiJiaSupportHelper.ShadowKhanPowerSnapshot snapshot) {
+        return dominion;
     }
 
     /**
@@ -149,34 +185,37 @@ public abstract class BaseShadowKhanCard extends BaseCard {
      */
     @Override
     public void applyPowers() {
-        int dominion = getDominionAmount();
+        // 关键点：一趟收集本次结算需要的全部玩家能力，避免高频路径上反复线性查找。
+        NiJiaSupportHelper.ShadowKhanPowerSnapshot powerSnapshot = NiJiaSupportHelper.collectShadowKhanPowers();
+        int dominion = powerSnapshot.getDominionAmount();
         int originalBaseDamage = this.baseDamage;
         int originalBaseBlock = this.baseBlock;
 
-        AbstractPower strPower = AbstractDungeon.player == null ? null : AbstractDungeon.player.getPower(StrengthPower.POWER_ID);
-        AbstractPower dexPower = AbstractDungeon.player == null ? null : AbstractDungeon.player.getPower(DexterityPower.POWER_ID);
-        AbstractPower weakPower = AbstractDungeon.player == null ? null : AbstractDungeon.player.getPower(WeakPower.POWER_ID);
-        AbstractPower frailPower = AbstractDungeon.player == null ? null : AbstractDungeon.player.getPower(FrailPower.POWER_ID);
+        AbstractPower strPower = powerSnapshot.strength;
+        AbstractPower dexPower = powerSnapshot.dexterity;
+        AbstractPower weakPower = powerSnapshot.weak;
+        AbstractPower frailPower = powerSnapshot.frail;
         int originalStr = strPower == null ? 0 : strPower.amount;
         int originalDex = dexPower == null ? 0 : dexPower.amount;
-        boolean ignoreWeak = this.type == CardType.ATTACK;
-        boolean ignoreFrail = originalBaseBlock >= 0;
+        boolean ignorePowerModifiers = shouldIgnoreBaseShadowKhanPowerModifiers(powerSnapshot);
+        boolean ignoreWeak = ignorePowerModifiers && this.type == CardType.ATTACK;
+        boolean ignoreFrail = ignorePowerModifiers && originalBaseBlock >= 0;
         int weakPowerIndex = -1;
         int frailPowerIndex = -1;
-        boolean needDebugLog = BasicMod.logger.isDebugEnabled() && (dominion > 0 || originalStr != 0 || originalDex != 0);
+        boolean needTraceLog = BasicMod.logger.isTraceEnabled() && (dominion > 0 || originalStr != 0 || originalDex != 0);
         ArrayList<AbstractPower> originalPowers = copyPlayerPowersIfNeeded(ignoreWeak, weakPower, ignoreFrail, frailPower);
 
-        if (needDebugLog) {
-            BasicMod.logger.debug("【影噬结算-预览】卡牌={}，基础伤害={}，基础格挡={}，影噬={}，力量={}，敏捷={}",
+        if (needTraceLog) {
+            BasicMod.logger.trace("【影噬结算-预览】卡牌={}，基础伤害={}，基础格挡={}，影噬={}，力量={}，敏捷={}",
                     this.cardID, originalBaseDamage, originalBaseBlock, dominion, originalStr, originalDex);
         }
 
         try {
             // 关键点：黑影兵团牌计算时临时屏蔽力量/敏捷影响。
-            if (strPower != null) {
+            if (ignorePowerModifiers && strPower != null) {
                 strPower.amount = 0;
             }
-            if (dexPower != null) {
+            if (ignorePowerModifiers && dexPower != null) {
                 dexPower.amount = 0;
             }
             if (ignoreWeak) {
@@ -188,20 +227,20 @@ public abstract class BaseShadowKhanCard extends BaseCard {
 
             // 关键点：把【影噬】层数直接加到基础伤害/格挡上，再走原版结算链路。
             if (originalBaseDamage >= 0) {
-                this.baseDamage = originalBaseDamage + dominion;
+                this.baseDamage = getShadowKhanBaseDamage(originalBaseDamage, powerSnapshot) + getDominionDamageBonus(dominion, powerSnapshot);
             }
             if (originalBaseBlock >= 0) {
-                this.baseBlock = originalBaseBlock + dominion;
+                this.baseBlock = getShadowKhanBaseBlock(originalBaseBlock, powerSnapshot) + getDominionBlockBonus(dominion, powerSnapshot);
             }
 
             super.applyPowers();
         } finally {
             this.baseDamage = originalBaseDamage;
             this.baseBlock = originalBaseBlock;
-            if (strPower != null) {
+            if (ignorePowerModifiers && strPower != null) {
                 strPower.amount = originalStr;
             }
-            if (dexPower != null) {
+            if (ignorePowerModifiers && dexPower != null) {
                 dexPower.amount = originalDex;
             }
             if (ignoreWeak) {
@@ -215,8 +254,8 @@ public abstract class BaseShadowKhanCard extends BaseCard {
 
         refreshShadowKhanModifiedFlags(originalBaseDamage, originalBaseBlock);
 
-        if (needDebugLog) {
-            BasicMod.logger.debug("【影噬结算-预览结果】卡牌={}，最终伤害={}，最终格挡={}，伤害已改={}，格挡已改={}",
+        if (needTraceLog) {
+            BasicMod.logger.trace("【影噬结算-预览结果】卡牌={}，最终伤害={}，最终格挡={}，伤害已改={}，格挡已改={}",
                     this.cardID, this.damage, this.block, this.isDamageModified, this.isBlockModified);
         }
     }
@@ -230,34 +269,37 @@ public abstract class BaseShadowKhanCard extends BaseCard {
      */
     @Override
     public void calculateCardDamage(AbstractMonster m) {
-        int dominion = getDominionAmount();
+        // 关键点：一趟收集本次结算需要的全部玩家能力，避免高频路径上反复线性查找。
+        NiJiaSupportHelper.ShadowKhanPowerSnapshot powerSnapshot = NiJiaSupportHelper.collectShadowKhanPowers();
+        int dominion = powerSnapshot.getDominionAmount();
         int originalBaseDamage = this.baseDamage;
         int originalBaseBlock = this.baseBlock;
 
-        AbstractPower strPower = AbstractDungeon.player == null ? null : AbstractDungeon.player.getPower(StrengthPower.POWER_ID);
-        AbstractPower dexPower = AbstractDungeon.player == null ? null : AbstractDungeon.player.getPower(DexterityPower.POWER_ID);
-        AbstractPower weakPower = AbstractDungeon.player == null ? null : AbstractDungeon.player.getPower(WeakPower.POWER_ID);
-        AbstractPower frailPower = AbstractDungeon.player == null ? null : AbstractDungeon.player.getPower(FrailPower.POWER_ID);
+        AbstractPower strPower = powerSnapshot.strength;
+        AbstractPower dexPower = powerSnapshot.dexterity;
+        AbstractPower weakPower = powerSnapshot.weak;
+        AbstractPower frailPower = powerSnapshot.frail;
         int originalStr = strPower == null ? 0 : strPower.amount;
         int originalDex = dexPower == null ? 0 : dexPower.amount;
-        boolean ignoreWeak = this.type == CardType.ATTACK;
-        boolean ignoreFrail = originalBaseBlock >= 0;
+        boolean ignorePowerModifiers = shouldIgnoreBaseShadowKhanPowerModifiers(powerSnapshot);
+        boolean ignoreWeak = ignorePowerModifiers && this.type == CardType.ATTACK;
+        boolean ignoreFrail = ignorePowerModifiers && originalBaseBlock >= 0;
         int weakPowerIndex = -1;
         int frailPowerIndex = -1;
-        boolean needDebugLog = BasicMod.logger.isDebugEnabled() && (dominion > 0 || originalStr != 0 || originalDex != 0);
+        boolean needTraceLog = BasicMod.logger.isTraceEnabled() && (dominion > 0 || originalStr != 0 || originalDex != 0);
         ArrayList<AbstractPower> originalPowers = copyPlayerPowersIfNeeded(ignoreWeak, weakPower, ignoreFrail, frailPower);
 
-        if (needDebugLog) {
+        if (needTraceLog) {
             String targetName = m == null ? "空目标" : m.name;
-            BasicMod.logger.debug("【影噬结算-实战】卡牌={}，目标={}，基础伤害={}，影噬={}，力量={}，敏捷={}",
+            BasicMod.logger.trace("【影噬结算-实战】卡牌={}，目标={}，基础伤害={}，影噬={}，力量={}，敏捷={}",
                     this.cardID, targetName, originalBaseDamage, dominion, originalStr, originalDex);
         }
 
         try {
-            if (strPower != null) {
+            if (ignorePowerModifiers && strPower != null) {
                 strPower.amount = 0;
             }
-            if (dexPower != null) {
+            if (ignorePowerModifiers && dexPower != null) {
                 dexPower.amount = 0;
             }
             if (ignoreWeak) {
@@ -268,20 +310,20 @@ public abstract class BaseShadowKhanCard extends BaseCard {
             }
 
             if (originalBaseDamage >= 0) {
-                this.baseDamage = originalBaseDamage + dominion;
+                this.baseDamage = getShadowKhanBaseDamage(originalBaseDamage, powerSnapshot) + getDominionDamageBonus(dominion, powerSnapshot);
             }
             if (originalBaseBlock >= 0) {
-                this.baseBlock = originalBaseBlock + dominion;
+                this.baseBlock = getShadowKhanBaseBlock(originalBaseBlock, powerSnapshot) + getDominionBlockBonus(dominion, powerSnapshot);
             }
 
             super.calculateCardDamage(m);
         } finally {
             this.baseDamage = originalBaseDamage;
             this.baseBlock = originalBaseBlock;
-            if (strPower != null) {
+            if (ignorePowerModifiers && strPower != null) {
                 strPower.amount = originalStr;
             }
-            if (dexPower != null) {
+            if (ignorePowerModifiers && dexPower != null) {
                 dexPower.amount = originalDex;
             }
             if (ignoreWeak) {
@@ -295,9 +337,9 @@ public abstract class BaseShadowKhanCard extends BaseCard {
 
         refreshShadowKhanModifiedFlags(originalBaseDamage, originalBaseBlock);
 
-        if (needDebugLog) {
+        if (needTraceLog) {
             String targetName = m == null ? "空目标" : m.name;
-            BasicMod.logger.debug("【影噬结算-实战结果】卡牌={}，目标={}，最终伤害={}，伤害已改={}",
+            BasicMod.logger.trace("【影噬结算-实战结果】卡牌={}，目标={}，最终伤害={}，伤害已改={}",
                     this.cardID, targetName, this.damage, this.isDamageModified);
         }
     }

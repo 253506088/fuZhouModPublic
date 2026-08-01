@@ -1,0 +1,195 @@
+﻿[
+  {
+    "ID": "Combo",
+    "PROPER_NAME": "阿福連招",
+    "NAMES": [
+      "阿福連招",
+      "連招"
+    ],
+    "DESCRIPTION": "如果你本回合上一張打出的牌是 #y阿福 招式，觸發額外效果。"
+  },
+  {
+    "ID": "AfuMove",
+    "PROPER_NAME": "阿福招式",
+    "NAMES": [
+      "阿福招式",
+      "阿福"
+    ],
+    "DESCRIPTION": "由黑手黨大將阿福使出的威猛招式。"
+  },
+  {
+    "ID": "TeamJackie",
+    "PROPER_NAME": "龍小組",
+    "NAMES": [
+      "龍小組"
+    ],
+    "DESCRIPTION": "成龍、小玉、特魯等人組成的龍小組系列卡牌。"
+  },
+  {
+    "ID": "AnimalTalisman",
+    "PROPER_NAME": "動物符咒",
+    "NAMES": [
+      "動物符咒"
+    ],
+    "DESCRIPTION": "十二生肖動物符咒系列卡牌，其中寅虎分爲攻與技兩張。"
+  },
+  {
+    "ID": "Flight",
+    "PROPER_NAME": "飛行",
+    "NAMES": [
+      "飛行"
+    ],
+    "DESCRIPTION": "受到的下一次傷害減半。"
+  },
+  {
+    "ID": "Soaked",
+    "PROPER_NAME": "潮溼",
+    "NAMES": [
+      "潮溼",
+      "溼潤"
+    ],
+    "DESCRIPTION": "目標處於潮溼狀態，水火不容，但雷電和寒氣在潮溼狀態下會有額外效果。"
+  },
+  {
+    "ID": "Steam",
+    "PROPER_NAME": "高溫蒸汽",
+    "NAMES": [
+      "高溫蒸汽"
+    ],
+    "DESCRIPTION": "由於被高溫蒸汽包圍，該怪物的意圖有一定概率失效。"
+  },
+  {
+    "ID": "Burning",
+    "PROPER_NAME": "灼燒",
+    "NAMES": [
+      "灼燒",
+      "燒傷"
+    ],
+    "DESCRIPTION": "回合開始時受到當前生命值 #b1/8 的傷害（單次最低 #b2，最高 #b20），達到 #b9 層時進化成 #y灼心 。"
+  },
+  {
+    "ID": "BurningHeart",
+    "PROPER_NAME": "灼心",
+    "NAMES": [
+      "灼心"
+    ],
+    "DESCRIPTION": "由 #y灼燒 進化而來的更強異常，回合開始時受到當前生命值 #b1/5 的傷害（單次最低 #b5，最高 #b40）。"
+  },
+  {
+    "ID": "Frostbite",
+    "PROPER_NAME": "凍傷",
+    "NAMES": [
+      "凍傷",
+      "寒氣"
+    ],
+    "DESCRIPTION": "回合開始時受到當前生命值 #b1/8 的傷害（單次最低 #b2，最高 #b20），達到 #b9 層時進化成 #y冰獄 。"
+  },
+  {
+    "ID": "FrostHell",
+    "PROPER_NAME": "冰獄",
+    "NAMES": [
+      "冰獄"
+    ],
+    "DESCRIPTION": "由 #y凍傷 進化而來的更強異常，回合開始時受到當前生命值 #b1/5 的傷害（單次最低 #b5，最高 #b40）。"
+  },
+  {
+    "ID": "Fear",
+    "PROPER_NAME": "恐懼",
+    "NAMES": [
+      "恐懼"
+    ],
+    "DESCRIPTION": "感到恐懼，下一回合的意圖將變得 #y保守 ，本狀態在本單位的回合開始時消失。"
+  },
+  {
+    "ID": "EarthBind",
+    "PROPER_NAME": "地縛",
+    "NAMES": [
+      "地縛"
+    ],
+    "DESCRIPTION": "由 #y地之惡魔 施加的異常。回合開始時受到當前生命值 #b1/8 的傷害。該效果不會隨回合自動減少，僅在玩家受到生命傷害時解除。"
+  },
+  {
+    "ID": "HeavyMire",
+    "PROPER_NAME": "沉重泥沼",
+    "NAMES": [
+      "沉重泥沼"
+    ],
+    "DESCRIPTION": "融合了 #y地縛 與 #y潮溼 的強化異常。每回合開始失去 #b1/5 當前生命值（單次最低 #b5，最高 #b40），並減少 #b2 點 #y力量 和 #y敏捷 。移除時返還扣除的所有層數。"
+  },
+  {
+    "ID": "WindCatalyst",
+    "PROPER_NAME": "風勢",
+    "NAMES": [
+      "風勢"
+    ],
+    "DESCRIPTION": "加速元素反應。 NL 敵人回合開始時，額外結算其持有的 #y灼燒 、 #y灼心 、 #y凍傷 或 #y冰獄 的傷害（灼燒或凍傷：最低 #b2，最高 #b20；灼心或冰獄：最低 #b5，最高 #b40）。 NL 敵人回合結束時，這些狀態額外減少 #b1 層。 NL 層數每回合自然減少 #b1 層。"
+  },
+  {
+    "ID": "BlackHandMark",
+    "PROPER_NAME": "黑手",
+    "NAMES": [
+      "黑手"
+    ],
+    "DESCRIPTION": "黑手幫施加的標記。部分黑手幫卡牌會根據層數觸發額外效果，並可消耗其層數。"
+  },
+  {
+    "ID": "Dominion",
+    "PROPER_NAME": "影噬",
+    "NAMES": [
+      "影噬"
+    ],
+    "DESCRIPTION": "黑影兵團卡不再受 #y力量 與 #y敏捷 影響，改爲受 #y影噬 影響。每 #b1 層 #y影噬 ，使黑影兵團卡造成的傷害或獲得的格擋 #b+1。"
+  },
+  {
+    "ID": "BlackHandCard",
+    "PROPER_NAME": "黑手幫",
+    "NAMES": [
+      "黑手幫"
+    ],
+    "DESCRIPTION": "黑手幫系列卡牌。部分效果會施加或利用 #y黑手 標記。"
+  },
+  {
+    "ID": "DarkWarrior",
+    "PROPER_NAME": "黑暗殺手",
+    "NAMES": [
+      "黑暗殺手"
+    ],
+    "DESCRIPTION": "刀龍麾下的黑暗殺手系列卡牌。"
+  },
+  {
+    "ID": "Mask",
+    "PROPER_NAME": "面具",
+    "NAMES": [
+      "面具"
+    ],
+    "DESCRIPTION": "黑影兵團面具。面具能力會在戰鬥中持續生成對應的黑影兵團牌。"
+  },
+  {
+    "ID": "Shadowkhan",
+    "PROPER_NAME": "黑影兵團",
+    "NAMES": [
+      "黑影兵團"
+    ],
+    "DESCRIPTION": "黑影兵團系列卡牌默認 #y消耗 ，其傷害或格擋會受 #y影噬 影響。"
+  },
+  {
+    "ID": "DemonAnomaly",
+    "PROPER_NAME": "惡魔異常",
+    "NAMES": [
+      "惡魔異常"
+    ],
+    "EXTRA": [
+      "Burning",
+      "BurningHeart",
+      "Soaked",
+      "Steam",
+      "Frostbite",
+      "FrostHell",
+      "EarthBind",
+      "HeavyMire",
+      "WindCatalyst",
+      "Fear"
+    ],
+    "DESCRIPTION": "八大惡魔相關異常，包括 #y灼燒 、 #y灼心 、 #y潮溼 、 #y高溫蒸汽 、 #y凍傷 、 #y冰獄 、 #y地縛 、 #y沉重泥沼 、 #y風勢 和 #y恐懼 。"
+  }
+]

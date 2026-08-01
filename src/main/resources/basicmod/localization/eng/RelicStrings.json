@@ -3,7 +3,7 @@
         "NAME": "Rat Talisman",
         "FLAVOR": "Motion from stillness. Gives life to the lifeless.",
         "DESCRIPTIONS": [
-            "When not cooling down, if there are #yStatus or #yCurse cards in your hand, choose 1 and replace it with a #y0-cost #yExhaust #yAttack card, then enter #b2-turn cooldown. NL Shendu's true form invokes the talisman's true power..."
+            "Can be #yRight-Click to activate. Choose #b1 #yStatus or #yCurse card in your hand and randomly transform it into a #y0-cost #yExhaust #yAttack card, then enter a #b2-turn cooldown. NL Shendu's true form invokes the talisman's true power..."
         ]
     },
     "fuZhouMod:OxTalisman": {
@@ -105,7 +105,7 @@
         "NAME": "Shadowkhan Token",
         "FLAVOR": "Flip the token, and the Shadowkhan know whose order to follow.",
         "DESCRIPTIONS": [
-            "#yRight-click to switch how Shadowkhan cards exhaust other cards. NL #y1 Choose cards manually (Default) NL #y0 Exhaust random cards automatically NL Only affects #ySamurai-khan and #yMingta #yShadow."
+            "#yRight-click to switch how Shadowkhan cards exhaust other cards. NL #y1 Choose cards manually (Default) NL #y0 Exhaust random cards automatically NL #y2 Mingta exhausts a random card automatically; Samurai-khan exhausts no cards. NL Only affects #ySamurai-khan and #yMingta #yShadow."
         ]
     },
     "fuZhouMod:CollaborationRelic": {

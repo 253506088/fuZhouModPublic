@@ -15,7 +15,7 @@ public class NiJiaMask extends BaseMaskCard {
             AbstractCard.CardType.POWER,
             AbstractCard.CardRarity.COMMON,
             AbstractCard.CardTarget.SELF,
-            1
+            0
     );
 
     public NiJiaMask() {

@@ -1,0 +1,529 @@
+﻿{
+  "fuZhouMod:FlightAfuPower": {
+    "NAME": "飛行",
+    "DESCRIPTIONS": [
+      "所受到的攻擊傷害減半。 受到攻擊傷害後層數減少 #b1 "
+    ]
+  },
+  "fuZhouMod:TwoDragonsPower": {
+    "NAME": "二龍戲珠",
+    "DESCRIPTIONS": [
+      "你下 #b",
+      " 張打出的牌將額外觸發一次"
+    ]
+  },
+  "fuZhouMod:GoatClimbsMountainPower": {
+    "NAME": "山羊爬山",
+    "DESCRIPTIONS": [
+      "每當你打出 #b2 張牌，獲得 #b",
+      " 點臨時 #y力量 "
+    ]
+  },
+  "fuZhouMod:TaiShanPressPower": {
+    "NAME": "泰山壓頂",
+    "DESCRIPTIONS": [
+      "在你的回合結束時，對所有敵人造成本回合你造成總傷害 #b30% ( #b",
+      " ) 的傷害"
+    ]
+  },
+  "fuZhouMod:TornadoPower": {
+    "NAME": "山",
+    "DESCRIPTIONS": [
+      "在你的回合結束時，對所有敵人造成本回合你造成總傷害 #b30% ( #b",
+      " ) 的傷害"
+    ]
+  },
+  "fuZhouMod:NiJiaPower": {
+    "NAME": "尼嘉面具",
+    "DESCRIPTIONS": [
+      "回合開始時增加 #b",
+      " 張尼嘉-忍者團到手中，若手牌已滿則自動打出"
+    ]
+  },
+  "fuZhouMod:LaZuoPower": {
+    "NAME": "拉佐面具",
+    "DESCRIPTIONS": [
+      "回合開始時增加 #b",
+      " 張拉佐-刺刃團到手中，若手牌已滿則自動打出"
+    ]
+  },
+  "fuZhouMod:SaMoPower": {
+    "NAME": "薩莫面具",
+    "DESCRIPTIONS": [
+      "回合開始時增加 #b",
+      " 張薩莫-巨魔團到手中，若手牌已滿則自動打出"
+    ]
+  },
+  "fuZhouMod:BaTePower": {
+    "NAME": "巴特面具",
+    "DESCRIPTIONS": [
+      "回合開始時增加 #b",
+      " 張巴特-夜蝠團到手中，若手牌已滿則自動打出"
+    ]
+  },
+  "fuZhouMod:KaBoPower": {
+    "NAME": "卡博面具",
+    "DESCRIPTIONS": [
+      "回合開始時增加 #b",
+      " 張卡博-獵鉗團到手中，若手牌已滿則自動打出"
+    ]
+  },
+  "fuZhouMod:LeiSuPower": {
+    "NAME": "雷蘇面具",
+    "DESCRIPTIONS": [
+      "回合開始時增加 #b",
+      " 張雷蘇-異形團到手中，若手牌已滿則自動打出"
+    ]
+  },
+  "fuZhouMod:ManNiPower": {
+    "NAME": "曼尼面具",
+    "DESCRIPTIONS": [
+      "回合開始時增加 #b",
+      " 張曼尼-螳形團到手中，若手牌已滿則自動打出"
+    ]
+  },
+  "fuZhouMod:MingTaPower": {
+    "NAME": "明塔面具",
+    "DESCRIPTIONS": [
+      "回合開始時增加 #b",
+      " 張明塔-噬影團到手中，若手牌已滿則自動打出"
+    ]
+  },
+  "fuZhouMod:YiKaPower": {
+    "NAME": "伊卡面具",
+    "DESCRIPTIONS": [
+      "回合開始時增加 #b",
+      " 張伊卡-武士團到手中，若手牌已滿則自動打出"
+    ]
+  },
+  "fuZhouMod:TaLaPower": {
+    "NAME": "塔拉麪具",
+    "DESCRIPTIONS": [
+      "面具容量增加 #b",
+      " 層。回合開始時隨機獲取一張黑影兵團牌，若手牌已滿則自動打出"
+    ]
+  },
+  "fuZhouMod:LeiSuCurse": {
+    "NAME": "異形詛咒",
+    "DESCRIPTIONS": [
+      "回合結束時如果層數大於等於生命值，則被 #y斬殺 。目前層數： #b",
+      ""
+    ]
+  },
+  "fuZhouMod:GanPower": {
+    "NAME": "甘你真他媽是個天才",
+    "DESCRIPTIONS": [
+      "卡牌 [#efc100]甘[] 造成的暴擊幾率提升10% [#71b1d1]",
+      "% "
+    ]
+  },
+  "fuZhouMod:SheepResonancePower": {
+    "NAME": "真靈共鳴",
+    "DESCRIPTIONS": [
+      "戰鬥中所有卡牌現在都會被自動 [#efc100]升級[] 。"
+    ]
+  },
+  "fuZhouMod:NothingLackingPower": {
+    "NAME": "我什麼都不缺了",
+    "DESCRIPTIONS": [
+      "手牌始終補滿。每回合開始時獲得 #b",
+      " [E] 。獲得 #b",
+      " 層 *力量 和 #b",
+      " 層 *敏捷 。"
+    ]
+  },
+  "fuZhouMod:DeflectAndStrikePower": {
+    "NAME": "借力打力",
+    "DESCRIPTIONS": [
+      "在本回合內，如果你完全格擋了敵人的攻擊，則對該敵人造成等額的傷害。"
+    ]
+  },
+  "fuZhouMod:OxTalismanPower": {
+    "NAME": "丑牛",
+    "DESCRIPTIONS": [
+      "敵人的力量和敏捷無法高於你。每當敵人的數值超過你時，會被強制降低。"
+    ]
+  },
+  "fuZhouMod:HorseTalismanPower": {
+    "NAME": "午馬",
+    "DESCRIPTIONS": [
+      "回合結束時，將恢復本回合造成未格擋傷害總和的一半（向下取整）： #b",
+      " 點。"
+    ]
+  },
+  "fuZhouMod:MonkeyTalismanPower": {
+    "NAME": "申猴",
+    "DESCRIPTIONS": [
+      "賦予自身一層易傷。如果敵人的意圖是攻擊，則對其造成雙倍的傷害。"
+    ]
+  },
+  "fuZhouMod:RoosterTalismanPower": {
+    "NAME": "酉雞飛行",
+    "DESCRIPTIONS": [
+      "飛行狀態： #y敏捷 + #b",
+      " ，受傷降低 #b50% 。還能承受 #b",
+      " 次傷害。次數用完後將被擊落並眩暈。"
+    ]
+  },
+  "fuZhouMod:DogTalismanPower": {
+    "NAME": "戌狗保命",
+    "DESCRIPTIONS": [
+      "接下來 ",
+      " 回合內，敵人造成的致命傷害不會讓你死亡（觸發時恢復 ",
+      " 點生命）。剩餘保命次數：",
+      " 次。"
+    ]
+  },
+  "fuZhouMod:PetrifiedPower": {
+    "NAME": "石化",
+    "DESCRIPTIONS": [
+      "該單位每回合開始獲得 #b1 點 #y力量 (共計加成 #b",
+      " 點，上限 #b10 點)。每回合開始層數 #b+1 (上限10層)。受到傷害提升 #b",
+      "% (與其他傷害修正倍率乘法疊加)。"
+    ]
+  },
+  "fuZhouMod:HiddenDragonPower": {
+    "NAME": "潛龍在淵",
+    "DESCRIPTIONS": [
+      "在本回合結束時，保留你的所有手牌。下一回合開始時，獲得額外的 #b",
+      " [E] 。"
+    ]
+  },
+  "fuZhouMod:BurningPower": {
+    "NAME": "灼燒",
+    "DESCRIPTIONS": [
+      "回合開始時受到當前生命值 #b1/8 的傷害（ #b",
+      " 點）持續，",
+      " 回合，單次傷害最低 #b2，最高 #b20，9 層進化新異常"
+    ]
+  },
+  "fuZhouMod:SoakedPower": {
+    "NAME": "潮溼",
+    "DESCRIPTIONS": [
+      "目標處於潮溼狀態，每回合減少一層持續： ",
+      " 回合"
+    ]
+  },
+  "fuZhouMod:FrostbitePower": {
+    "NAME": "凍傷",
+    "DESCRIPTIONS": [
+      "回合開始時受到當前生命值 #b1/8 的傷害（ #b",
+      " 點）持續，",
+      " 回合，單次傷害最低 #b2，最高 #b20，9 層進化新異常"
+    ]
+  },
+  "fuZhouMod:EarthDemonPower": {
+    "NAME": "地之惡魔",
+    "DESCRIPTIONS": [
+      "在你的回合結束時，如果沒有格擋，失去 #b",
+      " 點生命，並獲得 #b",
+      " 點 #y格擋 。"
+    ]
+  },
+  "fuZhouMod:HeavenDemonPower": {
+    "NAME": "天空惡魔",
+    "DESCRIPTIONS": [
+      "攻擊命中時額外觸發並消耗其身上各 1 層 #y灼燒 、 #y灼心 、 #y凍傷 、 #y冰獄 （額外觸發傷害同樣遵循最低值與上限）。 NL 攻擊命中時有 #b1/8 概率施加 1 層 #y恐懼 ，目標每持有上述一種異常，概率提升 #b1/8 。"
+    ]
+  },
+  "fuZhouMod:FearPower": {
+    "NAME": "恐懼",
+    "DESCRIPTIONS": [
+      "感到恐懼，下一回合的意圖將變得 #y保守 ，本狀態在它的回合開始時該效果會消失"
+    ]
+  },
+  "fuZhouMod:BurningHeartPower": {
+    "NAME": "灼心",
+    "DESCRIPTIONS": [
+      "回合開始時受到當前生命值 #b1/5 的傷害（ #b",
+      " 點）持續，",
+      " 回合，單次傷害最低 #b5，最高 #b40"
+    ]
+  },
+  "fuZhouMod:FrostHellPower": {
+    "NAME": "冰獄",
+    "DESCRIPTIONS": [
+      "回合開始時受到當前生命值 #b1/5 的傷害（ #b",
+      " 點）持續，",
+      " 回合，單次傷害最低 #b5，最高 #b40"
+    ]
+  },
+  "fuZhouMod:SteamPower": {
+    "NAME": "高溫蒸汽",
+    "DESCRIPTIONS": [
+      "由於被高溫蒸汽包圍，該怪物的意圖有 #b",
+      "/",
+      " 的概率失效。",
+      "被【大法師的庇佑】壓制：高溫蒸汽不再令意圖失效，改爲在回合開始時造成至多 #b",
+      " 點傷害。"
+    ]
+  },
+  "fuZhouMod:EarthBindPower": {
+    "NAME": "地縛",
+    "DESCRIPTIONS": [
+      "在回合開始時，失去生命值當前生命值的 #b1/8 ( #b",
+      " ) （最低爲 #b2 ）。該狀態不會隨回合流逝而減少。"
+    ]
+  },
+  "fuZhouMod:EarthPrisonPrepPower": {
+    "NAME": "大地守望",
+    "DESCRIPTIONS": [
+      "如果您連續 #b",
+      " 回合沒有受到傷害，將對全體敵人施加一層 #y地縛 。如果您受到敵人的傷害，計數重置且解除所有敵人的 #y地縛 或 #y沉重泥沼 。"
+    ]
+  },
+  "fuZhouMod:HeavyMirePower": {
+    "NAME": "沉重泥沼",
+    "DESCRIPTIONS": [
+      "由於身陷泥濘，在回合開始時失去當前生命值的 #b1/5 ( #b",
+      " ) （最低 #b5，最高 #b40）。且每回合減少 #b2 點 #y力量 和 #b2 點 #y敏捷 。在該狀態移除時，將返還此前扣除的所有 #y力量 和 #y敏捷 (目前已累計扣除： ",
+      " )。該狀態不會隨回合流逝而減少。"
+    ]
+  },
+  "fuZhouMod:WindCatalystPower": {
+    "NAME": "風勢",
+    "DESCRIPTIONS": [
+      "加速元素反應。 NL 敵人回合開始時，再次結算其持有的 #y灼燒 、 #y灼心 、 #y凍傷 或 #y冰獄 的傷害（灼燒或凍傷：最低 #b2，最高 #b20；灼心或冰獄：最低 #b5，最高 #b40）。 NL 敵人回合結束時，這些狀態額外減少 #b1 層。 NL 層數每回合自然減少 #b1 層。"
+    ]
+  },
+  "fuZhouMod:ValmontPower": {
+    "NAME": "金雞王之力",
+    "DESCRIPTIONS": [
+      "本回合內，你打出的所有 [#efc100]阿福[] 、 [#efc100]黑手幫[] 和 [#efc100]黑暗殺手[] 系列卡牌的耗費變爲 [#efc100]0[] 。"
+    ]
+  },
+  "fuZhouMod:BlackHandPower": {
+    "NAME": "黑手",
+    "DESCRIPTIONS": [
+      "目標攜帶黑手標記。當前層數： #b",
+      " 。部分黑手幫卡會根據層數觸發額外效果。"
+    ]
+  },
+  "fuZhouMod:BountyPower": {
+    "NAME": "懸賞",
+    "DESCRIPTIONS": [
+      "每當你施加 *黑手 ，對該目標造成 #b",
+      " 點傷害。帶 *黑手 的敵人死亡時，獲得 #b",
+      " 金幣。"
+    ]
+  },
+  "fuZhouMod:BlackHandNoNameYetPower": {
+    "NAME": "痞子",
+    "DESCRIPTIONS": [
+      "回合開始時，對所有敵人施加 #b",
+      " 層 *黑手 。每名敵人每回合累計獲得 #b",
+      " 層 *黑手 時，對其造成 #b",
+      " 點傷害並抽 1 張牌。"
+    ]
+  },
+  "fuZhouMod:BlackHandEscortPower": {
+    "NAME": "黑手幫護送",
+    "DESCRIPTIONS": [
+      "下回合開始時，獲得等同於敵方總 *黑手 層數 x#b",
+      " 的 *格擋 ，然後移除該能力。"
+    ]
+  },
+  "fuZhouMod:BlackHandStrengthReturnPower": {
+    "NAME": "裸絞",
+    "DESCRIPTIONS": [
+      "#b",
+      " 回合後，恢復 #b",
+      " 點因【裸絞】失去的 *力量 。"
+    ]
+  },
+  "fuZhouMod:BlackHandPullStringsPower": {
+    "NAME": "撈人",
+    "DESCRIPTIONS": [
+      "回合開始時，從棄牌堆中選擇 #b",
+      " 張牌加入手牌。"
+    ]
+  },
+  "fuZhouMod:DominionPower": {
+    "NAME": "影噬",
+    "DESCRIPTIONS": [
+      "當前層： #b",
+      " ，黑影兵團的傷害或護盾受到本屬性影響。"
+    ]
+  },
+  "fuZhouMod:ShadowDecreePower": {
+    "NAME": "黑影敕令",
+    "DESCRIPTIONS": [
+      "回合開始時，失去 [#71b1d1]",
+      "[] 點 [#efc100]力量[] 和 [#71b1d1]",
+      "[] 點 [#efc100]敏捷[]，並失去 [#71b1d1]1[] 點生命值。你無法再獲得 [#efc100]力量[]。"
+    ]
+  },
+  "fuZhouMod:GrandMageDamageCapPower": {
+    "NAME": "正氣不滅",
+    "DESCRIPTIONS": [
+      "每回合最多承受 #b",
+      " 點傷害。當前剩餘可承受： #b",
+      " 。",
+      " NL 單次受傷上限： #b",
+      " NL 當本回合承傷打滿上限時，返還 #b1 個已封存符咒。",
+      " NL 當前已封存： ",
+      "無"
+    ]
+  },
+  "fuZhouMod:GrandMageCounterPouncePower": {
+    "NAME": "正氣反撲",
+    "DESCRIPTIONS": [
+      "計算規則：每有1個 [#efc100]符咒遺物[] ，生命 #b+30 ；若持有 [#efc100]潘庫寶盒[] ，每個已獲得惡魔魔氣生命 #b+30 ；每有1張 [#efc100]面具牌[] 或 [#efc100]面具輔助牌[] ，生命 #b+15 ；每有1張 [#efc100]動物符咒牌[] ，生命 #b+20 ； [#efc100]我什麼都不缺了[] 生命 #b+100 且升級版會被降級； [#efc100]無盡黑暗[] 生命 #b+300 ；其餘 [#efc100]主卡組卡牌[] 每張生命 #b+5 。",
+      " NL [#efc100]本場額外生命[] 爲 #b",
+      " 點。 力量轉換公式： [#efc100]每30點額外生命折算1點力量，不足30點不計算[]  NL 本場初始提升 #b",
+      " 點力量。"
+    ]
+  },
+  "fuZhouMod:GrandMageBlessingPower": {
+    "NAME": "大法師的庇佑",
+    "DESCRIPTIONS": [
+      "本回合還可免疫前 #b",
+      " 次異常狀態。來自魔氣系列異常與 #y【高溫蒸汽】 的單次傷害最多爲 #b",
+      " 點。天之惡魔的 #y【恐懼】 不會改變老爹意圖，改爲額外造成 #b8 點傷害。老爹行動開始時清除自身全部減益並獲得 #b2 點力量。",
+      "本回合的異常免疫次數已用盡。來自魔氣系列異常與 #y【高溫蒸汽】 的單次傷害仍最多爲 #b",
+      " 點。天之惡魔的 #y【恐懼】 不會改變老爹意圖，改爲額外造成 #b8 點傷害。老爹行動開始時清除自身全部減益並獲得 #b2 點力量。"
+    ]
+  },
+  "fuZhouMod:MoonUncapPower": {
+    "NAME": "解除限制",
+    "DESCRIPTIONS": [
+      "直到本回合結束，你造成的 惡魔異常 傷害不再受到任何傷害上限的限制。"
+    ]
+  },
+  "fuZhouMod:EightDemonPossessionPower": {
+    "NAME": "八魔附體",
+    "DESCRIPTIONS": [
+      "每回合前 #b2 次打出攻擊牌時，隨機給予被攻擊的敵人 #b2 層一種異常（惡魔異常、虛弱、易傷、纏繞、點穴、以手拒之、勒喉、屍爆術或中毒）。羣體攻擊會使所有被攻擊的敵人獲得同一種異常。 NL 本回合剩餘觸發次數： #b",
+      "。"
+    ]
+  },
+  "fuZhouMod:GrandMageCurseTaxAttackPower": {
+    "NAME": "特魯",
+    "DESCRIPTIONS": [
+      "本回合你打出的第一張攻擊牌費用 +1。"
+    ]
+  },
+  "fuZhouMod:GrandMageCurseTaxSkillPower": {
+    "NAME": "布萊克",
+    "DESCRIPTIONS": [
+      "本回合你打出的第一張技能牌費用 +1。"
+    ]
+  },
+  "fuZhouMod:GrandMageDadCycleCursePower": {
+    "NAME": "五行壓制",
+    "DESCRIPTIONS": [
+      "本回合你的升級牌會臨時塌落爲基礎版，回合結束後恢復。",
+      "本回合結束時，選擇任意手牌不消耗；每選擇 #b1 張，受到 #b12 點可被格擋抵擋的傷害。",
+      "本回合你每打出一張牌，受到 #b2 點可被格擋抵擋的傷害。",
+      "本回合你每打出一張牌，下一張牌的傷害和護盾 #b-",
+      " 。",
+      "老爹本回合獲得 #b5 點臨時荊棘，玩家回合結束後移除。",
+      "大法師老爹正在壓制你的回合。"
+    ]
+  },
+  "fuZhouMod:GrandMageChantShieldPower": {
+    "NAME": "封印陣詠唱",
+    "DESCRIPTIONS": [
+      "吟唱護盾值：【",
+      "】。吟唱期間該護盾不會在回合開始時自然清空，且【豬符咒無法直接移除】。若該護盾在老爹下回合行動前被擊破，則取消處決並直接回到T2。"
+    ]
+  },
+  "fuZhouMod:RingOfDestructionPower": {
+    "NAME": "破壞輪",
+    "DESCRIPTIONS": [
+      "該怪物死亡時，對場上其他怪物造成 #b",
+      " 點傷害（等同於其最大生命值）。"
+    ]
+  },
+  "fuZhouMod:ChestnutBallPower": {
+    "NAME": "栗子球",
+    "DESCRIPTIONS": [
+      "本回合免疫任何來源的傷害。"
+    ]
+  },
+  "fuZhouMod:ExodiaProtectionPower": {
+    "NAME": "艾克佐迪亞的庇護",
+    "DESCRIPTIONS": [
+      "艾克佐迪亞已甦醒。每個回合開始時，獲得 #b999 點 #y格擋 與 #b1 層 #y無實體 ，並將手牌中的部件保留。"
+    ]
+  },
+  "fuZhouMod:ShadowGuardPower": {
+    "NAME": "黑影護衛",
+    "DESCRIPTIONS": [
+      "尼嘉-忍者團傷害結算後，獲得 #b",
+      " 倍生命傷害的 #y格擋 。",
+      " 倍總傷害的 #y格擋 ，包括被格擋吸收的傷害。"
+    ]
+  },
+  "fuZhouMod:DoubleSticksPower": {
+    "NAME": "雙棍",
+    "DESCRIPTIONS": [
+      "尼嘉-忍者團從 #y影噬 獲得的傷害加成變為 #b3 倍。"
+    ]
+  },
+  "fuZhouMod:WingsuitFlightPower": {
+    "NAME": "翼裝飛行",
+    "DESCRIPTIONS": [
+      "尼嘉-忍者團獲得 #y保留 。每回合每打出 #b2 張尼嘉-忍者團，獲得 #b",
+      " 層本回合臨時 #y影噬 。"
+    ]
+  },
+  "fuZhouMod:ShurikenPower": {
+    "NAME": "手裏劍",
+    "DESCRIPTIONS": [
+      "持有手裏劍時，尼嘉-忍者團每段基礎傷害變為：基礎版 #b3，升級版 #b5。攻擊次數變為 #b",
+      " 次。"
+    ]
+  },
+  "fuZhouMod:SmokeBombPower": {
+    "NAME": "煙霧彈",
+    "DESCRIPTIONS": [
+      "尼嘉-忍者團觸發時，使目標本回合失去 #b",
+      " 點 #y力量 。當前觸發條件：造成生命傷害。",
+      " 點 #y力量 。當前觸發條件：每段攻擊結算。"
+    ]
+  },
+  "fuZhouMod:NinjaCooperationPower": {
+    "NAME": "忍者協作",
+    "DESCRIPTIONS": [
+      "消耗牌堆每有 1 張尼嘉-忍者團，尼嘉-忍者團每段傷害提高 #b",
+      " 點。當前 #b",
+      " 張，每段共提高 #b",
+      " 點。"
+    ]
+  },
+  "fuZhouMod:KatanaPower": {
+    "NAME": "武士刀",
+    "DESCRIPTIONS": [
+      "尼嘉-忍者團改為攻擊所有敵人。"
+    ]
+  },
+  "fuZhouMod:DemonCodexPower": {
+    "NAME": "惡魔法典",
+    "DESCRIPTIONS": [
+      "黑影兵團會受到力量、敏捷、易傷、虛弱和脆弱等常規修正影響。"
+    ]
+  },
+  "fuZhouMod:EmergencyEscapePower": {
+    "NAME": "緊急逃生",
+    "DESCRIPTIONS": [
+      "免疫並反彈來自怪物的減益。剩餘 #b",
+      " 回合。"
+    ]
+  },
+  "fuZhouMod:BlackHandBitterChoicePenaltyPower": {
+    "NAME": "苦澀的抉擇",
+    "DESCRIPTIONS": [
+      "下回合開始後，全部卡牌費用 +#b",
+      " 。",
+      "本回合全部卡牌費用 +#b"
+    ]
+  },
+  "fuZhouMod:PossessionNoAttackPower": {
+    "NAME": "奪舍",
+    "DESCRIPTIONS": [
+      "本回合不能打出攻擊牌。",
+      "奪舍生效中，本回合不能打出攻擊牌。"
+    ]
+  }
+}

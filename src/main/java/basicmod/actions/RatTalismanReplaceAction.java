@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import java.util.ArrayList;
 import java.util.UUID;
 
-// 鼠符咒替换流程动作：处理自动替换与多选一
+// 鼠符咒替换流程动作：打开可取消的手牌选择界面，并处理选中后的变化。
 public class RatTalismanReplaceAction extends AbstractGameAction {
     private final RatTalisman relic;
     // 是否已经打开过选择界面
@@ -42,30 +42,27 @@ public class RatTalismanReplaceAction extends AbstractGameAction {
                 return;
             }
 
-            // 只有1张候选牌时直接替换
-            if (candidates.size() == 1) {
-                relic.tryReplaceCard(candidates.get(0));
-                finish();
-                return;
-            }
-
             // 有其他界面时先等待，避免与现有界面冲突
             if (AbstractDungeon.isScreenUp) {
                 return;
             }
 
-            // 多张候选牌时弹出选择界面，由玩家决定替换目标
+            // 弹出选择界面，由玩家决定替换目标；取消不会消耗鼠符咒。
             CardGroup group = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
             for (AbstractCard card : candidates) {
                 group.addToTop(card);
             }
 
-            AbstractDungeon.gridSelectScreen.open(group, 1, RatTalisman.SELECT_PROMPT, false, false, false, false);
+            AbstractDungeon.gridSelectScreen.open(group, 1, RatTalisman.SELECT_PROMPT, false, false, true, false);
+            AbstractDungeon.overlayMenu.cancelButton.show(RatTalisman.CANCEL_TEXT);
             openedSelection = true;
             return;
         }
 
         if (AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
+            if (AbstractDungeon.screen != AbstractDungeon.CurrentScreen.GRID) {
+                finish();
+            }
             return;
         }
 

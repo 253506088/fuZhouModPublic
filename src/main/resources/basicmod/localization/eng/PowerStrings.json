@@ -446,5 +446,84 @@
                                             "DESCRIPTIONS":  [
                                                                  "Exodia has awakened. At the start of each turn, gain #b999 #yBlock and #b1 #yIntangible , and retain all Exodia pieces in hand."
                                                              ]
+                                        },
+    "fuZhouMod:ShadowGuardPower":  {
+                                      "NAME":  "Shadow Guard",
+                                      "DESCRIPTIONS":  [
+                                                           "After Ninja Squad damage resolves, gain #b",
+                                                           " times its unblocked damage as #yBlock.",
+                                                           " times its total damage as #yBlock, including damage blocked by the target."
+                                                       ]
+                                  },
+    "fuZhouMod:DoubleSticksPower":  {
+                                       "NAME":  "Double Sticks",
+                                       "DESCRIPTIONS":  [
+                                                            "Ninja Squad gains #b3 times as much damage from #yDominion."
+                                                        ]
+                                   },
+    "fuZhouMod:WingsuitFlightPower":  {
+                                         "NAME":  "Wingsuit Flight",
+                                         "DESCRIPTIONS":  [
+                                                              "Ninja Squad gains #yRetain. Each turn, whenever you play #b2 Ninja Squad cards, gain #b",
+                                                              " temporary #yDominion this turn."
+                                                          ]
+                                     },
+    "fuZhouMod:ShurikenPower":  {
+                                   "NAME":  "Shuriken",
+                                   "DESCRIPTIONS":  [
+                                                        "While you have Shuriken, Ninja Squad base damage per hit becomes #b3 normally or #b5 when the Ninja Squad is upgraded. Attacks #b",
+                                                        " times."
+                                                    ]
+                               },
+    "fuZhouMod:SmokeBombPower":  {
+                                    "NAME":  "Smoke Bomb",
+                                    "DESCRIPTIONS":  [
+                                                         "When Ninja Squad triggers, the target loses #b",
+                                                         " #yStrength this turn. Trigger condition: unblocked damage.",
+                                                         " #yStrength this turn. Trigger condition: each hit resolves."
+                                                     ]
+                                },
+    "fuZhouMod:NinjaCooperationPower":  {
+                                           "NAME":  "Ninja Cooperation",
+                                           "DESCRIPTIONS":  [
+                                                                "For each Ninja Squad in your exhaust pile, Ninja Squad deals #b",
+                                                                " more damage per hit. Currently #b",
+                                                                " in pile, granting #b",
+                                                                " bonus damage per hit."
+                                                            ]
+                                       },
+    "fuZhouMod:KatanaPower":  {
+                                 "NAME":  "Katana",
+                                 "DESCRIPTIONS":  [
+                                                      "Ninja Squad attacks all enemies."
+                                                  ]
+                             },
+    "fuZhouMod:DemonCodexPower":  {
+                                     "NAME":  "Demon Codex",
+                                     "DESCRIPTIONS":  [
+                                                          "Shadowkhan cards are affected by normal modifiers such as Strength, Dexterity, Vulnerable, Weak, and Frail."
+                                                      ]
+                                 },
+    "fuZhouMod:EmergencyEscapePower":  {
+                                          "NAME":  "Emergency Escape",
+                                          "DESCRIPTIONS":  [
+                                                               "Block and reflect debuffs from monsters. Remaining turns: #b",
+                                                               "."
+                                                           ]
+                                      },
+    "fuZhouMod:BlackHandBitterChoicePenaltyPower":  {
+                                                       "NAME":  "Bitter Choice",
+                                                       "DESCRIPTIONS":  [
+                                                                            "Starting next turn, all cards cost #b",
+                                                                            " more.",
+                                                                            "This turn, all cards cost #b"
+                                                                        ]
+                                                   },
+    "fuZhouMod:PossessionNoAttackPower":  {
+                                             "NAME":  "Possession",
+                                             "DESCRIPTIONS":  [
+                                                                  "You cannot play Attacks this turn.",
+                                                                  "Possession is active. You cannot play Attacks this turn."
+                                                              ]
                                         }
 }
